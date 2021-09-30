@@ -466,9 +466,19 @@ a {
     background: url(../img/visual1.jpg) no-repeat center/cover;
     opacity: 0.1; }
   #visual .inner {
-    width: 100%;
-    height: 100%;
+    width: 1180px;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 170px;
     position: relative; }
+    #visual .inner h1 {
+      font: bold 80px/1 'arial';
+      color: #111;
+      margin-bottom: 20px; }
+    #visual .inner p {
+      width: 40%;
+      font: 16px/1.6 'arial';
+      color: #333; }
 
 #news {
   width: 100%;
