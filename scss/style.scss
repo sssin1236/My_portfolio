@@ -214,12 +214,61 @@
             color: #555;
         }
 
-        .slider{
-            width: 55%; height: 270px;
+        .list{
+            width: 53%; height: 270px;
             padding: 30px;
             position: absolute;
-            top: 200px; right: 0;
+            top: 190px; right: 0;
             background: url(../img/쿠션지.jpg) no-repeat center/cover;
+
+            &::after{
+                content: ''; display: block; clear: both;
+            }
+
+            h2{
+                width: 130px;
+                font: 28px/1 'arial';
+                color: #ddd;
+                margin-bottom: 30px;
+
+                &::before{
+                    content: ''; 
+                    display: block;
+                    width: 80px; height: 2px;
+                    background: #eee;
+                    margin-bottom: 20px;
+                }
+            }
+
+            ul{
+                width: 100%;
+                position: absolute;
+                bottom: 30px; left: 30px;
+
+                li{
+                    float: left;
+                    width: calc(100% / 4 - 20px);
+
+                    a{
+                        font: bold 15px/1 'arial';
+                        color: #ccc;
+                    }
+
+                    >span{
+                        display: block;
+                        margin-top: 5px;
+                        font: 14px/1 'arial';
+                        color: #999;
+                    }
+                }
+            }
+            
+            >span{
+                position: absolute;
+                bottom: -40px; left: 0;
+                font: bold 14px/1 'arial';
+                color: #333;
+            }
         }
     }
 }

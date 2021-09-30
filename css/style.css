@@ -480,14 +480,52 @@ a {
       width: 40%;
       font: 16px/1.7 'arial';
       color: #555; }
-    #visual .inner .slider {
-      width: 55%;
+    #visual .inner .list {
+      width: 53%;
       height: 270px;
       padding: 30px;
       position: absolute;
-      top: 200px;
+      top: 190px;
       right: 0;
       background: url(../img/쿠션지.jpg) no-repeat center/cover; }
+      #visual .inner .list::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #visual .inner .list h2 {
+        width: 130px;
+        font: 28px/1 'arial';
+        color: #ddd;
+        margin-bottom: 30px; }
+        #visual .inner .list h2::before {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 2px;
+          background: #eee;
+          margin-bottom: 20px; }
+      #visual .inner .list ul {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        left: 30px; }
+        #visual .inner .list ul li {
+          float: left;
+          width: calc(100% / 4 - 20px); }
+          #visual .inner .list ul li a {
+            font: bold 15px/1 'arial';
+            color: #ccc; }
+          #visual .inner .list ul li > span {
+            display: block;
+            margin-top: 5px;
+            font: 14px/1 'arial';
+            color: #999; }
+      #visual .inner .list > span {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        font: bold 14px/1 'arial';
+        color: #333; }
 
 #news {
   width: 100%;
