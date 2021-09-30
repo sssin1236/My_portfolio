@@ -203,15 +203,23 @@
         position: relative;
 
         h1{
-            font: bold 80px/1 'arial';
+            font: bold 70px/1 'arial';
             color: #111;
             margin-bottom: 20px;
         }
 
         p{
             width: 40%;
-            font: 16px/1.6 'arial';
-            color: #333;
+            font: 16px/1.7 'arial';
+            color: #555;
+        }
+
+        .slider{
+            width: 55%; height: 270px;
+            padding: 30px;
+            position: absolute;
+            top: 200px; right: 0;
+            background: url(../img/쿠션지.jpg) no-repeat center/cover;
         }
     }
 }

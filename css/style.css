@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Saira+Semi+Condensed:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200&family=Rajdhani:wght@300&display=swap");
@@ -472,13 +473,21 @@ a {
     padding-top: 170px;
     position: relative; }
     #visual .inner h1 {
-      font: bold 80px/1 'arial';
+      font: bold 70px/1 'arial';
       color: #111;
       margin-bottom: 20px; }
     #visual .inner p {
       width: 40%;
-      font: 16px/1.6 'arial';
-      color: #333; }
+      font: 16px/1.7 'arial';
+      color: #555; }
+    #visual .inner .slider {
+      width: 55%;
+      height: 270px;
+      padding: 30px;
+      position: absolute;
+      top: 200px;
+      right: 0;
+      background: url(../img/쿠션지.jpg) no-repeat center/cover; }
 
 #news {
   width: 100%;
