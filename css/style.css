@@ -526,6 +526,11 @@ a {
         left: 0;
         font: bold 14px/1 'arial';
         color: #333; }
+    #visual .inner .wrap {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
 
 #news {
   width: 100%;
