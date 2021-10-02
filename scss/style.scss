@@ -439,6 +439,7 @@
             font: 13px/50px 'arial';
             color: #eee;
             text-align: center;
+            transform: translateX(0px);
 
             &::before{
                 content: '';
@@ -447,6 +448,8 @@
                 background: #eee;
                 position: absolute;
                 top: 0; left: 0;
+                transform: rotate(180deg);
+                transform-origin: right center;
             }
 
             &::after{
@@ -456,6 +459,21 @@
                 background: #eee;
                 position: absolute;
                 bottom: 0; left: 0;
+                transform: rotate(-180deg);
+                transform-origin: right center;
+            }
+
+            &:hover{
+                // transform: translateX(50px);
+                // opacity: 0;
+
+                &::before{
+                    transform: rotate(-30deg);
+                }
+
+                &::after{
+                    transform: rotate(30deg);
+                }
             }
         }
 
