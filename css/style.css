@@ -612,7 +612,8 @@ a {
   #news .inner {
     width: 1180px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #news .inner h1 {
       font: bold 28px "Rajdhani";
       color: #eee;
@@ -639,6 +640,23 @@ a {
       transform: translateY(-50px);
       transition: 1s;
       opacity: 0; }
+    #news .inner .slider {
+      width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative; }
+      #news .inner .slider ul {
+        width: calc(800px * 4);
+        height: 400px;
+        overflow: hidden; }
+        #news .inner .slider ul li {
+          width: 800px;
+          height: 100%;
+          float: left; }
+          #news .inner .slider ul li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
 
 #brand {
   width: 100%;
