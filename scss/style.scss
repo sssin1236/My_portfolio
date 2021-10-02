@@ -371,6 +371,44 @@
     width: 100%; 
     padding: 200px 0px;
     background: #111;
+
+    &.on .inner{
+        h1, p{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+
+        h1{
+            @include title();
+            transform: translateY(50px);
+            transition: 1s;
+            opacity: 0;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 40px; height: 2px;
+                background:$mainCol;
+                position: absolute;
+                top: 50px; left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+
+        >p{
+            @include title2();
+            transform: translateY(-50px);
+            transition: 1s;
+            opacity: 0;
+        }
+    }
 }
 
 // brand -------------------------------------------------------------------------------
