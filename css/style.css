@@ -333,8 +333,14 @@ a {
   background: url(../../img/unsplash.jpg) no-repeat bottom/cover; }
 .member .inner {
   width: 1180px;
-  margin: 0 auto;
-  position: absolute; }
+  min-height: 500px;
+  margin: 100px auto 0;
+  position: relative; }
+  .member .inner .back {
+    width: 80%;
+    min-height: 700px;
+    background: #ddd;
+    margin: 0 auto; }
 
 #header {
   width: 100%;
