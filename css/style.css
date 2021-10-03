@@ -331,6 +331,10 @@ a {
 
 .member .sub_visual {
   background: url(../../img/unsplash.jpg) no-repeat bottom/cover; }
+.member .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute; }
 
 #header {
   width: 100%;
