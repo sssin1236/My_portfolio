@@ -15,5 +15,12 @@
             background: #ddd;
             margin: 0 auto;
         }
+
+        .pic{
+            width: 500px; height: 300px;
+            background: rgb(68, 42, 1);
+            position: absolute;
+            top: 0; right: -100px;
+        }
     }
 }
