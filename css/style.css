@@ -657,6 +657,10 @@ a {
   #news.on .inner h1, #news.on .inner p {
     transform: translateY(0);
     opacity: 1; }
+  #news.on .inner .slider {
+    transition-delay: 0.4s;
+    opacity: 1;
+    transform: scale(1); }
   #news .inner {
     width: 1180px;
     margin: 0 auto;
@@ -691,7 +695,10 @@ a {
       width: 800px;
       margin: 0 auto;
       overflow: hidden;
-      position: relative; }
+      position: relative;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: 1s; }
       #news .inner .slider ul {
         width: calc(800px * 4);
         height: 400px;

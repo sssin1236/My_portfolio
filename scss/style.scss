@@ -377,6 +377,12 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        .slider{
+            transition-delay: 0.4s;
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     .inner{
@@ -414,6 +420,9 @@
             margin: 0 auto;
             overflow: hidden;
             position: relative;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: 1s;
 
             ul{
                 width: calc(800px * 4); height: 400px;

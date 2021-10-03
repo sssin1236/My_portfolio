@@ -90,15 +90,6 @@ let posArr = [];
 let len2 = $btns.length;
 let baseLine = -250;
 
-// $(".btnNext").on("click", function(){
-//     $dots.children("div").removeClass("on");
-    
-//     for(let i=0; i<$dots.length; i++){
-//         $dots.eq(i).children("div").addClass("on");
-//     }
-// });
-
-
 for(let i=0; i<len2; i++){
     posArr.push($boxs.eq(i).offset().top);
 }
@@ -124,11 +115,6 @@ $(window).on("scroll", function(){
     }
 });
 
-// if(isOn){
-//     openWrap1();
-// }else{
-//     closeWrap1();
-// }
 
 $("#navi li a").on("click", function(e){
     e.preventDefault();
