@@ -739,7 +739,7 @@ a {
         left: 50px;
         transform: rotate(150deg);
         transform-origin: left center;
-        transition: 0.5s; }
+        transition: 1s; }
       #news .inner .prev::after {
         content: '';
         display: block;
@@ -751,7 +751,7 @@ a {
         left: 50px;
         transform: rotate(-150deg);
         transform-origin: left center;
-        transition: 0.5s; }
+        transition: 1s; }
       #news .inner .prev:hover span {
         transform: translateX(0);
         opacity: 1; }
@@ -785,7 +785,7 @@ a {
         left: -50px;
         transform: rotate(-150deg);
         transform-origin: right center;
-        transition: 0.5s; }
+        transition: 1s; }
       #news .inner .next::after {
         content: '';
         display: block;
@@ -797,7 +797,7 @@ a {
         left: -50px;
         transform: rotate(150deg);
         transform-origin: right center;
-        transition: 0.5s; }
+        transition: 1s; }
       #news .inner .next:hover span {
         opacity: 1;
         transform: translateX(0); }
