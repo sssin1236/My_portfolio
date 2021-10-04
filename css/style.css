@@ -379,6 +379,10 @@ a {
       width: 300px;
       font: 15px/1.6 'arial';
       color: #222; }
+.member .history {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative; }
 
 #header {
   width: 100%;
