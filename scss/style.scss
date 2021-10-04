@@ -208,7 +208,7 @@
             margin-bottom: 20px;
         }
 
-        p{
+        >p{
             width: 40%;
             font: 16px/1.7 'arial';
             color: #555;
@@ -272,7 +272,7 @@
         }
 
         .wrap{
-            width: 100%; height: 35%;
+            width: calc(250px * 5); height: 420px;
             position: absolute;
             bottom: 0; left: 0;
             overflow: hidden;
@@ -282,28 +282,28 @@
             }
 
             article{
-                width: 280px; height: 100%;
+                width: 250px; height: 90%;
                 float: left;
-                margin-right: 20px;
                 position: relative;
                 transition: 0.5s;
 
-                &:last-child{ margin-right: 0; }
-
                 &:hover{
                     .pic img{
-                        display: block;
-                        opacity: 0.2;
+                        opacity: 0.9;
                     }
 
-                    span{
-                        a{
-                            font-size: 17px;
-                            color: #111;
+                    .text{
+                        p{
+                            color: #fff;
+                        }
 
-                            i{
-                                transform: translateX(10px);
-                            }
+                        h3{
+                            color: #fff;
+                            border-bottom: 2px solid #fff; 
+                        }
+
+                        span a, i{
+                            color: #fff;
                         }
                     }
                 }
@@ -315,52 +315,72 @@
                     z-index: 1;
                     
                     img{
-                        width: 90%; height: 100%;
+                        width: 100%; height: 100%;
                         object-fit: cover;
                         transition: all 0.5s;
-                        display: none;
+                        opacity: 0;
+                        filter: brightness(0.5);
                     }
                 }
 
-                >p{
-                    font: 13px/1 'arial';
-                    color: #333;
+                .text{
+                    width: 160px; height: 100%;
                     position: absolute;
-                    top: 60px; left: 10px;
+                    top: 50%; left: 50%;
+                    padding: 50px 0;
+                    transform: translate(-50%, -50%);
                     z-index: 2;
-                }
 
-                h3{
-                    width: 80%;
-                    font: bold 18px/1.4 'arial';
-                    color: #111;
-                    position: absolute;
-                    top: 80px; left: 10px;
-                    z-index: 2;
-                    border-bottom: 2px solid #111;
-                    padding-bottom: 20px;
-                }
-                
-                span{
-                    display: block;
-                    width: 80%;
-                    position: absolute;
-                    bottom: 110px; left: 10px;
+                    >p{
+                        font: 14px/1 'arial';
+                        color: #222;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                        z-index: 2;
+                    }
+    
+                    h3{
+                        font: bold 28px/1.4 'arial';
+                        color: #111;
+                        z-index: 2;
+                        border-bottom: 2px solid #111;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
+                    
+                    span{
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        z-index: 2;
 
-                    a{
-                        font: 15px/1 'arial';
-                        color: #444;
-                        transition: 0.5s;
+                        &:hover{
+                            a{
+                                font-size: 14px;
+                            }
 
-                        i{
-                            font-size: 15px;
-                            color: #444;
-                            position: absolute;
-                            bottom: 0px; right:0px;
+                            i{
+                                transform: translateX(-20px);
+                            }
+                        }
+    
+                        a{
+                            font: 13px/1 'arial';
+                            color: #222;
                             transition: 0.5s;
+    
+                            i{
+                                font-size: 14px;
+                                color: #222;
+                                position: absolute;
+                                top: 50%; right:0px;
+                                margin-top: -6px;
+                                transition: 0.5s;
+                            }
                         }
                     }
                 }
+                
             }
         }
     }
