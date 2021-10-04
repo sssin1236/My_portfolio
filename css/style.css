@@ -453,7 +453,7 @@ a {
         margin-right: 0; }
       #header .inner .util li:hover a i {
         transform: scale(1.2);
-        color: #eee; }
+        color: #777; }
       #header .inner .util li a i {
         color: #aaa;
         transition: 0.3s; }
@@ -641,7 +641,7 @@ a {
           z-index: 2; }
         #visual .inner .wrap article h3 {
           width: 80%;
-          font: bold 18px/1 'arial';
+          font: bold 18px/1.4 'arial';
           color: #111;
           position: absolute;
           top: 80px;
@@ -736,7 +736,7 @@ a {
       text-align: center;
       position: absolute;
       top: 65%;
-      left: 120px;
+      left: 90px;
       cursor: pointer; }
       #news .inner .prev span {
         display: block;
@@ -781,7 +781,7 @@ a {
       height: 50px;
       position: absolute;
       top: 65%;
-      right: 110px;
+      right: 80px;
       text-align: center;
       cursor: pointer; }
       #news .inner .next span {
@@ -1242,8 +1242,9 @@ a {
       display: block;
       width: 10px;
       height: 10px;
+      border: 1px solid #ff5b20;
       border-radius: 5px;
-      background: #eee;
+      background: transparent;
       transition: 0.5s; }
       #navi li a.on {
         background: #ff5b20;
