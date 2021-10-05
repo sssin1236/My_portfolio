@@ -645,9 +645,9 @@
             }
 
             article{
-                width: 380px; height: 500px;
+                width: 360px; height: 500px;
                 float: left;
-                margin-right: 20px;
+                margin-right: 40px;
                 position: relative;
                 transition: 1.5s;
                 opacity: 0;
@@ -807,10 +807,10 @@
             }
 
             article{
-                width: 580px; height: 500px;
+                width: 580px; min-height: 500px;
                 float: left;
                 margin-right: 20px;
-                padding: 10px;
+                padding: 30px 10px;
                 background: rgba(187, 187, 187, 0.144);
                 transition: 1s;
                 opacity: 0;
@@ -828,8 +828,7 @@
                     display: inline-block;
                     font: bold 20px/1 $mainFon;
                     color: #eee;
-                    margin-bottom: 15px;
-
+                    margin-bottom: 30px;
                 }
 
                 >span{
