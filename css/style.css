@@ -339,7 +339,7 @@ a {
   .member .ceo .back {
     width: 60%;
     min-height: 700px;
-    background: #ddd;
+    background: #eee;
     margin: 0 auto; }
   .member .ceo .pic {
     width: 500px;
@@ -386,16 +386,19 @@ a {
   .member .history .back {
     width: 60%;
     min-height: 700px;
-    background: #ddd;
+    background: #eee;
     margin: 0 auto; }
   .member .history .pic {
-    width: 500px;
-    height: 300px;
-    background: #aaa;
+    width: 60%;
+    height: 500px;
     position: absolute;
-    top: 400px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%); }
+    .member .history .pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
 
 #header {
   width: 100%;
