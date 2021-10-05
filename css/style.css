@@ -387,23 +387,40 @@ a {
 .member .history {
   width: 1180px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  padding-bottom: 200px; }
   .member .history .back {
     width: 60%;
-    min-height: 700px;
+    min-height: 500px;
     background: #eee;
     margin: 0 auto; }
   .member .history .pic {
     width: 60%;
-    height: 500px;
+    height: 600px;
     position: absolute;
-    bottom: 0px;
+    bottom: 120px;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+    overflow: hidden; }
     .member .history .pic img {
       width: 100%;
       height: 100%;
-      object-fit: contain; }
+      object-fit: contain;
+      transform: scale(1.3); }
+  .member .history h1 {
+    font: 80px/1 'arial';
+    color: #442a01;
+    position: absolute;
+    top: 30%;
+    left: 150px; }
+  .member .history h2 {
+    width: 200px;
+    font: 20px/1.3 'arial';
+    color: #111;
+    position: absolute;
+    top: 15%;
+    right: 280px; }
 
 #header {
   width: 100%;
