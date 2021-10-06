@@ -432,7 +432,8 @@ a {
 .member .build {
   width: 1180px;
   min-height: 500px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 150px; }
   .member .build .back {
     width: 1180px;
     height: 500px;
@@ -477,6 +478,31 @@ a {
     width: 250px;
     font: 15px/1.6 'arial';
     color: #222; }
+
+.phil {
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+  background: linear-gradient(90deg, #eee 50%, #333 50%); }
+  .phil .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    .phil .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .phil .inner .wrap1 {
+      width: 50%;
+      height: 100%;
+      float: left;
+      padding: 20px; }
+    .phil .inner .wrap2 {
+      width: 50%;
+      height: 100%;
+      float: left;
+      padding: 20px; }
 
 #header {
   width: 100%;
