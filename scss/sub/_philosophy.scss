@@ -129,15 +129,15 @@
         position: relative;
 
         .back{
-            width: 1180px;
+            width: 1180px; height: 500px;
             background: #eee;
             position: relative;
-            height: 600px;
+            overflow: hidden;
 
             .pic{
                 width: 700px;
                 position: absolute;
-                bottom: -5px; left: 0;
+                bottom: -100px; left: 0;
 
                 img{
                     width: 100%; height: 550px;
@@ -146,6 +146,40 @@
                     opacity: 0.8;
                 }
             }
+        }
+
+        .text{
+            width: 300px;
+            position: absolute;
+            top: 100px; right: 120px;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 35px; height: 1px;
+                background: rgb(68, 42, 1);
+                position: absolute;
+                top: 40%; left: 0px;
+                transform: rotate(-40deg);
+            }
+        }
+
+        h1{
+            font: 80px/1 'arial';
+            color: rgb(68, 42, 1);
+            margin-bottom: 30px;
+        }
+
+        h2{
+            font: 20px/1 'arial';
+            color: #111;
+            margin-bottom: 125px;
+        }
+
+        p{
+            width: 250px;
+            font: 15px/1.6 'arial';
+            color: #222;
         }
     }
 }
