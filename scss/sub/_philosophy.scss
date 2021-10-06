@@ -6,12 +6,12 @@
     }
 
     .ceo{
-        width: 1180px; min-height: 700px;
+        width: 1180px; height: 600px;
         margin: 100px auto 0;
         position: relative;
 
         .back{
-            width: 60%; min-height: 700px;
+            width: 60%; min-height: 600px;
             background: #eee;
             margin: 0 auto;
         }
@@ -76,6 +76,7 @@
         margin: 0 auto;
         position: relative;
         padding-bottom: 200px;
+        margin-bottom: 200px;
 
         .back{
             width: 60%; min-height: 500px;
@@ -119,6 +120,18 @@
             color: #222;
             position: absolute;
             bottom: -10px; right: 150px;
+        }
+    }
+
+    .build{
+        width: 1180px; min-height: 400px;
+        margin: 0 auto;
+        position: relative;
+
+        .back{
+            width: 1180px;
+            background: #eee;
+            height: 700px;
         }
     }
 }
