@@ -333,26 +333,25 @@ a {
   background: url(../../img/unsplash.jpg) no-repeat bottom/cover; }
 .member .ceo {
   width: 1180px;
-  height: 600px;
+  height: 650px;
   margin: 100px auto 0;
   position: relative; }
   .member .ceo .back {
     width: 60%;
-    min-height: 600px;
+    min-height: 650px;
     background: #eee;
     margin: 0 auto; }
-  .member .ceo .pic {
-    width: 500px;
-    height: 300px;
-    background: rgba(68, 42, 1, 0.7);
-    position: absolute;
-    top: -30px;
-    right: -50px; }
-    .member .ceo .pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: sepia(55%); }
+    .member .ceo .back .pic {
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      top: -30px;
+      right: -50px; }
+      .member .ceo .back .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: sepia(55%); }
   .member .ceo .text {
     width: 100%;
     position: absolute;
@@ -369,6 +368,7 @@ a {
       left: -180px;
       transform: rotate(-40deg); }
     .member .ceo .text h1 {
+      width: 100%;
       font: 60px/1 'arial';
       color: #442a01;
       margin-left: -140px; }
@@ -389,26 +389,26 @@ a {
   margin: 0 auto;
   position: relative;
   padding-bottom: 200px;
-  margin-bottom: 200px; }
+  margin-bottom: 150px; }
   .member .history .back {
     width: 60%;
     min-height: 500px;
     background: #eee;
     margin: 0 auto; }
-  .member .history .pic {
-    width: 60%;
-    height: 600px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 100px;
-    overflow: hidden; }
-    .member .history .pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transform: scale(1.3); }
+    .member .history .back .pic {
+      width: 60%;
+      height: 600px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 100px;
+      overflow: hidden; }
+      .member .history .back .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transform: scale(1.3); }
   .member .history h1 {
     font: 80px/1 'arial';
     color: #442a01;
@@ -431,13 +431,24 @@ a {
     right: 150px; }
 .member .build {
   width: 1180px;
-  min-height: 400px;
-  margin: 0 auto;
+  min-height: 500px;
   position: relative; }
   .member .build .back {
     width: 1180px;
     background: #eee;
-    height: 700px; }
+    position: relative;
+    height: 600px; }
+    .member .build .back .pic {
+      width: 700px;
+      position: absolute;
+      bottom: -5px;
+      left: 0; }
+      .member .build .back .pic img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        filter: grayscale(80%);
+        opacity: 0.8; }
 
 #header {
   width: 100%;
