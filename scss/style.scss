@@ -1503,7 +1503,7 @@
     }
 }
 
-@media screen and(max-height: 1060px){
+@media screen and(max-height: 900px){
     #visual{
     
         .inner{
@@ -1520,37 +1520,10 @@
             .wrap{
                 width: calc(250px * 5); height: 380px;
     
-                &::after{
-                    content: ''; display: block; clear: both;
-                }
-    
                 article{
                     width: 250px; height: 100%;
                     padding: 20px 0;
-                    float: left;
-                    position: relative;
-                    transition: 0.5s;
     
-                    &:hover{
-                        .pic img{
-                            opacity: 0.9;
-                        }
-    
-                        .text{
-                            p{
-                                color: #fff;
-                            }
-    
-                            h3{
-                                color: #fff;
-                                border-bottom: 2px solid #fff; 
-                            }
-    
-                            span a, i{
-                                color: #fff;
-                            }
-                        }
-                    }
     
                     .pic{
                         width: 90%; height: 90%;
@@ -1558,74 +1531,7 @@
                         position: absolute;
                         top: 50%; left: 50%;
                         transform: translate(-50%, -50%);
-                        
-                        img{
-                            width: 100%; height: 100%;
-                            object-fit: cover;
-                            transition: all 0.5s;
-                            opacity: 0;
-                            filter: brightness(0.5);
-                        }
                     }
-    
-                    .text{
-                        width: 160px; height: 100%;
-                        position: absolute;
-                        top: 50%; left: 50%;
-                        padding: 50px 0;
-                        transform: translate(-50%, -50%);
-                        z-index: 2;
-    
-                        >p{
-                            font: 14px/1 'arial';
-                            color: #222;
-                            margin-top: 30px;
-                            margin-bottom: 20px;
-                            z-index: 2;
-                        }
-        
-                        h3{
-                            font: bold 28px/1.4 'arial';
-                            color: #111;
-                            z-index: 2;
-                            border-bottom: 2px solid #111;
-                            padding-bottom: 20px;
-                            margin-bottom: 20px;
-                        }
-                        
-                        span{
-                            display: block;
-                            width: 100%;
-                            position: relative;
-                            z-index: 2;
-    
-                            &:hover{
-                                a{
-                                    font-size: 14px;
-                                }
-    
-                                i{
-                                    transform: translateX(-20px);
-                                }
-                            }
-        
-                            a{
-                                font: 13px/1 'arial';
-                                color: #222;
-                                transition: 0.5s;
-        
-                                i{
-                                    font-size: 14px;
-                                    color: #222;
-                                    position: absolute;
-                                    top: 50%; right:0px;
-                                    margin-top: -6px;
-                                    transition: 0.5s;
-                                }
-                            }
-                        }
-                    }
-                    
                 }
             }
         }

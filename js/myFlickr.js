@@ -4,11 +4,11 @@ $.ajax({
     dataType:"json",
     data:{
         api_key:"645bbdf320519f9a5473a288fc9f617a",
-        per_page:30,
+        per_page:20,
         format:"json",
         nojsoncallback:1,
         privacy_filter: 5,
-        tags:"profile" 
+        tags:"plant_shadow" 
     }
 })
 .success(function(data){
@@ -19,8 +19,13 @@ $.ajax({
     $("#gallery").append("<ul>");
 
     $(items).each(function(index, data){
+        let num = index+1;
+
         $("#gallery ul").append(
             $("<li>")
+                .append(
+                    $("<span>").text("0" + num + "/")
+                )
                 .append(
                     $("<a>").attr({
                         href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
@@ -32,7 +37,7 @@ $.ajax({
                     )
                 )
                 .append(
-                    $("<h2>").text("Lorem ipsum.")
+                    $("<p>").text(data.owner),
                 )
         )}
     );

@@ -1,4 +1,61 @@
 
+.inner{
+    h1{
+        font: bold 24px/1 $mainFon;
+        color: #111;
+        padding-bottom: 20px;
+        margin: 0px 10px;
+        border-bottom: 2px solid #111;
+    }
+}
+
+#gallery{
+    width: 100%;
+
+    ul{
+        width: 100%;
+        
+        &::after{
+            content: ''; display: block; clear: both;
+        }
+
+        li{
+            float: left;
+            width: calc(100% / 4);
+            padding: 0px 10px;
+
+            a{
+                display: block;
+                width: 100%; height: 400px;
+                margin-bottom: 15px;
+                
+                img{
+                    width: 100%; height: 100%;
+                    object-fit: cover;
+                    filter: grayscale(30%) contrast(80%) saturate(0.5);
+                }
+            }
+
+            span{
+                display: block;
+                padding: 15px 0;
+                font: bold 17px/1 $mainFon;
+                color: #333;
+            }
+
+            p{
+                border-bottom: 1.5px solid #555;
+                padding-bottom: 15px;
+                margin: 0 auto;
+                font: 17px/1 $mainFon;
+                color: #333;
+                text-align: right;
+            }
+        }
+    }
+}
+
+
 .pop{
     width: 100%; height: 100vh;
     background: rgba(0,0,0, 0.8);
