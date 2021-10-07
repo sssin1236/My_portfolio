@@ -1,13 +1,16 @@
-
-.inner{
-    h1{
-        font: bold 24px/1 $mainFon;
-        color: #111;
-        padding-bottom: 20px;
-        margin: 0px 10px;
-        border-bottom: 2px solid #111;
+.gallery{
+    .inner{
+        h1{
+            font: bold 24px/1 $mainFon;
+            color: #111;
+            padding-bottom: 20px;
+            margin: 0px 10px;
+            border-bottom: 2px solid #111;
+        }
     }
+    
 }
+
 
 #gallery{
     width: 100%;
@@ -36,7 +39,7 @@
                 }
             }
 
-            span{
+            >span{
                 display: block;
                 padding: 15px 0;
                 font: bold 17px/1 $mainFon;
@@ -68,7 +71,7 @@
         object-fit: cover;
     }
 
-    span{
+    >span{
         font: bold 14px/1 'airal';
         color: #fff;
         position: absolute;
