@@ -8,7 +8,7 @@ $.ajax({
         format:"json",
         nojsoncallback:1,
         privacy_filter: 5,
-        tags:"building" 
+        tags:"profile" 
     }
 })
 .success(function(data){
@@ -44,16 +44,16 @@ $.ajax({
 $("body").on("click", "#gallery ul li", function(e){
     e.preventDefault();
 
-    let imgAdd = $(this).children("a").attr("href");
+    let imgSrc = $(this).children("a").attr("href");
 
     $("body").append(
-        $("<div class='pop'>").append(
-            $("<img>").attr({ src : imgAdd }),
-            $("<span>").text("Close")
-        )
+        $("<div class='pop'>")
+            .append(
+                $("<img>").attr({ src : imgSrc }),
+                $("<span>").text("close")
+            )
     )
 });
-
 
 $("body").on("click", ".pop span", function(){
     $(".pop").remove();
