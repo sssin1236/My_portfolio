@@ -599,21 +599,23 @@ a {
           height: 100%;
           object-fit: cover;
           transform: scale(1.05);
-          filter: grayscale(80%); }
+          filter: grayscale(80%) hue-rotate(5deg) contrast(80%);
+          transition: 0.5s; }
       .youtube .inner #video article .con {
         width: 100%;
         margin-bottom: 130px; }
         .youtube .inner #video article .con span {
           display: block;
-          width: 40%;
+          width: 50%;
           height: 40px;
           padding: 0 40px;
-          background: #ff5b20;
+          background: #fff;
           font: bold 18px/40px "Rajdhani", "Noto Sans KR";
-          color: #fff;
+          color: #ff5b20;
           position: absolute;
-          top: -40px;
-          left: 30px; }
+          top: 0px;
+          left: 30px;
+          transition: 0.5s; }
         .youtube .inner #video article .con h2 {
           width: 100%;
           font: bold 20px/1.4 'Noto Sans KR';
@@ -623,6 +625,13 @@ a {
           width: 100%;
           font: 15px/1.4 'arial', 'Noto Sans KR';
           color: #555; }
+      .youtube .inner #video article:hover a img {
+        transform: scale(1.15);
+        filter: grayscale(0%) hue-rotate(0deg) contrast(80%); }
+      .youtube .inner #video article:hover .con span {
+        background: #ff5b20;
+        top: -40px;
+        color: #fff; }
 
 #header {
   width: 100%;
