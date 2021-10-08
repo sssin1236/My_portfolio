@@ -4,7 +4,7 @@ $.ajax({
     dataType:"json",
     data:{
         api_key:"645bbdf320519f9a5473a288fc9f617a",
-        per_page:20,
+        per_page:16,
         format:"json",
         nojsoncallback:1,
         privacy_filter: 5,
