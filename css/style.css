@@ -633,6 +633,29 @@ a {
         top: -40px;
         color: #fff; }
 
+.vidPop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 100px;
+  z-index: 5; }
+  .vidPop iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5; }
+  .vidPop > span {
+    font: 18px/1 "Rajdhani";
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 5; }
+
 #header {
   width: 100%;
   height: 100px;
