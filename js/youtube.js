@@ -18,9 +18,15 @@ $.ajax({
         
         let txt = data.snippet.description;
         let len = txt.length;
+        let tit = data.snippet.title;
+        let titLen = tit.length;
 
-        if(len > 200){
-            txt = txt.substr(0, 150) + "...";
+        if(len > 75){
+            txt = txt.substr(0, 75) + "...";
+        }
+
+        if(titLen > 40){
+            tit = tit.substr(0, 40) + "...";
         }
 
         $("#video").append(
@@ -30,7 +36,7 @@ $.ajax({
                 ),
                 $("<div class='con'>").append(
                     $("<span>").text(data.snippet.videoOwnerChannelTitle),
-                    $("<h2>").text(data.snippet.title),
+                    $("<h2>").text(tit),
                     $("<p>").text(txt)
                 )
             )

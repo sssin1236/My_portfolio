@@ -17,8 +17,12 @@
             article{
                 width: 50%;
                 float: left;
-                padding: 0px 20px;
+                padding: 0px 30px;
                 position: relative;
+
+                &:nth-of-type(2n){
+                    transform: translateY(100px);
+                }
 
                 a{
                     display: block;
@@ -28,26 +32,39 @@
 
                     img{
                         width: 100%; height: 100%;
-                        margin: 0 auto;
                         object-fit: cover;
                         transform: scale(1.05);
+                        filter: grayscale(80%);
                     }
                 }
 
                     
                 .con{
                     width: 100%;
-                    margin-bottom: 20px;
+                    margin-bottom: 130px;
 
                     span{
                         display: block;
-                        width: 50%; height: 40px;
+                        width: 40%; height: 40px;
                         padding: 0 40px;
-                        background: #fff;
+                        background: $mainCol;
                         font: bold 18px/40px $mainFon,'Noto Sans KR';
-                        color: $mainCol;
+                        color: #fff;
                         position: absolute;
-                        top: 0px; left: 20px;
+                        top: -40px; left: 30px;
+                    }
+
+                    h2{
+                        width: 100%;
+                        font: bold 20px/1.4 'Noto Sans KR';
+                        color: #333;
+                        margin-bottom: 15px;
+                    }
+
+                    p{
+                        width: 100%;
+                        font: 15px/1.4 'arial', 'Noto Sans KR';
+                        color: #555;
                     }
                 }
             }
