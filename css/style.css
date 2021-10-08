@@ -627,7 +627,7 @@ a {
           color: #555; }
       .youtube .inner #video article:hover a img {
         transform: scale(1.15);
-        filter: grayscale(0%) hue-rotate(0deg) contrast(80%); }
+        filter: grayscale(0%) hue-rotate(0deg); }
       .youtube .inner #video article:hover .con span {
         background: #ff5b20;
         top: -40px;

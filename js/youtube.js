@@ -20,6 +20,7 @@ $.ajax({
         let len = txt.length;
         let tit = data.snippet.title;
         let titLen = tit.length;
+        
 
         if(len > 75){
             txt = txt.substr(0, 75) + "...";
