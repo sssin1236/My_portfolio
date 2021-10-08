@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Saira+Semi+Condensed:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200&family=Rajdhani:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&family=Noto+Sans+KR:wght@300;400&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -606,7 +607,7 @@ a {
           height: 40px;
           padding: 0 40px;
           background: #fff;
-          font: bold 18px/40px "Rajdhani", "나눔고딕";
+          font: bold 18px/40px "Rajdhani", "Noto Sans KR";
           color: #ff5b20;
           position: absolute;
           top: 0px;
