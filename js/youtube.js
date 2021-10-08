@@ -20,11 +20,8 @@ $.ajax({
         let len = txt.length;
 
         if(len > 200){
-            txt = txt.substr(0, 200) + "...";
+            txt = txt.substr(0, 150) + "...";
         }
-
-        let date = data.snippet.publishedAt;
-        date = date.split("T")[0];
 
         $("#video").append(
             $("<article>").append(
@@ -32,9 +29,9 @@ $.ajax({
                     $("<img>").attr({ src : data.snippet.thumbnails.high.url})
                 ),
                 $("<div class='con'>").append(
+                    $("<span>").text(data.snippet.videoOwnerChannelTitle),
                     $("<h2>").text(data.snippet.title),
-                    $("<p>").text(txt),
-                    $("<span>").text(date)
+                    $("<p>").text(txt)
                 )
             )
         )
