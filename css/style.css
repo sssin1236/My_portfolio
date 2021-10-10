@@ -1762,5 +1762,28 @@ a {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%); } }
+@media screen and (max-height: 800px) {
+  #visual .inner {
+    padding-top: 150px; }
+    #visual .inner .list {
+      top: 150px;
+      right: 0; }
+      #visual .inner .list span {
+        bottom: -30px; }
+    #visual .inner .wrap {
+      width: calc(250px * 5);
+      height: 340px; }
+      #visual .inner .wrap article {
+        width: 250px;
+        height: 100%;
+        padding: 20px 0; }
+        #visual .inner .wrap article .pic {
+          width: 90%;
+          height: 90%;
+          padding: 25px 0 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); } }
 
 /*# sourceMappingURL=style.css.map */
