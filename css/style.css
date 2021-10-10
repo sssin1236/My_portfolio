@@ -503,7 +503,22 @@ a {
       width: 50%;
       height: 100%;
       float: left;
-      padding: 20px; }
+      padding: 0 20px; }
+      .phil .inner .wrap1 article {
+        width: calc(100% / 3);
+        padding: 0 10px;
+        float: left;
+        text-align: center; }
+        .phil .inner .wrap1 article:nth-of-type(4), .phil .inner .wrap1 article:nth-of-type(5), .phil .inner .wrap1 article:nth-of-type(6) {
+          margin-top: 40px; }
+        .phil .inner .wrap1 article a i {
+          font-size: 35px;
+          color: #555;
+          margin-bottom: 30px; }
+        .phil .inner .wrap1 article h2 {
+          font: bold 22px/1 "Rajdhani";
+          color: #111;
+          margin-bottom: 20px; }
     .phil .inner .wrap2 {
       width: 50%;
       height: 100%;
