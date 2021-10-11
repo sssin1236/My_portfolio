@@ -332,86 +332,89 @@ a {
 
 .member .sub_visual {
   background: url(../../img/unsplash.jpg) no-repeat bottom/cover; }
-.member .ceo {
+.member #ceo {
   width: 1180px;
   height: 650px;
   margin: 100px auto 0;
   position: relative; }
-  .member .ceo.on .back .pic {
+  .member #ceo.on .back .pic {
     opacity: 1;
     right: -50px; }
-  .member .ceo.on .text {
+  .member #ceo.on .text {
     opacity: 1; }
-    .member .ceo.on .text h1 {
+    .member #ceo.on .text::before {
+      width: 130px; }
+    .member #ceo.on .text h1 {
       margin-left: -140px; }
-      .member .ceo.on .text h1 span {
+      .member #ceo.on .text h1 span {
         margin: 30px 0 40px 140px; }
-  .member .ceo .back {
+  .member #ceo .back {
     width: 60%;
     min-height: 650px;
     background: #eee;
     margin: 0 auto; }
-    .member .ceo .back .pic {
+    .member #ceo .back .pic {
       width: 500px;
       height: 300px;
       position: absolute;
       top: -30px;
       right: -150px;
       transition: 1s; }
-      .member .ceo .back .pic img {
+      .member #ceo .back .pic img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         filter: sepia(55%); }
-  .member .ceo .text {
+  .member #ceo .text {
     width: 100%;
     position: absolute;
     top: 100px;
     left: 350px;
     transition: 1s; }
-    .member .ceo .text::before {
+    .member #ceo .text::before {
       content: '';
       display: block;
-      width: 130px;
+      width: 0px;
       height: 1px;
       background: #442a01;
       position: absolute;
       bottom: 30%;
       left: -180px;
-      transform: rotate(-40deg); }
-    .member .ceo .text h1 {
+      transform: rotate(-40deg);
+      transition: 1s; }
+    .member #ceo .text h1 {
       width: 100%;
       font: 60px/1 'arial';
       color: #442a01;
       margin-left: -200px;
       transition: 1s; }
-      .member .ceo .text h1 span {
+      .member #ceo .text h1 span {
         display: block;
         width: 100%;
         margin: 30px 0 40px 250px;
         transition: 1s; }
-    .member .ceo .text h2 {
+    .member #ceo .text h2 {
       font: 20px/1 'arial';
       color: #111;
       margin-bottom: 40px;
       transition: 1s; }
-    .member .ceo .text p {
+    .member #ceo .text p {
       width: 300px;
       font: 15px/1.6 'arial';
       color: #222;
       transition: 1s; }
-.member .history {
+.member #history {
   width: 1180px;
   margin: 0 auto;
   position: relative;
   padding-bottom: 200px;
   margin-bottom: 150px; }
-  .member .history .back {
+  .member #history .back {
     width: 60%;
     min-height: 500px;
     background: #eee;
     margin: 0 auto; }
-    .member .history .back .pic {
+    .member #history .back .pic {
       width: 60%;
       height: 600px;
       position: absolute;
@@ -420,59 +423,59 @@ a {
       transform: translateX(-50%);
       margin-bottom: 100px;
       overflow: hidden; }
-      .member .history .back .pic img {
+      .member #history .back .pic img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         transform: scale(1.3); }
-  .member .history h1 {
+  .member #history h1 {
     font: 80px/1 'arial';
     color: #442a01;
     position: absolute;
     top: 30%;
     left: 150px; }
-  .member .history h2 {
+  .member #history h2 {
     width: 200px;
     font: 20px/1.3 'arial';
     color: #111;
     position: absolute;
     top: 20%;
     right: 280px; }
-  .member .history p {
+  .member #history p {
     width: 250px;
     font: 15px/1.6 'arial';
     color: #222;
     position: absolute;
     bottom: -10px;
     right: 150px; }
-.member .build {
+.member #build {
   width: 1180px;
   min-height: 500px;
   position: relative;
   margin-bottom: 150px; }
-  .member .build .back {
+  .member #build .back {
     width: 1180px;
     height: 500px;
     background: #eee;
     position: relative;
     overflow: hidden; }
-    .member .build .back .pic {
+    .member #build .back .pic {
       width: 700px;
       position: absolute;
       bottom: -100px;
       left: 0; }
-      .member .build .back .pic img {
+      .member #build .back .pic img {
         width: 100%;
         height: 550px;
         object-fit: cover;
         filter: grayscale(80%);
         opacity: 0.8; }
-  .member .build .text {
+  .member #build .text {
     width: 300px;
     position: absolute;
     top: 100px;
     right: 120px; }
-    .member .build .text::after {
+    .member #build .text::after {
       content: '';
       display: block;
       width: 35px;
@@ -482,15 +485,15 @@ a {
       top: 40%;
       left: 0px;
       transform: rotate(-40deg); }
-  .member .build h1 {
+  .member #build h1 {
     font: 80px/1 'arial';
     color: #442a01;
     margin-bottom: 30px; }
-  .member .build h2 {
+  .member #build h2 {
     font: 20px/1 'arial';
     color: #111;
     margin-bottom: 125px; }
-  .member .build p {
+  .member #build p {
     width: 250px;
     font: 15px/1.6 'arial';
     color: #222; }

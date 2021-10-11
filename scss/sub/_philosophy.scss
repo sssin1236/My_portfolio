@@ -5,7 +5,7 @@
         background: url(../../img/unsplash.jpg) no-repeat bottom/cover;
     }
 
-    .ceo{
+    #ceo{
         width: 1180px; height: 650px;
         margin: 100px auto 0;
         position: relative;
@@ -18,6 +18,11 @@
 
             .text{
                 opacity: 1;
+
+                &::before{
+                    width: 130px;
+                }
+
                 h1{
                     margin-left: -140px;
 
@@ -56,11 +61,12 @@
             &::before{
                 content: '';
                 display: block;
-                width: 130px; height: 1px;
+                width: 0px; height: 1px;
                 background: rgb(68, 42, 1);
                 position: absolute;
                 bottom: 30%; left: -180px;
                 transform: rotate(-40deg);
+                transition: 1s;
             }
 
             h1{
@@ -95,7 +101,7 @@
         
     }
 
-    .history{
+    #history{
         width: 1180px; 
         margin: 0 auto;
         position: relative;
@@ -148,7 +154,7 @@
         }
     }
 
-    .build{
+    #build{
         width: 1180px; min-height: 500px;
         position: relative;
         margin-bottom: 150px;
