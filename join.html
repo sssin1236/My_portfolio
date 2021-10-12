@@ -65,14 +65,146 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content join">
         <div class="sub_visual">
             <div class="txt">
                 <h1>JOIN <span>회원가입</span></h1>
-            </div>
+            </div class="txt">
         </div>
 
-        <div class="inner"></div>
+        <div class="inner">
+            <h2>신규고객</h2>
+
+            <form action="/" mathod="post">
+                <fieldset>
+                    <legend class="h">회원가입 입력 양식폼</legend>
+
+					<h3>서비스 이용 약관</h3>
+					<textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores, velit voluptatibus atque, voluptate fugit accusamus veritatis ullam commodi quis distinctio veniam fuga aspernatur eveniet amet deleniti vitae fugiat ad sequi a autem facere enim dolorum voluptas. Totam ut sequi corporis laboriosam unde aperiam, debitis id enim, molestias deserunt nesciunt vitae quas molestiae, consequuntur nostrum illum tempora iure fuga quo exercitationem veniam sit. Cupiditate vero nostrum voluptatem officia, quos unde odio deleniti cumque dolores pariatur incidunt obcaecati quaerat modi ducimus doloribus totam nulla atque expedita ipsa ratione architecto possimus? Quidem architecto sequi facilis recusandae odio cum totam. Voluptatem maxime, atque temporibus in, error maiores deserunt at perferendis illum nobis voluptate laborum reprehenderit sunt nihil inventore impedit eum dolorum sed architecto. Pariatur similique quasi nulla tenetur sint provident, quaerat dolore et neque a saepe quis ea voluptatem unde officia vel. Fugit nisi at quod ipsam sequi culpa nesciunt consectetur, necessitatibus temporibus eum ratione qui ea alias quo reiciendis enim, accusamus, atque dolorem sint. Consectetur vel minus deserunt tempora quo quis, error perspiciatis alias veniam doloremque iste ex debitis, corporis voluptatibus accusantium. Mollitia corrupti deleniti quas quam nemo neque praesentium facilis ipsa illum eligendi. Cupiditate aspernatur, exercitationem temporibus fugiat perspiciatis obcaecati nesciunt.</textarea>
+					<div class="agree">
+						<input type="checkbox" name="agree" id="agree">
+						<label for="agree">서비스 이용 약관에 동의합니다.</label>
+					</div>
+
+					<h3>회원정보</h3>
+
+					<table summary="회원의 아이디, 비밀번호, 주소, 연락처, 이메일, SMS수신동의여부, 수신매체선택 입력양식폼">
+						<caption class="h">회원정보 입력 양식 테이블</caption>
+
+						<tr>
+							<th scope="row"><label for="name">이름<i class="fas fa-circle"></i></label></th>
+							<td>
+								<input type="text" name="name" id="name" required>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="userid">아이디<i class="fas fa-circle"></i></label></th>
+							<td>
+								<input type="text" name="userid" id="userid" required>
+								<a href="#">중복확인<i class="fas fa-check"></i></a>
+								<p>아이디를 입력해주세요.</p>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="password">비밀번호<i class="fas fa-circle"></i></label></th>
+							<td>
+								<input type="password" name="password" id="password" required>
+								<p>영어 대소문자, 숫자, 특수문자를 포함하여 8글자 이상 입력해주세요.</p>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="password_check">비밀번호 확인<i class="fas fa-circle"></i></label></th>
+							<td>
+								<input type="password" name="password_check" id="password_check" required>
+								<p>비밀번호를 한번 더 입력해주세요.</p>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="address">주소<i class="fas fa-circle"></i></label></th>
+							<td>
+								<input type="search" name="search" id="address" required>
+								<a href="#">주소찾기<i class="fas fa-search"></i></a>
+								<input type="text" name="address" id="address" required>
+								<input type="text" name="address" id="address" placeholder="세부주소 입력" required>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="call">연락처<i class="fas fa-circle"></i></label></th>
+							<td>
+								<select name="call" id="call">
+									<option value="">---</option>
+									<option value="010">010</option>
+									<option value="070">070</option>
+									<option value="02">02</option>
+									<option value="031">031</option>
+									<option value="041">041</option>
+									<option value="051">051</option>
+									<option value="052">052</option>
+								</select>
+								<input type="tel" name="call" id="call" placeholder="숫자만 입력해주세요.">
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row"><label for="email">이메일</label></th>
+							<td>
+								<input type="text" name="email" id="email" placeholder="선택입력">
+								@
+								<select name="company" id="company">
+									<option value="">-----</option>
+									<option value="naver">naver.com</option>
+									<option value="nate">nate.com</option>
+									<option value="google">gmail.com</option>
+									<option value="daum">daum.net</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row">SMS 수신동의<i class="fas fa-circle"></i></th>
+							<td>
+								<label for="agree">
+								<input type="radio" name="agree" id="agree" value="agree">
+								수신 동의</label>
+								<label for="deagree">
+								<input type="radio" name="deagree" id="deagree" value="deagree">
+								수신 미동의</label>
+							</td>
+						</tr>
+
+						<tr>
+							<th scope="row">수신매체 선택</th>
+							<td>
+								<label for="post">
+								<input type="checkbox" name="post" id="post" value="post">
+								우편</label>
+								<label for="mms">
+								<input type="checkbox" name="mms" id="mms" value="mms">
+								문자 메세지</label>
+								<label for="kakao">
+								<input type="checkbox" name="kakao" id="kakao" value="kakao">
+								카카오톡</label>
+							</td>
+						</tr>
+
+						<tr>
+							<th colspan="2">
+								<input type="reset" value="이전">
+								<input type="submit" value="다음">
+							</th>
+						</tr>
+
+					</table>
+
+                </fieldset>
+            </form>
+
+        </div>
     </section>
 
     <footer id="footer_sub">
