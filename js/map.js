@@ -87,3 +87,12 @@ for(let i=0; i<markerOptions.length; i++){
         markerOptions[i].button.classList.add("on");
     }
 }
+
+
+function moveTo(target) {            
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = target;
+    
+    // 지도 중심을 이동 시킵니다
+    map.setCenter(moveLatLon);
+}
