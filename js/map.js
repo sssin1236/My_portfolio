@@ -37,3 +37,32 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+
+const branch_btns = document.querySelectorAll(".branch li"); 
+const markerOptions = [
+    {
+        title : "본점",
+        latlng : new kakao.maps.LatLng(37.5114452,127.0564974),
+        imgSrc : "img/marker1.png",
+        imgSize : new kakao.maps.Size(232, 99),
+        imgPos : {offset: new kakao.maps.Point(116, 99)},
+        button : branch_btns[0]
+    },
+    {
+        title : "지점1",
+        latlng : new kakao.maps.LatLng(37.50710883955524,126.75635942986159),
+        imgSrc : "img/marker2.png",
+        imgSize : new kakao.maps.Size(232, 99),
+        imgPos : {offset: new kakao.maps.Point(116, 99)},
+        button : branch_btns[1]
+    },
+    {
+        title : "지점2",
+        latlng : new kakao.maps.LatLng(37.529704155212045,126.96450406612227),
+        imgSrc : "img/marker3.png",
+        imgSize : new kakao.maps.Size(232, 99),
+        imgPos : {offset: new kakao.maps.Point(116, 99)},
+        button : branch_btns[2]
+    }
+];
