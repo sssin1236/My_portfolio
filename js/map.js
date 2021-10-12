@@ -44,9 +44,9 @@ const markerOptions = [
     {
         title : "본점",
         latlng : new kakao.maps.LatLng(37.5114452,127.0564974),
-        imgSrc : "img/marker1.png",
-        imgSize : new kakao.maps.Size(232, 99),
-        imgPos : {offset: new kakao.maps.Point(116, 99)},
+        imgSrc : "img/marker.png",
+        imgSize : new kakao.maps.Size(57, 85),
+        imgPos : {offset: new kakao.maps.Point(29, 85)},
         button : branch_btns[0]
     },
     {
