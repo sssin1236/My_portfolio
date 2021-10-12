@@ -14,7 +14,7 @@ const $boxs = $(".myScroll");
 
 let posArr = [];
 let len = $boxs.length;
-let plusLine = -200;
+let plusLine = -250;
 
 for(let i=0; i<len; i++){
     posArr.push($boxs.eq(i).offset().top);
