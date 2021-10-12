@@ -66,3 +66,24 @@ const markerOptions = [
         button : branch_btns[2]
     }
 ];
+
+for(let i=0; i<markerOptions.length; i++){
+    new kakao.maps.Marker({
+        map: map,
+        position: markerOptions[i].latlng,
+        title: markerOptions[i].title,
+        image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos)
+    });
+
+    //branch 메뉴 버튼을 클릭했을 때
+    markerOptions[i].button.onclick = function(){
+        //해당 위치로 이동
+        moveTo(markerOptions[i].latlng); 
+
+        //branch 메뉴 버튼 모두 비활성화 후 클릭한 버튼만 활성화
+        for(let k=0; k<markerOptions.length; k++){
+            markerOptions[k].button.classList.remove("on");
+        }
+        markerOptions[i].button.classList.add("on");
+    }
+}
