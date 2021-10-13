@@ -1049,7 +1049,6 @@ body .join .inner table {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    margin-top: 20px;
     z-index: 2; }
     .location .inner .branch li {
       margin-bottom: 10px; }
@@ -1097,6 +1096,29 @@ body .join .inner table {
     content: '';
     display: block;
     clear: both; }
+  .inner .wrap article {
+    float: left;
+    width: calc(100% / 3 - 20px);
+    margin-right: 20px; }
+    .inner .wrap article:last-child {
+      margin-right: 0; }
+    .inner .wrap article > h2 {
+      font: bold 20px/1 "Rajdhani";
+      color: #111;
+      width: 80%; }
+      .inner .wrap article > h2 i {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 20px;
+        color: #222; }
+    .inner .wrap article > ul li {
+      margin-bottom: 20px;
+      font: bold 17px/1 "Rajdhani";
+      color: #111; }
+      .inner .wrap article > ul li p {
+        font: 17px/1 "Rajdhani";
+        color: #333;
+        margin-top: 5px; }
 
 #header {
   width: 100%;
