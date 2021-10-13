@@ -1113,7 +1113,7 @@ body {
   .inner .wrap article {
     float: left;
     width: calc(100% / 3);
-    padding: 0 30px; }
+    padding-left: 50px; }
     .inner .wrap article:last-child {
       margin-right: 0; }
     .inner .wrap article > h2 {
@@ -1133,6 +1133,20 @@ body {
         font: 17px/1 "Rajdhani";
         color: #333;
         margin-top: 5px; }
+
+.form {
+  width: 1180px;
+  margin: 100px auto;
+  position: relative; }
+  .form h2 {
+    font: bold 24px/1 "Rajdhani";
+    color: #111;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111; }
+  .form .wrap {
+    width: 100%;
+    position: relative; }
 
 #header {
   width: 100%;

@@ -114,6 +114,7 @@ body{
 }
 
 .inner{
+
     .wrap{
         width: 100%;
         
@@ -124,7 +125,7 @@ body{
         article{
             float: left; 
             width: calc(100% / 3); 
-            padding: 0 30px;
+            padding-left: 50px;
 
             &:last-child{
                 margin-right: 0;
@@ -155,5 +156,26 @@ body{
                 }
             }
         }
+    }
+}
+
+.form{
+    width: 1180px;
+    margin: 100px auto;
+    position: relative;
+
+    h2{
+        font: bold 24px/1 $mainFon;
+        color: #111;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #111;
+    }
+
+    .wrap{
+        width: 100%;
+        position: relative;
+
+        
     }
 }
