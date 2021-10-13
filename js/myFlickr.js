@@ -8,7 +8,7 @@ $.ajax({
         format:"json",
         nojsoncallback:1,
         privacy_filter: 5,
-        tags:"plant_shadow" 
+        tags:"shadow" 
     }
 })
 .success(function(data){

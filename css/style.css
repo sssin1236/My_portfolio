@@ -339,8 +339,7 @@ fieldset {
   width: 1180px;
   height: 650px;
   margin: 100px auto 0;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .member #ceo.on .back .pic {
     opacity: 1;
     right: -50px; }
@@ -391,7 +390,7 @@ fieldset {
       transform: rotate(-40deg);
       transition: 1.5s; }
     .member #ceo .text h1 {
-      width: 100%;
+      width: 50%;
       font: 60px/1 'arial';
       color: #442a01;
       margin-left: -200px;
@@ -1024,26 +1023,49 @@ body .join .inner table {
       width: 50%; }
     body .join .inner table tr td a {
       width: 40%; } }
+.location .inner h2 {
+  font: bold 24px/1 "Rajdhani";
+  color: #111;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #111; }
 .location .inner #map {
   width: 100%;
-  height: 500px; }
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(70%);
+  transition: 0.5s; }
+  .location .inner #map:hover {
+    filter: grayscale(0%); }
 .location .inner .branch {
-  float: right;
-  margin-top: 20px; }
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  margin-top: 20px;
+  z-index: 2; }
   .location .inner .branch li {
-    float: left;
-    margin-right: 10px; }
+    margin-bottom: 10px; }
+    .location .inner .branch li:last-child {
+      margin-bottom: 0; }
     .location .inner .branch li.on a {
-      background: #aaa;
-      color: #333; }
+      background: #333;
+      color: #fff; }
+      .location .inner .branch li.on a p {
+        color: #ddd; }
     .location .inner .branch li a {
       display: block;
-      width: 200px;
-      height: 40px;
-      background: #555;
-      font: bold 12px/40px '맑은 고딕';
-      color: #fff;
-      text-align: center; }
+      width: 350px;
+      height: 120px;
+      padding: 15px 40px 15px 15px;
+      background: #fff;
+      font: bold 18px/1 "Rajdhani";
+      color: #111; }
+      .location .inner .branch li a p {
+        font: 16px/1.6 "Rajdhani";
+        color: #222;
+        margin-top: 5px; }
 .location .inner .traffic {
   float: left;
   margin-top: 20px; }
@@ -1052,15 +1074,16 @@ body .join .inner table {
     margin-right: 10px; }
     .location .inner .traffic li a {
       display: block;
-      width: 200px;
+      width: 100px;
       height: 40px;
-      background: #555;
-      font: bold 12px/40px '맑은 고딕';
-      color: #fff;
+      background: #fff;
+      border: 1px solid #333;
+      font: bold 15px/40px "Rajdhani";
+      color: #333;
       text-align: center; }
     .location .inner .traffic li.on a {
-      background: #aaa;
-      color: #333; }
+      background: #333;
+      color: #fff; }
 
 #header {
   width: 100%;
