@@ -1,6 +1,12 @@
 
 
 .location .inner{
+    padding: 50px 0;
+
+    &::after{
+        content: ''; display: block; clear: both;
+    }
+
     h2{
         font: bold 24px/1 $mainFon;
         color: #111;
@@ -67,6 +73,7 @@
     .traffic{
         float: left;
         margin-top: 20px;
+        margin-bottom: 20px;
 
         li{
             float: left;
@@ -91,3 +98,12 @@
     }
 }
 
+.inner{
+    .wrap{
+        width: 100%;
+        
+        &::after{
+            content: ''; display: block; clear: both;
+        }
+    }
+}
