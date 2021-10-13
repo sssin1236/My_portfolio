@@ -59,11 +59,16 @@
                 background: #fff;
                 font: bold 18px/1 $mainFon;
                 color: #111;
+                transition: 0.5s;
 
                 p{
                     font: 16px/1.6 $mainFon;
                     color: #222;
                     margin-top: 5px;
+                }
+
+                &:hover{
+                    color: $mainCol;
                 }
             }
         }
@@ -85,12 +90,21 @@
                 font: bold 15px/40px $mainFon;
                 color: #333;
                 text-align: center;
+                transition: 0.5s;
+
+                &:hover{
+                    color: $mainCol;
+                }
             }
 
             &.on{
                 a{
                     background: #333;
                     color: #fff;
+
+                    &:hover{
+                        color: $mainCol;
+                    }
                 }
             }
         }
@@ -123,7 +137,7 @@
                     display: inline-block;
                     margin-left: 5px;
                     font-size: 20px;
-                    color: #222;
+                    color: $mainCol;
                 }
             }
 
