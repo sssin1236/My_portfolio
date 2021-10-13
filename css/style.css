@@ -330,8 +330,11 @@ fieldset {
   .content .inner {
     width: 1180px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 300px;
     position: relative; }
+
+#philosophy {
+  background: #fff; }
 
 .member .sub_visual {
   background: url(../../img/unsplash.jpg) no-repeat bottom/cover; }
@@ -1023,6 +1026,9 @@ body .join .inner table {
       width: 50%; }
     body .join .inner table tr td a {
       width: 40%; } }
+body {
+  background: #efefef; }
+
 .location .inner {
   padding: 30px 0; }
   .location .inner::after {
@@ -1085,7 +1091,7 @@ body .join .inner table {
         display: block;
         width: 100px;
         height: 40px;
-        background: #eee;
+        background: #fff;
         font: bold 15px/40px "Rajdhani";
         color: #333;
         text-align: center;
