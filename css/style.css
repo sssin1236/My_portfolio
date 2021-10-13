@@ -1076,8 +1076,7 @@ body .join .inner table {
       display: block;
       width: 100px;
       height: 40px;
-      background: #fff;
-      border: 1px solid #333;
+      background: #eee;
       font: bold 15px/40px "Rajdhani";
       color: #333;
       text-align: center; }
