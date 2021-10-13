@@ -1103,48 +1103,44 @@ body {
         color: #fff; }
         .location .inner .traffic li.on a:hover {
           color: #ff5b20; }
-
-.inner .wrap {
+.location .inner .wrap {
   width: 100%; }
-  .inner .wrap::after {
+  .location .inner .wrap::after {
     content: '';
     display: block;
     clear: both; }
-  .inner .wrap article {
+  .location .inner .wrap article {
     float: left;
     width: calc(100% / 3);
     padding-left: 50px; }
-    .inner .wrap article:last-child {
-      margin-right: 0; }
-    .inner .wrap article > h2 {
+    .location .inner .wrap article > h2 {
       font: bold 20px/1 "Rajdhani";
       color: #111;
       width: 80%; }
-      .inner .wrap article > h2 i {
+      .location .inner .wrap article > h2 i {
         display: inline-block;
         margin-left: 5px;
         font-size: 20px;
         color: #ff5b20; }
-    .inner .wrap article > ul li {
+    .location .inner .wrap article > ul li {
       margin-bottom: 20px;
       font: bold 17px/1 "Rajdhani";
       color: #111; }
-      .inner .wrap article > ul li p {
+      .location .inner .wrap article > ul li p {
         font: 17px/1 "Rajdhani";
         color: #333;
         margin-top: 5px; }
-
-.form {
+.location .form {
   width: 1180px;
   margin: 100px auto;
   position: relative; }
-  .form h2 {
+  .location .form h2 {
     font: bold 24px/1 "Rajdhani";
     color: #111;
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 2px solid #111; }
-  .form .wrap {
+  .location .form .wrap {
     width: 100%;
     position: relative; }
 
