@@ -16,6 +16,9 @@ a {
 fieldset {
   border: none; }
 
+input, a, select, option {
+  outline: 0; }
+
 .wrap::after {
   content: '';
   display: none;
@@ -1148,23 +1151,25 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(122, 122, 122, 0.72);
+  background: rgba(54, 54, 54, 0.79);
   z-index: 5; }
   #popup .content {
     width: 800px;
-    min-height: 500px;
+    min-height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
-    border: 2px solid #ff5b20;
-    padding: 20px; }
+    border: 2px solid #fff;
+    padding: 30px; }
     #popup .content .close {
       float: right;
       font: 15px/1 "Rajdhani";
-      color: #eee;
-      position: relative; }
+      color: #ff5b20;
+      position: absolute;
+      top: 15px;
+      right: 15px; }
       #popup .content .close b {
         display: block;
         transform: translateY(-20px);
@@ -1181,7 +1186,7 @@ body {
         display: block;
         width: 20px;
         height: 2px;
-        background: #ff5b20;
+        background: #fff;
         transform: rotate(45deg);
         position: absolute;
         top: 50%;
@@ -1193,18 +1198,69 @@ body {
         display: block;
         width: 20px;
         height: 2px;
-        background: #ff5b20;
+        background: #fff;
         transform: rotate(-45deg);
         position: absolute;
         top: 50%;
         left: 50%;
         margin-left: -10px;
         transition: 0.5s; }
-    #popup .content .pic {
-      width: 50%;
-      height: 100%;
-      float: left;
-      background: #ff5b20; }
+    #popup .content .inner {
+      width: 100%;
+      height: 400px;
+      margin: 15px 0px; }
+      #popup .content .inner::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #popup .content .inner article {
+        width: 49%;
+        height: 100%;
+        float: left; }
+      #popup .content .inner .pic {
+        background: #fff;
+        margin-right: 1%; }
+      #popup .content .inner .popTxt {
+        position: relative;
+        padding: 30px; }
+        #popup .content .inner .popTxt h1 {
+          font: bold 75px/1 "Rajdhani";
+          color: #ff5b20;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 40px; }
+        #popup .content .inner .popTxt p {
+          font: 24px/1 "Rajdhani";
+          color: #fff;
+          text-align: center;
+          margin-bottom: 40px; }
+        #popup .content .inner .popTxt input[type=text] {
+          width: 100%;
+          height: 40px;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid #ddd;
+          margin-bottom: 20px;
+          padding: 10px;
+          transition: 0.5s; }
+          #popup .content .inner .popTxt input[type=text]::placeholder {
+            text-align: center;
+            font: 18px/40px "Rajdhani";
+            color: #eee; }
+          #popup .content .inner .popTxt input[type=text]:focus {
+            border: 2px solid #ff5b20;
+            background: transparent;
+            font: 15px/40px "Rajdhani";
+            color: #eee; }
+        #popup .content .inner .popTxt input[type=submit] {
+          width: 100%;
+          height: 40px;
+          background: #ff5b20;
+          border: none;
+          padding: 10px;
+          font: bold 18px/1 "Rajdhani";
+          color: #fff;
+          cursor: pointer; }
     #popup .content .wrap {
       float: left; }
       #popup .content .wrap label {
@@ -1212,8 +1268,9 @@ body {
         color: #eee;
         margin-left: 5px; }
       #popup .content .wrap input[type=checkbox] {
-        background: #555;
-        border: none; }
+        display: inline-block;
+        width: 15px;
+        height: 15px; }
 
 #header {
   width: 100%;

@@ -2,6 +2,7 @@
 ul, ol, li { list-style: none; }
 a { text-decoration: none; outline: 1;}
 fieldset { border: none; }
+input, a, select, option { outline: 0; }
 
 .wrap::after{
     content: '';
