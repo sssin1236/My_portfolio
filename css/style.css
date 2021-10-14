@@ -565,132 +565,96 @@ input, a, select, option {
     opacity: 0;
     transition: 1.5s; }
 
-/*
-.phil{
-    width: 100%;
-    padding: 50px 0;
-    position: relative;
-    background: linear-gradient(90deg, #eee 50%, #333 50%);
+.phil {
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  background: linear-gradient(90deg, #eee 50%, #333 50%);
+  display: none; }
+  .phil .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    .phil .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .phil .inner h1 {
+      font: bold 35px/1 "Rajdhani";
+      color: #111;
+      margin-bottom: 80px; }
+    .phil .inner .wrap1 {
+      width: 50%;
+      height: 100%;
+      float: left; }
+      .phil .inner .wrap1 article {
+        width: calc(65% / 2);
+        float: left; }
+        .phil .inner .wrap1 article:nth-of-type(4), .phil .inner .wrap1 article:nth-of-type(5), .phil .inner .wrap1 article:nth-of-type(6) {
+          margin-top: 50px; }
+        .phil .inner .wrap1 article:nth-of-type(2), .phil .inner .wrap1 article:nth-of-type(5) {
+          width: 35%; }
+        .phil .inner .wrap1 article a i {
+          font-size: 35px;
+          color: #777;
+          margin-bottom: 30px; }
+        .phil .inner .wrap1 article h2 {
+          font: bold 22px/1 "Rajdhani";
+          color: #111;
+          margin-bottom: 10px; }
+        .phil .inner .wrap1 article span {
+          font: 15px/1 'arial';
+          color: #777; }
+    .phil .inner .wrap2 {
+      width: 50%;
+      height: 100%;
+      float: left;
+      padding: 10px 20px; }
+      .phil .inner .wrap2 .line {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative; }
+        .phil .inner .wrap2 .line:last-child {
+          margin-bottom: 0; }
+        .phil .inner .wrap2 .line h3 {
+          font: bold 18px/1 "Rajdhani";
+          color: #eee;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #222;
+          position: relative; }
+          .phil .inner .wrap2 .line h3::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #eee;
+            position: absolute;
+            top: 100%;
+            left: 0; }
+        .phil .inner .wrap2 .line:nth-of-type(2) ::after {
+          width: 75%; }
+        .phil .inner .wrap2 .line:nth-of-type(3) ::after {
+          width: 93%; }
+        .phil .inner .wrap2 .line:nth-of-type(4) ::after {
+          width: 87%; }
+        .phil .inner .wrap2 .line:nth-of-type(5) ::after {
+          width: 65%; }
+        .phil .inner .wrap2 .line span {
+          font: 14px/1 'arial';
+          color: #ccc;
+          position: absolute;
+          top: 10px;
+          left: 98%; }
+        .phil .inner .wrap2 .line:nth-of-type(2) span {
+          left: 73%; }
+        .phil .inner .wrap2 .line:nth-of-type(3) span {
+          left: 90%; }
+        .phil .inner .wrap2 .line:nth-of-type(4) span {
+          left: 85%; }
+        .phil .inner .wrap2 .line:nth-of-type(5) span {
+          left: 63%; }
 
-    .inner{
-        width: 1180px; height: 100%;
-        margin: 0 auto;
-        position: relative;
-
-        &::after{
-            content: ''; display: block; clear: both;
-        }
-
-        h1{
-            font: bold 35px/1 $mainFon;
-            color: #111;
-            margin-bottom: 80px;
-        }
-
-        .wrap1{
-            width: 50%; height: 100%;
-            float: left;
-
-            article{
-                width: calc(65% / 2);
-                float: left;
-
-                &:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6){
-                    margin-top: 50px;
-                }
-
-                &:nth-of-type(2), &:nth-of-type(5){
-                    width: 35%;
-                }
-
-                a i {
-                    font-size: 35px;
-                    color: #777;
-                    margin-bottom: 30px;
-                }
-
-                h2{
-                    font: bold 22px/1 $mainFon;
-                    color: #111;
-                    margin-bottom: 10px;
-                }
-
-                span{
-                    font: 15px/1 'arial';
-                    color: #777;
-                }
-            }
-        }
-
-        .wrap2{
-            width: 50%; height: 100%;
-            float: left;
-            padding: 10px 20px;
-
-            .line{
-                width: 100%;
-                margin-bottom: 20px;
-                position: relative;
-
-                &:last-child{
-                    margin-bottom: 0;
-                }
-
-                h3{
-                    font: bold 18px/1 $mainFon;
-                    color: #eee;
-                    padding-bottom: 10px;
-                    border-bottom: 2px solid #222;
-                    position: relative;
-
-                    &::after{
-                        content: '';
-                        display: block;
-                        width: 100%; height: 2px;
-                        background: #eee;
-                        position: absolute;
-                        top: 100%; left: 0;
-                    }
-                }
-
-                &:nth-of-type(2) ::after{
-                    width: 75%;
-                }
-                &:nth-of-type(3) ::after{
-                    width: 93%;
-                }
-                &:nth-of-type(4) ::after{
-                    width: 87%;
-                }
-                &:nth-of-type(5) ::after{
-                    width: 65%;
-                }
-
-                span{
-                    font: 14px/1 'arial';
-                    color: #ccc;
-                    position: absolute;
-                    top: 10px; left: 98%;
-                }
-
-                &:nth-of-type(2) span{
-                    left: 73%
-                }
-                &:nth-of-type(3) span{
-                    left: 90%
-                }
-                &:nth-of-type(4) span{
-                    left: 85%;
-                }
-                &:nth-of-type(5) span{
-                    left: 63%;
-                }
-            }
-        }
-    }
-}
-
-*/
 .gallery .inner h1 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
@@ -1061,185 +1025,158 @@ input, a, select, option {
 #location {
   background: #efefef; }
 
-.location {
-    /*
-    .form{
-        width: 1180px;
-        margin: 100px auto;
-        position: relative;
-    
-        h2{
-            font: bold 24px/1 $mainFon;
-            color: #111;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #111;
-        }
-    
-        .wrap{
-            width: 100%;
-            position: relative;
-            padding: 20px 0;
-    
-            form{
-                width: 580px;
-                position: relative;
-
-                fieldset{
-                    width: 100%;
-
-                    &::after{
-                        content: ''; display: block; clear: both;
-                    }
-
-                    article{
-                        width: 280px; 
-                        float: left;
-
-                        &:nth-of-type(even){
-                            margin-left: 20px;
-                        }
-
-                        label{
-                            font: bold 18px/1 $mainFon;
-                            color: #222; 
-                        }
-
-                        input, select{
-                            width: 100%; height: 20px;
-                            padding: 10px;
-                            background: transparent;
-                            border: none;
-                            border-bottom: 2px solid #222;
-                            margin-bottom: 20px;
-
-                            option{
-                                font: 16px/1 $mainFon;
-                                color: #333;
-                            }
-
-                            &:focus{
-                                font: 13px/1 'arial';
-                                color: #222;
-                            }
-                        }
-                    }
-
-                    .comments{
-                        width: 100%;
-
-                        label{
-                            font: bold 18px/1 $mainFon;
-                            color: #222; 
-                        }
-                    }
-                    
-                }
-            }
-        }
-    }
-    */ }
-  .location .inner {
-    padding: 30px 0; }
-    .location .inner::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .location .inner h2 {
-      font: bold 24px/1 "Rajdhani";
-      color: #111;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #111; }
-    .location .inner #map {
-      width: 100%;
-      height: 500px;
-      position: relative;
-      z-index: 1;
-      filter: grayscale(70%);
-      transition: 0.5s; }
-      .location .inner #map:hover {
-        filter: grayscale(0%); }
-    .location .inner .branch {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-      z-index: 2; }
-      .location .inner .branch li {
-        margin-bottom: 10px; }
-        .location .inner .branch li:last-child {
-          margin-bottom: 0; }
-        .location .inner .branch li.on a {
-          background: #333;
-          color: #fff; }
-          .location .inner .branch li.on a p {
-            color: #ddd; }
-        .location .inner .branch li a {
-          display: block;
-          width: 350px;
-          height: 120px;
-          padding: 15px 40px 15px 15px;
-          background: #fff;
-          font: bold 18px/1 "Rajdhani";
-          color: #111;
-          transition: 0.5s; }
-          .location .inner .branch li a p {
-            font: 16px/1.6 "Rajdhani";
-            color: #222;
-            margin-top: 5px; }
-          .location .inner .branch li a:hover {
-            color: #ff5b20; }
-    .location .inner .traffic {
-      float: left;
-      margin-top: 20px;
-      margin-bottom: 20px; }
-      .location .inner .traffic li {
-        float: left;
-        margin-right: 10px; }
-        .location .inner .traffic li a {
-          display: block;
-          width: 100px;
-          height: 40px;
-          background: #fff;
-          font: bold 15px/40px "Rajdhani";
-          color: #333;
-          text-align: center;
-          transition: 0.5s; }
-          .location .inner .traffic li a:hover {
-            color: #ff5b20; }
-        .location .inner .traffic li.on a {
-          background: #333;
-          color: #fff; }
-          .location .inner .traffic li.on a:hover {
-            color: #ff5b20; }
-  .location .inner .wrap {
-    width: 100%; }
-    .location .inner .wrap::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .location .inner .wrap article {
-      float: left;
-      width: calc(100% / 3);
-      padding-left: 50px; }
-      .location .inner .wrap article > h2 {
-        font: bold 20px/1 "Rajdhani";
+.location .inner {
+  padding: 30px 0; }
+  .location .inner::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner h2 {
+    font: bold 24px/1 "Rajdhani";
+    color: #111;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111; }
+  .location .inner #map {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(70%);
+    transition: 0.5s; }
+    .location .inner #map:hover {
+      filter: grayscale(0%); }
+  .location .inner .branch {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 2; }
+    .location .inner .branch li {
+      margin-bottom: 10px; }
+      .location .inner .branch li:last-child {
+        margin-bottom: 0; }
+      .location .inner .branch li.on a {
+        background: #333;
+        color: #fff; }
+        .location .inner .branch li.on a p {
+          color: #ddd; }
+      .location .inner .branch li a {
+        display: block;
+        width: 350px;
+        height: 120px;
+        padding: 15px 40px 15px 15px;
+        background: #fff;
+        font: bold 18px/1 "Rajdhani";
         color: #111;
-        width: 80%; }
-        .location .inner .wrap article > h2 i {
-          display: inline-block;
-          margin-left: 5px;
-          font-size: 20px;
-          color: #ff5b20; }
-      .location .inner .wrap article > ul li {
-        margin-bottom: 20px;
-        font: bold 17px/1 "Rajdhani";
-        color: #111; }
-        .location .inner .wrap article > ul li p {
-          font: 17px/1 "Rajdhani";
-          color: #333;
+        transition: 0.5s; }
+        .location .inner .branch li a p {
+          font: 16px/1.6 "Rajdhani";
+          color: #222;
           margin-top: 5px; }
+        .location .inner .branch li a:hover {
+          color: #ff5b20; }
+  .location .inner .traffic {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .location .inner .traffic li {
+      float: left;
+      margin-right: 10px; }
+      .location .inner .traffic li a {
+        display: block;
+        width: 100px;
+        height: 40px;
+        background: #fff;
+        font: bold 15px/40px "Rajdhani";
+        color: #333;
+        text-align: center;
+        transition: 0.5s; }
+        .location .inner .traffic li a:hover {
+          color: #ff5b20; }
+      .location .inner .traffic li.on a {
+        background: #333;
+        color: #fff; }
+        .location .inner .traffic li.on a:hover {
+          color: #ff5b20; }
+.location .inner .wrap {
+  width: 100%; }
+  .location .inner .wrap::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .wrap article {
+    float: left;
+    width: calc(100% / 3);
+    padding-left: 50px; }
+    .location .inner .wrap article > h2 {
+      font: bold 20px/1 "Rajdhani";
+      color: #111;
+      width: 80%; }
+      .location .inner .wrap article > h2 i {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 20px;
+        color: #ff5b20; }
+    .location .inner .wrap article > ul li {
+      margin-bottom: 20px;
+      font: bold 17px/1 "Rajdhani";
+      color: #111; }
+      .location .inner .wrap article > ul li p {
+        font: 17px/1 "Rajdhani";
+        color: #333;
+        margin-top: 5px; }
+.location .form {
+  width: 1180px;
+  margin: 100px auto;
+  position: relative;
+  display: none; }
+  .location .form h2 {
+    font: bold 24px/1 "Rajdhani";
+    color: #111;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111; }
+  .location .form .wrap {
+    width: 100%;
+    position: relative;
+    padding: 20px 0; }
+    .location .form .wrap form {
+      width: 580px;
+      position: relative; }
+      .location .form .wrap form fieldset {
+        width: 100%; }
+        .location .form .wrap form fieldset::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .location .form .wrap form fieldset article {
+          width: 280px;
+          float: left; }
+          .location .form .wrap form fieldset article:nth-of-type(even) {
+            margin-left: 20px; }
+          .location .form .wrap form fieldset article label {
+            font: bold 18px/1 "Rajdhani";
+            color: #222; }
+          .location .form .wrap form fieldset article input, .location .form .wrap form fieldset article select {
+            width: 100%;
+            height: 20px;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #222;
+            margin-bottom: 20px; }
+            .location .form .wrap form fieldset article input option, .location .form .wrap form fieldset article select option {
+              font: 16px/1 "Rajdhani";
+              color: #333; }
+            .location .form .wrap form fieldset article input:focus, .location .form .wrap form fieldset article select:focus {
+              font: 13px/1 'arial';
+              color: #222; }
+        .location .form .wrap form fieldset .comments {
+          width: 100%; }
+          .location .form .wrap form fieldset .comments label {
+            font: bold 18px/1 "Rajdhani";
+            color: #222; }
 
 #popup {
   position: fixed;
