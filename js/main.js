@@ -65,3 +65,40 @@ $("#navi li a").on("click", function(e){
     }, 1000);
 });
 
+
+// 쿠키 팝업-------------------------------------------------------------------
+let isCookie = document.cookie.indexOf("popup=done");
+console.log(isCookie);
+
+if(isCookie == -1){
+    $("#popup").show();
+}else{
+    $("#popup").hide();
+}
+
+$(".del").on("click", function(){
+    setCookie(0);
+    alert("쿠키가 제거 되었습니다.");
+});
+
+
+$("#popup .close").on("click", function(e){
+    e.preventDefault();
+
+    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
+
+    if(isChecked) setCookie(1);
+
+    $("#popup").slideUp(500);
+});
+
+function setCookie(time){
+    let today = new Date();
+    let date = today.getDate();
+
+    today.setDate(date + time);
+
+    let duedate = today.toGMTString();
+
+    document.cookie + "popup=done; expires"+duedate;
+}
