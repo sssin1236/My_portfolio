@@ -24,6 +24,11 @@ input, a, select, option {
   display: none;
   clear: both; }
 
+.h {
+  position: absolute;
+  top: -9999px;
+  opacity: 0; }
+
 #header_sub {
   width: 100%;
   height: 100px;
@@ -560,95 +565,132 @@ input, a, select, option {
     opacity: 0;
     transition: 1.5s; }
 
-.phil {
-  width: 100%;
-  padding: 50px 0;
-  position: relative;
-  background: linear-gradient(90deg, #eee 50%, #333 50%); }
-  .phil .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative; }
-    .phil .inner::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .phil .inner h1 {
-      font: bold 35px/1 "Rajdhani";
-      color: #111;
-      margin-bottom: 80px; }
-    .phil .inner .wrap1 {
-      width: 50%;
-      height: 100%;
-      float: left; }
-      .phil .inner .wrap1 article {
-        width: calc(65% / 2);
-        float: left; }
-        .phil .inner .wrap1 article:nth-of-type(4), .phil .inner .wrap1 article:nth-of-type(5), .phil .inner .wrap1 article:nth-of-type(6) {
-          margin-top: 50px; }
-        .phil .inner .wrap1 article:nth-of-type(2), .phil .inner .wrap1 article:nth-of-type(5) {
-          width: 35%; }
-        .phil .inner .wrap1 article a i {
-          font-size: 35px;
-          color: #777;
-          margin-bottom: 30px; }
-        .phil .inner .wrap1 article h2 {
-          font: bold 22px/1 "Rajdhani";
-          color: #111;
-          margin-bottom: 10px; }
-        .phil .inner .wrap1 article span {
-          font: 15px/1 'arial';
-          color: #777; }
-    .phil .inner .wrap2 {
-      width: 50%;
-      height: 100%;
-      float: left;
-      padding: 10px 20px; }
-      .phil .inner .wrap2 .line {
-        width: 100%;
-        margin-bottom: 20px;
-        position: relative; }
-        .phil .inner .wrap2 .line:last-child {
-          margin-bottom: 0; }
-        .phil .inner .wrap2 .line h3 {
-          font: bold 18px/1 "Rajdhani";
-          color: #eee;
-          padding-bottom: 10px;
-          border-bottom: 2px solid #222;
-          position: relative; }
-          .phil .inner .wrap2 .line h3::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: #eee;
-            position: absolute;
-            top: 100%;
-            left: 0; }
-        .phil .inner .wrap2 .line:nth-of-type(2) ::after {
-          width: 75%; }
-        .phil .inner .wrap2 .line:nth-of-type(3) ::after {
-          width: 93%; }
-        .phil .inner .wrap2 .line:nth-of-type(4) ::after {
-          width: 87%; }
-        .phil .inner .wrap2 .line:nth-of-type(5) ::after {
-          width: 65%; }
-        .phil .inner .wrap2 .line span {
-          font: 14px/1 'arial';
-          color: #ccc;
-          position: absolute;
-          top: 10px;
-          left: 98%; }
-        .phil .inner .wrap2 .line:nth-of-type(2) span {
-          left: 73%; }
-        .phil .inner .wrap2 .line:nth-of-type(3) span {
-          left: 90%; }
-        .phil .inner .wrap2 .line:nth-of-type(4) span {
-          left: 85%; }
-        .phil .inner .wrap2 .line:nth-of-type(5) span {
-          left: 63%; }
+/*
+.phil{
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    background: linear-gradient(90deg, #eee 50%, #333 50%);
 
+    .inner{
+        width: 1180px; height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        &::after{
+            content: ''; display: block; clear: both;
+        }
+
+        h1{
+            font: bold 35px/1 $mainFon;
+            color: #111;
+            margin-bottom: 80px;
+        }
+
+        .wrap1{
+            width: 50%; height: 100%;
+            float: left;
+
+            article{
+                width: calc(65% / 2);
+                float: left;
+
+                &:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6){
+                    margin-top: 50px;
+                }
+
+                &:nth-of-type(2), &:nth-of-type(5){
+                    width: 35%;
+                }
+
+                a i {
+                    font-size: 35px;
+                    color: #777;
+                    margin-bottom: 30px;
+                }
+
+                h2{
+                    font: bold 22px/1 $mainFon;
+                    color: #111;
+                    margin-bottom: 10px;
+                }
+
+                span{
+                    font: 15px/1 'arial';
+                    color: #777;
+                }
+            }
+        }
+
+        .wrap2{
+            width: 50%; height: 100%;
+            float: left;
+            padding: 10px 20px;
+
+            .line{
+                width: 100%;
+                margin-bottom: 20px;
+                position: relative;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                h3{
+                    font: bold 18px/1 $mainFon;
+                    color: #eee;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #222;
+                    position: relative;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%; height: 2px;
+                        background: #eee;
+                        position: absolute;
+                        top: 100%; left: 0;
+                    }
+                }
+
+                &:nth-of-type(2) ::after{
+                    width: 75%;
+                }
+                &:nth-of-type(3) ::after{
+                    width: 93%;
+                }
+                &:nth-of-type(4) ::after{
+                    width: 87%;
+                }
+                &:nth-of-type(5) ::after{
+                    width: 65%;
+                }
+
+                span{
+                    font: 14px/1 'arial';
+                    color: #ccc;
+                    position: absolute;
+                    top: 10px; left: 98%;
+                }
+
+                &:nth-of-type(2) span{
+                    left: 73%
+                }
+                &:nth-of-type(3) span{
+                    left: 90%
+                }
+                &:nth-of-type(4) span{
+                    left: 85%;
+                }
+                &:nth-of-type(5) span{
+                    left: 63%;
+                }
+            }
+        }
+    }
+}
+
+*/
 .gallery .inner h1 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
@@ -679,7 +721,7 @@ input, a, select, option {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          filter: grayscale(30%) contrast(80%) saturate(0.5);
+          filter: grayscale(70%) contrast(80%) saturate(0.5);
           transition: 0.5s; }
       #gallery ul li > span {
         display: block;
@@ -800,156 +842,145 @@ input, a, select, option {
     cursor: pointer;
     z-index: 5; }
 
-body .join .sub_visual {
-  position: relative; }
-  body .join .sub_visual::before {
-    content: '';
-    display: block;
+#join {
+  background: #efefef; }
+  #join .join .inner h2 {
+    font: 30px/1 'Do Hyeon';
+    color: #555;
+    text-align: center; }
+    #join .join .inner h2::before {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #bbb;
+      width: 40%;
+      height: 15px;
+      float: left; }
+    #join .join .inner h2::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #bbb;
+      width: 40%;
+      height: 15px;
+      float: right; }
+  #join .join .inner h3 {
+    font: normal 22px/1 "Noto Sans KR";
+    color: #555;
+    margin: 50px 0 10px; }
+  #join .join .inner textarea {
+    resize: none;
     width: 100%;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, orange, #ff5b20);
-    opacity: 0.15;
-    z-index: 1; }
-body .join .inner h2 {
-  font: 30px/1 'Do Hyeon';
-  color: #555;
-  text-align: center; }
-  body .join .inner h2::before {
-    content: '';
-    display: block;
-    border-bottom: 1px solid #bbb;
-    width: 40%;
-    height: 15px;
-    float: left; }
-  body .join .inner h2::after {
-    content: '';
-    display: block;
-    border-bottom: 1px solid #bbb;
-    width: 40%;
-    height: 15px;
+    height: 120px;
+    background-color: #efefef;
+    padding: 10px;
+    margin-bottom: 10px;
+    font: normal 14px/1.6 'Rajdhani';
+    color: #888;
+    border: 2px solid #aaa; }
+  #join .join .inner .agree {
     float: right; }
-body .join .inner h3 {
-  font: normal 22px/1 "Noto Sans KR";
-  color: #555;
-  margin: 50px 0 10px; }
-body .join .inner textarea {
-  resize: none;
-  width: 100%;
-  height: 120px;
-  background-color: #efefef;
-  padding: 10px;
-  margin-bottom: 10px;
-  font: normal 14px/1.6 'Rajdhani';
-  color: #888;
-  border: 2px solid #aaa; }
-body .join .inner .agree {
-  float: right; }
-  body .join .inner .agree label {
-    font: 16px/1 "Noto Sans KR";
-    color: #555; }
-body .join .inner table {
-  width: 100%;
-  border-top: 2px solid #888;
-  border-bottom: 2px solid #888;
-  border-collapse: collapse; }
-  body .join .inner table tr {
-    border-bottom: 1px solid #ddd; }
-    body .join .inner table tr th {
-      width: 20%;
-      padding: 20px 10px;
-      text-align: left;
-      font: bold 15px/1 "Noto Sans KR";
-      color: #666; }
-      body .join .inner table tr th:last-child {
-        text-align: center; }
-      body .join .inner table tr th svg {
-        font-size: 4px;
-        color: #ff5b20;
-        margin-left: 3px;
-        transform: translateY(-9px); }
-      body .join .inner table tr th input[type="reset"] {
-        width: 120px;
-        height: 40px;
-        background-color: #555;
-        font: 15px/40px 'Do Hyeon';
-        color: #eee;
-        border: 2px solid #555;
-        box-sizing: border-box;
-        transition: all 0.3s; }
-        body .join .inner table tr th input[type="reset"]:hover {
-          cursor: pointer;
-          transform: translateX(-20%);
-          background: #ff5b20;
-          border: 2px solid #ff5b20; }
-      body .join .inner table tr th input[type="submit"] {
-        width: 120px;
-        height: 40px;
-        background-color: #555;
-        font: 15px/40px 'Do Hyeon';
-        color: #eee;
-        border: 2px solid #555;
-        box-sizing: border-box;
-        transition: all 0.3s; }
-        body .join .inner table tr th input[type="submit"]:hover {
-          cursor: pointer;
-          transform: translateX(20%);
-          background: #ff5b20;
-          border: 2px solid #ff5b20; }
-    body .join .inner table tr td {
-      width: auto;
-      padding: 20px 10px;
-      font: 20px/1 "Rajdhani";
-      color: #888; }
-      body .join .inner table tr td input[type="text"], body .join .inner table tr td input[type="password"],
-      body .join .inner table tr td input[type="search"], body .join .inner table tr td input[type="tel"] {
-        width: 30%;
-        height: 30px;
-        border: none;
-        background: rgba(221, 221, 221, 0.692);
-        padding-left: 10px; }
-      body .join .inner table tr td select {
-        width: 15%;
-        height: 30px;
-        border: none;
-        background: rgba(221, 221, 221, 0.692);
-        padding-left: 10px;
-        font-family: 'noto sans kr';
-        color: #777; }
-        body .join .inner table tr td select option {
-          font: normal 15px/1 "Rajdhani";
+    #join .join .inner .agree label {
+      font: 16px/1 "Noto Sans KR";
+      color: #555; }
+  #join .join .inner table {
+    width: 100%;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-collapse: collapse; }
+    #join .join .inner table tr {
+      border-bottom: 1px solid #ddd; }
+      #join .join .inner table tr th {
+        width: 20%;
+        padding: 20px 10px;
+        text-align: left;
+        font: bold 15px/1 "Noto Sans KR";
+        color: #666; }
+        #join .join .inner table tr th:last-child {
+          text-align: center; }
+        #join .join .inner table tr th i {
+          font-size: 2px;
+          color: #ff5b20;
+          margin-left: 3px;
+          transform: translateY(-9px); }
+        #join .join .inner table tr th input[type="reset"] {
+          width: 120px;
+          height: 40px;
+          background-color: #555;
+          font: 18px/40px 'Do Hyeon';
+          color: #eee;
+          border: 2px solid #555;
+          box-sizing: border-box;
+          transition: all 0.3s; }
+          #join .join .inner table tr th input[type="reset"]:hover {
+            cursor: pointer;
+            transform: translateX(-20%);
+            background: #ff5b20;
+            border: 2px solid #ff5b20; }
+        #join .join .inner table tr th input[type="submit"] {
+          width: 120px;
+          height: 40px;
+          background-color: #555;
+          font: 18px/40px 'Do Hyeon';
+          color: #eee;
+          border: 2px solid #555;
+          box-sizing: border-box;
+          transition: all 0.3s; }
+          #join .join .inner table tr th input[type="submit"]:hover {
+            cursor: pointer;
+            transform: translateX(20%);
+            background: #ff5b20;
+            border: 2px solid #ff5b20; }
+      #join .join .inner table tr td {
+        width: auto;
+        padding: 20px 10px;
+        font: 20px/1 "Rajdhani";
+        color: #888; }
+        #join .join .inner table tr td input[type="text"], #join .join .inner table tr td input[type="password"],
+        #join .join .inner table tr td input[type="search"], #join .join .inner table tr td input[type="tel"] {
+          width: 30%;
+          height: 30px;
+          border: none;
+          background: rgba(221, 221, 221, 0.692);
+          padding-left: 10px; }
+        #join .join .inner table tr td select {
+          width: 15%;
+          height: 30px;
+          border: none;
+          background: rgba(221, 221, 221, 0.692);
+          padding-left: 10px;
+          font-family: 'noto sans kr';
           color: #777; }
-      body .join .inner table tr td label {
-        font: 15px/1 "Noto Sans KR";
-        color: #777;
-        margin-right: 20px; }
-      body .join .inner table tr td a {
-        display: inline-block;
-        width: 10%;
-        height: 30px;
-        background: #555;
-        font: normal 13px/30px "Noto Sans KR";
-        color: #eee;
-        text-align: center;
-        transition: 0.5s; }
-        body .join .inner table tr td a svg {
-          margin-left: 10px;
-          font-size: 13px;
-          line-height: 30px;
-          transition: 0.3s; }
-        body .join .inner table tr td a:hover {
-          background: #ff5b20; }
-        body .join .inner table tr td a:hover svg {
-          transform: scale(1.3); }
-      body .join .inner table tr td p {
-        font: normal 13px/1 "Noto Sans KR";
-        color: #999;
+          #join .join .inner table tr td select option {
+            font: normal 15px/1 "Rajdhani";
+            color: #777; }
+        #join .join .inner table tr td label {
+          font: 15px/1 "Noto Sans KR";
+          color: #777;
+          margin-right: 20px; }
+        #join .join .inner table tr td a {
+          display: inline-block;
+          width: 10%;
+          height: 30px;
+          background: #555;
+          font: normal 13px/30px "Noto Sans KR";
+          color: #eee;
+          text-align: center;
+          transition: 0.5s; }
+          #join .join .inner table tr td a i {
+            margin-left: 10px;
+            font-size: 13px;
+            line-height: 30px;
+            transition: 0.3s; }
+          #join .join .inner table tr td a:hover {
+            background: #ff5b20; }
+          #join .join .inner table tr td a:hover i {
+            transform: scale(1.3); }
+        #join .join .inner table tr td p {
+          font: normal 13px/1 "Noto Sans KR";
+          color: #999;
+          margin-top: 10px; }
+      #join .join .inner table tr:nth-of-type(5) td input[type="text"] {
+        width: 81%;
         margin-top: 10px; }
-    body .join .inner table tr:nth-of-type(5) td input[type="text"] {
-      width: 81%;
-      margin-top: 10px; }
 
 /* tablet-------------------------------------------------------------------------- */
 @media screen and (max-width: 1179px) {
@@ -1027,123 +1058,188 @@ body .join .inner table {
       width: 50%; }
     body .join .inner table tr td a {
       width: 40%; } }
-body {
+#location {
   background: #efefef; }
 
-.location .inner {
-  padding: 30px 0; }
-  .location .inner::after {
-    content: '';
-    display: block;
-    clear: both; }
-  .location .inner h2 {
-    font: bold 24px/1 "Rajdhani";
-    color: #111;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #111; }
-  .location .inner #map {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    z-index: 1;
-    filter: grayscale(70%);
-    transition: 0.5s; }
-    .location .inner #map:hover {
-      filter: grayscale(0%); }
-  .location .inner .branch {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 2; }
-    .location .inner .branch li {
-      margin-bottom: 10px; }
-      .location .inner .branch li:last-child {
-        margin-bottom: 0; }
-      .location .inner .branch li.on a {
-        background: #333;
-        color: #fff; }
-        .location .inner .branch li.on a p {
-          color: #ddd; }
-      .location .inner .branch li a {
-        display: block;
-        width: 350px;
-        height: 120px;
-        padding: 15px 40px 15px 15px;
-        background: #fff;
-        font: bold 18px/1 "Rajdhani";
-        color: #111;
-        transition: 0.5s; }
-        .location .inner .branch li a p {
-          font: 16px/1.6 "Rajdhani";
-          color: #222;
-          margin-top: 5px; }
-        .location .inner .branch li a:hover {
-          color: #ff5b20; }
-  .location .inner .traffic {
-    float: left;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-    .location .inner .traffic li {
-      float: left;
-      margin-right: 10px; }
-      .location .inner .traffic li a {
-        display: block;
-        width: 100px;
-        height: 40px;
-        background: #fff;
-        font: bold 15px/40px "Rajdhani";
-        color: #333;
-        text-align: center;
-        transition: 0.5s; }
-        .location .inner .traffic li a:hover {
-          color: #ff5b20; }
-      .location .inner .traffic li.on a {
-        background: #333;
-        color: #fff; }
-        .location .inner .traffic li.on a:hover {
-          color: #ff5b20; }
-.location .inner .wrap {
-  width: 100%; }
-  .location .inner .wrap::after {
-    content: '';
-    display: block;
-    clear: both; }
-  .location .inner .wrap article {
-    float: left;
-    width: calc(100% / 3);
-    padding-left: 50px; }
-    .location .inner .wrap article > h2 {
-      font: bold 20px/1 "Rajdhani";
+.location {
+    /*
+    .form{
+        width: 1180px;
+        margin: 100px auto;
+        position: relative;
+    
+        h2{
+            font: bold 24px/1 $mainFon;
+            color: #111;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #111;
+        }
+    
+        .wrap{
+            width: 100%;
+            position: relative;
+            padding: 20px 0;
+    
+            form{
+                width: 580px;
+                position: relative;
+
+                fieldset{
+                    width: 100%;
+
+                    &::after{
+                        content: ''; display: block; clear: both;
+                    }
+
+                    article{
+                        width: 280px; 
+                        float: left;
+
+                        &:nth-of-type(even){
+                            margin-left: 20px;
+                        }
+
+                        label{
+                            font: bold 18px/1 $mainFon;
+                            color: #222; 
+                        }
+
+                        input, select{
+                            width: 100%; height: 20px;
+                            padding: 10px;
+                            background: transparent;
+                            border: none;
+                            border-bottom: 2px solid #222;
+                            margin-bottom: 20px;
+
+                            option{
+                                font: 16px/1 $mainFon;
+                                color: #333;
+                            }
+
+                            &:focus{
+                                font: 13px/1 'arial';
+                                color: #222;
+                            }
+                        }
+                    }
+
+                    .comments{
+                        width: 100%;
+
+                        label{
+                            font: bold 18px/1 $mainFon;
+                            color: #222; 
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    */ }
+  .location .inner {
+    padding: 30px 0; }
+    .location .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner h2 {
+      font: bold 24px/1 "Rajdhani";
       color: #111;
-      width: 80%; }
-      .location .inner .wrap article > h2 i {
-        display: inline-block;
-        margin-left: 5px;
-        font-size: 20px;
-        color: #ff5b20; }
-    .location .inner .wrap article > ul li {
+      padding-bottom: 10px;
       margin-bottom: 20px;
-      font: bold 17px/1 "Rajdhani";
-      color: #111; }
-      .location .inner .wrap article > ul li p {
-        font: 17px/1 "Rajdhani";
-        color: #333;
-        margin-top: 5px; }
-.location .form {
-  width: 1180px;
-  margin: 100px auto;
-  position: relative; }
-  .location .form h2 {
-    font: bold 24px/1 "Rajdhani";
-    color: #111;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #111; }
-  .location .form .wrap {
-    width: 100%;
-    position: relative; }
+      border-bottom: 2px solid #111; }
+    .location .inner #map {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      z-index: 1;
+      filter: grayscale(70%);
+      transition: 0.5s; }
+      .location .inner #map:hover {
+        filter: grayscale(0%); }
+    .location .inner .branch {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 2; }
+      .location .inner .branch li {
+        margin-bottom: 10px; }
+        .location .inner .branch li:last-child {
+          margin-bottom: 0; }
+        .location .inner .branch li.on a {
+          background: #333;
+          color: #fff; }
+          .location .inner .branch li.on a p {
+            color: #ddd; }
+        .location .inner .branch li a {
+          display: block;
+          width: 350px;
+          height: 120px;
+          padding: 15px 40px 15px 15px;
+          background: #fff;
+          font: bold 18px/1 "Rajdhani";
+          color: #111;
+          transition: 0.5s; }
+          .location .inner .branch li a p {
+            font: 16px/1.6 "Rajdhani";
+            color: #222;
+            margin-top: 5px; }
+          .location .inner .branch li a:hover {
+            color: #ff5b20; }
+    .location .inner .traffic {
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+      .location .inner .traffic li {
+        float: left;
+        margin-right: 10px; }
+        .location .inner .traffic li a {
+          display: block;
+          width: 100px;
+          height: 40px;
+          background: #fff;
+          font: bold 15px/40px "Rajdhani";
+          color: #333;
+          text-align: center;
+          transition: 0.5s; }
+          .location .inner .traffic li a:hover {
+            color: #ff5b20; }
+        .location .inner .traffic li.on a {
+          background: #333;
+          color: #fff; }
+          .location .inner .traffic li.on a:hover {
+            color: #ff5b20; }
+  .location .inner .wrap {
+    width: 100%; }
+    .location .inner .wrap::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .wrap article {
+      float: left;
+      width: calc(100% / 3);
+      padding-left: 50px; }
+      .location .inner .wrap article > h2 {
+        font: bold 20px/1 "Rajdhani";
+        color: #111;
+        width: 80%; }
+        .location .inner .wrap article > h2 i {
+          display: inline-block;
+          margin-left: 5px;
+          font-size: 20px;
+          color: #ff5b20; }
+      .location .inner .wrap article > ul li {
+        margin-bottom: 20px;
+        font: bold 17px/1 "Rajdhani";
+        color: #111; }
+        .location .inner .wrap article > ul li p {
+          font: 17px/1 "Rajdhani";
+          color: #333;
+          margin-top: 5px; }
 
 #popup {
   position: fixed;

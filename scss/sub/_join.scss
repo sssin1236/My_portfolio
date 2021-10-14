@@ -1,19 +1,8 @@
-body{
+#join{
+    background: #efefef;
 
     .join {
         .sub_visual{
-            position: relative;
-
-            &::before{
-                content: '';
-                display: block;
-                width: 100%; height: 300px;
-                position: absolute;
-                top: 0; left: 0;
-                background: linear-gradient(45deg, orange, $mainCol);
-                opacity: 0.15;
-                z-index: 1;
-            }
         }
 
         .inner {
@@ -86,8 +75,8 @@ body{
                             text-align: center;
                         }
 
-                        svg{
-                            font-size: 4px;
+                        i{
+                            font-size: 2px;
                             color: $mainCol;
                             margin-left: 3px;
                             transform: translateY(-9px);
@@ -96,7 +85,7 @@ body{
                         input[type="reset"]{
                             width: 120px; height: 40px;
                             background-color: #555;
-                            font: 15px/40px 'Do Hyeon';
+                            font: 18px/40px 'Do Hyeon';
                             color: #eee;
                             border: 2px solid #555;
                             box-sizing:border-box;
@@ -113,7 +102,7 @@ body{
                         input[type="submit"]{
                             width: 120px; height: 40px;
                             background-color: #555;
-                            font: 15px/40px 'Do Hyeon';
+                            font: 18px/40px 'Do Hyeon';
                             color: #eee;
                             border: 2px solid #555;
                             box-sizing:border-box;
@@ -171,7 +160,7 @@ body{
                             text-align: center;
                             transition: 0.5s;
 
-                            svg{
+                            i{
                                 margin-left: 10px;
                                 font-size: 13px;
                                 line-height: 30px;
@@ -182,7 +171,7 @@ body{
                                 background: $mainCol;
                             }
 
-                            &:hover svg{
+                            &:hover i{
                                 transform: scale(1.3);
                             }
                         }

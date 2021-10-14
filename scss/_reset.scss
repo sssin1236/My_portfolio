@@ -9,3 +9,9 @@ input, a, select, option { outline: 0; }
     display: none;
     clear: both;
 }
+
+.h {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+}
