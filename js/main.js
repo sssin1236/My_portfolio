@@ -76,12 +76,6 @@ if(isCookie == -1){
     $("#popup").hide();
 }
 
-$(".del").on("click", function(){
-    setCookie(0);
-    alert("쿠키가 제거 되었습니다.");
-});
-
-
 $("#popup .content .close").on("click", function(e){
     e.preventDefault();
 
