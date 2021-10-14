@@ -19,18 +19,68 @@
     z-index: 5;
 
     .content{
-        width: 500px; min-height: 300px;
+        width: 800px; min-height: 500px;
         position: absolute;
         top: 50%; left: 50%;
         transform: translate(-50%,-50%);
-        background: #222;
+        background: transparent;
+        border: 2px solid $mainCol;
         padding: 20px;
 
-        h1{
-            font: bold 50px/1 $mainFon;
-            color: #fff;
-            text-align: center;
-            margin: 50px 0 120px;
+        .close{
+            float: right;
+            font: 15px/1 $mainFon;
+            color: #eee;
+            position: relative;
+
+            b{
+                display: block;
+                transform: translateY(-20px);
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            &:hover{
+                &::before, &::after{
+                    transform: rotate(0deg);
+                    top: 120%;
+                }
+
+                b{
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                width: 20px; height: 2px;
+                background: $mainCol;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 50%; left: 50%;
+                margin-left: -10px;
+                transition: 0.5s;
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                width: 20px; height: 2px;
+                background: $mainCol;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 50%; left: 50%;
+                margin-left: -10px;
+                transition: 0.5s;
+            }
+        }
+        
+        .pic{
+            width: 50%; height: 100%;
+            float: left;
+            background: $mainCol;
         }
 
         .wrap{
@@ -48,11 +98,6 @@
             }
         }
 
-        .close{
-            float: right;
-            font: 15px/1 $mainFon;
-            color: #eee;
-        }
     }
 }
 
