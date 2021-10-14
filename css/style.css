@@ -1144,6 +1144,52 @@ body {
     width: 100%;
     position: relative; }
 
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(122, 122, 122, 0.72);
+  z-index: 5; }
+  #popup .content {
+    width: 500px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222;
+    padding: 20px; }
+    #popup .content h1 {
+      font: bold 50px/1 "Rajdhani";
+      color: #fff;
+      text-align: center;
+      margin: 50px 0; }
+  #popup .wrap {
+    float: left;
+    position: absolute;
+    top: 60%;
+    left: 35%; }
+    #popup .wrap label {
+      font: 15px/1 "Noto Sans KR";
+      color: #eee;
+      margin-left: 5px; }
+  #popup .close {
+    font: 15px/1 "Rajdhani";
+    color: #eee;
+    position: absolute;
+    top: 60%;
+    left: 62%; }
+  #popup .del {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: #eee;
+    font: bold 18px/50px "Rajdhani";
+    color: #333;
+    text-align: center; }
+
 #header {
   width: 100%;
   height: 100px;
