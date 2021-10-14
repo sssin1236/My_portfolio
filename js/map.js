@@ -72,8 +72,9 @@ for(let i=0; i<markerOptions.length; i++){
         image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos)
     });
 
-    markerOptions[i].button.onclick = function(){
-        
+    markerOptions[i].button.onclick = function(e){
+        e.preventDefault();
+
         moveTo(markerOptions[i].latlng); 
 
         for(let k=0; k<markerOptions.length; k++){
