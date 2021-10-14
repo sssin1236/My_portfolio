@@ -30,40 +30,28 @@
             font: bold 50px/1 $mainFon;
             color: #fff;
             text-align: center;
-            margin: 50px 0;
+            margin: 50px 0 120px;
         }
 
-    }
+        .wrap{
+            float: left;
 
-    .wrap{
-        float: left;
-        position: absolute;
-        top: 60%; left: 35%;
+            label{
+                font: 15px/1 $fontKo;
+                color: #eee;
+                margin-left: 5px;
+            }
+        }
 
-        label{
-            font: 15px/1 $fontKo;
+        .close{
+            float: right;
+            font: 15px/1 $mainFon;
             color: #eee;
-            margin-left: 5px;
         }
     }
-
-    .close{
-        font: 15px/1 $mainFon;
-        color: #eee;
-        position: absolute;
-        top: 60%; left: 62%;
-    }
-
-    .del{
-        display: block;
-        width: 200px; height: 50px;
-        background: #eee;
-        font: bold 18px/50px $mainFon;
-        color: #333;
-        text-align: center;
-    }
-
 }
+
+
 
 #header{
     width: 100%;

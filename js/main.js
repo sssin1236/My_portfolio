@@ -82,7 +82,7 @@ $(".del").on("click", function(){
 });
 
 
-$("#popup .close").on("click", function(e){
+$("#popup .content .close").on("click", function(e){
     e.preventDefault();
 
     let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
@@ -100,5 +100,5 @@ function setCookie(time){
 
     let duedate = today.toGMTString();
 
-    document.cookie + "popup=done; expires"+duedate;
+    document.cookie = "popup=done; expires"+duedate;
 }

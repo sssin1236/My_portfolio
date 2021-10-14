@@ -1165,30 +1165,17 @@ body {
       font: bold 50px/1 "Rajdhani";
       color: #fff;
       text-align: center;
-      margin: 50px 0; }
-  #popup .wrap {
-    float: left;
-    position: absolute;
-    top: 60%;
-    left: 35%; }
-    #popup .wrap label {
-      font: 15px/1 "Noto Sans KR";
-      color: #eee;
-      margin-left: 5px; }
-  #popup .close {
-    font: 15px/1 "Rajdhani";
-    color: #eee;
-    position: absolute;
-    top: 60%;
-    left: 62%; }
-  #popup .del {
-    display: block;
-    width: 200px;
-    height: 50px;
-    background: #eee;
-    font: bold 18px/50px "Rajdhani";
-    color: #333;
-    text-align: center; }
+      margin: 50px 0 120px; }
+    #popup .content .wrap {
+      float: left; }
+      #popup .content .wrap label {
+        font: 15px/1 "Noto Sans KR";
+        color: #eee;
+        margin-left: 5px; }
+    #popup .content .close {
+      float: right;
+      font: 15px/1 "Rajdhani";
+      color: #eee; }
 
 #header {
   width: 100%;
