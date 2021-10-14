@@ -1172,7 +1172,7 @@ body {
         font: 15px/1 "Noto Sans KR";
         color: #eee;
         margin-left: 5px; }
-      #popup .content .wrap input[type=checkbox] {
+      #popup .content .wrap input[type="checkbox"] {
         background: #eee;
         border: none; }
     #popup .content .close {
