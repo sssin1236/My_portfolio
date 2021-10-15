@@ -1129,8 +1129,7 @@ input, a, select, option {
 .location .form {
   width: 1180px;
   margin: 100px auto;
-  position: relative;
-  display: none; }
+  position: relative; }
   .location .form h2 {
     font: bold 24px/1 "Rajdhani";
     color: #111;
