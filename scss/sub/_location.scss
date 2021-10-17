@@ -258,6 +258,11 @@
                         background: #222;
                         transition: 0.5s;
                         cursor: pointer;
+
+                        &:hover{
+                            background: $mainCol;
+                            font: #fff;
+                        }
                     }
                     
                 }

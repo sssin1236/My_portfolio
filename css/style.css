@@ -1272,6 +1272,9 @@ input, a, select, option {
           background: #222;
           transition: 0.5s;
           cursor: pointer; }
+          .location .form .wrap form fieldset input[type=submit]:hover {
+            background: #ff5b20;
+            font: #fff; }
     .location .form .wrap .contact {
       width: 560px;
       position: relative;
