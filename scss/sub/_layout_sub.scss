@@ -5,34 +5,63 @@
     width: 100%;
     padding: 0px 0px 100px;
 
-    // .sub_visual{
-    //     width: 100%; min-height: 300px; 
-    //     background: #fff;
-    //     margin-bottom: 100px;
-    //     position: relative;
+    .sub_visual{
+        width: 100%; min-height: 500px; 
+        background: #fff;
+        margin-bottom: 100px;
+        position: relative;
 
-    //     .txt{
-    //         width: 1180px; height: 90%;
-    //         position: absolute;
-    //         bottom: 0; left: 50%;
-    //         transform: translateX(-50%);
+        .txt{
+            width: 1180px; height: 80%;
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
 
-    //         h1{
-    //             font: bold 80px/1 'Rajdhani';
-    //             color: #111;
-    //             position: absolute;
-    //             top: 50%; left: 0;
-    //             transform: rotate(-90deg);
+            h1{
+                width: 100%;
+                font: bold 100px/1 'Rajdhani';
+                color: #222;
+                letter-spacing: 15px;
+                position: absolute;
+                top: 30%; left: 0;
 
-    //             span{
-    //                 font: normal 20px/1 'arial';
-    //                 color: #fff;
-    //                 border-left: 3px solid #fff;
-    //                 padding: 0 20px;
-    //             }
-    //         }
-    //     }
-    // }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 500px; height: 5px;
+                    background: #000;
+                    position: absolute;
+                    top: 50%; right: 0px;
+                }
+
+                b{
+                    display: inline-block;
+                    transform: translateY(-40px);
+
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 55px; height: 5px;
+                        background: #222;
+                    }
+                }
+            }
+            
+            span{
+                display: block;
+                width: 90px; height: 90px;
+                background: #222;
+                border-radius: 45px;
+                text-align: center;
+                position: absolute;
+                top: 60%; left: 50px;
+                font: normal 14px/90px 'arial';
+                color: #fff;
+            }
+
+        }
+        
+    }
 
     .inner{
         width: 1180px;
