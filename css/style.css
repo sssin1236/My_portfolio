@@ -1957,7 +1957,7 @@ input, a, select, option {
             height: 150px;
             object-fit: cover; }
           #comment .inner .wrap article .pic h3 {
-            width: 300px;
+            width: 250px;
             padding-bottom: 10px;
             position: absolute;
             top: 45px;
@@ -1973,7 +1973,7 @@ input, a, select, option {
             color: #777; }
           #comment .inner .wrap article .pic p {
             position: absolute;
-            top: 120px;
+            top: 110px;
             left: 250px;
             font: 16px/1.4 "Rajdhani";
             color: #999; }
