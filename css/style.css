@@ -370,6 +370,95 @@ input, a, select, option {
     min-height: 300px;
     position: relative; }
 
+.phil {
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  background: linear-gradient(90deg, #eee 50%, #333 50%); }
+  .phil .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    .phil .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .phil .inner h1 {
+      font: bold 35px/1 "Rajdhani";
+      color: #111;
+      margin-bottom: 80px; }
+    .phil .inner .wrap1 {
+      width: 50%;
+      height: 100%;
+      float: left; }
+      .phil .inner .wrap1 article {
+        width: calc(65% / 2);
+        float: left; }
+        .phil .inner .wrap1 article:nth-of-type(4), .phil .inner .wrap1 article:nth-of-type(5), .phil .inner .wrap1 article:nth-of-type(6) {
+          margin-top: 50px; }
+        .phil .inner .wrap1 article:nth-of-type(2), .phil .inner .wrap1 article:nth-of-type(5) {
+          width: 35%; }
+        .phil .inner .wrap1 article a i {
+          font-size: 35px;
+          color: #777;
+          margin-bottom: 30px; }
+        .phil .inner .wrap1 article h2 {
+          font: bold 22px/1 "Rajdhani";
+          color: #111;
+          margin-bottom: 10px; }
+        .phil .inner .wrap1 article span {
+          font: 15px/1 'arial';
+          color: #777; }
+    .phil .inner .wrap2 {
+      width: 50%;
+      height: 100%;
+      float: left;
+      padding: 10px 20px; }
+      .phil .inner .wrap2 .line {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative; }
+        .phil .inner .wrap2 .line:last-child {
+          margin-bottom: 0; }
+        .phil .inner .wrap2 .line h3 {
+          font: bold 18px/1 "Rajdhani";
+          color: #eee;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #222;
+          position: relative; }
+          .phil .inner .wrap2 .line h3::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #eee;
+            position: absolute;
+            top: 100%;
+            left: 0; }
+        .phil .inner .wrap2 .line:nth-of-type(2) ::after {
+          width: 75%; }
+        .phil .inner .wrap2 .line:nth-of-type(3) ::after {
+          width: 93%; }
+        .phil .inner .wrap2 .line:nth-of-type(4) ::after {
+          width: 87%; }
+        .phil .inner .wrap2 .line:nth-of-type(5) ::after {
+          width: 65%; }
+        .phil .inner .wrap2 .line span {
+          font: 14px/1 'arial';
+          color: #ccc;
+          position: absolute;
+          top: 10px;
+          left: 98%; }
+        .phil .inner .wrap2 .line:nth-of-type(2) span {
+          left: 73%; }
+        .phil .inner .wrap2 .line:nth-of-type(3) span {
+          left: 90%; }
+        .phil .inner .wrap2 .line:nth-of-type(4) span {
+          left: 85%; }
+        .phil .inner .wrap2 .line:nth-of-type(5) span {
+          left: 63%; }
+
 .member .sub_visual .txt h1::after {
   content: '';
   display: block;
@@ -633,96 +722,6 @@ input, a, select, option {
     transform: translateY(100px);
     opacity: 0;
     transition: 1.5s; }
-
-.phil {
-  width: 100%;
-  padding: 50px 0;
-  position: relative;
-  background: linear-gradient(90deg, #eee 50%, #333 50%);
-  display: none; }
-  .phil .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative; }
-    .phil .inner::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .phil .inner h1 {
-      font: bold 35px/1 "Rajdhani";
-      color: #111;
-      margin-bottom: 80px; }
-    .phil .inner .wrap1 {
-      width: 50%;
-      height: 100%;
-      float: left; }
-      .phil .inner .wrap1 article {
-        width: calc(65% / 2);
-        float: left; }
-        .phil .inner .wrap1 article:nth-of-type(4), .phil .inner .wrap1 article:nth-of-type(5), .phil .inner .wrap1 article:nth-of-type(6) {
-          margin-top: 50px; }
-        .phil .inner .wrap1 article:nth-of-type(2), .phil .inner .wrap1 article:nth-of-type(5) {
-          width: 35%; }
-        .phil .inner .wrap1 article a i {
-          font-size: 35px;
-          color: #777;
-          margin-bottom: 30px; }
-        .phil .inner .wrap1 article h2 {
-          font: bold 22px/1 "Rajdhani";
-          color: #111;
-          margin-bottom: 10px; }
-        .phil .inner .wrap1 article span {
-          font: 15px/1 'arial';
-          color: #777; }
-    .phil .inner .wrap2 {
-      width: 50%;
-      height: 100%;
-      float: left;
-      padding: 10px 20px; }
-      .phil .inner .wrap2 .line {
-        width: 100%;
-        margin-bottom: 20px;
-        position: relative; }
-        .phil .inner .wrap2 .line:last-child {
-          margin-bottom: 0; }
-        .phil .inner .wrap2 .line h3 {
-          font: bold 18px/1 "Rajdhani";
-          color: #eee;
-          padding-bottom: 10px;
-          border-bottom: 2px solid #222;
-          position: relative; }
-          .phil .inner .wrap2 .line h3::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: #eee;
-            position: absolute;
-            top: 100%;
-            left: 0; }
-        .phil .inner .wrap2 .line:nth-of-type(2) ::after {
-          width: 75%; }
-        .phil .inner .wrap2 .line:nth-of-type(3) ::after {
-          width: 93%; }
-        .phil .inner .wrap2 .line:nth-of-type(4) ::after {
-          width: 87%; }
-        .phil .inner .wrap2 .line:nth-of-type(5) ::after {
-          width: 65%; }
-        .phil .inner .wrap2 .line span {
-          font: 14px/1 'arial';
-          color: #ccc;
-          position: absolute;
-          top: 10px;
-          left: 98%; }
-        .phil .inner .wrap2 .line:nth-of-type(2) span {
-          left: 73%; }
-        .phil .inner .wrap2 .line:nth-of-type(3) span {
-          left: 90%; }
-        .phil .inner .wrap2 .line:nth-of-type(4) span {
-          left: 85%; }
-        .phil .inner .wrap2 .line:nth-of-type(5) span {
-          left: 63%; }
 
 .gallery .inner h1 {
   font: bold 24px/1 "Rajdhani";
