@@ -173,10 +173,15 @@
             width: 100%;
             position: relative;
             padding: 20px 0;
+
+            &::after{
+                content: ''; display: block; clear: both;
+            }
     
             form{
                 width: 580px;
                 position: relative;
+                float: left;
 
                 fieldset{
                     width: 100%;
@@ -193,18 +198,24 @@
                             margin-left: 20px;
                         }
 
+                        &:last-child{
+                            width: 100px;
+                            margin-left: 0;
+                            float: right;
+                        }
+
                         label{
                             font: bold 18px/1 $mainFon;
                             color: #222; 
                         }
 
-                        input, select{
+                        input[type=text], input[type=number], input[type=email], select{
                             width: 100%; height: 20px;
                             padding: 10px;
                             background: transparent;
                             border: none;
                             border-bottom: 2px solid #222;
-                            margin-bottom: 20px;
+                            margin-bottom: 30px;
 
                             option{
                                 font: 16px/1 $mainFon;
@@ -221,12 +232,80 @@
                     .comments{
                         width: 100%;
 
-                        label{
-                            font: bold 18px/1 $mainFon;
-                            color: #222; 
+                        margin-bottom: 30px;
+
+                        textarea{
+                            width: 100%;
+                            border: none;
+                            border-bottom: 2px solid #222;
+                            background: transparent;
+                            resize: none;
+                            padding: 10px;
+
+                            &:focus{
+                                font: 15px/1 'arial';
+                                color: #222;
+                            }
                         }
                     }
+
+                    input[type=submit]{
+                        width: 100px; height: 40px;
+                        border: none;
+                        font: bold 15px/1 $mainFon;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        background: #222;
+                        transition: 0.5s;
+                        cursor: pointer;
+                    }
                     
+                }
+            }
+
+            .contact{
+                width: 560px; 
+                position: relative;
+                float: right;
+                padding: 0px 30px;
+                border-left: 1px solid rgba(204, 204, 204, 0.733);
+
+                ul li{
+                    width: 100%;
+                    margin-bottom: 30px;
+
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+
+                    h3{
+                        font: bold 20px/1 $mainFon;
+                        color: #222;
+                        margin-bottom: 10px;
+                    }
+                    
+                    p{
+                        font: 15px/1.4 $mainFon;
+                        color: #666;
+                        margin-bottom: 10px;
+                    }
+
+                    span{
+                        font: bold 16px/1 $mainFon;
+                        color: $mainCol;
+
+                        i{
+                            display: inline-block;
+                            width: 30px; height: 30px;
+                            background: $mainCol;
+                            border-radius: 50%;
+                            font-size: 15px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #eee;
+                            margin-right: 10px;
+                        }
+                    }
                 }
             }
         }

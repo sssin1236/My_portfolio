@@ -1209,9 +1209,14 @@ input, a, select, option {
     width: 100%;
     position: relative;
     padding: 20px 0; }
+    .location .form .wrap::after {
+      content: '';
+      display: block;
+      clear: both; }
     .location .form .wrap form {
       width: 580px;
-      position: relative; }
+      position: relative;
+      float: left; }
       .location .form .wrap form fieldset {
         width: 100%; }
         .location .form .wrap form fieldset::after {
@@ -1223,28 +1228,83 @@ input, a, select, option {
           float: left; }
           .location .form .wrap form fieldset article:nth-of-type(even) {
             margin-left: 20px; }
+          .location .form .wrap form fieldset article:last-child {
+            width: 100px;
+            margin-left: 0;
+            float: right; }
           .location .form .wrap form fieldset article label {
             font: bold 18px/1 "Rajdhani";
             color: #222; }
-          .location .form .wrap form fieldset article input, .location .form .wrap form fieldset article select {
+          .location .form .wrap form fieldset article input[type=text], .location .form .wrap form fieldset article input[type=number], .location .form .wrap form fieldset article input[type=email], .location .form .wrap form fieldset article select {
             width: 100%;
             height: 20px;
             padding: 10px;
             background: transparent;
             border: none;
             border-bottom: 2px solid #222;
-            margin-bottom: 20px; }
-            .location .form .wrap form fieldset article input option, .location .form .wrap form fieldset article select option {
+            margin-bottom: 30px; }
+            .location .form .wrap form fieldset article input[type=text] option, .location .form .wrap form fieldset article input[type=number] option, .location .form .wrap form fieldset article input[type=email] option, .location .form .wrap form fieldset article select option {
               font: 16px/1 "Rajdhani";
               color: #333; }
-            .location .form .wrap form fieldset article input:focus, .location .form .wrap form fieldset article select:focus {
+            .location .form .wrap form fieldset article input[type=text]:focus, .location .form .wrap form fieldset article input[type=number]:focus, .location .form .wrap form fieldset article input[type=email]:focus, .location .form .wrap form fieldset article select:focus {
               font: 13px/1 'arial';
               color: #222; }
         .location .form .wrap form fieldset .comments {
-          width: 100%; }
-          .location .form .wrap form fieldset .comments label {
-            font: bold 18px/1 "Rajdhani";
-            color: #222; }
+          width: 100%;
+          margin-bottom: 30px; }
+          .location .form .wrap form fieldset .comments textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #222;
+            background: transparent;
+            resize: none;
+            padding: 10px; }
+            .location .form .wrap form fieldset .comments textarea:focus {
+              font: 15px/1 'arial';
+              color: #222; }
+        .location .form .wrap form fieldset input[type=submit] {
+          width: 100px;
+          height: 40px;
+          border: none;
+          font: bold 15px/1 "Rajdhani";
+          color: #fff;
+          letter-spacing: 1px;
+          background: #222;
+          transition: 0.5s;
+          cursor: pointer; }
+    .location .form .wrap .contact {
+      width: 560px;
+      position: relative;
+      float: right;
+      padding: 0px 30px;
+      border-left: 1px solid rgba(204, 204, 204, 0.733); }
+      .location .form .wrap .contact ul li {
+        width: 100%;
+        margin-bottom: 30px; }
+        .location .form .wrap .contact ul li:last-child {
+          margin-bottom: 0px; }
+        .location .form .wrap .contact ul li h3 {
+          font: bold 20px/1 "Rajdhani";
+          color: #222;
+          margin-bottom: 10px; }
+        .location .form .wrap .contact ul li p {
+          font: 15px/1.4 "Rajdhani";
+          color: #666;
+          margin-bottom: 10px; }
+        .location .form .wrap .contact ul li span {
+          font: bold 16px/1 "Rajdhani";
+          color: #ff5b20; }
+          .location .form .wrap .contact ul li span i {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #ff5b20;
+            border-radius: 50%;
+            font-size: 15px;
+            line-height: 30px;
+            text-align: center;
+            color: #eee;
+            margin-right: 10px; }
 
 #popup {
   position: fixed;
