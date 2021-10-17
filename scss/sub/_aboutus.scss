@@ -1,9 +1,32 @@
-#philosophy{
-    background: #fff;
-}
 
 .member{
-    
+    .sub_visual{
+        width: 100%; min-height: 500px; 
+        background: #fff;
+        margin-bottom: 100px;
+        position: relative;
+
+        .txt{
+            width: 1180px; height: 80%;
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+
+            h1{
+                font: bold 80px/1 'Rajdhani';
+                color: #111;
+                position: absolute;
+                top: 50%; left: 0;
+
+                span{
+                    font: normal 20px/1 'arial';
+                    color: #fff;
+                    border-left: 3px solid #fff;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
 
     #ceo{
         width: 1180px; height: 650px;

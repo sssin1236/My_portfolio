@@ -313,39 +313,36 @@ input, a, select, option {
 .content {
   width: 100%;
   padding: 0px 0px 100px; }
-  .content .sub_visual {
-    width: 100%;
-    min-height: 300px;
-    background: #fff;
-    margin-bottom: 100px;
-    position: relative; }
-    .content .sub_visual .txt {
-      width: 1180px;
-      height: 90%;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%); }
-      .content .sub_visual .txt h1 {
-        font: bold 50px/1 'Rajdhani';
-        color: #111;
-        position: absolute;
-        top: 75%;
-        left: 0; }
-        .content .sub_visual .txt h1 span {
-          font: normal 20px/1 'arial';
-          color: #fff;
-          border-left: 3px solid #fff;
-          padding: 0 20px; }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
     min-height: 300px;
     position: relative; }
 
-#philosophy {
-  background: #fff; }
-
+.member .sub_visual {
+  width: 100%;
+  min-height: 500px;
+  background: #fff;
+  margin-bottom: 100px;
+  position: relative; }
+  .member .sub_visual .txt {
+    width: 1180px;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+    .member .sub_visual .txt h1 {
+      font: bold 80px/1 'Rajdhani';
+      color: #111;
+      position: absolute;
+      top: 50%;
+      left: 0; }
+      .member .sub_visual .txt h1 span {
+        font: normal 20px/1 'arial';
+        color: #fff;
+        border-left: 3px solid #fff;
+        padding: 0 20px; }
 .member #ceo {
   width: 1180px;
   height: 650px;

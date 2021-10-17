@@ -5,33 +5,34 @@
     width: 100%;
     padding: 0px 0px 100px;
 
-    .sub_visual{
-        width: 100%; min-height: 300px; 
-        background: #fff;
-        margin-bottom: 100px;
-        position: relative;
+    // .sub_visual{
+    //     width: 100%; min-height: 300px; 
+    //     background: #fff;
+    //     margin-bottom: 100px;
+    //     position: relative;
 
-        .txt{
-            width: 1180px; height: 90%;
-            position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
+    //     .txt{
+    //         width: 1180px; height: 90%;
+    //         position: absolute;
+    //         bottom: 0; left: 50%;
+    //         transform: translateX(-50%);
 
-            h1{
-                font: bold 50px/1 'Rajdhani';
-                color: #111;
-                position: absolute;
-                top: 75%; left: 0;
+    //         h1{
+    //             font: bold 80px/1 'Rajdhani';
+    //             color: #111;
+    //             position: absolute;
+    //             top: 50%; left: 0;
+    //             transform: rotate(-90deg);
 
-                span{
-                    font: normal 20px/1 'arial';
-                    color: #fff;
-                    border-left: 3px solid #fff;
-                    padding: 0 20px;
-                }
-            }
-        }
-    }
+    //             span{
+    //                 font: normal 20px/1 'arial';
+    //                 color: #fff;
+    //                 border-left: 3px solid #fff;
+    //                 padding: 0 20px;
+    //             }
+    //         }
+    //     }
+    // }
 
     .inner{
         width: 1180px;
