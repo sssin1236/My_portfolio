@@ -33,14 +33,21 @@
         dt{
             width: 120px; height: 40px;
             position: absolute;
-            left: -200px;
+            left: -250px;
 
             a{
+                display: block;
+                width: 120px;
                 font: 18px/40px $mainFon;
                 color: #333;
+                
+                &.on{
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: $mainCol;
+                }
             }
             
-
             &:nth-of-type(1){ top: calc(40px * 0); border-top: 2px solid #111; }
             &:nth-of-type(2){ top: calc(40px * 1); }
             &:nth-of-type(3){ top: calc(40px * 2); }
@@ -72,7 +79,7 @@
 
                         &:nth-of-type(1){ width: 20%; }
                         &:nth-of-type(2){ width: auto; }
-                        &:nth-of-type(3){ width: 20%; }
+                        &:nth-of-type(3){ width: 20%; font-weight: normal; color: #888;}
 
                         b{
                             position: absolute;

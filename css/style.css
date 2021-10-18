@@ -1366,10 +1366,16 @@ input, a, select, option {
     width: 120px;
     height: 40px;
     position: absolute;
-    left: -200px; }
+    left: -250px; }
     .inner .menu dt a {
+      display: block;
+      width: 120px;
       font: 18px/40px "Rajdhani";
       color: #333; }
+      .inner .menu dt a.on {
+        font-weight: bold;
+        font-size: 20px;
+        color: #ff5b20; }
     .inner .menu dt:nth-of-type(1) {
       top: calc(40px * 0);
       border-top: 2px solid #111; }
@@ -1401,7 +1407,9 @@ input, a, select, option {
         .inner .menu #menu1 table tr td:nth-of-type(2) {
           width: auto; }
         .inner .menu #menu1 table tr td:nth-of-type(3) {
-          width: 20%; }
+          width: 20%;
+          font-weight: normal;
+          color: #888; }
         .inner .menu #menu1 table tr td b {
           position: absolute;
           top: 30px; }
