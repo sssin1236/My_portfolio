@@ -1,6 +1,4 @@
-#location{
-    background: #efefef;
-}
+
 
 .location{
     .inner{
@@ -86,6 +84,7 @@
             li{
                 float: left;
                 margin-right: 10px;
+                border: 1px solid #333;
     
                 a{
                     display: block;
