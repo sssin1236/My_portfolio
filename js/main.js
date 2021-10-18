@@ -97,3 +97,28 @@ function setCookie(time){
 
     document.cookie = "popup=done; expires"+duedate;
 }
+
+// 스와이퍼 -----------------------------------------------------------------------
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
