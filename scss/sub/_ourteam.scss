@@ -54,7 +54,83 @@
     }
 }
 
+.award{
+    width: 100%;
+    padding: 100px 0;
 
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+
+        h1{
+            width: 50px;
+            padding: 10px 0;
+            font: bold 40px/1 $mainFon;
+            color: #111;
+            margin-bottom: 20px;
+            border-top: 2px solid $mainCol;
+        }
+
+        article{
+            width: 100%;
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before{
+                content: '';
+                display: block;
+                width: 150px; height: 150px;
+                border: 5px solid $mainCol;
+                position: absolute;
+                top: 50%; left: 50%;
+                margin-left: -75px;
+                margin-top: -75px;
+                z-index: 1;
+            }
+
+            &::after{
+                content: ''; display: block; clear: both;
+            }
+
+            &:nth-of-type(2){
+                .txt{ 
+                    float: left; 
+                    text-align: left; 
+                    padding-left: 0;
+                    padding-right: 40px;
+                }
+                .pic{ float: right; }
+            }
+
+            .txt{
+                width: 580px; height: 200px;
+                float: right;
+                padding: 40px;
+                padding-right: 0;
+                text-align: right;
+                h2{
+                    font: bold 24px/1 $mainFon;
+                    color: #222;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font: 18px/1.4 $mainFon;
+                    color: #555;
+                }
+            }
+
+            .pic{
+                width: 580px; height: 200px;
+                float: left;
+                background: #333;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+}
 
 .phil{
     width: 100%;
@@ -72,9 +148,19 @@
         }
 
         h1{
-            font: bold 35px/1 $mainFon;
+            font: bold 40px/1 $mainFon;
             color: #111;
             margin-bottom: 80px;
+            position: relative;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 50px; height: 2px;
+                background: $mainCol;
+                position: absolute;
+                left: 0; top: -10px;
+            }
         }
 
         .wrap1{

@@ -435,6 +435,69 @@ input, a, select, option {
         object-fit: cover;
         z-index: 2; }
 
+.award {
+  width: 100%;
+  padding: 100px 0; }
+  .award .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    .award .inner h1 {
+      width: 50px;
+      padding: 10px 0;
+      font: bold 40px/1 "Rajdhani";
+      color: #111;
+      margin-bottom: 20px;
+      border-top: 2px solid #ff5b20; }
+    .award .inner article {
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative; }
+      .award .inner article::before {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 150px;
+        border: 5px solid #ff5b20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -75px;
+        margin-top: -75px;
+        z-index: 1; }
+      .award .inner article::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .award .inner article:nth-of-type(2) .txt {
+        float: left;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 40px; }
+      .award .inner article:nth-of-type(2) .pic {
+        float: right; }
+      .award .inner article .txt {
+        width: 580px;
+        height: 200px;
+        float: right;
+        padding: 40px;
+        padding-right: 0;
+        text-align: right; }
+        .award .inner article .txt h2 {
+          font: bold 24px/1 "Rajdhani";
+          color: #222;
+          margin-bottom: 20px; }
+        .award .inner article .txt p {
+          font: 18px/1.4 "Rajdhani";
+          color: #555; }
+      .award .inner article .pic {
+        width: 580px;
+        height: 200px;
+        float: left;
+        background: #333;
+        position: relative;
+        z-index: 2; }
+
 .phil {
   width: 100%;
   padding: 50px 0;
@@ -450,9 +513,19 @@ input, a, select, option {
       display: block;
       clear: both; }
     .phil .inner h1 {
-      font: bold 35px/1 "Rajdhani";
+      font: bold 40px/1 "Rajdhani";
       color: #111;
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      position: relative; }
+      .phil .inner h1::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: #ff5b20;
+        position: absolute;
+        left: 0;
+        top: -10px; }
     .phil .inner .wrap1 {
       width: 50%;
       height: 100%;
@@ -831,6 +904,69 @@ input, a, select, option {
         object-fit: cover;
         z-index: 2; }
 
+.award {
+  width: 100%;
+  padding: 100px 0; }
+  .award .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    .award .inner h1 {
+      width: 50px;
+      padding: 10px 0;
+      font: bold 40px/1 "Rajdhani";
+      color: #111;
+      margin-bottom: 20px;
+      border-top: 2px solid #ff5b20; }
+    .award .inner article {
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative; }
+      .award .inner article::before {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 150px;
+        border: 5px solid #ff5b20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -75px;
+        margin-top: -75px;
+        z-index: 1; }
+      .award .inner article::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .award .inner article:nth-of-type(2) .txt {
+        float: left;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 40px; }
+      .award .inner article:nth-of-type(2) .pic {
+        float: right; }
+      .award .inner article .txt {
+        width: 580px;
+        height: 200px;
+        float: right;
+        padding: 40px;
+        padding-right: 0;
+        text-align: right; }
+        .award .inner article .txt h2 {
+          font: bold 24px/1 "Rajdhani";
+          color: #222;
+          margin-bottom: 20px; }
+        .award .inner article .txt p {
+          font: 18px/1.4 "Rajdhani";
+          color: #555; }
+      .award .inner article .pic {
+        width: 580px;
+        height: 200px;
+        float: left;
+        background: #333;
+        position: relative;
+        z-index: 2; }
+
 .phil {
   width: 100%;
   padding: 50px 0;
@@ -846,9 +982,19 @@ input, a, select, option {
       display: block;
       clear: both; }
     .phil .inner h1 {
-      font: bold 35px/1 "Rajdhani";
+      font: bold 40px/1 "Rajdhani";
       color: #111;
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      position: relative; }
+      .phil .inner h1::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: #ff5b20;
+        position: absolute;
+        left: 0;
+        top: -10px; }
     .phil .inner .wrap1 {
       width: 50%;
       height: 100%;
