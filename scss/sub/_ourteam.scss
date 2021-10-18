@@ -1,4 +1,25 @@
 
+
+
+
+.intro{
+    width: 100%;
+
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+
+        h1{
+            width: 400px; height: 400px;
+            font: bold 100px/1 $mainFon;
+            color: #111;
+        }
+    }
+}
+
+
+
 .phil{
     width: 100%;
     padding: 50px 0;

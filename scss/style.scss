@@ -6,6 +6,7 @@
 //sub layout
 @import "sub/layout_sub.scss";
 @import "sub/aboutus.scss";
+@import "sub/ourteam.scss";
 @import "sub/gallery.scss";
 @import "sub/youtube.scss";
 @import "sub/join.scss";
@@ -1166,7 +1167,7 @@
 
                             a{
                                 color: #eee;
-                                letter-spacing: 1px;
+                                letter-spacing: 0.5px;
                             }
                             span{
                                 display: none;

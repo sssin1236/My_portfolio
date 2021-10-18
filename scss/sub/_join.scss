@@ -1,7 +1,11 @@
 
 
 .join {
-    
+    .sub_visual{
+        .txt h1::after{
+            width: 700px;
+        }
+    }
 
     .inner {
 
