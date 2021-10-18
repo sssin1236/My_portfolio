@@ -1335,6 +1335,90 @@ input, a, select, option {
             color: #eee;
             margin-right: 10px; }
 
+.inner .title {
+  position: relative;
+  width: 100%; }
+  .inner .title::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .inner .title h2 {
+    font: bold 50px/1 "Rajdhani";
+    color: #222;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+  .inner .title p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 30px;
+    background: #222;
+    border-radius: 15px;
+    font: 15px/30px "Rajdhani";
+    color: #eee;
+    text-align: center;
+    margin-bottom: 20px; }
+.inner .menu {
+  position: relative; }
+  .inner .menu dt {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    left: -200px; }
+    .inner .menu dt a {
+      font: 18px/40px "Rajdhani";
+      color: #333; }
+    .inner .menu dt:nth-of-type(1) {
+      top: calc(40px * 0);
+      border-top: 2px solid #111; }
+    .inner .menu dt:nth-of-type(2) {
+      top: calc(40px * 1); }
+    .inner .menu dt:nth-of-type(3) {
+      top: calc(40px * 2); }
+    .inner .menu dt:nth-of-type(4) {
+      top: calc(40px * 3);
+      border-bottom: 2px solid #111; }
+  .inner .menu #menu1 {
+    width: 100%; }
+    .inner .menu #menu1 table {
+      width: 100%;
+      margin: 0 auto 50px;
+      border-collapse: collapse; }
+      .inner .menu #menu1 table .h {
+        position: absolute;
+        top: -9999px;
+        opacity: 0; }
+      .inner .menu #menu1 table tr td {
+        padding: 30px 0;
+        border-top: 1px solid #111;
+        font: bold 15px/1 "Rajdhani";
+        color: #222;
+        position: relative; }
+        .inner .menu #menu1 table tr td:nth-of-type(1) {
+          width: 20%; }
+        .inner .menu #menu1 table tr td:nth-of-type(2) {
+          width: auto; }
+        .inner .menu #menu1 table tr td:nth-of-type(3) {
+          width: 20%; }
+        .inner .menu #menu1 table tr td b {
+          position: absolute;
+          top: 30px; }
+        .inner .menu #menu1 table tr td a {
+          font: bold 22px/1 "Rajdhani";
+          color: #111; }
+        .inner .menu #menu1 table tr td p {
+          font: normal 14px/1 "Rajdhani";
+          color: #222;
+          margin-top: 20px;
+          margin-bottom: 30px; }
+        .inner .menu #menu1 table tr td span {
+          display: block;
+          height: 20px;
+          font: bold 15px/1 "Rajdhani";
+          color: #222; }
+
 #popup {
   position: fixed;
   top: 0;
