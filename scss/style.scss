@@ -220,20 +220,48 @@
 
             li{
                 float: left;
-                display: block;
-                padding: 0px 30px;
+                width: 80px;
+                margin: 0px 20px;
+                text-align: center;
+                position: relative;
+                transition: 0.5s;
 
-                &:first-child{
-                    padding-left: 0;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 0%; height: 1px;
+                    background: $mainCol;
+                    position: absolute;
+                    top: -10px; left: 50%;
+                    transform: translateX(-50%);
+                    transition: 0.5s;
                 }
 
-                &:last-child{
-                    padding-right: 0;
+                &:hover{
+                    transform: translateY(-5px);
+
+                    &::after{
+                        width: 50%;
+                    }
+                }
+
+                &.on{
+                    transform: translateY(-5px);
+
+                    &::after{
+                        width: 50%;
+                    }
+
+                    a{
+                        font-size: 17px;
+                        font-weight: bold;
+                    }
                 }
 
                 a{
                     font: 15px/1 $mainFon;
                     color: #333;
+                    transition: 0.5s;
                 }
             }
         }
