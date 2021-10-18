@@ -11,10 +11,14 @@ btnCall.onclick = function(e){
 const $menu = $(".menu");
 const $btn = $menu.find("dt a");
 const $boxs = $menu.find("dd");
+const $numBtn = $(".numbers").find("a");
 
 
-$btn.on("click", function(e){
+$btn.on("click focusin", function(e){
     e.preventDefault();
+
+    let isOn = $(this).hasClass("on");
+    if(isOn) return;
 
     let target = $(this).attr("href");
 
@@ -23,4 +27,11 @@ $btn.on("click", function(e){
 
     $(this).addClass("on");
     $(target).show();
+});
+
+$numBtn.on("click", function(e){
+    e.preventDefault();
+
+    $numBtn.removeClass("on");
+    $(this).addClass("on");
 });
