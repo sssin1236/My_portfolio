@@ -65,15 +65,37 @@ input, a, select, option {
       clear: both; }
     #header_sub .inner #gnb li {
       float: left;
-      display: block;
-      padding: 0px 30px; }
-      #header_sub .inner #gnb li:first-child {
-        padding-left: 0; }
-      #header_sub .inner #gnb li:last-child {
-        padding-right: 0; }
+      width: 80px;
+      margin: 0px 20px;
+      text-align: center;
+      position: relative;
+      transition: 0.5s; }
+      #header_sub .inner #gnb li::after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 1px;
+        background: #ff5b20;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s; }
+      #header_sub .inner #gnb li:hover {
+        transform: translateY(-5px); }
+        #header_sub .inner #gnb li:hover::after {
+          width: 50%; }
+      #header_sub .inner #gnb li.on {
+        transform: translateY(-5px); }
+        #header_sub .inner #gnb li.on::after {
+          width: 50%; }
+        #header_sub .inner #gnb li.on a {
+          font-size: 17px;
+          font-weight: bold; }
       #header_sub .inner #gnb li a {
         font: 15px/1 "Rajdhani";
-        color: #333; }
+        color: #333;
+        transition: 0.5s; }
     #header_sub .inner .util::after {
       content: '';
       display: block;

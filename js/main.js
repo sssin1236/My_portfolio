@@ -27,6 +27,7 @@ let posArr = [];
 let len2 = $btns.length;
 let baseLine = -250;
 
+
 for(let i=0; i<len2; i++){
     posArr.push($boxs.eq(i).offset().top);
 }
