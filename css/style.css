@@ -129,7 +129,7 @@ input, a, select, option {
       background: rgba(17, 17, 17, 0.9);
       border-right: 2px solid #fff;
       padding: 30px 30px;
-      z-index: 10;
+      z-index: 3;
       opacity: 1;
       transition: all 0.5s; }
       #header_sub .inner .Mob h1 {
@@ -762,33 +762,41 @@ input, a, select, option {
       clear: both; }
     #gallery ul li {
       float: left;
-      width: calc(100% / 4);
-      padding: 0px 10px; }
+      width: 280px;
+      padding: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      background: #eee;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35); }
+      #gallery ul li:nth-of-type(4n) {
+        margin-right: 0; }
       #gallery ul li a {
         display: block;
         width: 100%;
-        height: 400px;
-        margin-bottom: 15px; }
+        height: 250px;
+        margin-bottom: 10px; }
         #gallery ul li a:hover img {
           filter: grayscale(0%) contrast(90%) saturate(1); }
         #gallery ul li a img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          filter: grayscale(70%) contrast(80%) saturate(0.5);
+          filter: grayscale(80%) contrast(80%) saturate(0);
           transition: 0.5s; }
-      #gallery ul li > span {
-        display: block;
-        padding: 15px 0;
-        font: bold 17px/1 "Rajdhani";
-        color: #333; }
+      #gallery ul li h2 {
+        font: 24px/1 "Rajdhani";
+        color: #222;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #bbb;
+        margin-bottom: 20px; }
       #gallery ul li p {
-        border-bottom: 1.5px solid #555;
-        padding-bottom: 15px;
         margin: 0 auto;
-        font: 17px/1 "Rajdhani";
-        color: #333;
-        text-align: right; }
+        font: 15px/1 "Rajdhani";
+        color: #444; }
+        #gallery ul li p > span {
+          font: 15px/1 "Rajdhani";
+          color: #444;
+          float: right; }
 
 .pop {
   width: 100%;
@@ -1143,7 +1151,8 @@ input, a, select, option {
     transform: translateY(-50%);
     z-index: 2; }
     .location .inner .branch li {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); }
       .location .inner .branch li:last-child {
         margin-bottom: 0; }
       .location .inner .branch li.on a {
@@ -1768,10 +1777,10 @@ input, a, select, option {
   #news.on .inner h1, #news.on .inner p {
     transform: translateY(0);
     opacity: 1; }
-  #news.on .inner .slider {
+  #news.on .inner .swiper {
     transition-delay: 0.4s;
     opacity: 1;
-    transform: scale(1); }
+    transform: translateY(0px); }
   #news .inner {
     width: 1180px;
     margin: 0 auto;
@@ -1806,7 +1815,10 @@ input, a, select, option {
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
-      position: relative; }
+      position: relative;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: 1s; }
       #news .inner .swiper .swiper-slide {
         background-position: center;
         background-size: cover;
@@ -1867,7 +1879,7 @@ input, a, select, option {
         content: '';
         display: block;
         width: 50px;
-        height: 1px;
+        height: 2px;
         background: #eee;
         position: absolute;
         top: 0;

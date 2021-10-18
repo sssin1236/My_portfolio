@@ -8,7 +8,7 @@ $.ajax({
         format:"json",
         nojsoncallback:1,
         privacy_filter: 5,
-        tags:"acrylic paint" 
+        tags:"white" 
     }
 })
 .success(function(data){
@@ -23,9 +23,7 @@ $.ajax({
 
         $("#gallery ul").append(
             $("<li>")
-                .append(
-                    $("<span>").text("0" + num + "/")
-                )
+                
                 .append(
                     $("<a>").attr({
                         href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
@@ -34,10 +32,13 @@ $.ajax({
                         $("<img>").attr({
                             src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
                         })
-                    )
+                    ),
                 )
                 .append(
-                    $("<p>").text(data.owner),
+                    $("<h2>").text("2021 PROJECT"),
+                    $("<p>").text(data.owner).append(
+                        $("<span>").text("0" + num + "/")
+                    )
                 )
         )}
     );
@@ -55,11 +56,11 @@ $("body").on("click", "#gallery ul li", function(e){
         $("<div class='pop'>")
             .append(
                 $("<img>").attr({ src : imgSrc }),
-                $("<span>").text("close")
+                $("<span>").text("Close")
             )
     )
 });
 
 $("body").on("click", ".pop span", function(){
-    $(".pop").remove();
+    $(".pop").fadeOut();
 });
