@@ -125,3 +125,16 @@ const swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+const btnStart = document.querySelector(".btnStart");
+const btnStop = document.querySelector(".btnStop");
+
+swiper.autoplay.stop();
+
+btnStart.onclick = function(){
+    swiper.autoplay.start();
+}
+
+btnStop.onclick = function(){
+    swiper.autoplay.stop();
+}

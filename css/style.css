@@ -2573,6 +2573,21 @@ input, a, select, option {
         transform: rotate(30deg); }
       #news .inner .swiper-button-next:hover::after {
         transform: rotate(-30deg); }
+    #news .inner .auto {
+      position: absolute;
+      bottom: 10px;
+      left: 40px; }
+      #news .inner .auto li {
+        float: left;
+        margin-right: 20px;
+        cursor: pointer;
+        font: 13px/1 "Rajdhani";
+        color: #eee;
+        opacity: 0.8;
+        transition: 0.5s; }
+        #news .inner .auto li:hover {
+          opacity: 1;
+          transform: scale(1.2); }
 
 #brand {
   width: 100%;
