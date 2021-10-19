@@ -4,7 +4,7 @@
 
 .intro{
     width: 100%;
-    padding: 50px 0 100px;
+    padding: 0px 0 100px;
     margin-bottom: 100px;
 
     .inner{
@@ -359,20 +359,29 @@
                 margin-bottom: 60px;
                 background: #eee;
                 position: relative;
+                overflow: hidden;
 
                 &:nth-of-type(3n){
                     margin-right: 0px;
                 }
 
+                &:last-child{
+                    .pic{
+                        margin-top: 55px;
+                        margin-left: 80px;
+                    }
+                }
+
                 .pic{
-                    width: 250px; height: 400px;
-                    margin-top: 100px;
-                    margin-left: 90px;
+                    width: 280px; height: 450px;
+                    margin-top: 50px;
+                    margin-left: 60px;
                     
                     img{
                         width: 100%; height: 100%;
-                        object-fit: cover;
+                        object-fit: contain;
                         filter: grayscale(100%);
+                        transition: 0.5s;
                     }
                 }
 
@@ -383,14 +392,14 @@
                     padding: 30px;
 
                     h2{
-                        font: bold 28px/1.2 "roboto";
+                        font: bold 34px/1.2 "roboto";
                         color: #333;
                         letter-spacing: 1px;
                         margin-bottom: 10px;
                     }
 
                     p{
-                        font: 15px/1 'roboto';
+                        font: bold 15px/1 'roboto';
                         color: #777;
                         margin-left: 40px;
                         position: relative;
@@ -401,7 +410,41 @@
                             width: 30px; height: 2px;
                             position: absolute;
                             top: 7px; left: -40px;
-                            background: #555;
+                            background: $mainCol;
+                        }
+                    }
+
+                    span{
+                        font: bold 15px/1 'roboto';
+                        color: #555;
+                        transform: rotate(-90deg);
+                        position: absolute;
+                        bottom: 180px; left: -10px;
+                    }
+
+                    a{
+                        display: block;
+                        width: 340px; height: 50px;
+                        background: #222;
+                        position: absolute;
+                        bottom: 0; left:0;
+                        font: bold 20px/50px 'Roboto';
+                        color: #fff;
+                        text-align: center;
+                        letter-spacing: 5px;
+                        transition: 0.5s;
+                    }
+                }
+
+                &:hover{
+                    .pic img{
+                        transform: scale(1.1);
+                        filter: grayscale(0%);
+                    }
+
+                    .name{
+                        a{
+                            color: $mainCol;
                         }
                     }
                 }
