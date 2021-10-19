@@ -100,23 +100,26 @@ function setCookie(time){
 
 // 스와이퍼 -----------------------------------------------------------------------
 
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     loop: true,
+    speed : 500,
+    spaceBetween : 0,
     slidesPerView: "auto",
+    autoplay:{
+        delay: 1300,
+        disableOnInteraction : true 
+    },
     coverflowEffect: {
         rotate: 50,
-        stretch: 0,
-        depth: 100,
+        stretch: -100,
+        depth: 400,
         modifier: 1,
         slideShadows: true,
     },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: true,
-    },
+    
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
