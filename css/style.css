@@ -408,7 +408,7 @@ input, a, select, option {
       font: bold 80px/1 'arial';
       color: #111;
       float: left;
-      margin-top: 50px;
+      margin-top: 20px;
       z-index: 2; }
       .intro .inner h1::before {
         content: '';
@@ -434,6 +434,15 @@ input, a, select, option {
         height: 100%;
         object-fit: cover;
         z-index: 2; }
+    .intro .inner p {
+      width: 450px;
+      font: 19px/1.6 'arial';
+      color: #333;
+      position: absolute;
+      bottom: -20px;
+      left: 130px;
+      z-index: 2;
+      background: #fff; }
 
 .award {
   width: 100%;
@@ -451,7 +460,7 @@ input, a, select, option {
       border-top: 2px solid #ff5b20; }
     .award .inner article {
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       position: relative; }
       .award .inner article::before {
         content: '';
@@ -478,25 +487,44 @@ input, a, select, option {
         float: right; }
       .award .inner article .txt {
         width: 580px;
-        height: 200px;
+        height: 250px;
         float: right;
         padding: 40px;
         padding-right: 0;
-        text-align: right; }
+        text-align: right;
+        position: relative; }
+        .award .inner article .txt span {
+          display: block;
+          font: bold 400px/1 "Rajdhani";
+          color: #ff5b20;
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          opacity: 0.1;
+          z-index: 1; }
         .award .inner article .txt h2 {
-          font: bold 24px/1 "Rajdhani";
+          font: bold 30px/1 "Rajdhani";
           color: #222;
           margin-bottom: 20px; }
         .award .inner article .txt p {
           font: 18px/1.4 "Rajdhani";
-          color: #555; }
+          color: #444; }
       .award .inner article .pic {
         width: 580px;
-        height: 200px;
+        height: 250px;
         float: left;
         background: #333;
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
         z-index: 2; }
+        .award .inner article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.5s; }
+        .award .inner article .pic:hover img {
+          transform: scale(1.1); }
 
 .phil {
   width: 100%;
@@ -877,7 +905,7 @@ input, a, select, option {
       font: bold 80px/1 'arial';
       color: #111;
       float: left;
-      margin-top: 50px;
+      margin-top: 20px;
       z-index: 2; }
       .intro .inner h1::before {
         content: '';
@@ -903,6 +931,15 @@ input, a, select, option {
         height: 100%;
         object-fit: cover;
         z-index: 2; }
+    .intro .inner p {
+      width: 450px;
+      font: 19px/1.6 'arial';
+      color: #333;
+      position: absolute;
+      bottom: -20px;
+      left: 130px;
+      z-index: 2;
+      background: #fff; }
 
 .award {
   width: 100%;
@@ -920,7 +957,7 @@ input, a, select, option {
       border-top: 2px solid #ff5b20; }
     .award .inner article {
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       position: relative; }
       .award .inner article::before {
         content: '';
@@ -947,25 +984,44 @@ input, a, select, option {
         float: right; }
       .award .inner article .txt {
         width: 580px;
-        height: 200px;
+        height: 250px;
         float: right;
         padding: 40px;
         padding-right: 0;
-        text-align: right; }
+        text-align: right;
+        position: relative; }
+        .award .inner article .txt span {
+          display: block;
+          font: bold 400px/1 "Rajdhani";
+          color: #ff5b20;
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          opacity: 0.1;
+          z-index: 1; }
         .award .inner article .txt h2 {
-          font: bold 24px/1 "Rajdhani";
+          font: bold 30px/1 "Rajdhani";
           color: #222;
           margin-bottom: 20px; }
         .award .inner article .txt p {
           font: 18px/1.4 "Rajdhani";
-          color: #555; }
+          color: #444; }
       .award .inner article .pic {
         width: 580px;
-        height: 200px;
+        height: 250px;
         float: left;
         background: #333;
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
         z-index: 2; }
+        .award .inner article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.5s; }
+        .award .inner article .pic:hover img {
+          transform: scale(1.1); }
 
 .phil {
   width: 100%;
@@ -2357,7 +2413,7 @@ input, a, select, option {
 
 #news {
   width: 100%;
-  padding: 200px 0px;
+  padding: 150px 0px;
   background: #111; }
   #news.on .inner h1, #news.on .inner p {
     transform: translateY(0);
@@ -2399,7 +2455,7 @@ input, a, select, option {
     #news .inner .swiper {
       width: 100%;
       padding-top: 50px;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
       position: relative;
       transform: translateY(100px);
       opacity: 0;
