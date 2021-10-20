@@ -376,6 +376,7 @@
                     width: 280px; height: 450px;
                     margin-top: 50px;
                     margin-left: 60px;
+                    transition: 0.2s;
                     
                     img{
                         width: 100%; height: 110%;
@@ -444,7 +445,7 @@
                                 width: 0px; height: 1px;
                                 background: #eee;
                                 margin-top: 10px;
-                                transition: 0.5s;
+                                transition: 1s;
                             }
                         }
 
@@ -493,6 +494,7 @@
 
                             a i{
                                 transform: rotateX(180deg);
+                                animation: none;
                             }
                         }
                     }

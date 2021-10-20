@@ -684,7 +684,8 @@ input, a, select, option {
           width: 280px;
           height: 450px;
           margin-top: 50px;
-          margin-left: 60px; }
+          margin-left: 60px;
+          transition: 0.2s; }
           .mem .inner .wrap article .pic img {
             width: 100%;
             height: 110%;
@@ -747,7 +748,7 @@ input, a, select, option {
                 height: 1px;
                 background: #eee;
                 margin-top: 10px;
-                transition: 0.5s; }
+                transition: 1s; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 60px;
@@ -779,7 +780,8 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotateX(180deg); }
+                transform: rotateX(180deg);
+                animation: none; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
@@ -1350,7 +1352,8 @@ input, a, select, option {
           width: 280px;
           height: 450px;
           margin-top: 50px;
-          margin-left: 60px; }
+          margin-left: 60px;
+          transition: 0.2s; }
           .mem .inner .wrap article .pic img {
             width: 100%;
             height: 110%;
@@ -1413,7 +1416,7 @@ input, a, select, option {
                 height: 1px;
                 background: #eee;
                 margin-top: 10px;
-                transition: 0.5s; }
+                transition: 1s; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 60px;
@@ -1445,7 +1448,8 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotateX(180deg); }
+                transform: rotateX(180deg);
+                animation: none; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
