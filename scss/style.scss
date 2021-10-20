@@ -661,7 +661,8 @@
                     img{
                         width: 100%; height: 100%;
                         object-fit: cover;
-                        
+                        filter: grayscale(100%);
+                        transition: 0.5s;
                     }
                 }
 
@@ -682,9 +683,9 @@
                 }
 
                 h2{
-                    font: bold 25px/1.3 'Roboto';
+                    font: 28px/1.1 $mainFon;
                     color: #fff;
-                    letter-spacing: 2px;
+                    letter-spacing: 3px;
                     margin-bottom: 25px;
                     text-align: right;
                     opacity: 0;
@@ -720,6 +721,9 @@
 
                     .pic{
                         height: 300px;
+                        img{
+                            filter: grayscale(0);
+                        }
                     }
 
                     h2{
@@ -731,7 +735,7 @@
                     }
                 }
 
-                &::before,{
+                &::before{
                     content: '';
                     display: block;
                     width: 100%; height: 100%;
