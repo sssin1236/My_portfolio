@@ -769,6 +769,8 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career > ul > li ul li {
                   font: 17px/1.6 "Rajdhani";
                   color: #888; }
+            .mem .inner .wrap article .name .career.on {
+              height: 380px; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
@@ -1414,6 +1416,8 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career > ul > li ul li {
                   font: 17px/1.6 "Rajdhani";
                   color: #888; }
+            .mem .inner .wrap article .name .career.on {
+              height: 380px; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
