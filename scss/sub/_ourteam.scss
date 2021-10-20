@@ -423,18 +423,26 @@
                     }
 
                     .career{
-                        width: 340px; height: 240px;
+                        width: 340px; height: 380px;
                         background: rgba(34, 34, 34, 0.99);
-                        padding: 20px;
+                        padding: 20px 30px 30px;
                         position: absolute;
                         bottom: 0; left:0;
                         transition: 0.5s;
 
                         h2{
-                            font: bold 24px/1 $mainFon;
+                            font: 24px/1 $mainFon;
                             color: #fff;
-                            text-align: right;
-                            margin-bottom: 40px;
+                            text-align: left;
+                            margin-bottom: 30px;
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 30px; height: 1px;
+                                background: #eee;
+                                margin-top: 10px;
+                            }
                         }
 
                         a{
@@ -442,7 +450,7 @@
                             width: 40px; height: 40px;
                             background: rgba(34, 34, 34, 0.99);
                             position: absolute;
-                            top: -20px; left: 20px;
+                            top: -20px; right: 20px;
                             border-radius: 50%;
                             text-align: center;
                             
@@ -451,6 +459,21 @@
                                 line-height: 40px;
                                 color: #eee;
                                 transform: rotatez(180deg);
+                            }
+                        }
+
+                        >ul >li{
+                            font: 19px/1.2 $mainFon;
+                            color: #ccc;
+                            margin-bottom: 20px;
+
+                            ul{
+                                margin-top: 10px;
+                                li{
+                                    font: 17px/1.6 $mainFon;
+                                    color: #888;
+                                }
+                                
                             }
                         }
                     }

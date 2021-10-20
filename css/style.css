@@ -726,18 +726,25 @@ input, a, select, option {
             left: -10px; }
           .mem .inner .wrap article .name .career {
             width: 340px;
-            height: 240px;
+            height: 380px;
             background: rgba(34, 34, 34, 0.99);
-            padding: 20px;
+            padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
             left: 0;
             transition: 0.5s; }
             .mem .inner .wrap article .name .career h2 {
-              font: bold 24px/1 "Rajdhani";
+              font: 24px/1 "Rajdhani";
               color: #fff;
-              text-align: right;
-              margin-bottom: 40px; }
+              text-align: left;
+              margin-bottom: 30px; }
+              .mem .inner .wrap article .name .career h2::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background: #eee;
+                margin-top: 10px; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 40px;
@@ -745,7 +752,7 @@ input, a, select, option {
               background: rgba(34, 34, 34, 0.99);
               position: absolute;
               top: -20px;
-              left: 20px;
+              right: 20px;
               border-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
@@ -753,6 +760,15 @@ input, a, select, option {
                 line-height: 40px;
                 color: #eee;
                 transform: rotatez(180deg); }
+            .mem .inner .wrap article .name .career > ul > li {
+              font: 19px/1.2 "Rajdhani";
+              color: #ccc;
+              margin-bottom: 20px; }
+              .mem .inner .wrap article .name .career > ul > li ul {
+                margin-top: 10px; }
+                .mem .inner .wrap article .name .career > ul > li ul li {
+                  font: 17px/1.6 "Rajdhani";
+                  color: #888; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
@@ -1355,18 +1371,25 @@ input, a, select, option {
             left: -10px; }
           .mem .inner .wrap article .name .career {
             width: 340px;
-            height: 240px;
+            height: 380px;
             background: rgba(34, 34, 34, 0.99);
-            padding: 20px;
+            padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
             left: 0;
             transition: 0.5s; }
             .mem .inner .wrap article .name .career h2 {
-              font: bold 24px/1 "Rajdhani";
+              font: 24px/1 "Rajdhani";
               color: #fff;
-              text-align: right;
-              margin-bottom: 40px; }
+              text-align: left;
+              margin-bottom: 30px; }
+              .mem .inner .wrap article .name .career h2::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background: #eee;
+                margin-top: 10px; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 40px;
@@ -1374,7 +1397,7 @@ input, a, select, option {
               background: rgba(34, 34, 34, 0.99);
               position: absolute;
               top: -20px;
-              left: 20px;
+              right: 20px;
               border-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
@@ -1382,6 +1405,15 @@ input, a, select, option {
                 line-height: 40px;
                 color: #eee;
                 transform: rotatez(180deg); }
+            .mem .inner .wrap article .name .career > ul > li {
+              font: 19px/1.2 "Rajdhani";
+              color: #ccc;
+              margin-bottom: 20px; }
+              .mem .inner .wrap article .name .career > ul > li ul {
+                margin-top: 10px; }
+                .mem .inner .wrap article .name .career > ul > li ul li {
+                  font: 17px/1.6 "Rajdhani";
+                  color: #888; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
