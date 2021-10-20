@@ -783,8 +783,7 @@ input, a, select, option {
                 transform: rotateX(180deg);
                 animation: none; }
         .mem .inner .wrap article:hover .pic img {
-          transform: scale(1.1);
-          filter: grayscale(0%); }
+          transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
           animation: motion 1s ease infinite;
           color: #fff; }
@@ -1451,8 +1450,7 @@ input, a, select, option {
                 transform: rotateX(180deg);
                 animation: none; }
         .mem .inner .wrap article:hover .pic img {
-          transform: scale(1.1);
-          filter: grayscale(0%); }
+          transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
           animation: motion 1s ease infinite;
           color: #fff; }
@@ -2088,13 +2086,13 @@ input, a, select, option {
   position: relative; }
   .inner .menu > dt {
     width: 120px;
-    height: 40px;
+    height: 35px;
     position: absolute;
-    left: -250px; }
+    left: -150px; }
     .inner .menu > dt a {
       display: block;
       width: 120px;
-      font: 18px/40px "Rajdhani";
+      font: 18px/35px "Rajdhani";
       color: #333; }
       .inner .menu > dt a.on {
         font-weight: bold;
@@ -2164,21 +2162,25 @@ input, a, select, option {
     margin: 0 auto 50px;
     position: relative; }
     .inner .menu #menu2 > dl dt {
-      padding: 30px 0 30px 70px;
+      padding: 30px 0 30px 100px;
       border-top: 1px solid #333;
-      position: relative; }
+      position: relative;
+      transition: 0.5s;
+      cursor: pointer; }
       .inner .menu #menu2 > dl dt span {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 20px;
         transform: translateY(-50%); }
         .inner .menu #menu2 > dl dt span i {
-          font-size: 30px;
-          color: #333; }
+          font-size: 35px;
+          color: #333;
+          transition: 0.5s; }
       .inner .menu #menu2 > dl dt p {
-        width: 80%;
-        font: bold 20px/1 "Rajdhani";
-        color: #555; }
+        width: 70%;
+        font: bold 22px/1 "Rajdhani";
+        color: #111;
+        transition: 0.5s; }
       .inner .menu #menu2 > dl dt > i {
         display: block;
         font-size: 18px;
@@ -2186,34 +2188,98 @@ input, a, select, option {
         position: absolute;
         top: 50%;
         right: 10px;
-        transform: translateY(-50%); }
+        transform: translateY(-50%);
+        transition: 0.5s; }
       .inner .menu #menu2 > dl dt.on span i {
         color: #ff5b20; }
       .inner .menu #menu2 > dl dt.on p {
         color: #333; }
       .inner .menu #menu2 > dl dt.on > i {
         color: #333; }
+      .inner .menu #menu2 > dl dt:hover {
+        background: rgba(252, 108, 56, 0.3); }
     .inner .menu #menu2 > dl dd {
       width: 100%;
       position: relative;
-      padding: 30px 0 30px 70px;
+      padding: 30px 0 30px 100px;
       background: #eee;
       border-top: 1px solid #999; }
       .inner .menu #menu2 > dl dd span {
-        font: bold 30px/1 "Rajdhani";
-        color: #555;
+        font: bold 35px/1 "Rajdhani";
+        color: #333;
         position: absolute;
         top: 50%;
-        left: 10px;
+        left: 20px;
         transform: translateY(-50%); }
         .inner .menu #menu2 > dl dd span b {
           display: block;
-          font: 13px/1.2 "Rajdhani";
-          color: #777; }
+          font: bold 17px/1.2 "Rajdhani";
+          color: #555; }
       .inner .menu #menu2 > dl dd p {
-        width: 80%;
+        width: 70%;
         font: 18px/1.6 "Rajdhani";
         color: #333; }
+  .inner .menu #menu3 > dl {
+    width: 100%;
+    margin: 0 auto 50px;
+    position: relative; }
+    .inner .menu #menu3 > dl dt {
+      padding: 30px 0 30px 100px;
+      border-top: 1px solid #333;
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s; }
+      .inner .menu #menu3 > dl dt span {
+        font: bold 50px/1 "Rajdhani";
+        color: #333;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        transition: 0.5s; }
+      .inner .menu #menu3 > dl dt p {
+        width: 70%;
+        font: bold 22px/1 "Rajdhani";
+        color: #111;
+        transition: 0.5s; }
+      .inner .menu #menu3 > dl dt > i {
+        display: block;
+        font-size: 18px;
+        color: #888;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: 0.5s; }
+      .inner .menu #menu3 > dl dt.on {
+        background: #222; }
+        .inner .menu #menu3 > dl dt.on span {
+          color: #ff5b20; }
+        .inner .menu #menu3 > dl dt.on p {
+          color: #eee;
+          font-weight: normal; }
+        .inner .menu #menu3 > dl dt.on > i {
+          color: #333; }
+      .inner .menu #menu3 > dl dt:hover span {
+        color: #ff5b20; }
+    .inner .menu #menu3 > dl dd {
+      width: 100%;
+      position: relative;
+      padding: 30px 0 30px 100px;
+      background: #eee;
+      border-top: 1px solid #999; }
+      .inner .menu #menu3 > dl dd span {
+        font: bold 50px/1 "Rajdhani";
+        color: #111;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%); }
+      .inner .menu #menu3 > dl dd p {
+        width: 70%;
+        font: 18px/1.6 "Rajdhani";
+        color: #333;
+        letter-spacing: 1px; }
 .inner .pagination {
   width: 100%;
   height: 30px;

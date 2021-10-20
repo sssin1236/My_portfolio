@@ -24,3 +24,7 @@ $(".career").on("click", function(){
     }
     
 });
+
+$(".career a").on("click", function(e){
+    e.preventDefault();
+});
