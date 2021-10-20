@@ -423,24 +423,25 @@
                     }
 
                     .career{
-                        width: 340px; height: 380px;
+                        width: 340px; height: 60px;
                         background: rgba(34, 34, 34, 0.99);
                         padding: 20px 30px 30px;
                         position: absolute;
                         bottom: 0; left:0;
+                        cursor: pointer;
                         transition: 0.5s;
 
                         h2{
                             font: 24px/1 $mainFon;
                             color: #fff;
-                            text-align: left;
+                            text-align: center;
                             margin-bottom: 30px;
                             transition: 0.5s;
 
                             &::after{
                                 content: '';
                                 display: block;
-                                width: 30px; height: 1px;
+                                width: 0px; height: 1px;
                                 background: #eee;
                                 margin-top: 10px;
                                 transition: 0.5s;
@@ -449,18 +450,18 @@
 
                         a{
                             display: block;
-                            width: 40px; height: 40px;
+                            width: 60px; height: 60px;
                             background: rgba(34, 34, 34, 0.99);
                             position: absolute;
-                            top: -20px; right: 20px;
+                            top: -30px; right: 20px;
                             border-radius: 50%;
                             text-align: center;
                             
                             i{
                                 font-size: 20px;
-                                line-height: 40px;
+                                line-height: 50px;
                                 color: #eee;
-                                transform: rotatez(180deg);
+                                transition: 1s;
                             }
                         }
 
@@ -490,8 +491,8 @@
                                 }
                             }
 
-                            a{
-
+                            a i{
+                                transform: rotateX(180deg);
                             }
                         }
                     }
@@ -502,8 +503,22 @@
                         transform: scale(1.1);
                         filter: grayscale(0%);
                     }
+                    .name{
+                        .career{
+                            i{
+                                animation: motion 1s ease infinite;
+                                color: #fff;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+}
+
+@keyframes motion{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-8px);}
+    100% {transform: translateY(0px);}
 }

@@ -726,42 +726,43 @@ input, a, select, option {
             left: -10px; }
           .mem .inner .wrap article .name .career {
             width: 340px;
-            height: 380px;
+            height: 60px;
             background: rgba(34, 34, 34, 0.99);
             padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
             left: 0;
+            cursor: pointer;
             transition: 0.5s; }
             .mem .inner .wrap article .name .career h2 {
               font: 24px/1 "Rajdhani";
               color: #fff;
-              text-align: left;
+              text-align: center;
               margin-bottom: 30px;
               transition: 0.5s; }
               .mem .inner .wrap article .name .career h2::after {
                 content: '';
                 display: block;
-                width: 30px;
+                width: 0px;
                 height: 1px;
                 background: #eee;
                 margin-top: 10px;
                 transition: 0.5s; }
             .mem .inner .wrap article .name .career a {
               display: block;
-              width: 40px;
-              height: 40px;
+              width: 60px;
+              height: 60px;
               background: rgba(34, 34, 34, 0.99);
               position: absolute;
-              top: -20px;
+              top: -30px;
               right: 20px;
               border-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
-                line-height: 40px;
+                line-height: 50px;
                 color: #eee;
-                transform: rotatez(180deg); }
+                transition: 1s; }
             .mem .inner .wrap article .name .career > ul > li {
               font: 19px/1.2 "Rajdhani";
               color: #ccc;
@@ -777,10 +778,22 @@ input, a, select, option {
                 text-align: left; }
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
+              .mem .inner .wrap article .name .career.on a i {
+                transform: rotateX(180deg); }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
+        .mem .inner .wrap article:hover .name .career i {
+          animation: motion 1s ease infinite;
+          color: #fff; }
 
+@keyframes motion {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-8px); }
+  100% {
+    transform: translateY(0px); } }
 .member .sub_visual .txt h1::after {
   content: '';
   display: block;
@@ -1379,42 +1392,43 @@ input, a, select, option {
             left: -10px; }
           .mem .inner .wrap article .name .career {
             width: 340px;
-            height: 380px;
+            height: 60px;
             background: rgba(34, 34, 34, 0.99);
             padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
             left: 0;
+            cursor: pointer;
             transition: 0.5s; }
             .mem .inner .wrap article .name .career h2 {
               font: 24px/1 "Rajdhani";
               color: #fff;
-              text-align: left;
+              text-align: center;
               margin-bottom: 30px;
               transition: 0.5s; }
               .mem .inner .wrap article .name .career h2::after {
                 content: '';
                 display: block;
-                width: 30px;
+                width: 0px;
                 height: 1px;
                 background: #eee;
                 margin-top: 10px;
                 transition: 0.5s; }
             .mem .inner .wrap article .name .career a {
               display: block;
-              width: 40px;
-              height: 40px;
+              width: 60px;
+              height: 60px;
               background: rgba(34, 34, 34, 0.99);
               position: absolute;
-              top: -20px;
+              top: -30px;
               right: 20px;
               border-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
-                line-height: 40px;
+                line-height: 50px;
                 color: #eee;
-                transform: rotatez(180deg); }
+                transition: 1s; }
             .mem .inner .wrap article .name .career > ul > li {
               font: 19px/1.2 "Rajdhani";
               color: #ccc;
@@ -1430,10 +1444,22 @@ input, a, select, option {
                 text-align: left; }
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
+              .mem .inner .wrap article .name .career.on a i {
+                transform: rotateX(180deg); }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
+        .mem .inner .wrap article:hover .name .career i {
+          animation: motion 1s ease infinite;
+          color: #fff; }
 
+@keyframes motion {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-8px); }
+  100% {
+    transform: translateY(0px); } }
 .gallery .inner h1 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
