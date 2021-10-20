@@ -1658,6 +1658,58 @@ input, a, select, option {
 
 .join .sub_visual .txt h1::after {
   width: 700px; }
+.join .inner .wrap {
+  width: 100%;
+  margin-bottom: 100px; }
+  .join .inner .wrap ul {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+    .join .inner .wrap ul::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .join .inner .wrap ul li {
+      width: 280px;
+      margin-right: 80px;
+      float: left;
+      text-align: center; }
+      .join .inner .wrap ul li:nth-of-type(2) > div {
+        background: #ff5b20; }
+        .join .inner .wrap ul li:nth-of-type(2) > div i {
+          color: #fff; }
+      .join .inner .wrap ul li:nth-of-type(2) p {
+        font-weight: bold;
+        font-size: 20px;
+        color: #333; }
+      .join .inner .wrap ul li:last-child {
+        margin-right: 0; }
+        .join .inner .wrap ul li:last-child > div i::after {
+          display: none; }
+      .join .inner .wrap ul li > div {
+        width: 150px;
+        height: 150px;
+        background: #eee;
+        margin: 0 auto 60px;
+        transform: rotate(45deg);
+        position: relative; }
+        .join .inner .wrap ul li > div i {
+          transform: rotate(-45deg);
+          font-size: 50px;
+          line-height: 150px; }
+          .join .inner .wrap ul li > div i::after {
+            content: '';
+            display: block;
+            width: 140px;
+            height: 5px;
+            background: #eee;
+            position: absolute;
+            top: 73px;
+            right: -226px; }
+      .join .inner .wrap ul li p {
+        font: 18px/1 'Noto Sans KR';
+        color: #777; }
 .join .inner h2 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
