@@ -737,14 +737,16 @@ input, a, select, option {
               font: 24px/1 "Rajdhani";
               color: #fff;
               text-align: left;
-              margin-bottom: 30px; }
+              margin-bottom: 30px;
+              transition: 0.5s; }
               .mem .inner .wrap article .name .career h2::after {
                 content: '';
                 display: block;
                 width: 30px;
                 height: 1px;
                 background: #eee;
-                margin-top: 10px; }
+                margin-top: 10px;
+                transition: 0.5s; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 40px;
@@ -771,6 +773,10 @@ input, a, select, option {
                   color: #888; }
             .mem .inner .wrap article .name .career.on {
               height: 380px; }
+              .mem .inner .wrap article .name .career.on h2 {
+                text-align: left; }
+                .mem .inner .wrap article .name .career.on h2::after {
+                  width: 30px; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }
@@ -1384,14 +1390,16 @@ input, a, select, option {
               font: 24px/1 "Rajdhani";
               color: #fff;
               text-align: left;
-              margin-bottom: 30px; }
+              margin-bottom: 30px;
+              transition: 0.5s; }
               .mem .inner .wrap article .name .career h2::after {
                 content: '';
                 display: block;
                 width: 30px;
                 height: 1px;
                 background: #eee;
-                margin-top: 10px; }
+                margin-top: 10px;
+                transition: 0.5s; }
             .mem .inner .wrap article .name .career a {
               display: block;
               width: 40px;
@@ -1418,6 +1426,10 @@ input, a, select, option {
                   color: #888; }
             .mem .inner .wrap article .name .career.on {
               height: 380px; }
+              .mem .inner .wrap article .name .career.on h2 {
+                text-align: left; }
+                .mem .inner .wrap article .name .career.on h2::after {
+                  width: 30px; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.1);
           filter: grayscale(0%); }

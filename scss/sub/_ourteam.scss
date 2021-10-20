@@ -435,6 +435,7 @@
                             color: #fff;
                             text-align: left;
                             margin-bottom: 30px;
+                            transition: 0.5s;
 
                             &::after{
                                 content: '';
@@ -442,6 +443,7 @@
                                 width: 30px; height: 1px;
                                 background: #eee;
                                 margin-top: 10px;
+                                transition: 0.5s;
                             }
                         }
 
@@ -480,7 +482,17 @@
                         &.on{
                             height: 380px;
 
-                            
+                            h2{
+                                text-align: left;
+
+                                &::after{
+                                    width: 30px;
+                                }
+                            }
+
+                            a{
+
+                            }
                         }
                     }
                 }
