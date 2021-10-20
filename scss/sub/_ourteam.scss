@@ -6,6 +6,26 @@
     width: 100%;
     padding: 0px 0 100px;
     margin-bottom: 100px;
+    position: relative;
+
+    >a{   
+        display: block;
+        width: 50px; height: 20px;
+        position: absolute;
+        top: 0; left: 200px;
+        font: bold 20px/1 $mainFon;
+        color: #111;
+
+        &:hover i{
+            margin-left: 20px;
+        }
+
+        i{
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: 0.5s;
+        }
+    }
 
     .inner{
         width: 1180px;
@@ -493,7 +513,7 @@
                             }
 
                             a i{
-                                transform: rotateX(180deg);
+                                transform: rotate(180deg);
                                 animation: none;
                             }
                         }

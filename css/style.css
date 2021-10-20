@@ -395,7 +395,23 @@ input, a, select, option {
 .intro {
   width: 100%;
   padding: 0px 0 100px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  position: relative; }
+  .intro > a {
+    display: block;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    font: bold 20px/1 "Rajdhani";
+    color: #111; }
+    .intro > a:hover i {
+      margin-left: 20px; }
+    .intro > a i {
+      font-size: 20px;
+      margin-bottom: 10px;
+      transition: 0.5s; }
   .intro .inner {
     width: 1180px;
     margin: 0 auto;
@@ -780,7 +796,7 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotateX(180deg);
+                transform: rotate(180deg);
                 animation: none; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
@@ -847,7 +863,7 @@ input, a, select, option {
     height: 20px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -150px;
     font: bold 20px/1 "Rajdhani";
     color: #111; }
     .member #ceo > a:hover i {
@@ -1062,7 +1078,23 @@ input, a, select, option {
 .intro {
   width: 100%;
   padding: 0px 0 100px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  position: relative; }
+  .intro > a {
+    display: block;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    font: bold 20px/1 "Rajdhani";
+    color: #111; }
+    .intro > a:hover i {
+      margin-left: 20px; }
+    .intro > a i {
+      font-size: 20px;
+      margin-bottom: 10px;
+      transition: 0.5s; }
   .intro .inner {
     width: 1180px;
     margin: 0 auto;
@@ -1447,7 +1479,7 @@ input, a, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotateX(180deg);
+                transform: rotate(180deg);
                 animation: none; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
@@ -1627,23 +1659,11 @@ input, a, select, option {
 .join .sub_visual .txt h1::after {
   width: 700px; }
 .join .inner h2 {
-  font: 30px/1 'Do Hyeon';
-  color: #555;
-  text-align: center; }
-  .join .inner h2::before {
-    content: '';
-    display: block;
-    border-bottom: 1px solid #bbb;
-    width: 40%;
-    height: 15px;
-    float: left; }
-  .join .inner h2::after {
-    content: '';
-    display: block;
-    border-bottom: 1px solid #bbb;
-    width: 40%;
-    height: 15px;
-    float: right; }
+  font: bold 24px/1 "Rajdhani";
+  color: #111;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #111; }
 .join .inner h3 {
   font: normal 22px/1 "Noto Sans KR";
   color: #555;
