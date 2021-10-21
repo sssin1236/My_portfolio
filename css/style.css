@@ -1696,8 +1696,9 @@ input, a, select, option {
         position: relative; }
         .join .inner .wrap ul li > div i {
           transform: rotate(-45deg);
-          font-size: 50px;
-          line-height: 150px; }
+          font-size: 45px;
+          line-height: 150px;
+          color: #333; }
           .join .inner .wrap ul li > div i::after {
             content: '';
             display: block;
@@ -1713,28 +1714,79 @@ input, a, select, option {
 .join .inner h2 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #111; }
-.join .inner h3 {
-  font: normal 22px/1 "Noto Sans KR";
-  color: #555;
-  margin: 50px 0 10px; }
-.join .inner textarea {
-  resize: none;
+  margin-bottom: 20px; }
+.join .inner dl {
   width: 100%;
-  height: 120px;
-  background-color: #efefef;
-  padding: 10px;
-  margin-bottom: 10px;
-  font: normal 14px/1.6 'Rajdhani';
-  color: #888;
-  border: 2px solid #aaa; }
-.join .inner .agree {
-  float: right; }
-  .join .inner .agree label {
-    font: 16px/1 "Noto Sans KR";
-    color: #555; }
+  margin-bottom: 100px; }
+  .join .inner dl dt {
+    width: 100%;
+    padding: 30px;
+    border-top: 2px solid #111;
+    border-bottom: 1px solid #bbb;
+    font: bold 18px/1 'Noto Sans KR';
+    color: #111; }
+    .join .inner dl dt::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .join .inner dl dt span {
+      float: right;
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: relative; }
+      .join .inner dl dt span::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #111;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        transform-origin: right center;
+        transform: rotate(30deg); }
+      .join .inner dl dt span::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #111;
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        transform-origin: right center;
+        transform: rotate(-30deg); }
+  .join .inner dl dd {
+    background: #fdfdfd;
+    width: 100%; }
+    .join .inner dl dd .terms {
+      width: 100%;
+      height: 500px;
+      padding: 50px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #bbb;
+      overflow: auto; }
+      .join .inner dl dd .terms h3 {
+        font: 15px/1 'Noto Snas KR';
+        color: #333;
+        margin-bottom: 25px; }
+      .join .inner dl dd .terms textarea {
+        resize: none;
+        width: 100%;
+        height: 200px;
+        background: #fdfdfd;
+        padding: 20px;
+        margin-bottom: 50px;
+        border: 1px solid #ddd;
+        font: 14px/1.6 'Noto Sans KR';
+        color: #888;
+        box-shadow: 0px 0px 30px rgba(10, 10, 10, 0.05); }
+        .join .inner dl dd .terms textarea:nth-of-type(2) {
+          height: 300px; }
+    .join .inner dl dd p {
+      font: bold 16px/1.6 'Noto Sans KR';
+      color: #333; }
 .join .inner table {
   width: 100%;
   border-top: 2px solid #888;

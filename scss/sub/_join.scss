@@ -62,8 +62,9 @@
 
                         i{
                             transform: rotate(-45deg);
-                            font-size: 50px;
+                            font-size: 45px;
                             line-height: 150px;
+                            color: #333;
 
                             &::after{
                                 content: '';
@@ -87,34 +88,95 @@
         h2{
             font: bold 24px/1 $mainFon;
             color: #111;
-            padding-bottom: 10px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #111;
         }
         
-        h3{
-            font: normal 22px/1 $fontKo;
-            color: #555;
-            margin: 50px 0 10px;
-        }
+        dl{
+            width: 100%;
+            margin-bottom: 100px;
 
-        textarea{
-            resize: none;
-            width: 100%; height: 120px;
-            background-color: #efefef;
-            padding: 10px;
-            margin-bottom: 10px;
-            font: normal 14px/1.6 'Rajdhani';
-            color: #888;
-            border: 2px solid #aaa;
-        }
+            dt{
+                width: 100%;
+                padding: 30px;
+                border-top: 2px solid #111;
+                border-bottom: 1px solid #bbb;
+                font: bold 18px/1 'Noto Sans KR';
+                color: #111;
 
-        .agree{
-            float: right;
+                &::after{
+                    content: ''; display: block; clear: both;
+                }
 
-            label{
-                font: 16px/1 $fontKo;
-                color: #555;
+                span{
+                    float: right;
+                    display: block;
+                    width: 20px; height: 20px;
+                    position: relative;
+                    
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 100%; height: 2px;
+                        background: #111;
+                        position: absolute;
+                        top: 9px; left: 0;
+                        transform-origin: right center;
+                        transform: rotate(30deg);
+                    }
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%; height: 2px;
+                        background: #111;
+                        position: absolute;
+                        bottom: 9px; left: 0;
+                        transform-origin: right center;
+                        transform: rotate(-30deg);
+                    }
+                }
+            }
+
+            dd{
+                background: rgb(253, 253, 253);
+                width: 100%;
+
+                .terms{
+                    width: 100%; height: 500px;
+                    padding: 50px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #bbb;
+                    overflow: auto;
+
+                    
+                    h3{
+                        font: 15px/1 'Noto Snas KR';
+                        color: #333;
+                        margin-bottom: 25px;
+                    }
+
+                    textarea{
+                        resize: none;
+                        width: 100%; height: 200px;
+                        background: rgb(253, 253, 253);
+                        padding: 20px;
+                        margin-bottom: 50px;
+                        border: 1px solid #ddd;
+                        font: 14px/1.6 'Noto Sans KR';
+                        color: #888;
+                        box-shadow: 0px 0px 30px rgba(10,10,10, 0.05);
+    
+                        &:nth-of-type(2){
+                            height: 300px;
+                        }
+                    }
+                }
+                
+
+                p{
+                    font: bold 16px/1.6 'Noto Sans KR';
+                    color: #333; 
+                }
             }
         }
 
