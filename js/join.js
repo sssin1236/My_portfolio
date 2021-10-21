@@ -46,6 +46,24 @@ $("input[name=userid]").on("keyup", function(){
     }
 });
 
+$("input[name=pwd1]").on("keyup", function(){
+    len =8;
+    len2 =15;
+
+    let txt = $(this).val();
+    let num = /[0-9]/;
+    let eng = /[a-zA-Z]/;
+    let spc = /[~!@#$%^&*()_+|\[\]-]/;
+
+    if(txt.length >= len && txt.length < len2 && eng.test(pwd1)){
+        $(this).parent().find("p").eq(0).css({ color: "#111"});
+    }else{
+        $(this).parent().find("p").eq(0).css({ color: "rgb(255, 91, 32)"});
+    }
+
+    
+});
+
 
 function isID(name, len, len2){
 
