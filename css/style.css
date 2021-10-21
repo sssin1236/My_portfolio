@@ -1814,8 +1814,8 @@ input, a, select, option {
         margin-right: 20px; }
 .join .inner table {
   width: 100%;
-  border-top: 2px solid #888;
-  border-bottom: 2px solid #888;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
   border-collapse: collapse; }
   .join .inner table tr {
     border-bottom: 1px solid #ddd; }
@@ -1824,7 +1824,7 @@ input, a, select, option {
       padding: 20px 10px;
       text-align: left;
       font: bold 15px/1 "Noto Sans KR";
-      color: #666; }
+      color: #111; }
       .join .inner table tr th:last-child {
         text-align: center; }
       .join .inner table tr th i {
@@ -1832,41 +1832,39 @@ input, a, select, option {
         color: #ff5b20;
         margin-left: 3px;
         transform: translateY(-9px); }
-      .join .inner table tr th input[type="reset"] {
+      .join .inner table tr th input[type=reset] {
+        float: left;
         width: 120px;
         height: 40px;
-        background-color: #555;
-        font: 18px/40px 'Do Hyeon';
-        color: #eee;
-        border: 2px solid #555;
+        font: bold 18px/40px "Rajdhani";
+        color: #ff5b20;
+        background: #fff;
+        border: 2px solid #ff5b20;
         box-sizing: border-box;
         transition: all 0.3s; }
-        .join .inner table tr th input[type="reset"]:hover {
+        .join .inner table tr th input[type=reset]:hover {
           cursor: pointer;
-          transform: translateX(-20%);
-          background: #ff5b20;
-          border: 2px solid #ff5b20; }
-      .join .inner table tr th input[type="submit"] {
+          transform: translateX(-20%); }
+      .join .inner table tr th input[type=submit] {
+        float: right;
         width: 120px;
         height: 40px;
-        background-color: #555;
-        font: 18px/40px 'Do Hyeon';
-        color: #eee;
-        border: 2px solid #555;
+        background-color: #ff5b20;
+        font: 18px/40px "Rajdhani";
+        color: #fff;
+        border: 2px solid #ff5b20;
         box-sizing: border-box;
         transition: all 0.3s; }
-        .join .inner table tr th input[type="submit"]:hover {
+        .join .inner table tr th input[type=submit]:hover {
           cursor: pointer;
-          transform: translateX(20%);
-          background: #ff5b20;
-          border: 2px solid #ff5b20; }
+          transform: translateX(20%); }
     .join .inner table tr td {
       width: auto;
       padding: 20px 10px;
       font: 20px/1 "Rajdhani";
       color: #888; }
-      .join .inner table tr td input[type="text"], .join .inner table tr td input[type="password"],
-      .join .inner table tr td input[type="search"], .join .inner table tr td input[type="tel"] {
+      .join .inner table tr td input[type=text], .join .inner table tr td input[type=password],
+      .join .inner table tr td input[type=search], .join .inner table tr td input[type=tel] {
         width: 30%;
         height: 30px;
         border: none;
@@ -1882,7 +1880,8 @@ input, a, select, option {
         color: #777; }
         .join .inner table tr td select option {
           font: normal 15px/1 "Rajdhani";
-          color: #777; }
+          color: #777;
+          background: #fdfdfd; }
       .join .inner table tr td label {
         font: 15px/1 "Noto Sans KR";
         color: #777;

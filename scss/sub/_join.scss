@@ -226,8 +226,8 @@
 
         table{
             width: 100%;
-            border-top: 2px solid #888;
-            border-bottom: 2px solid #888;
+            border-top: 2px solid #111;
+            border-bottom: 2px solid #111;
             border-collapse: collapse;
 
             tr{
@@ -238,7 +238,7 @@
                     padding: 20px 10px;
                     text-align: left;
                     font: bold 15px/1 $fontKo;
-                    color: #666;
+                    color: #111;
 
                     &:last-child{
                         text-align: center;
@@ -251,37 +251,35 @@
                         transform: translateY(-9px);
                     }
 
-                    input[type="reset"]{
+                    input[type=reset]{
+                        float: left;
                         width: 120px; height: 40px;
-                        background-color: #555;
-                        font: 18px/40px 'Do Hyeon';
-                        color: #eee;
-                        border: 2px solid #555;
+                        font: bold 18px/40px $mainFon;
+                        color: $mainCol;
+                        background: #fff;
+                        border: 2px solid $mainCol;
                         box-sizing:border-box;
                         transition: all 0.3s;
 
                         &:hover{
                             cursor: pointer;
                             transform: translateX(-20%);
-                            background: $mainCol;
-                            border: 2px solid $mainCol;
                         }
                     }
 
-                    input[type="submit"]{
+                    input[type=submit]{
+                        float: right;
                         width: 120px; height: 40px;
-                        background-color: #555;
-                        font: 18px/40px 'Do Hyeon';
-                        color: #eee;
-                        border: 2px solid #555;
+                        background-color: $mainCol;
+                        font: 18px/40px $mainFon;
+                        color: #fff;
+                        border: 2px solid $mainCol;
                         box-sizing:border-box;
                         transition: all 0.3s;
 
                         &:hover{
                             cursor: pointer;
                             transform: translateX(20%);
-                            background: $mainCol;
-                            border: 2px solid $mainCol;
                         }
                     }
                 }
@@ -292,8 +290,8 @@
                     font: 20px/1 $fontFam;
                     color: #888;
 
-                    input[type="text"], input[type="password"],
-                    input[type="search"], input[type="tel"]{
+                    input[type=text], input[type=password],
+                    input[type=search], input[type=tel]{
                         width: 30%; height: 30px;
                         border: none;
                         background: rgba(221, 221, 221, 0.692);
@@ -311,6 +309,7 @@
                         option{
                             font: normal 15px/1 $fontFam;
                             color: #777;
+                            background: rgb(253, 253, 253);
                         }
                     }
 
