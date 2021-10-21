@@ -1769,6 +1769,8 @@ input, a, select, option {
   .join .inner dl dd {
     background: #fdfdfd;
     width: 100%; }
+    .join .inner dl dd:nth-of-type(2) {
+      display: none; }
     .join .inner dl dd .terms {
       width: 100%;
       height: 500px;
@@ -1788,7 +1790,7 @@ input, a, select, option {
         margin-bottom: 50px;
         border: 1px solid #ddd;
         font: 14px/1.6 'Noto Sans KR';
-        color: #888;
+        color: #111;
         box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.068); }
         .join .inner dl dd .terms textarea:nth-of-type(2) {
           height: 300px; }
@@ -1797,11 +1799,11 @@ input, a, select, option {
         .join .inner dl dd .terms.two textarea {
           margin-bottom: 0; }
   .join .inner dl .chec {
-    padding: 30px;
+    padding: 15px 30px;
     text-align: right; }
     .join .inner dl .chec p {
       float: left;
-      font: bold 16px/1 'Noto Sans KR';
+      font: 16px/1 'Noto Sans KR';
       color: #333; }
     .join .inner dl .chec input[type=radio] {
       margin-right: 5px; }
