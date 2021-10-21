@@ -1717,14 +1717,17 @@ input, a, select, option {
   margin-bottom: 20px; }
 .join .inner dl {
   width: 100%;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  border-bottom: 2px solid #111; }
   .join .inner dl dt {
     width: 100%;
     padding: 30px;
     border-top: 2px solid #111;
     border-bottom: 1px solid #bbb;
     font: bold 18px/1 'Noto Sans KR';
-    color: #111; }
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s; }
     .join .inner dl dt::after {
       content: '';
       display: block;
@@ -1745,7 +1748,8 @@ input, a, select, option {
         top: 9px;
         left: 0;
         transform-origin: right center;
-        transform: rotate(30deg); }
+        transform: rotate(30deg);
+        transition: 0.5s; }
       .join .inner dl dt span::after {
         content: '';
         display: block;
@@ -1756,7 +1760,12 @@ input, a, select, option {
         bottom: 9px;
         left: 0;
         transform-origin: right center;
-        transform: rotate(-30deg); }
+        transform: rotate(-30deg);
+        transition: 0.5s; }
+    .join .inner dl dt:hover {
+      background: #eee; }
+    .join .inner dl dt.on span::before, .join .inner dl dt.on span::after {
+      transform: rotate(0deg); }
   .join .inner dl dd {
     background: #fdfdfd;
     width: 100%; }
@@ -1764,12 +1773,11 @@ input, a, select, option {
       width: 100%;
       height: 500px;
       padding: 50px;
-      margin-bottom: 30px;
       border-bottom: 1px solid #bbb;
       overflow: auto; }
       .join .inner dl dd .terms h3 {
-        font: 15px/1 'Noto Snas KR';
-        color: #333;
+        font: 16px/1 'Noto Snas KR';
+        color: #555;
         margin-bottom: 25px; }
       .join .inner dl dd .terms textarea {
         resize: none;
@@ -1781,12 +1789,27 @@ input, a, select, option {
         border: 1px solid #ddd;
         font: 14px/1.6 'Noto Sans KR';
         color: #888;
-        box-shadow: 0px 0px 30px rgba(10, 10, 10, 0.05); }
+        box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.068); }
         .join .inner dl dd .terms textarea:nth-of-type(2) {
           height: 300px; }
-    .join .inner dl dd p {
-      font: bold 16px/1.6 'Noto Sans KR';
+      .join .inner dl dd .terms.two {
+        height: auto; }
+        .join .inner dl dd .terms.two textarea {
+          margin-bottom: 0; }
+  .join .inner dl .chec {
+    padding: 30px;
+    text-align: right; }
+    .join .inner dl .chec p {
+      float: left;
+      font: bold 16px/1 'Noto Sans KR';
       color: #333; }
+    .join .inner dl .chec input[type=radio] {
+      margin-right: 5px; }
+    .join .inner dl .chec label {
+      font: 15px/1 'Noto Sans KR';
+      color: #555; }
+      .join .inner dl .chec label:nth-of-type(1) {
+        margin-right: 20px; }
 .join .inner table {
   width: 100%;
   border-top: 2px solid #888;
