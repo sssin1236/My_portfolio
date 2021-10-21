@@ -255,31 +255,37 @@
                         float: left;
                         width: 120px; height: 40px;
                         font: bold 18px/40px $mainFon;
-                        color: $mainCol;
+                        color: #333;
                         background: #fff;
-                        border: 2px solid $mainCol;
+                        border: 2px solid #333;
+                        box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
                         box-sizing:border-box;
                         transition: all 0.3s;
 
                         &:hover{
                             cursor: pointer;
                             transform: translateX(-20%);
+                            background: $mainCol;
+                            color: #fff;
+                            border: 2px solid $mainCol;
                         }
                     }
 
                     input[type=submit]{
                         float: right;
                         width: 120px; height: 40px;
-                        background-color: $mainCol;
+                        background-color: #333;
                         font: 18px/40px $mainFon;
                         color: #fff;
-                        border: 2px solid $mainCol;
+                        border: none;
+                        box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
                         box-sizing:border-box;
                         transition: all 0.3s;
 
                         &:hover{
                             cursor: pointer;
                             transform: translateX(20%);
+                            background: $mainCol;
                         }
                     }
                 }
@@ -296,6 +302,11 @@
                         border: none;
                         background: rgba(221, 221, 221, 0.692);
                         padding-left: 10px;
+
+                        &:focus{
+                            border: 1px solid $mainCol;
+                            background: rgba(250,250,250, 0.1);
+                        }
                     }
 
                     select{

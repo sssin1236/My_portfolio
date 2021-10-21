@@ -1,3 +1,13 @@
+const btnCall = document.querySelector(".btnMo");
+const menuMo = document.querySelector(".Mob");
+
+btnCall.onclick = function(e){
+    e.preventDefault();
+
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle("on");
+}
+
 
 $("dt").on("click", function(){
 
@@ -13,4 +23,9 @@ $("dt").on("click", function(){
         $(this).addClass("on");
         $(this).next().slideDown(500);
     }
+});
+
+$("input[type=submit]").on("click", function(e){
+    e.preventDefault();
+    
 });
