@@ -3024,6 +3024,7 @@ input, a, select, option {
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
+      overflow: hidden;
       position: relative;
       transform: translateY(100px);
       opacity: 0;
