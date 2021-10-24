@@ -2992,7 +2992,8 @@ input, a, select, option {
   #news .inner {
     width: 100%;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #news .inner h1 {
       font: bold 28px "Rajdhani";
       color: #eee;
