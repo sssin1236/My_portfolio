@@ -2990,7 +2990,7 @@ input, a, select, option {
     opacity: 1;
     transform: translateY(0px); }
   #news .inner {
-    width: 1180px;
+    width: 100%;
     margin: 0 auto;
     position: relative; }
     #news .inner h1 {
