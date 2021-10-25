@@ -357,3 +357,93 @@
 }
 
 
+@media screen and (max-width: 1179px){
+    .member{
+    
+        .sub_visual{
+            padding: 0 30px;
+    
+            .txt{
+                width: 100%; height: 80%;
+    
+                h1{
+                    font: bold 80px/1 'Rajdhani';
+                    color: #222;
+                    text-align: center;
+                    letter-spacing: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+    
+                    &::after{
+                        display: none;
+                    }
+    
+                    b{
+                        display: inline-block;
+                        transform: translateY(-40px);
+    
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 50px; height: 5px;
+                            background: #222;
+                        }
+                    }
+                }
+                
+                span{
+                    width: 80px; height: 80px;
+                    border-radius: 40px;
+                    top: 55%; left: 50%;
+                    transform: translateX(-50%);
+                    font: normal 14px/80px 'arial';
+                }
+    
+            }
+            
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 539px){
+    .member{
+    
+        .sub_visual{
+            padding: 20px;
+            margin-bottom: 50px;
+    
+            .txt{
+                width: 100%; height: 300px;
+    
+                h1{
+                    font: bold 55px/1 'Rajdhani';
+                    letter-spacing: 5px;
+    
+                    b{
+                        transform: translateY(-20px);
+    
+                        &::before{
+                            width: 25px; height: 3px;
+                            position: absolute;
+                            top: -5px; left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+                
+                span{
+                    width: 70px; height: 70px;
+                    border-radius: 35px;
+                    top: 50%; left: 50%;
+                    transform: translateX(-50%);
+                    font: normal 14px/70px 'arial';
+                }
+    
+            }
+            
+        }
+    }
+    
+}
