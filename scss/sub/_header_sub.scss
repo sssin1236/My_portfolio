@@ -243,3 +243,27 @@
         }
     }
 }
+
+
+
+@media screen and (max-width:1179px){
+    #header_sub{
+        
+        .inner{
+            width: 100%;
+            padding: 50px 30px;
+    
+            #gnb{
+                display: none;
+            }
+    
+            .util{
+                display: none;
+            }
+    
+            .btnMo{
+                display: block;
+            }
+        }
+    }
+}

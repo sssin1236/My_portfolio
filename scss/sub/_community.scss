@@ -441,3 +441,468 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1179px){
+    .inner{
+        
+        .menu{
+    
+            >dt{
+                display: none;
+            }
+    
+            #menu1{
+    
+                table{
+    
+                    tr{
+    
+                        td{
+                            &:nth-of-type(1){ width: 20%; }
+                            &:nth-of-type(2){ width: auto; }
+                            &:nth-of-type(3){ width: 23%; }
+    
+                            b{
+                                position: absolute;
+                                top: 30px;
+                            }
+    
+                            a{
+                                font: bold 20px/1 $mainFon;
+                                color: #111;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #menu2{
+                >dl{
+                    width: 100%;
+                    margin: 0 auto 50px;
+                    position: relative;
+    
+                    dt{
+                        padding: 30px 0 30px 100px;
+                        border-top: 1px solid #333;
+                        position: relative;
+                        transition: 0.5s;
+                        cursor: pointer;
+    
+                        span{
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+    
+                            i{
+                                font-size: 35px;
+                                color: #333;
+                                transition: 0.5s;
+                            }
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: bold 22px/1 $mainFon;
+                            color: #111;
+                            transition: 0.5s;
+                        }
+    
+                        >i{
+                            display: block;
+                            font-size: 18px;
+                            color: #888;
+                            position: absolute;
+                            top: 50%; right: 10px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        &.on{
+                            span i{
+                                color: $mainCol;
+                            }
+    
+                            p{
+                                color: #333;
+                            }
+    
+                            >i{
+                                color: #333;
+                            }
+                        }
+    
+                        &:hover{
+                            background: rgba(252, 108, 56, 0.3);
+                        }
+                    }
+    
+                    dd{
+                        width: 100%;
+                        position: relative;
+                        padding: 30px 0 30px 100px;
+                        background: #eee;
+                        border-top: 1px solid #999;
+    
+                        span{
+                            font: bold 35px/1 $mainFon;
+                            color: #333;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+    
+                            b{
+                                display: block;
+                                font: bold 17px/1.2 $mainFon;
+                                color: #555;
+                            }
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: 18px/1.6 $mainFon;
+                            color: #333; 
+                        }
+                    }
+                }
+            }
+    
+            #menu3{
+                >dl{
+                    width: 100%;
+                    margin: 0 auto 50px;
+                    position: relative;
+    
+                    dt{
+                        padding: 30px 0 30px 100px;
+                        border-top: 1px solid #333;
+                        position: relative;
+                        cursor: pointer;
+                        transition: 0.5s;
+    
+                        span{
+                            font: bold 50px/1 $mainFon;
+                            color: #333;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: bold 22px/1 $mainFon;
+                            color: #111;
+                            transition: 0.5s;
+                        }
+    
+                        >i{
+                            display: block;
+                            font-size: 18px;
+                            color: #888;
+                            position: absolute;
+                            top: 50%; right: 10px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        &.on{
+                            background: #222;
+                            span {
+                                color: $mainCol;
+                            }
+    
+                            p{
+                                color: #eee;
+                                font-weight: normal;
+                            }
+    
+                            >i{
+                                color: #333;
+                            }
+                        }
+    
+                        &:hover{
+                            span {
+                                color: $mainCol;
+                            }
+                        }
+                    }
+    
+                    dd{
+                        width: 100%;
+                        position: relative;
+                        padding: 30px 0 30px 100px;
+                        background: #eee;
+                        border-top: 1px solid #999;
+    
+                        span{
+                            font: bold 50px/1 $mainFon;
+                            color: #111;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: 18px/1.6 $mainFon;
+                            color: #333; 
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .pagination{
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 539px){
+    .inner{
+        .title{
+            
+            h2{
+                font: bold 35px/1 $mainFon;
+                letter-spacing: 1px;
+                padding-bottom: 0px;
+            }
+        
+            p{
+                position: relative;
+            }
+        }
+        
+        .menu{
+    
+            #menu1{
+    
+                table{
+    
+                    tr{
+    
+                        td{
+                            font: bold 14px/1 $mainFon;
+
+                            &:nth-of-type(1){ width: 20%; }
+                            &:nth-of-type(2){ width: auto; }
+                            &:nth-of-type(3){ width: 23%; }
+    
+    
+                            a{
+                                display: block;
+                                width: 90%;
+                                font: bold 18px/1 $mainFon;
+                                color: #111;
+                            }
+
+                            p{
+                                width: 90%;
+                                line-height: 1.2;
+                            }
+
+                            span{
+                                display: block;
+                                height: 40px;
+                                font: bold 15px/1 $mainFon;
+                                color: #222;
+                                position: absolute;
+                                top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #menu2{
+                >dl{
+                    width: 100%;
+                    margin: 0 auto 50px;
+                    position: relative;
+    
+                    dt{
+                        padding: 30px 0 30px 100px;
+                        border-top: 1px solid #333;
+                        position: relative;
+                        transition: 0.5s;
+                        cursor: pointer;
+    
+                        span{
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+    
+                            i{
+                                font-size: 35px;
+                                color: #333;
+                                transition: 0.5s;
+                            }
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: bold 22px/1 $mainFon;
+                            color: #111;
+                            transition: 0.5s;
+                        }
+    
+                        >i{
+                            display: block;
+                            font-size: 18px;
+                            color: #888;
+                            position: absolute;
+                            top: 50%; right: 10px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        &.on{
+                            span i{
+                                color: $mainCol;
+                            }
+    
+                            p{
+                                color: #333;
+                            }
+    
+                            >i{
+                                color: #333;
+                            }
+                        }
+    
+                        &:hover{
+                            background: rgba(252, 108, 56, 0.3);
+                        }
+                    }
+    
+                    dd{
+                        width: 100%;
+                        position: relative;
+                        padding: 30px 0 30px 100px;
+                        background: #eee;
+                        border-top: 1px solid #999;
+    
+                        span{
+                            font: bold 35px/1 $mainFon;
+                            color: #333;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+    
+                            b{
+                                display: block;
+                                font: bold 17px/1.2 $mainFon;
+                                color: #555;
+                            }
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: 18px/1.6 $mainFon;
+                            color: #333; 
+                        }
+                    }
+                }
+            }
+    
+            #menu3{
+                >dl{
+                    width: 100%;
+                    margin: 0 auto 50px;
+                    position: relative;
+    
+                    dt{
+                        padding: 30px 0 30px 100px;
+                        border-top: 1px solid #333;
+                        position: relative;
+                        cursor: pointer;
+                        transition: 0.5s;
+    
+                        span{
+                            font: bold 50px/1 $mainFon;
+                            color: #333;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: bold 22px/1 $mainFon;
+                            color: #111;
+                            transition: 0.5s;
+                        }
+    
+                        >i{
+                            display: block;
+                            font-size: 18px;
+                            color: #888;
+                            position: absolute;
+                            top: 50%; right: 10px;
+                            transform: translateY(-50%);
+                            transition: 0.5s;
+                        }
+    
+                        &.on{
+                            background: #222;
+                            span {
+                                color: $mainCol;
+                            }
+    
+                            p{
+                                color: #eee;
+                                font-weight: normal;
+                            }
+    
+                            >i{
+                                color: #333;
+                            }
+                        }
+    
+                        &:hover{
+                            span {
+                                color: $mainCol;
+                            }
+                        }
+                    }
+    
+                    dd{
+                        width: 100%;
+                        position: relative;
+                        padding: 30px 0 30px 100px;
+                        background: #eee;
+                        border-top: 1px solid #999;
+    
+                        span{
+                            font: bold 50px/1 $mainFon;
+                            color: #111;
+                            position: absolute;
+                            top: 50%; left: 20px;
+                            transform: translateY(-50%);
+                        }
+    
+                        p{
+                            width: 70%;
+                            font: 18px/1.6 $mainFon;
+                            color: #333; 
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .pagination{
+            text-align: center;
+        }
+    }
+    
+}
