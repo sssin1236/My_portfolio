@@ -98,6 +98,30 @@ function setCookie(time){
     document.cookie = "popup=done; expires"+duedate;
 }
 
+// 롤링 배너 -------------------------------------------------------------------
+const $rollWrap = $(".rolling").parent();
+let timer;
+let num = 0;
+
+timer = setInterval(roll, 30);
+
+$(".rolling").parent().on("mouseenter", function(){
+    clearInterval(timer);
+});
+$(".rolling").parent().on("mouseleave", function(){
+    timer = setInterval(roll, 30);
+});
+
+function roll(){
+    if(num <= -250){
+        num = 0;
+        // $(".rolling").find("article").first().appendTo($(".rolling"));
+    }else{
+        num -= 2;
+    }
+    $(".rolling").css({marginLeft: num});
+}
+
 // 스와이퍼 -----------------------------------------------------------------------
 
 
