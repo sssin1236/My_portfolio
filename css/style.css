@@ -345,74 +345,74 @@ input, a, select, option {
             color: #888; }
 
 @media screen and (max-width: 1179px) {
-  #footer {
+  #footer_sub {
     padding: 80px 40px 30px; }
-    #footer .inner {
+    #footer_sub .inner {
       width: 100%; }
-      #footer .inner .wrap {
+      #footer_sub .inner .wrap {
         position: relative; }
-        #footer .inner .wrap .menu1 {
+        #footer_sub .inner .wrap .menu1 {
           margin-bottom: 50px; }
-          #footer .inner .wrap .menu1 > li {
+          #footer_sub .inner .wrap .menu1 > li {
             float: left;
             width: calc(100% / 3);
             margin-right: 0; }
-            #footer .inner .wrap .menu1 > li:last-child {
+            #footer_sub .inner .wrap .menu1 > li:last-child {
               float: left;
               width: 50%;
               margin-top: 40px;
               text-align: left; }
-        #footer .inner .wrap address {
+        #footer_sub .inner .wrap address {
           float: left;
           font: 15px/1 'Rajdhani';
           color: #999;
           margin-bottom: 20px; }
-        #footer .inner .wrap > p {
+        #footer_sub .inner .wrap > p {
           float: right;
           font: 15px/1 'Rajdhani';
           color: #999; }
-        #footer .inner .wrap .visa {
+        #footer_sub .inner .wrap .visa {
           float: none;
           width: 49%;
           text-align: right;
           position: absolute;
           bottom: 65px;
           right: 40px; }
-      #footer .inner .bottom {
+      #footer_sub .inner .bottom {
         width: 80%;
         display: block;
         margin: 0 auto; }
-        #footer .inner .bottom h1 {
+        #footer_sub .inner .bottom h1 {
           margin-bottom: 30px; }
-        #footer .inner .bottom .menu2 {
+        #footer_sub .inner .bottom .menu2 {
           width: 100%;
           margin-bottom: 20px; }
-          #footer .inner .bottom .menu2 li {
+          #footer_sub .inner .bottom .menu2 li {
             float: left;
             width: calc(100% / 4);
             padding: 0px;
             text-align: center; }
-        #footer .inner .bottom .sns {
+        #footer_sub .inner .bottom .sns {
           width: 80%;
           display: flex;
           justify-content: space-evenly;
           margin: 0 auto; }
-          #footer .inner .bottom .sns::after {
+          #footer_sub .inner .bottom .sns::after {
             display: none; }
-          #footer .inner .bottom .sns li {
+          #footer_sub .inner .bottom .sns li {
             float: none;
             margin-right: 0px;
             text-align: center; }
-            #footer .inner .bottom .sns li:last-child {
+            #footer_sub .inner .bottom .sns li:last-child {
               margin-right: 0; }
-            #footer .inner .bottom .sns li a {
+            #footer_sub .inner .bottom .sns li a {
               display: block;
               width: 40px;
               height: 40px;
               background: #ddd;
               border-radius: 50%;
               text-align: center; }
-              #footer .inner .bottom .sns li a i {
+              #footer_sub .inner .bottom .sns li a i {
                 font-size: 20px;
                 line-height: 40px;
                 color: #888; } }
@@ -1899,6 +1899,60 @@ input, a, select, option {
     cursor: pointer;
     z-index: 5; }
 
+@media screen and (max-width: 1179px) {
+  .youtube .inner {
+    width: 100%;
+    padding: 0 30px; }
+    .youtube .inner #video {
+      width: 100%;
+      padding: 0px; }
+      .youtube .inner #video article {
+        padding: 0px 5px; }
+        .youtube .inner #video article:nth-of-type(2n) {
+          transform: translateY(100px); }
+        .youtube .inner #video article a {
+          height: 200px; }
+          .youtube .inner #video article a img {
+            transform: scale(1.35);
+            filter: grayscale(0%) hue-rotate(0deg) contrast(1); }
+        .youtube .inner #video article .con {
+          width: 100%;
+          margin-bottom: 80px; }
+          .youtube .inner #video article .con span {
+            width: 80%;
+            height: 40px;
+            padding: 0 30px;
+            font: bold 18px/40px "Rajdhani", "Noto Sans KR";
+            top: 0px;
+            left: 5px; }
+          .youtube .inner #video article .con h2 {
+            font: bold 15px/1.4 'Noto Sans KR'; }
+          .youtube .inner #video article .con p {
+            font: 13px/1.4 'arial', 'Noto Sans KR'; }
+
+  .vidPop {
+    padding: 250px 20px; } }
+@media screen and (max-width: 539px) {
+  .youtube .inner #video article {
+    width: 100%;
+    padding: 0px; }
+    .youtube .inner #video article:nth-of-type(2n) {
+      transform: translateY(0px); }
+    .youtube .inner #video article a {
+      height: 200px; }
+      .youtube .inner #video article a img {
+        transform: scale(1.35);
+        filter: grayscale(0%) hue-rotate(0deg) contrast(1); }
+    .youtube .inner #video article .con {
+      width: 100%;
+      margin-bottom: 40px; }
+      .youtube .inner #video article .con span {
+        padding: 0 30px;
+        top: 0px;
+        left: 0px; }
+
+  .vidPop {
+    padding: 300px 20px; } }
 .join .sub_visual .txt h1::after {
   width: 700px; }
 .join .inner .wrap {

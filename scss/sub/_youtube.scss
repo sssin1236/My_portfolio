@@ -110,3 +110,102 @@
         z-index: 5;
     }
 }
+
+@media screen and (max-width: 1179px){
+    .youtube{
+        .inner{
+            width: 100%;
+            padding: 0 30px;
+    
+            #video{
+                width: 100%;
+                padding: 0px;
+    
+                article{
+                    padding: 0px 5px;
+    
+                    &:nth-of-type(2n){
+                        transform: translateY(100px);
+                    }
+    
+                    a{ 
+                        height: 200px;
+    
+                        img{
+                            transform: scale(1.35);
+                            filter: grayscale(0%) hue-rotate(0deg) contrast(1);
+                        }
+                    }
+    
+                        
+                    .con{
+                        width: 100%;
+                        margin-bottom: 80px;
+    
+                        span{
+                            width: 80%; height: 40px;
+                            padding: 0 30px;
+                            font: bold 18px/40px $mainFon,'Noto Sans KR';
+                            top: 0px; left: 5px;
+                        }
+    
+                        h2{
+                            font: bold 15px/1.4 'Noto Sans KR';
+                        }
+    
+                        p{
+                            font: 13px/1.4 'arial', 'Noto Sans KR';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .vidPop{
+        padding: 250px 20px;
+    }
+}
+
+@media screen and (max-width: 539px){
+    .youtube{
+        .inner{
+    
+            #video{
+    
+                article{
+                    width: 100%;
+                    padding: 0px;
+    
+                    &:nth-of-type(2n){
+                        transform: translateY(0px);
+                    }
+    
+                    a{ 
+                        height: 200px;
+    
+                        img{
+                            transform: scale(1.35);
+                            filter: grayscale(0%) hue-rotate(0deg) contrast(1);
+                        }
+                    }
+    
+                        
+                    .con{
+                        width: 100%;
+                        margin-bottom: 40px;
+    
+                        span{
+                            padding: 0 30px;
+                            top: 0px; left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .vidPop{
+        padding: 300px 20px;
+    }
+}
