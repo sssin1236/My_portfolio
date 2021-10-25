@@ -3404,7 +3404,7 @@ input, a, select, option {
         min-height: 500px;
         float: left;
         margin-right: 20px;
-        padding: 40px 40px 40px;
+        padding: 40px;
         background: rgba(187, 187, 187, 0.144);
         transition: 1s;
         opacity: 0; }
@@ -3815,314 +3815,440 @@ input, a, select, option {
             font-size: 3vmin; }
 
   #banner {
-    width: 100%;
-    padding: 100px;
-    background: url(../img/banner1.jpg) no-repeat fixed; }
+    padding: 100px 30px; }
     #banner .inner {
-      width: 1180px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative; }
-      #banner .inner h1 {
-        font: bold 28px "Rajdhani";
-        color: #eee;
-        text-align: center;
-        margin-bottom: 40px; }
-        #banner .inner h1::after {
-          content: '';
-          display: block;
-          width: 40px;
-          height: 2px;
-          background: #ff5b20;
-          position: absolute;
-          top: 50px;
-          left: 50%;
-          transform: translateX(-50%); }
-      #banner .inner p {
-        font: normal 16px/1.4 "Rajdhani";
-        color: #ddd; }
+      width: 100%; }
 
   #comment {
-    width: 100%;
-    padding: 200px 0;
-    background: #111; }
-    #comment.on .inner h1, #comment.on .inner p {
-      transform: translateY(0);
-      opacity: 1; }
-    #comment.on .inner .wrap article {
-      opacity: 1; }
-      #comment.on .inner .wrap article:first-child {
-        transition-delay: 0.3s;
-        transform: translateX(0px); }
-      #comment.on .inner .wrap article:last-child {
-        transition-delay: 0.3s;
-        transform: translateX(0px); }
+    padding: 100px 30px; }
+    #comment.on .inner .wrap article:first-child {
+      transition-delay: 0.3s;
+      transform: translateX(0px); }
+    #comment.on .inner .wrap article:last-child {
+      transition-delay: 0.3s;
+      transform: translateX(0px); }
     #comment .inner {
-      width: 1180px;
-      margin: 0 auto;
-      position: relative; }
-      #comment .inner h1 {
-        font: bold 28px "Rajdhani";
-        color: #eee;
-        text-align: center;
-        margin-bottom: 40px;
-        transform: translateY(50px);
-        transition: 1s;
-        opacity: 0; }
-        #comment .inner h1::after {
-          content: '';
+      width: 100%; }
+      #comment .inner .wrap article {
+        width: 100%;
+        height: auto;
+        margin-right: 0px;
+        padding: 40px; }
+        #comment .inner .wrap article:first-child {
+          transform: translateX(-200px);
+          padding-bottom: 0px; }
+        #comment .inner .wrap article:last-child {
+          margin-right: 0;
+          transform: translateX(200px);
+          padding-top: 30px; }
+        #comment .inner .wrap article .pic {
+          padding: 20px 0; }
+          #comment .inner .wrap article .pic img {
+            width: 48%; }
+          #comment .inner .wrap article .pic h3 {
+            width: 45%;
+            position: absolute;
+            top: 25px;
+            left: 50%; }
+          #comment .inner .wrap article .pic span {
+            position: absolute;
+            top: 60px;
+            left: 50%; }
+          #comment .inner .wrap article .pic p {
+            position: absolute;
+            top: 90px;
+            left: 50%; }
+        #comment .inner .wrap article ul li a {
           display: block;
-          width: 40px;
-          height: 2px;
-          background: #ff5b20;
-          position: absolute;
-          top: 50px;
-          left: 50%;
-          transform: translateX(-50%); }
-      #comment .inner > p {
-        font: 15px "Rajdhani";
-        color: #eee;
-        text-align: center;
-        margin-bottom: 80px;
-        transform: translateY(-50px);
-        transition: 1s;
-        opacity: 0; }
-      #comment .inner .wrap {
-        width: 100%; }
-        #comment .inner .wrap::after {
-          content: '';
+          width: 80%;
+          height: 50px;
+          overflow: hidden; }
+        #comment .inner .wrap article ul li span {
+          line-height: 50px; }
+        #comment .inner .wrap article ul li:hover span {
           display: block;
-          clear: both; }
-        #comment .inner .wrap article {
-          width: 580px;
-          min-height: 500px;
-          float: left;
-          margin-right: 20px;
-          padding: 40px 40px 40px;
-          background: rgba(187, 187, 187, 0.144);
-          transition: 1s;
-          opacity: 0; }
-          #comment .inner .wrap article:first-child {
-            transform: translateX(-200px); }
-          #comment .inner .wrap article:last-child {
-            margin-right: 0;
-            transform: translateX(200px); }
-          #comment .inner .wrap article h2 {
-            display: inline-block;
-            font: bold 20px/1 "Rajdhani";
-            color: #eee;
-            margin-bottom: 20px; }
-          #comment .inner .wrap article > span {
-            float: right; }
-            #comment .inner .wrap article > span a i {
-              font-size: 16px;
-              color: #ddd;
-              transition: 0.3s; }
-            #comment .inner .wrap article > span a:hover svg {
-              font-size: 20px;
-              transform: rotate(180deg); }
-          #comment .inner .wrap article .pic {
-            width: 100%;
-            position: relative;
-            padding: 35px 0; }
-            #comment .inner .wrap article .pic:nth-of-type(1) {
-              border-top: 1px solid #ff5b20;
-              border-bottom: 1px solid #ff5b20; }
-            #comment .inner .wrap article .pic:nth-of-type(2) {
-              border-bottom: 1px solid #ff5b20; }
-            #comment .inner .wrap article .pic img {
-              width: 230px;
-              height: 150px;
-              object-fit: cover; }
-            #comment .inner .wrap article .pic h3 {
-              width: 250px;
-              padding-bottom: 5px;
-              position: absolute;
-              top: 45px;
-              left: 250px;
-              border-bottom: 2px solid #333;
-              font: normal 20px/1 "Rajdhani";
-              color: #ccc; }
-            #comment .inner .wrap article .pic span {
-              position: absolute;
-              top: 80px;
-              left: 250px;
-              font: 15px/1 "Rajdhani";
-              color: #777; }
-            #comment .inner .wrap article .pic p {
-              position: absolute;
-              top: 110px;
-              left: 250px;
-              font: 16px/1.4 "Rajdhani";
-              color: #999; }
-          #comment .inner .wrap article ul {
-            width: 100%; }
-            #comment .inner .wrap article ul li {
-              width: 100%;
-              height: 50px;
-              border-bottom: 1px solid #333;
-              padding: 0px 10px; }
-              #comment .inner .wrap article ul li:nth-of-type(1) {
-                border-top: 1px solid #ff5b20; }
-              #comment .inner .wrap article ul li:last-child {
-                border-bottom: 1px solid #ff5b20; }
-              #comment .inner .wrap article ul li::after {
-                content: '';
-                display: block;
-                clear: both; }
-              #comment .inner .wrap article ul li a {
-                float: left;
-                font: normal 17px/50px "Rajdhani";
-                color: #aaa;
-                transition: 0.2s; }
-              #comment .inner .wrap article ul li span {
-                float: right;
-                font: normal 13px/50px "Rajdhani";
-                color: #777; }
-              #comment .inner .wrap article ul li:hover {
-                background: #ff5b20; }
-                #comment .inner .wrap article ul li:hover a {
-                  color: #eee;
-                  letter-spacing: 0.5px; }
-                #comment .inner .wrap article ul li:hover span {
-                  display: none; }
+          color: #ccc; }
 
   #footer {
-    width: 100%;
-    padding: 100px 0 50px;
-    background: #efefef; }
+    padding: 80px 40px 30px; }
     #footer .inner {
-      width: 1180px;
-      margin: 0 auto;
-      position: relative; }
+      width: 100%; }
       #footer .inner .wrap {
-        width: 100%;
-        border-bottom: 1px solid #bbb;
-        margin-bottom: 50px; }
-        #footer .inner .wrap::after {
-          content: '';
-          display: block;
-          clear: both; }
+        position: relative; }
         #footer .inner .wrap .menu1 {
           margin-bottom: 50px; }
-          #footer .inner .wrap .menu1::after {
-            content: '';
-            display: block;
-            clear: both; }
           #footer .inner .wrap .menu1 > li {
             float: left;
-            margin-right: 120px; }
+            width: calc(100% / 3);
+            margin-right: 0; }
             #footer .inner .wrap .menu1 > li:last-child {
-              float: right;
-              margin-right: 0;
-              width: 300px;
-              position: relative; }
-            #footer .inner .wrap .menu1 > li > a {
-              display: block;
-              font: bold 16px/1 'Rajdhani';
-              color: #555;
-              letter-spacing: 1px;
-              margin-bottom: 10px; }
-            #footer .inner .wrap .menu1 > li p {
-              display: block;
-              margin-bottom: 15px;
-              font: 14px/1.2 'Rajdhani';
-              color: #666; }
-            #footer .inner .wrap .menu1 > li label {
-              font-size: 20px;
-              color: #777;
-              position: absolute;
-              bottom: 8px;
-              right: 20px; }
-            #footer .inner .wrap .menu1 > li input[type=email] {
-              display: block;
-              width: 100%;
-              height: 40px;
-              padding: 20px;
-              border: none;
-              background: #bbb;
-              border-radius: 5px;
-              font-family: 'Rajdhani';
-              color: #fff; }
-            #footer .inner .wrap .menu1 > li .depth li:last-child {
-              margin-bottom: 0; }
-            #footer .inner .wrap .menu1 > li .depth li a {
-              font: 15px/1.4 'Rajdhani';
-              color: #777; }
+              float: left;
+              width: 50%;
+              margin-top: 40px;
+              text-align: left; }
         #footer .inner .wrap address {
           float: left;
           font: 15px/1 'Rajdhani';
-          color: #999; }
+          color: #999;
+          margin-bottom: 20px; }
         #footer .inner .wrap > p {
           float: right;
           font: 15px/1 'Rajdhani';
           color: #999; }
         #footer .inner .wrap .visa {
-          float: right;
-          width: 100%;
+          float: none;
+          width: 49%;
           text-align: right;
-          margin: 40px 0px 20px; }
-          #footer .inner .wrap .visa span {
-            font: 20px/1 'Lalezar';
-            color: #999; }
-            #footer .inner .wrap .visa span:nth-of-type(1) {
-              margin-right: 20px; }
+          position: absolute;
+          bottom: 65px;
+          right: 40px; }
       #footer .inner .bottom {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-content: center; }
+        width: 80%;
+        display: block;
+        margin: 0 auto; }
         #footer .inner .bottom h1 {
-          display: flex;
-          align-content: center;
-          justify-content: center; }
-          #footer .inner .bottom h1 a {
-            display: inline-block;
-            margin-left: 15px;
-            font: bold 20px/15px 'Rajdhani';
-            color: #555;
-            letter-spacing: 1px; }
-          #footer .inner .bottom h1 i {
-            font-size: 35px;
-            color: #555;
-            line-height: 10px; }
-        #footer .inner .bottom .menu2::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #footer .inner .bottom .menu2 li {
-          float: left;
-          display: block;
-          padding: 0px 30px; }
-          #footer .inner .bottom .menu2 li:first-child {
-            padding-left: 0; }
-          #footer .inner .bottom .menu2 li:last-child {
-            padding-right: 0; }
-          #footer .inner .bottom .menu2 li a {
-            font: bold 15px/1 'Rajdhani';
-            color: #666;
-            letter-spacing: 1px; }
-        #footer .inner .bottom .sns::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #footer .inner .bottom .sns li {
-          float: left;
-          display: block;
-          margin-right: 10px; }
-          #footer .inner .bottom .sns li:last-child {
-            margin-right: 0; }
-          #footer .inner .bottom .sns li a {
-            display: block;
-            width: 40px;
-            height: 40px;
-            background: #ddd;
-            border-radius: 50%;
+          margin-bottom: 30px; }
+        #footer .inner .bottom .menu2 {
+          width: 100%;
+          margin-bottom: 20px; }
+          #footer .inner .bottom .menu2 li {
+            float: left;
+            width: calc(100% / 4);
+            padding: 0px;
             text-align: center; }
-            #footer .inner .bottom .sns li a i {
-              font-size: 20px;
-              line-height: 40px;
-              color: #888; } }
+        #footer .inner .bottom .sns {
+          width: 80%;
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto; }
+          #footer .inner .bottom .sns::after {
+            display: none; }
+          #footer .inner .bottom .sns li {
+            float: none;
+            margin-right: 0px;
+            text-align: center; }
+            #footer .inner .bottom .sns li:last-child {
+              margin-right: 0; }
+            #footer .inner .bottom .sns li a {
+              display: block;
+              width: 40px;
+              height: 40px;
+              background: #ddd;
+              border-radius: 50%;
+              text-align: center; }
+              #footer .inner .bottom .sns li a i {
+                font-size: 20px;
+                line-height: 40px;
+                color: #888; }
+
+  #navi {
+    right: 10px;
+    top: 50%; } }
+@media screen and (max-width: 539px) {
+  #popup .content {
+    width: 80%;
+    height: 60%; }
+    #popup .content .inner {
+      margin: 15px 0px 30px; }
+      #popup .content .inner article {
+        width: 100%;
+        height: 50%;
+        float: none; }
+      #popup .content .inner .popTxt {
+        padding: 10px 0px; }
+        #popup .content .inner .popTxt h1 {
+          font-size: 50px;
+          margin-top: 20px;
+          margin-bottom: 15px; }
+        #popup .content .inner .popTxt p {
+          font-size: 18px;
+          margin-bottom: 20px; }
+        #popup .content .inner .popTxt input[type=text] {
+          height: 30px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #ddd; }
+          #popup .content .inner .popTxt input[type=text]::placeholder {
+            font: 15px/30px "Rajdhani"; }
+          #popup .content .inner .popTxt input[type=text]:focus {
+            border: 1px solid #ff5b20; }
+        #popup .content .inner .popTxt input[type=submit] {
+          height: 30px;
+          padding: 0; }
+
+  #header .inner {
+    width: 100%;
+    padding: 50px 30px; }
+    #header .inner #gnb {
+      display: none; }
+    #header .inner .util {
+      display: none; }
+    #header .inner .btnMo {
+      display: block; }
+
+  #visual > img {
+    opacity: 0.15; }
+  #visual .inner {
+    width: 100%;
+    padding: 120px 30px 0px; }
+    #visual .inner h1 {
+      font: bold 60px/1 'arial'; }
+    #visual .inner > p {
+      width: 45%; }
+    #visual .inner .list {
+      width: 45%;
+      height: 250px;
+      padding: 20px;
+      top: 190px;
+      right: 30px; }
+      #visual .inner .list h2 {
+        width: 80px;
+        font: 20px/1 'arial';
+        margin-bottom: 15px; }
+        #visual .inner .list h2::before {
+          margin-bottom: 10px;
+          background: #ff5b20; }
+      #visual .inner .list ul {
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 20px; }
+        #visual .inner .list ul li {
+          width: calc(100% / 2 - 20px); }
+          #visual .inner .list ul li:nth-of-type(1), #visual .inner .list ul li:nth-of-type(2) {
+            margin-bottom: 30px; }
+          #visual .inner .list ul li a {
+            font: bold 14px/1 'arial';
+            color: #ccc; }
+          #visual .inner .list ul li > span {
+            display: block;
+            margin-top: 5px;
+            font: 13px/1 'arial';
+            color: #999; }
+      #visual .inner .list > span {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        font: bold 13px/1 'arial';
+        color: #555; }
+
+  #news {
+    width: 100%;
+    padding: 100px 30px; }
+    #news .inner {
+      width: 100%; }
+      #news .inner .swiper {
+        padding-top: 35px; }
+        #news .inner .swiper .swiper-slide {
+          width: 65%; }
+          #news .inner .swiper .swiper-slide span {
+            top: -40px;
+            left: 20px; }
+            #news .inner .swiper .swiper-slide span::after {
+              width: 280px; }
+          #news .inner .swiper .swiper-slide-active {
+            opacity: 1;
+            background: #ff5b20; }
+            #news .inner .swiper .swiper-slide-active span::after {
+              width: 100px; }
+            #news .inner .swiper .swiper-slide-active .pic {
+              height: 300px; }
+              #news .inner .swiper .swiper-slide-active .pic img {
+                filter: grayscale(0); }
+            #news .inner .swiper .swiper-slide-active h2 {
+              opacity: 1; }
+            #news .inner .swiper .swiper-slide-active::before {
+              animation: ani 1s ease 1; }
+      #news .inner .swiper-button-prev {
+        bottom: 0px;
+        right: 100px; }
+      #news .inner .swiper-button-next {
+        bottom: 0px;
+        right: 40px; }
+
+  #brand {
+    padding: 100px 30px; }
+    #brand.on .inner .wrap article:nth-of-type(1) {
+      transform: translateY(0px);
+      transform: translateX(0px);
+      transition-delay: 0.5s; }
+    #brand.on .inner .wrap article:nth-of-type(2) {
+      transform: translateY(0px);
+      transform: translateX(0px);
+      transition-delay: 1s; }
+    #brand.on .inner .wrap article:nth-of-type(3) {
+      transform: translateY(0px);
+      transform: translateX(0px);
+      transition-delay: 1.5s; }
+    #brand .inner {
+      width: 100%; }
+      #brand .inner .wrap article {
+        width: 100%;
+        height: 400px;
+        float: right;
+        margin-bottom: 50px;
+        margin-right: 0;
+        text-align: right; }
+        #brand .inner .wrap article:hover .txt {
+          left: 0; }
+        #brand .inner .wrap article:last-child {
+          margin-bottom: 0; }
+        #brand .inner .wrap article:nth-of-type(1) {
+          transform: translateY(0px);
+          transform: translateX(-50px); }
+        #brand .inner .wrap article:nth-of-type(2) {
+          transform: translateY(0px);
+          transform: translateX(50px); }
+        #brand .inner .wrap article:nth-of-type(3) {
+          transform: translateY(0px);
+          transform: translateX(-50px); }
+        #brand .inner .wrap article img {
+          width: 75%;
+          height: 100%;
+          object-fit: cover; }
+        #brand .inner .wrap article .txt {
+          width: 40%;
+          height: 110%;
+          left: 0%;
+          background: rgba(255, 91, 32, 0.7);
+          padding: 40px 30px;
+          opacity: 1;
+          text-align: left; }
+          #brand .inner .wrap article .txt h2 {
+            font-size: 4vmin; }
+          #brand .inner .wrap article .txt p {
+            letter-spacing: 0px;
+            font-size: 3vmin; }
+
+  #banner {
+    padding: 100px 30px; }
+    #banner .inner {
+      width: 100%; }
+
+  #comment {
+    padding: 100px 30px; }
+    #comment.on .inner .wrap article:first-child {
+      transition-delay: 0.3s;
+      transform: translateX(0px); }
+    #comment.on .inner .wrap article:last-child {
+      transition-delay: 0.3s;
+      transform: translateX(0px); }
+    #comment .inner {
+      width: 100%; }
+      #comment .inner .wrap article {
+        width: 100%;
+        height: auto;
+        margin-right: 0px;
+        padding: 40px; }
+        #comment .inner .wrap article:first-child {
+          transform: translateX(-200px);
+          padding-bottom: 0px; }
+        #comment .inner .wrap article:last-child {
+          margin-right: 0;
+          transform: translateX(200px);
+          padding-top: 30px; }
+        #comment .inner .wrap article .pic {
+          padding: 20px 0; }
+          #comment .inner .wrap article .pic img {
+            width: 48%; }
+          #comment .inner .wrap article .pic h3 {
+            width: 45%;
+            position: absolute;
+            top: 25px;
+            left: 50%; }
+          #comment .inner .wrap article .pic span {
+            position: absolute;
+            top: 60px;
+            left: 50%; }
+          #comment .inner .wrap article .pic p {
+            position: absolute;
+            top: 90px;
+            left: 50%; }
+        #comment .inner .wrap article ul li a {
+          display: block;
+          width: 80%;
+          height: 50px;
+          overflow: hidden; }
+        #comment .inner .wrap article ul li span {
+          line-height: 50px; }
+        #comment .inner .wrap article ul li:hover span {
+          display: block;
+          color: #ccc; }
+
+  #footer {
+    padding: 80px 40px 30px; }
+    #footer .inner {
+      width: 100%; }
+      #footer .inner .wrap {
+        position: relative; }
+        #footer .inner .wrap .menu1 {
+          margin-bottom: 50px; }
+          #footer .inner .wrap .menu1 > li {
+            float: left;
+            width: calc(100% / 3);
+            margin-right: 0; }
+            #footer .inner .wrap .menu1 > li:last-child {
+              float: left;
+              width: 50%;
+              margin-top: 40px;
+              text-align: left; }
+        #footer .inner .wrap address {
+          float: left;
+          font: 15px/1 'Rajdhani';
+          color: #999;
+          margin-bottom: 20px; }
+        #footer .inner .wrap > p {
+          float: right;
+          font: 15px/1 'Rajdhani';
+          color: #999; }
+        #footer .inner .wrap .visa {
+          float: none;
+          width: 49%;
+          text-align: right;
+          position: absolute;
+          bottom: 65px;
+          right: 40px; }
+      #footer .inner .bottom {
+        width: 80%;
+        display: block;
+        margin: 0 auto; }
+        #footer .inner .bottom h1 {
+          margin-bottom: 30px; }
+        #footer .inner .bottom .menu2 {
+          width: 100%;
+          margin-bottom: 20px; }
+          #footer .inner .bottom .menu2 li {
+            float: left;
+            width: calc(100% / 4);
+            padding: 0px;
+            text-align: center; }
+        #footer .inner .bottom .sns {
+          width: 80%;
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto; }
+          #footer .inner .bottom .sns::after {
+            display: none; }
+          #footer .inner .bottom .sns li {
+            float: none;
+            margin-right: 0px;
+            text-align: center; }
+            #footer .inner .bottom .sns li:last-child {
+              margin-right: 0; }
+            #footer .inner .bottom .sns li a {
+              display: block;
+              width: 40px;
+              height: 40px;
+              background: #ddd;
+              border-radius: 50%;
+              text-align: center; }
+              #footer .inner .bottom .sns li a i {
+                font-size: 20px;
+                line-height: 40px;
+                color: #888; }
+
+  #navi {
+    right: 10px;
+    top: 50%; } }
 @media screen and (max-height: 900px) {
   #visual .inner {
     padding-top: 170px; }
