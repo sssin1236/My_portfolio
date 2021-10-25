@@ -1487,161 +1487,33 @@
 
 @media screen and (max-width:1179px){
     #popup{
-        padding: 0px 30px;
     
         .content{
-            width: 800px; min-height: 400px;
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%,-50%);
-            background: transparent;
-            border: 2px solid #fff;
-            padding: 30px;
+            width: 80%; height: 80%;
     
-            .close{
-                float: right;
-                font: 15px/1 $mainFon;
-                color: $mainCol;
-                position: absolute;
-                top: 15px; right: 15px;
-    
-                b{
-                    display: block;
-                    transform: translateY(-20px);
-                    opacity: 0;
-                    transition: 0.5s;
-                }
-    
-                &:hover{
-                    &::before, &::after{
-                        transform: rotate(0deg);
-                        top: 120%;
-                    }
-    
-                    b{
-                        transform: translateY(0px);
-                        opacity: 1;
-                    }
-                }
-    
-                &::before{
-                    content: '';
-                    display: block;
-                    width: 20px; height: 2px;
-                    background: #fff;
-                    transform: rotate(45deg);
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    margin-left: -10px;
-                    transition: 0.5s;
-                }
-    
-                &::after{
-                    content: '';
-                    display: block;
-                    width: 20px; height: 2px;
-                    background: #fff;
-                    transform: rotate(-45deg);
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    margin-left: -10px;
-                    transition: 0.5s;
-                }
-            }
             
             .inner{
-                width: 100%; height: 400px;
-                margin: 15px 0px;
-    
-                &::after{
-                    content: ''; display: block; clear: both;
-                }
+                width: 100%; height: 90%;
+                margin: 15px 0px 50px;
     
                 article{
-                    width: 49%; height: 100%;
-                    float: left;
-                }
-    
-                .pic{
-                    background: #fff;
-                    margin-right: 1%;
-    
-                    img{
-                        width: 100%; height: 100%;
-                        object-fit: cover;
-                    }
+                    width: 100%; height: 50%;
+                    float: none;
                 }
     
                 .popTxt{
-                    position: relative;
-                    padding: 30px;
+                    padding: 30px 0px;
     
                     h1{
-                        font: bold 75px/1 $mainFon;
-                        color: $mainCol;
-                        text-align: center;
                         margin-top: 10px;
-                        margin-bottom: 40px;
+                        margin-bottom: 25px;
                     }
     
                     p{
-                        font: 24px/1 $mainFon;
-                        color: #fff;
-                        text-align: center;
-                        margin-bottom: 40px;
-                    }
-    
-                    input[type=text]{
-                        width: 100%; height: 40px;
-                        background: transparent;
-                        border: none;
-                        border-bottom: 2px solid #ddd;
-                        margin-bottom: 20px;
-                        padding: 10px;
-                        transition: 0.5s;
-    
-                        &::placeholder{
-                            text-align: center;
-                            font: 18px/40px $mainFon;
-                            color: #eee;
-                        }
-    
-                        &:focus{
-                            border: 2px solid $mainCol;
-                            background: transparent;
-                            font: 15px/40px $mainFon;
-                            color: #eee;
-                        }
-                    }
-    
-                    input[type=submit]{
-                        width: 100%; height: 40px;
-                        background: $mainCol;
-                        border: none;
-                        padding: 10px;
-                        font: bold 18px/1 $mainFon;
-                        color: #fff;
-                        cursor: pointer;
+                        margin-bottom: 30px;
                     }
                 }
             }
-            
-    
-            .wrap{
-                float: left;
-    
-                label{
-                    font: 15px/1 $fontKo;
-                    color: #eee;
-                    margin-left: 5px;
-                }
-    
-                input[type=checkbox]{
-                    display: inline-block;
-                    width: 15px; height: 15px;
-                }
-            }
-    
         }
     }
     
