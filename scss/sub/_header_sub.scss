@@ -102,8 +102,14 @@
                     margin-right: 0;
                 }
 
+                &:hover a i{
+                    transform: scale(1.2);
+                    color: #777;
+                }
+
                 a i{
                     color: #aaa;
+                    transition: 0.3s;
                 }
             }
         }
@@ -227,8 +233,7 @@
             }
     
             .util{
-                position: absolute;
-                top: 40px; right: 100px;
+                display: block;
             }
     
             .btnMo{
