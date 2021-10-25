@@ -100,6 +100,7 @@ function setCookie(time){
 
 // 스와이퍼 -----------------------------------------------------------------------
 
+
 const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -138,3 +139,5 @@ btnStart.onclick = function(){
 btnStop.onclick = function(){
     swiper.autoplay.stop();
 }
+
+
