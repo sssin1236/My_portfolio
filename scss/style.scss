@@ -1544,62 +1544,53 @@
     
         .inner{
             width: 100%;
-            padding: 100px 30px 0px;
+            padding: 120px 30px 0px;
     
             h1{
-                font: bold 70px/1 'arial';
-                color: #111;
-                margin-bottom: 20px;
+                font: bold 60px/1 'arial';
             }
     
             >p{
-                display: none;
+                width: 45%;
             }
     
             .list{
-                width: 90%; height: 250px;
-                padding: 30px;
-                position: absolute;
-                top: 250px; left: 50%;
-                transform: translateX(-50%);
-    
-                &::after{
-                    content: ''; display: block; clear: both;
-                }
+                width: 45%; height: 250px;
+                padding: 20px;
+                top: 190px; right: 30px;
     
                 h2{
-                    width: 130px;
-                    font: 28px/1 'arial';
-                    color: #ddd;
-                    margin-bottom: 30px;
+                    width: 80px;
+                    font: 20px/1 'arial';
+                    margin-bottom: 15px;
     
                     &::before{
-                        content: ''; 
-                        display: block;
-                        width: 80px; height: 2px;
-                        background: #eee;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
+                        background: $mainCol;
                     }
                 }
     
                 ul{
                     width: 100%;
                     position: absolute;
-                    bottom: 30px; left: 30px;
+                    top: 100px; left: 20px;
     
                     li{
-                        float: left;
-                        width: calc(100% / 4 - 20px);
+                        width: calc(100% / 2 - 20px);
+
+                        &:nth-of-type(1), &:nth-of-type(2){
+                            margin-bottom: 30px;
+                        }
     
                         a{
-                            font: bold 15px/1 'arial';
+                            font: bold 14px/1 'arial';
                             color: #ccc;
                         }
     
                         >span{
                             display: block;
                             margin-top: 5px;
-                            font: 14px/1 'arial';
+                            font: 13px/1 'arial';
                             color: #999;
                         }
                     }
@@ -1608,125 +1599,8 @@
                 >span{
                     position: absolute;
                     bottom: -40px; left: 0;
-                    font: bold 14px/1 'arial';
-                    color: #333;
-                }
-            }
-    
-            .wrap{
-                width: 100%; height: 420px;
-                position: absolute;
-                bottom: 0; left: 0;
-                overflow: hidden;
-    
-                .rolling{
-                    width: calc(250px * 8); height: 100%;
-    
-                    &::after{
-                        content: ''; display: block; clear: both;
-                    }
-        
-                    article{
-                        width: 250px; height: 90%;
-                        float: left;
-                        position: relative;
-                        transition: 0.5s;
-        
-                        &:hover{
-                            .pic img{
-                                opacity: 0.9;
-                            }
-        
-                            .text{
-                                p{
-                                    color: #fff;
-                                }
-        
-                                h3{
-                                    color: #fff;
-                                    border-bottom: 2px solid #fff; 
-                                }
-        
-                                span a, i{
-                                    color: #fff;
-                                }
-                            }
-                        }
-        
-                        .pic{
-                            width: 100%; height: 100%;
-                            position: absolute;
-                            top: 0; left: 0;
-                            z-index: 1;
-                            
-                            img{
-                                width: 100%; height: 100%;
-                                object-fit: cover;
-                                transition: all 0.5s;
-                                opacity: 0;
-                                filter: brightness(0.5);
-                            }
-                        }
-        
-                        .text{
-                            width: 160px; height: 100%;
-                            position: absolute;
-                            top: 50%; left: 50%;
-                            padding: 50px 0;
-                            transform: translate(-50%, -50%);
-                            z-index: 2;
-        
-                            >p{
-                                font: 14px/1 'arial';
-                                color: $mainCol;
-                                margin-top: 30px;
-                                margin-bottom: 20px;
-                                z-index: 2;
-                            }
-            
-                            h3{
-                                font: bold 28px/1.4 $mainFon;
-                                color: #111;
-                                z-index: 2;
-                                border-bottom: 2px solid $mainCol;
-                                padding-bottom: 20px;
-                                margin-bottom: 20px;
-                            }
-                            
-                            span{
-                                display: block;
-                                width: 100%;
-                                position: relative;
-                                z-index: 2;
-        
-                                &:hover{
-                                    a{
-                                        font-size: 14px;
-                                    }
-        
-                                    i{
-                                        transform: translateX(-20px);
-                                    }
-                                }
-            
-                                a{
-                                    font: 13px/1 'arial';
-                                    color: #222;
-                                    transition: 0.5s;
-            
-                                    i{
-                                        font-size: 14px;
-                                        color: #222;
-                                        position: absolute;
-                                        top: 50%; right:0px;
-                                        margin-top: -6px;
-                                        transition: 0.5s;
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
+                    font: bold 13px/1 'arial';
+                    color: #555;
                 }
             }
         }
@@ -1735,131 +1609,25 @@
     // news -------------------------------------------------------------------------------
     #news{
         width: 100%; 
-        padding: 150px 0px;
-        background: #111;
-    
-        &.on .inner{
-            h1, p{
-                transform: translateY(0);
-                opacity: 1;
-            }
-    
-            .swiper{
-                transition-delay: 0.4s;
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
+        padding: 100px 30px;
     
         .inner{
             width: 100%;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-    
-            h1{
-                @include title();
-                transform: translateY(50px);
-                transition: 1s;
-                opacity: 0;
-    
-                &::after{
-                    content: '';
-                    display: block;
-                    width: 40px; height: 2px;
-                    background:$mainCol;
-                    position: absolute;
-                    top: 50px; left: 50%;
-                    transform: translateX(-50%);
-                }
-    
-            }
-    
-            >p{
-                @include title2();
-                transform: translateY(-50px);
-                transition: 1s;
-                opacity: 0;
-            }
     
             .swiper {
-                width: 100%;
-                padding-top: 50px;
-                padding-bottom: 50px;
-                overflow: hidden;
-                position: relative;
-                transform: translateY(100px);
-                opacity: 0;
-                transition: 1s;
+                padding-top: 35px;
     
                 .swiper-slide {
-                    background-position: center;
-                    background-size: cover;
-                    width: 400px;
-                    height: 500px;
-                    padding: 30px 20px 20px;
-                    background: transparent;
-                    border: 1px solid $mainCol;
-                    opacity: 0.7;
-                    transition: 1s;
-    
-                    .pic{
-                        width: 100%; height: 300px;
-                        margin-bottom: 30px;
-    
-                        img{
-                            width: 100%; height: 100%;
-                            object-fit: cover;
-                            filter: grayscale(100%);
-                            transition: 0.5s;
-                        }
-                    }
+                    width: 65%;
     
                     span{
-                        font: 70px/1 'roboto';
-                        color: #fff;
-                        position: absolute;
-                        top: -45px; left: 20px;
+                        top: -40px; left: 20px;
     
                         &::after{
-                            content: '';
-                            display: block;
-                            width: 360px; height: 1.5px;
-                            background: #eee;
-                            margin-top: 30px;
-                            transition: 0.7s;
+                            width: 280px;
                         }
                     }
-    
-                    h2{
-                        font: 28px/1.1 $mainFon;
-                        color: #fff;
-                        letter-spacing: 3px;
-                        margin-bottom: 25px;
-                        text-align: right;
-                        opacity: 0;
-                        transition: 0.5s 0.3s;
-                    }
-    
-                    a{
-                        display: block;
-                        width: 100%;
-                        font: 18px/1 $mainFon;
-                        color: #ddd;
-    
-                        &:hover i{
-                            font-size: 20px;
-                        }
-    
-                        i{
-                            font-size: 18px;
-                            color: #ddd;
-                            position: absolute;
-                            top: auto; right: 20px;
-                            transition: 0.5s;
-                        }
-                    }
-    
+
                     &-active{
                         opacity: 1;
                         background: $mainCol;
@@ -1883,150 +1651,16 @@
                             animation: ani 1s ease 1;
                         }
                     }
-    
-                    &::before{
-                        content: '';
-                        display: block;
-                        width: 100%; height: 100%;
-                        position: absolute;
-                        top: 0; left: 0;
-                        border: 5px solid $mainCol;
-                        opacity: 0;
-                    }
                 }
                 
             }
     
             .swiper-button-prev{
-                width: 30px; height: 30px;
-                text-align: center;
-                position: absolute;
-                top: auto; left: auto;
-                bottom: 10px; right: 100px;
-                cursor: pointer;
-    
-                span{
-                    display: block;
-                    font: 13px/30px $mainFon;
-                    color: #eee;
-                    transform: translateX(5px);
-                    transition: 0.5s;
-                }
-    
-                &::before{
-                    content: '';
-                    display: block;
-                    width: 100%; height: 1px;
-                    background: #eee;
-                    position: absolute;
-                    top: 50%; left: 0px;
-                    transform: rotate(-180deg);
-                    transform-origin: left center;
-                    transition: 0.5s;
-                }
-    
-                &::after{
-                    content: '';
-                    display: block;
-                    width: 100%; height: 1px;
-                    background: #eee;
-                    position: absolute;
-                    bottom: 50%; left: 0px;
-                    transform: rotate(180deg);
-                    transform-origin: left center;
-                    transition: 0.5s;
-                }
-    
-                &:hover{
-                    span{
-                        transform: translateX(100%);
-                        opacity: 0;
-                    }
-    
-                    &::before{
-                        transform: rotate(-30deg);
-                    }
-    
-                    &::after{
-                        transform: rotate(30deg);
-                    }
-                }
+                bottom: 0px; right: 100px;
             }
     
             .swiper-button-next{
-                width: 30px; height: 30px;
-                position: absolute;
-                top: auto; left: auto;
-                bottom: 10px; right: 40px;
-                text-align: center;
-                cursor: pointer;
-    
-                span{
-                    display: block;
-                    font: 13px/30px $mainFon;
-                    color: #eee;
-                    transform: translateX(-5px);
-                    transition: 0.5s;
-                }
-    
-                &::before{
-                    content: '';
-                    display: block;
-                    width: 100%; height: 1px;
-                    background: #eee;
-                    position: absolute;
-                    top: 50%; left: 0px;
-                    transform: rotate(180deg);
-                    transform-origin: right center;
-                    transition: 0.5s;
-                }
-    
-                &::after{
-                    content: '';
-                    display: block;
-                    width: 100%; height: 1px;
-                    background: #eee;
-                    position: absolute;
-                    bottom: 50%; left: 0px;
-                    transform: rotate(-180deg);
-                    transform-origin: right center;
-                    transition: 0.5s;
-                }
-    
-                &:hover{
-                    span{
-                        opacity: 0;
-                        transform: translateX(-100%);
-                    }
-    
-                    &::before{
-                        transform: rotate(30deg);
-                    }
-    
-                    &::after{
-                        transform: rotate(-30deg);
-                    }
-                }
-            }
-    
-            .auto{
-                position: absolute;
-                bottom: 10px; left: 40px;
-    
-                li{
-                    float: left;
-                    margin-right: 20px;
-                    cursor: pointer;
-                    font: 13px/1 $mainFon;
-                    color: #eee;
-                    opacity: 0.8;
-                    transition: 0.5s;
-    
-                    &:hover{
-                        opacity: 1;
-                        transform: scale(1.2);
-                    }
-                }
+                bottom: 0px; right: 40px;
             }
         }
     }
