@@ -1487,7 +1487,6 @@
 
 @media screen and (max-width:1179px){
     #popup{
-    
         .content{
             width: 80%; height: 80%;
     
@@ -1528,128 +1527,24 @@
             }
     
             .util{
-    
-                li{
-                    float: left;
-                    display: block;
-                    margin-right: 20px;
-    
-                    &:last-child{
-                        margin-right: 0;
-                    }
-    
-                    a i{
-                        color: #aaa;
-                    }
-                }
+                display: none;
             }
     
             .btnMo{
                 display: block;
-                float: right;
-                transform: translateY(-50%);
-                width: 40px; height: 40px;
-                border: 2px solid #333;
-                font: bold 15px/1  $mainFon;
-                color: #333;
-                text-align: center;
-                letter-spacing: 2px;
-                padding: 3px 0px 0px; 
-            }
-    
-            .Mob{
-                position: fixed;
-                top: 0; left: -252px;
-                width: 250px; height: 100vh;
-                background:rgba(17, 17, 17, 0.9);
-                border-right: 2px solid #fff;
-                padding: 30px 30px;
-                z-index: 10;
-                opacity: 1;
-                transition: all 0.5s;
-    
-                h1{
-                    margin-bottom: 30px;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #444;
-                    float: left;
-    
-                    a{
-                        font: 18px/1 $mainFon;
-                        color: #aaa;
-    
-                        span{
-                            display: inline-block;
-                            margin-right: 10px;
-                            font:  bold 20px/1 $mainFon;
-                            color: #eee;
-                        }
-    
-                        i{
-                            font-size: 30px;
-                            color: #fff;
-                        }
-                    }
-                }
-    
-                #gnbMo{
-                    margin-bottom: 20px;
-    
-                    li{
-                        &:last-child{
-                            padding-bottom: 20px;
-                            border-bottom: 1px solid #444;
-                        }
-    
-                        a{
-                            display: block;
-                            width: 100%;
-                            padding: 15px 0;
-                            font: bold 16px/1 $mainFon;
-                            color: #ddd;
-                        }
-                    }
-                }
-    
-                .utilMo{
-                    li{
-                        a{
-                            display: block;
-                            width: 100%;
-                            padding: 10px 0;
-                            font: 14px/1 $mainFon;
-                            color: #aaa;
-                        }
-                    }
-                }
-    
-                &.on{
-                    left: 0;
-                    opacity: 1;
-                }
             }
         }
     }
     
     #visual{
-        width: 100%;
-        height: 100vh;
-        background: #efefef;
-        position: relative;
     
         >img{
-            width: 100%; height: 100%;
-            position: absolute;
-            top: 0; left: 0;
-            background: url(../img/visual1.jpg) no-repeat center/cover;
-            opacity: 0.1;
+            opacity: 0.15;
         }
     
         .inner{
-            width: 1180px; height: 100vh;
-            margin: 0 auto;
-            padding-top: 170px;
-            position: relative;
+            width: 100%;
+            padding: 100px 30px 0px;
     
             h1{
                 font: bold 70px/1 'arial';
@@ -1658,17 +1553,15 @@
             }
     
             >p{
-                width: 40%;
-                font: 16px/1.7 'arial';
-                color: #555;
+                display: none;
             }
     
             .list{
-                width: 53%; height: 270px;
+                width: 90%; height: 250px;
                 padding: 30px;
                 position: absolute;
-                top: 190px; right: 0;
-                background: url(../img/쿠션지.jpg) no-repeat center/cover;
+                top: 250px; left: 50%;
+                transform: translateX(-50%);
     
                 &::after{
                     content: ''; display: block; clear: both;

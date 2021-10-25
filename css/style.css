@@ -3675,234 +3675,154 @@ input, a, select, option {
     padding: 50px 30px; }
     #header .inner #gnb {
       display: none; }
-    #header .inner .util li {
-      float: left;
-      display: block;
-      margin-right: 20px; }
-      #header .inner .util li:last-child {
-        margin-right: 0; }
-      #header .inner .util li a i {
-        color: #aaa; }
+    #header .inner .util {
+      display: none; }
     #header .inner .btnMo {
-      display: block;
-      float: right;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      border: 2px solid #333;
-      font: bold 15px/1 "Rajdhani";
-      color: #333;
-      text-align: center;
-      letter-spacing: 2px;
-      padding: 3px 0px 0px; }
-    #header .inner .Mob {
-      position: fixed;
-      top: 0;
-      left: -252px;
-      width: 250px;
-      height: 100vh;
-      background: rgba(17, 17, 17, 0.9);
-      border-right: 2px solid #fff;
-      padding: 30px 30px;
-      z-index: 10;
-      opacity: 1;
-      transition: all 0.5s; }
-      #header .inner .Mob h1 {
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #444;
-        float: left; }
-        #header .inner .Mob h1 a {
-          font: 18px/1 "Rajdhani";
-          color: #aaa; }
-          #header .inner .Mob h1 a span {
-            display: inline-block;
-            margin-right: 10px;
-            font: bold 20px/1 "Rajdhani";
-            color: #eee; }
-          #header .inner .Mob h1 a i {
-            font-size: 30px;
-            color: #fff; }
-      #header .inner .Mob #gnbMo {
-        margin-bottom: 20px; }
-        #header .inner .Mob #gnbMo li:last-child {
-          padding-bottom: 20px;
-          border-bottom: 1px solid #444; }
-        #header .inner .Mob #gnbMo li a {
-          display: block;
-          width: 100%;
-          padding: 15px 0;
-          font: bold 16px/1 "Rajdhani";
-          color: #ddd; }
-      #header .inner .Mob .utilMo li a {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-        font: 14px/1 "Rajdhani";
-        color: #aaa; }
-      #header .inner .Mob.on {
-        left: 0;
-        opacity: 1; }
+      display: block; }
 
-  #visual {
+  #visual > img {
+    opacity: 0.15; }
+  #visual .inner {
     width: 100%;
-    height: 100vh;
-    background: #efefef;
-    position: relative; }
-    #visual > img {
-      width: 100%;
-      height: 100%;
+    padding: 100px 30px 0px; }
+    #visual .inner h1 {
+      font: bold 70px/1 'arial';
+      color: #111;
+      margin-bottom: 20px; }
+    #visual .inner > p {
+      display: none; }
+    #visual .inner .list {
+      width: 90%;
+      height: 250px;
+      padding: 30px;
       position: absolute;
-      top: 0;
-      left: 0;
-      background: url(../img/visual1.jpg) no-repeat center/cover;
-      opacity: 0.1; }
-    #visual .inner {
-      width: 1180px;
-      height: 100vh;
-      margin: 0 auto;
-      padding-top: 170px;
-      position: relative; }
-      #visual .inner h1 {
-        font: bold 70px/1 'arial';
-        color: #111;
-        margin-bottom: 20px; }
-      #visual .inner > p {
-        width: 40%;
-        font: 16px/1.7 'arial';
-        color: #555; }
-      #visual .inner .list {
-        width: 53%;
-        height: 270px;
-        padding: 30px;
+      top: 250px;
+      left: 50%;
+      transform: translateX(-50%); }
+      #visual .inner .list::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #visual .inner .list h2 {
+        width: 130px;
+        font: 28px/1 'arial';
+        color: #ddd;
+        margin-bottom: 30px; }
+        #visual .inner .list h2::before {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 2px;
+          background: #eee;
+          margin-bottom: 20px; }
+      #visual .inner .list ul {
+        width: 100%;
         position: absolute;
-        top: 190px;
-        right: 0;
-        background: url(../img/쿠션지.jpg) no-repeat center/cover; }
-        #visual .inner .list::after {
+        bottom: 30px;
+        left: 30px; }
+        #visual .inner .list ul li {
+          float: left;
+          width: calc(100% / 4 - 20px); }
+          #visual .inner .list ul li a {
+            font: bold 15px/1 'arial';
+            color: #ccc; }
+          #visual .inner .list ul li > span {
+            display: block;
+            margin-top: 5px;
+            font: 14px/1 'arial';
+            color: #999; }
+      #visual .inner .list > span {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        font: bold 14px/1 'arial';
+        color: #333; }
+    #visual .inner .wrap {
+      width: 100%;
+      height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      overflow: hidden; }
+      #visual .inner .wrap .rolling {
+        width: calc(250px * 8);
+        height: 100%; }
+        #visual .inner .wrap .rolling::after {
           content: '';
           display: block;
           clear: both; }
-        #visual .inner .list h2 {
-          width: 130px;
-          font: 28px/1 'arial';
-          color: #ddd;
-          margin-bottom: 30px; }
-          #visual .inner .list h2::before {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 2px;
-            background: #eee;
-            margin-bottom: 20px; }
-        #visual .inner .list ul {
-          width: 100%;
-          position: absolute;
-          bottom: 30px;
-          left: 30px; }
-          #visual .inner .list ul li {
-            float: left;
-            width: calc(100% / 4 - 20px); }
-            #visual .inner .list ul li a {
-              font: bold 15px/1 'arial';
-              color: #ccc; }
-            #visual .inner .list ul li > span {
-              display: block;
-              margin-top: 5px;
-              font: 14px/1 'arial';
-              color: #999; }
-        #visual .inner .list > span {
-          position: absolute;
-          bottom: -40px;
-          left: 0;
-          font: bold 14px/1 'arial';
-          color: #333; }
-      #visual .inner .wrap {
-        width: 100%;
-        height: 420px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        overflow: hidden; }
-        #visual .inner .wrap .rolling {
-          width: calc(250px * 8);
-          height: 100%; }
-          #visual .inner .wrap .rolling::after {
-            content: '';
-            display: block;
-            clear: both; }
-          #visual .inner .wrap .rolling article {
-            width: 250px;
-            height: 90%;
-            float: left;
-            position: relative;
-            transition: 0.5s; }
-            #visual .inner .wrap .rolling article:hover .pic img {
-              opacity: 0.9; }
-            #visual .inner .wrap .rolling article:hover .text p {
-              color: #fff; }
-            #visual .inner .wrap .rolling article:hover .text h3 {
-              color: #fff;
-              border-bottom: 2px solid #fff; }
-            #visual .inner .wrap .rolling article:hover .text span a, #visual .inner .wrap .rolling article:hover .text i {
-              color: #fff; }
-            #visual .inner .wrap .rolling article .pic {
+        #visual .inner .wrap .rolling article {
+          width: 250px;
+          height: 90%;
+          float: left;
+          position: relative;
+          transition: 0.5s; }
+          #visual .inner .wrap .rolling article:hover .pic img {
+            opacity: 0.9; }
+          #visual .inner .wrap .rolling article:hover .text p {
+            color: #fff; }
+          #visual .inner .wrap .rolling article:hover .text h3 {
+            color: #fff;
+            border-bottom: 2px solid #fff; }
+          #visual .inner .wrap .rolling article:hover .text span a, #visual .inner .wrap .rolling article:hover .text i {
+            color: #fff; }
+          #visual .inner .wrap .rolling article .pic {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; }
+            #visual .inner .wrap .rolling article .pic img {
               width: 100%;
               height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: 1; }
-              #visual .inner .wrap .rolling article .pic img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: all 0.5s;
-                opacity: 0;
-                filter: brightness(0.5); }
-            #visual .inner .wrap .rolling article .text {
-              width: 160px;
-              height: 100%;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              padding: 50px 0;
-              transform: translate(-50%, -50%);
+              object-fit: cover;
+              transition: all 0.5s;
+              opacity: 0;
+              filter: brightness(0.5); }
+          #visual .inner .wrap .rolling article .text {
+            width: 160px;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 50px 0;
+            transform: translate(-50%, -50%);
+            z-index: 2; }
+            #visual .inner .wrap .rolling article .text > p {
+              font: 14px/1 'arial';
+              color: #ff5b20;
+              margin-top: 30px;
+              margin-bottom: 20px;
               z-index: 2; }
-              #visual .inner .wrap .rolling article .text > p {
-                font: 14px/1 'arial';
-                color: #ff5b20;
-                margin-top: 30px;
-                margin-bottom: 20px;
-                z-index: 2; }
-              #visual .inner .wrap .rolling article .text h3 {
-                font: bold 28px/1.4 "Rajdhani";
-                color: #111;
-                z-index: 2;
-                border-bottom: 2px solid #ff5b20;
-                padding-bottom: 20px;
-                margin-bottom: 20px; }
-              #visual .inner .wrap .rolling article .text span {
-                display: block;
-                width: 100%;
-                position: relative;
-                z-index: 2; }
-                #visual .inner .wrap .rolling article .text span:hover a {
-                  font-size: 14px; }
-                #visual .inner .wrap .rolling article .text span:hover i {
-                  transform: translateX(-20px); }
-                #visual .inner .wrap .rolling article .text span a {
-                  font: 13px/1 'arial';
+            #visual .inner .wrap .rolling article .text h3 {
+              font: bold 28px/1.4 "Rajdhani";
+              color: #111;
+              z-index: 2;
+              border-bottom: 2px solid #ff5b20;
+              padding-bottom: 20px;
+              margin-bottom: 20px; }
+            #visual .inner .wrap .rolling article .text span {
+              display: block;
+              width: 100%;
+              position: relative;
+              z-index: 2; }
+              #visual .inner .wrap .rolling article .text span:hover a {
+                font-size: 14px; }
+              #visual .inner .wrap .rolling article .text span:hover i {
+                transform: translateX(-20px); }
+              #visual .inner .wrap .rolling article .text span a {
+                font: 13px/1 'arial';
+                color: #222;
+                transition: 0.5s; }
+                #visual .inner .wrap .rolling article .text span a i {
+                  font-size: 14px;
                   color: #222;
+                  position: absolute;
+                  top: 50%;
+                  right: 0px;
+                  margin-top: -6px;
                   transition: 0.5s; }
-                  #visual .inner .wrap .rolling article .text span a i {
-                    font-size: 14px;
-                    color: #222;
-                    position: absolute;
-                    top: 50%;
-                    right: 0px;
-                    margin-top: -6px;
-                    transition: 0.5s; }
 
   #news {
     width: 100%;
