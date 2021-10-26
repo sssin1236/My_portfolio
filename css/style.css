@@ -3121,6 +3121,127 @@ input, a, select, option {
             color: #eee;
             margin-right: 10px; }
 
+@media screen and (max-width: 1179px) {
+  .location .inner {
+    padding: 30px 30px; }
+    .location .inner .branch {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      z-index: 2; }
+      .location .inner .branch li a {
+        width: 120px;
+        height: 70px;
+        padding: 15px;
+        overflow: hidden; }
+  .location .inner .wrap {
+    width: 100%; }
+    .location .inner .wrap article {
+      width: 33.3333%;
+      padding-left: 0px; }
+  .location .form {
+    width: 100%;
+    padding: 0 30px; }
+    .location .form .wrap form {
+      width: 100%;
+      position: relative;
+      float: none; }
+      .location .form .wrap form fieldset {
+        width: 100%;
+        margin-bottom: 50px; }
+        .location .form .wrap form fieldset article {
+          width: 49%;
+          float: left; }
+          .location .form .wrap form fieldset article:nth-of-type(even) {
+            margin-left: 2%; }
+        .location .form .wrap form fieldset .comments {
+          width: 100%;
+          margin-bottom: 30px; }
+          .location .form .wrap form fieldset .comments textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #222;
+            background: transparent;
+            resize: none;
+            padding: 10px; }
+            .location .form .wrap form fieldset .comments textarea:focus {
+              font: 15px/1 'arial';
+              color: #222; }
+        .location .form .wrap form fieldset input[type=submit] {
+          width: 100px;
+          height: 40px;
+          border: none;
+          font: bold 15px/1 "Rajdhani";
+          color: #fff;
+          letter-spacing: 1px;
+          background: #222;
+          transition: 0.5s;
+          cursor: pointer; }
+          .location .form .wrap form fieldset input[type=submit]:hover {
+            background: #ff5b20;
+            font: #fff; }
+    .location .form .wrap .contact {
+      width: 100%;
+      float: none;
+      padding: 0px;
+      border-left: none; }
+      .location .form .wrap .contact ul li {
+        position: relative; }
+        .location .form .wrap .contact ul li::before {
+          content: '';
+          display: block;
+          width: 80%;
+          height: 1px;
+          background: #ff5b20;
+          position: absolute;
+          top: 10px;
+          right: 0; } }
+@media screen and (max-width: 539px) {
+  .location .inner {
+    padding: 30px 20px; }
+    .location .inner .branch {
+      top: 27%;
+      left: 25px; }
+      .location .inner .branch li a {
+        width: 100px;
+        height: 60px;
+        padding: 10px;
+        overflow: hidden; }
+    .location .inner .traffic {
+      width: 100%; }
+      .location .inner .traffic li {
+        width: 49%;
+        margin-right: 2%;
+        border: 1px solid #333; }
+        .location .inner .traffic li:last-child {
+          margin-right: 0; }
+        .location .inner .traffic li a {
+          width: 100%; }
+  .location .inner .wrap article {
+    float: none;
+    width: 100%;
+    margin-bottom: 50px; }
+    .location .inner .wrap article > h2 {
+      width: 100%; }
+  .location .form {
+    width: 100%;
+    padding: 0 20px; }
+    .location .form .wrap form fieldset .comments textarea {
+      height: 100px; }
+    .location .form .wrap form fieldset input[type=submit] {
+      width: 100px;
+      height: 40px;
+      border: none;
+      font: bold 15px/1 "Rajdhani";
+      color: #fff;
+      letter-spacing: 1px;
+      background: #222;
+      transition: 0.5s;
+      cursor: pointer; }
+    .location .form .wrap .contact ul li::before {
+      width: 70%;
+      height: 1px; } }
 .inner .title {
   position: relative;
   width: 100%; }

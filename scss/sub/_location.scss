@@ -317,3 +317,229 @@
     }
     
 }
+
+
+@media screen and (max-width: 1179px){
+    
+    .location{
+        .inner{
+            padding: 30px 30px;
+                
+            .branch{
+                position: absolute;
+                top: 50%; left: 30px;
+                transform: translateY(-50%);
+                z-index: 2;
+
+        
+                li{
+        
+                    a{
+                        width: 120px; height: 70px;
+                        padding: 15px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        
+        .inner{
+        
+            .wrap{
+                width: 100%;
+        
+                article{
+                    width: 33.3333%; 
+                    padding-left: 0px;
+                }
+            }
+        }
+        
+        .form{
+            width: 100%;
+            padding: 0 30px;
+        
+            .wrap{
+        
+                form{
+                    width: 100%;
+                    position: relative;
+                    float: none;
+
+                    fieldset{
+                        width: 100%;
+                        margin-bottom: 50px;
+
+                        article{
+                            width: 49%; 
+                            float: left;
+
+                            &:nth-of-type(even){
+                                margin-left: 2%;
+                            }
+                        }
+
+                        .comments{
+                            width: 100%;
+
+                            margin-bottom: 30px;
+
+                            textarea{
+                                width: 100%;
+                                border: none;
+                                border-bottom: 2px solid #222;
+                                background: transparent;
+                                resize: none;
+                                padding: 10px;
+
+                                &:focus{
+                                    font: 15px/1 'arial';
+                                    color: #222;
+                                }
+                            }
+                        }
+
+                        input[type=submit]{
+                            width: 100px; height: 40px;
+                            border: none;
+                            font: bold 15px/1 $mainFon;
+                            color: #fff;
+                            letter-spacing: 1px;
+                            background: #222;
+                            transition: 0.5s;
+                            cursor: pointer;
+
+                            &:hover{
+                                background: $mainCol;
+                                font: #fff;
+                            }
+                        }
+                        
+                    }
+                }
+
+                .contact{
+                    width: 100%; 
+                    float: none;
+                    padding: 0px;
+                    border-left: none;
+
+                    ul li{
+                        position: relative;
+
+                        &::before{
+                            content: ''; 
+                            display: block;
+                            width: 80%; height: 1px;
+                            background: $mainCol;
+                            position: absolute;
+                            top: 10px; right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+@media screen and (max-width: 539px){
+    
+    .location{
+        .inner{
+            padding: 30px 20px;
+                
+            .branch{
+                top: 27%; left: 25px;
+
+                li{
+                    a{
+                        width: 100px; height: 60px;
+                        padding: 10px;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .traffic{
+                width: 100%;
+        
+                li{
+                    width: 49%;
+                    margin-right: 2%;
+                    border: 1px solid #333;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+        
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        .inner{
+        
+            .wrap{
+                
+                article{
+                    float: none; 
+                    width: 100%;
+                    margin-bottom: 50px;
+        
+                    >h2{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        .form{
+            width: 100%;
+            padding: 0 20px;
+        
+            .wrap{
+        
+                form{
+
+                    fieldset{
+                        .comments{
+
+                            textarea{
+                                height: 100px;
+                            }
+                        }
+
+                        input[type=submit]{
+                            width: 100px; height: 40px;
+                            border: none;
+                            font: bold 15px/1 $mainFon;
+                            color: #fff;
+                            letter-spacing: 1px;
+                            background: #222;
+                            transition: 0.5s;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                }
+
+                .contact{
+
+                    ul li{
+
+                        &::before{
+                            width: 70%; height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
