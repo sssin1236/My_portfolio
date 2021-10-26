@@ -23,7 +23,6 @@ $.ajax({
 
         $("#gallery ul").append(
             $("<li>")
-                
                 .append(
                     $("<a>").attr({
                         href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
@@ -40,8 +39,27 @@ $.ajax({
                         $("<span>").text("0" + num + "/")
                     )
                 )
-        )}
-    );
+        )
+    });
+
+    const total = $("#gallery ul li").length;
+    let imgLen = 0;
+
+    $("#gallery img").each(function(index, data){
+
+        data.onerror = function(){
+            $(data).attr("src", "img/default.jpg");
+        }
+        
+        data.onload = function(){            
+            imgLen++;
+
+            if(imgLen === total){ 
+                $(".loadImg").addClass("off");
+                $("#gallery ul").addClass("on");
+            }
+        }        
+    }); 
 })
 .error(function(err){
     console.err("데이터를 호출하는 데 실패했습니다.");
@@ -64,3 +82,4 @@ $("body").on("click", "#gallery ul li", function(e){
 $("body").on("click", ".pop span", function(){
     $(".pop").fadeOut();
 });
+
