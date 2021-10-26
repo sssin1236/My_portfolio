@@ -2846,10 +2846,7 @@ input, a, select, option {
             font-size: 25px;
             line-height: 80px; }
             .join .inner .wrap ul li > div i::after {
-              width: 200%;
-              height: 3px;
-              top: 40px;
-              right: -93px; }
+              display: none; }
         .join .inner .wrap ul li p {
           font: 15px/1 'Noto Sans KR'; }
   .join .inner dl dt {
@@ -2909,11 +2906,6 @@ input, a, select, option {
         .join .inner .wrap ul li > div i {
           font-size: 25px;
           line-height: 60px; }
-          .join .inner .wrap ul li > div i::after {
-            width: 73%;
-            height: 3px;
-            top: 30px;
-            right: -46px; }
       .join .inner .wrap ul li p {
         font: 13px/1 'Noto Sans KR'; }
     .join .inner dl dt {

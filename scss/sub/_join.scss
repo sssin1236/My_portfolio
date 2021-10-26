@@ -412,8 +412,7 @@
                                 line-height: 80px;
 
                                 &::after{
-                                    width: 200%; height: 3px;
-                                    top: 40px; right: -93px;
+                                    display: none;
                                 }
                             }
                         }
@@ -541,11 +540,6 @@
                             i{
                                 font-size: 25px;
                                 line-height: 60px;
-    
-                                &::after{
-                                    width: 73%; height: 3px;
-                                    top: 30px; right: -46px;
-                                }
                             }
                         }
     
