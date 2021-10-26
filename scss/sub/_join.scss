@@ -590,7 +590,7 @@
                 tr{
     
                     &:nth-of-type(1) td input[type="text"]{
-                        width: 50%;
+                        width: 60%;
                     }
     
                     &:nth-of-type(6) td select{
@@ -642,7 +642,11 @@
                         }
     
                         a{
-                            width: 40%;
+                            width: 30%;
+
+                            i{
+                                display: none;
+                            }
                         }
                     }
                 }
