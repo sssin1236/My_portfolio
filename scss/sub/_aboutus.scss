@@ -439,6 +439,10 @@
                     top: 50%; left: 50%;
                     transform: translateX(-50%);
                     font: normal 14px/70px 'arial';
+
+                    a{
+                        line-height: 70px;
+                    }
                 }
     
             }

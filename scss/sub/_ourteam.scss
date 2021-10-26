@@ -588,7 +588,7 @@
                 width: 45%; height: 300px;
                 font: 15px/1.6 'arial';
                 overflow: hidden;
-                left: auto; bottom: 100px; right: -10px;
+                left: auto; bottom: 100px; right: -15px;
             }
         }
     }
@@ -834,6 +834,156 @@
                                     animation: motion 1s ease infinite;
                                     color: #fff;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 539px){
+    
+    .intro{
+        padding: 0px 20px 60px;
+        margin-bottom: 180px;
+
+        .inner{
+            width: 100%;
+
+            h1{
+                width: 100%;
+                font: bold 13vw/1 'arial';
+
+                &::before{
+                    display: none;
+                }
+
+                b{
+                    font: normal 15vw/1 'arial';
+                }
+            }
+
+            .pic{
+                width: 100%; height: 300px;
+                border: 2px solid $mainCol;
+            }
+
+            p{
+                width: 90%; height: 190px;
+                left: 30px; bottom: auto; right: auto; top: 105%;
+            }
+        }
+    }
+
+    .award{
+        padding: 80px 20px;
+
+        .inner{
+            h1{
+                margin-bottom: 50px;
+            }
+
+            article{
+                margin-bottom: 30px;
+
+                &:nth-of-type(2){
+                    .txt{ 
+                        padding-right: 0px;
+                    }
+                }
+
+                &:nth-of-type(3){
+                    .txt p{
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .txt{
+                    width: 100%;
+                    float: none;
+                    padding: 20px;
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                }
+
+                .pic{
+                    width: 100%; 
+                    float: none;
+                }
+            }
+        }
+    }
+
+    .phil{
+        padding: 50px 20px;
+        background: #333;
+
+        .inner{
+            h1{
+                margin-bottom: 40px;
+                color: #fff;
+            }
+            .wrap1{
+                display: none;
+            }
+
+            .wrap2{
+                width: 100%; height: 45%;
+                float: none;
+                padding: 0px;
+                margin: 0px;
+
+                .line{
+    
+                    h3{
+                        font: normal 17px/1 $mainFon;
+                    }
+                }
+            }
+        }
+    }
+
+    .mem{
+        padding: 80px 30px;
+
+        .inner{
+
+            h1{
+                font-size: 7vw;
+                margin-bottom: 50px;
+            }
+
+            .wrap{
+
+                article{
+                    width: 100%; height: 400px;
+                    margin-right: 0%;
+                    margin-bottom: 30px;
+
+                    &:nth-of-type(3){
+                        margin-right: 0;
+                    }
+
+                    &:last-child{
+                        .pic{
+                            margin-left: 60px;
+                        }
+                    }
+
+                    .pic{
+                        width: 90%; height: 400px;
+                        margin-top: 55px;
+                        margin-left: 50px;
+                    }
+
+                    .name{
+                        .career{
+
+                            h2{
+                                margin-bottom: 30px;
                             }
                         }
                     }

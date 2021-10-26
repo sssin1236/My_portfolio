@@ -1076,7 +1076,7 @@ input, a, select, option {
         overflow: hidden;
         left: auto;
         bottom: 100px;
-        right: -10px; }
+        right: -15px; }
 
   .award {
     padding: 80px 30px; }
@@ -1222,6 +1222,89 @@ input, a, select, option {
         .mem .inner .wrap article:hover .name .career i {
           animation: motion 1s ease infinite;
           color: #fff; } }
+@media screen and (max-width: 539px) {
+  .intro {
+    padding: 0px 20px 60px;
+    margin-bottom: 180px; }
+    .intro .inner {
+      width: 100%; }
+      .intro .inner h1 {
+        width: 100%;
+        font: bold 13vw/1 'arial'; }
+        .intro .inner h1::before {
+          display: none; }
+        .intro .inner h1 b {
+          font: normal 15vw/1 'arial'; }
+      .intro .inner .pic {
+        width: 100%;
+        height: 300px;
+        border: 2px solid #ff5b20; }
+      .intro .inner p {
+        width: 90%;
+        height: 190px;
+        left: 30px;
+        bottom: auto;
+        right: auto;
+        top: 105%; }
+
+  .award {
+    padding: 80px 20px; }
+    .award .inner h1 {
+      margin-bottom: 50px; }
+    .award .inner article {
+      margin-bottom: 30px; }
+      .award .inner article:nth-of-type(2) .txt {
+        padding-right: 0px; }
+      .award .inner article:nth-of-type(3) .txt p {
+        margin-bottom: 40px; }
+      .award .inner article .txt {
+        width: 100%;
+        float: none;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px; }
+      .award .inner article .pic {
+        width: 100%;
+        float: none; }
+
+  .phil {
+    padding: 50px 20px;
+    background: #333; }
+    .phil .inner h1 {
+      margin-bottom: 40px;
+      color: #fff; }
+    .phil .inner .wrap1 {
+      display: none; }
+    .phil .inner .wrap2 {
+      width: 100%;
+      height: 45%;
+      float: none;
+      padding: 0px;
+      margin: 0px; }
+      .phil .inner .wrap2 .line h3 {
+        font: normal 17px/1 "Rajdhani"; }
+
+  .mem {
+    padding: 80px 30px; }
+    .mem .inner h1 {
+      font-size: 7vw;
+      margin-bottom: 50px; }
+    .mem .inner .wrap article {
+      width: 100%;
+      height: 400px;
+      margin-right: 0%;
+      margin-bottom: 30px; }
+      .mem .inner .wrap article:nth-of-type(3) {
+        margin-right: 0; }
+      .mem .inner .wrap article:last-child .pic {
+        margin-left: 60px; }
+      .mem .inner .wrap article .pic {
+        width: 90%;
+        height: 400px;
+        margin-top: 55px;
+        margin-left: 50px; }
+      .mem .inner .wrap article .name .career h2 {
+        margin-bottom: 30px; } }
 .member .sub_visual .txt h1::after {
   content: '';
   display: block;
@@ -1544,7 +1627,9 @@ input, a, select, option {
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
-        font: normal 14px/70px 'arial'; } }
+        font: normal 14px/70px 'arial'; }
+        .member .sub_visual .txt span a {
+          line-height: 70px; } }
 .intro {
   width: 100%;
   padding: 0px 0 100px;
@@ -2000,7 +2085,7 @@ input, a, select, option {
         overflow: hidden;
         left: auto;
         bottom: 100px;
-        right: -10px; }
+        right: -15px; }
 
   .award {
     padding: 80px 30px; }
@@ -2146,6 +2231,89 @@ input, a, select, option {
         .mem .inner .wrap article:hover .name .career i {
           animation: motion 1s ease infinite;
           color: #fff; } }
+@media screen and (max-width: 539px) {
+  .intro {
+    padding: 0px 20px 60px;
+    margin-bottom: 180px; }
+    .intro .inner {
+      width: 100%; }
+      .intro .inner h1 {
+        width: 100%;
+        font: bold 13vw/1 'arial'; }
+        .intro .inner h1::before {
+          display: none; }
+        .intro .inner h1 b {
+          font: normal 15vw/1 'arial'; }
+      .intro .inner .pic {
+        width: 100%;
+        height: 300px;
+        border: 2px solid #ff5b20; }
+      .intro .inner p {
+        width: 90%;
+        height: 190px;
+        left: 30px;
+        bottom: auto;
+        right: auto;
+        top: 105%; }
+
+  .award {
+    padding: 80px 20px; }
+    .award .inner h1 {
+      margin-bottom: 50px; }
+    .award .inner article {
+      margin-bottom: 30px; }
+      .award .inner article:nth-of-type(2) .txt {
+        padding-right: 0px; }
+      .award .inner article:nth-of-type(3) .txt p {
+        margin-bottom: 40px; }
+      .award .inner article .txt {
+        width: 100%;
+        float: none;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px; }
+      .award .inner article .pic {
+        width: 100%;
+        float: none; }
+
+  .phil {
+    padding: 50px 20px;
+    background: #333; }
+    .phil .inner h1 {
+      margin-bottom: 40px;
+      color: #fff; }
+    .phil .inner .wrap1 {
+      display: none; }
+    .phil .inner .wrap2 {
+      width: 100%;
+      height: 45%;
+      float: none;
+      padding: 0px;
+      margin: 0px; }
+      .phil .inner .wrap2 .line h3 {
+        font: normal 17px/1 "Rajdhani"; }
+
+  .mem {
+    padding: 80px 30px; }
+    .mem .inner h1 {
+      font-size: 7vw;
+      margin-bottom: 50px; }
+    .mem .inner .wrap article {
+      width: 100%;
+      height: 400px;
+      margin-right: 0%;
+      margin-bottom: 30px; }
+      .mem .inner .wrap article:nth-of-type(3) {
+        margin-right: 0; }
+      .mem .inner .wrap article:last-child .pic {
+        margin-left: 60px; }
+      .mem .inner .wrap article .pic {
+        width: 90%;
+        height: 400px;
+        margin-top: 55px;
+        margin-left: 50px; }
+      .mem .inner .wrap article .name .career h2 {
+        margin-bottom: 30px; } }
 .gallery .inner h1 {
   font: bold 24px/1 "Rajdhani";
   color: #111;
