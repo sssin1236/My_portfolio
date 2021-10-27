@@ -225,14 +225,111 @@ body{
                 content: ''; display: block; clear: both;
             }
 
-
-            li{
+            >li{
                 float: left;
                 width: 80px;
                 margin: 0px 20px;
                 text-align: center;
-                position: relative;
                 transition: 0.5s;
+
+                .subMenu{
+                    width: 1180px; height: 300px;
+                    position: absolute;
+                    top: 91px; left: 50%;
+                    transform: translateX(-50%);
+                    background: #eee;
+                    border-top: 2px solid $mainCol;
+
+                    &:hover{
+                        .left{
+                            h2::before{
+                                transform: rotate(30deg);
+                            }
+
+                            h2::after{
+                                transform: rotate(-30deg);
+                            }
+                        }
+                    }
+
+                    .left{
+                        width: 30%; height: 100%;
+                        background: inherit;
+                        float: left;
+                        padding: 50px 20px;
+
+                        >h2{
+                            font: 40px/1 $mainFon;
+                            color: #111;
+                            text-align: left;
+                            margin-bottom: 30px;
+                            padding-bottom: 30px;
+                            border-bottom: 2px solid #111;
+                            position: relative;
+
+                            &::before{
+                                content: '';
+                                display: block;
+                                width: 15px; height: 2px;
+                                background: #111;
+                                position: absolute;
+                                bottom: -2px; right: 0;
+                                transform-origin: right center;
+                                transition: 0.5s;
+                            }
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 15px; height: 2px;
+                                background: #111;
+                                position: absolute;
+                                bottom: -2px; right: 0;
+                                transform-origin: right center;
+                                transition: 0.5s;
+                            }
+
+                            // i{
+                            //     font-size: 15px;
+                            //     position: absolute;
+                            //     bottom: -8px; right: -3px;
+                            // }
+                        }
+
+                        p{
+                            font: 15px/1.3 $mainFon;
+                            color: #333;
+                            text-align: left;
+                        }
+                    }
+
+                    .right{
+                        width: 70%; height: 100%;
+                        background: inherit;
+                        float: right;
+                        padding: 20px;
+                    }
+
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 100%; height: 100%;
+                        position: absolute;
+                        top: 0; left: -100%; 
+                        background: inherit;
+                        border: inherit;
+                    }
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%; height: 100%;
+                        position: absolute;
+                        top: 0; right: -100%;
+                        background: inherit;
+                        border: inherit;
+                    }
+                }
 
                 &::after{
                     content: '';
@@ -246,7 +343,7 @@ body{
                 }
 
                 &:hover{
-                    transform: translateY(-5px);
+                    transform: translateY(0px);
 
                     &::after{
                         width: 50%;
@@ -266,7 +363,7 @@ body{
                     }
                 }
 
-                a{
+                >a{
                     font: 15px/1 $mainFon;
                     color: #333;
                     transition: 0.5s;

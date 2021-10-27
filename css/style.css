@@ -2314,23 +2314,52 @@ input, a, select, option {
         margin-left: 50px; }
       .mem .inner .wrap article .name .career h2 {
         margin-bottom: 30px; } }
-.gallery .inner h1 {
-  font: bold 24px/1 "Rajdhani";
-  color: #111;
-  padding-bottom: 20px;
-  margin: 0px 10px;
-  border-bottom: 2px solid #111; }
-.gallery .inner .loadImg {
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.5s; }
-  .gallery .inner .loadImg.off {
-    opacity: 0;
-    transform: translate(-50%, -100px); }
+.gallery .inner {
+  position: relative; }
+  .gallery .inner h1 {
+    font: bold 24px/1 "Rajdhani";
+    color: #111;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #111;
+    cursor: pointer; }
+  .gallery .inner .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-content: center; }
+    .gallery .inner .search input {
+      width: 150px;
+      height: 20px;
+      padding: 15px;
+      border: 1px solid #ff5b20;
+      background: #fff;
+      transition: 0.5s; }
+      .gallery .inner .search input::placeholder {
+        font: 15px/20px "Rajdhani";
+        color: #ff5b20; }
+      .gallery .inner .search input:focus {
+        width: 250px; }
+    .gallery .inner .search a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-left: -30px; }
+      .gallery .inner .search a i {
+        font-size: 20px;
+        line-height: 30px;
+        color: #ff5b20; }
+  .gallery .inner .loadImg {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s; }
+    .gallery .inner .loadImg.off {
+      opacity: 0;
+      transform: translate(-50%, -100px); }
 
 #gallery {
   width: 100%; }
@@ -2416,6 +2445,10 @@ input, a, select, option {
     cursor: pointer; }
 
 @media screen and (max-width: 1179px) {
+  .gallery .inner .search {
+    top: -5px;
+    right: 30px; }
+
   #gallery ul li {
     width: 49%;
     padding: 20px;
@@ -2424,6 +2457,13 @@ input, a, select, option {
     #gallery ul li:nth-of-type(even) {
       margin-right: 0; } }
 @media screen and (max-width: 539px) {
+  .gallery .inner .search {
+    top: -5px; }
+    .gallery .inner .search input {
+      width: 120px; }
+      .gallery .inner .search input:focus {
+        width: 180px; }
+
   #gallery ul li {
     width: 100%;
     padding: 20px;
@@ -3969,14 +4009,92 @@ body {
       content: '';
       display: block;
       clear: both; }
-    #header .inner #gnb li {
+    #header .inner #gnb > li {
       float: left;
       width: 80px;
       margin: 0px 20px;
       text-align: center;
-      position: relative;
       transition: 0.5s; }
-      #header .inner #gnb li::after {
+      #header .inner #gnb > li .subMenu {
+        width: 1180px;
+        height: 300px;
+        position: absolute;
+        top: 91px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #eee;
+        border-top: 2px solid #ff5b20; }
+        #header .inner #gnb > li .subMenu:hover .left h2::before {
+          transform: rotate(30deg); }
+        #header .inner #gnb > li .subMenu:hover .left h2::after {
+          transform: rotate(-30deg); }
+        #header .inner #gnb > li .subMenu .left {
+          width: 30%;
+          height: 100%;
+          background: inherit;
+          float: left;
+          padding: 50px 20px; }
+          #header .inner #gnb > li .subMenu .left > h2 {
+            font: 40px/1 "Rajdhani";
+            color: #111;
+            text-align: left;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #111;
+            position: relative; }
+            #header .inner #gnb > li .subMenu .left > h2::before {
+              content: '';
+              display: block;
+              width: 15px;
+              height: 2px;
+              background: #111;
+              position: absolute;
+              bottom: -2px;
+              right: 0;
+              transform-origin: right center;
+              transition: 0.5s; }
+            #header .inner #gnb > li .subMenu .left > h2::after {
+              content: '';
+              display: block;
+              width: 15px;
+              height: 2px;
+              background: #111;
+              position: absolute;
+              bottom: -2px;
+              right: 0;
+              transform-origin: right center;
+              transition: 0.5s; }
+          #header .inner #gnb > li .subMenu .left p {
+            font: 15px/1.3 "Rajdhani";
+            color: #333;
+            text-align: left; }
+        #header .inner #gnb > li .subMenu .right {
+          width: 70%;
+          height: 100%;
+          background: inherit;
+          float: right;
+          padding: 20px; }
+        #header .inner #gnb > li .subMenu::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: -100%;
+          background: inherit;
+          border: inherit; }
+        #header .inner #gnb > li .subMenu::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: -100%;
+          background: inherit;
+          border: inherit; }
+      #header .inner #gnb > li::after {
         content: '';
         display: block;
         width: 0%;
@@ -3987,18 +4105,18 @@ body {
         left: 50%;
         transform: translateX(-50%);
         transition: 0.5s; }
-      #header .inner #gnb li:hover {
-        transform: translateY(-5px); }
-        #header .inner #gnb li:hover::after {
+      #header .inner #gnb > li:hover {
+        transform: translateY(0px); }
+        #header .inner #gnb > li:hover::after {
           width: 50%; }
-      #header .inner #gnb li.on {
+      #header .inner #gnb > li.on {
         transform: translateY(-5px); }
-        #header .inner #gnb li.on::after {
+        #header .inner #gnb > li.on::after {
           width: 50%; }
-        #header .inner #gnb li.on a {
+        #header .inner #gnb > li.on a {
           font-size: 17px;
           font-weight: bold; }
-      #header .inner #gnb li a {
+      #header .inner #gnb > li > a {
         font: 15px/1 "Rajdhani";
         color: #333;
         transition: 0.5s; }

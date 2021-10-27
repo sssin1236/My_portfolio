@@ -4,6 +4,50 @@ getList({
     user_id: "194134849@N06"
 });
 
+$(".search a").on("click", function(e){
+    e.preventDefault();
+
+    var search = $(".search input").val();
+    $(".search input").val("");
+
+    $("#gallery ul").removeClass("on");
+    $(".loadImg").removeClass("off");
+
+    getList({
+        type: "search",
+        tags: search
+    });
+});
+
+$(window).on("keypress", function(e){
+    if(e.keyCode == 13){
+        $("#gallery ul").removeClass("on");
+        $(".loadImg").removeClass("off");
+
+        var search = $(".search input").val();
+        $(".search input").val("");
+
+        $("#gallery ul").removeClass("on");
+        $(".loadImg").removeClass("off");
+
+        getList({
+            type: "search",
+            tags: search
+        }); 
+    }
+});
+
+
+$(".inner h1").on("click", function(){
+    $("#gallery ul").removeClass("on");
+    $(".loadImg").removeClass("off");
+
+    getList({
+        type: "userid",
+        user_id: "194134849@N06"
+    });
+});
+
 $("body").on("click", "#gallery ul li", function(e){
     e.preventDefault();
 
@@ -41,15 +85,15 @@ function getList(flickr){
 
     if(flickr.type == "search"){
         result_flickr = {
-            url:"https://www.flickr.com/services/rest/?method=flickr.photos.search",
-            dataType:"json",
+            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
+            dataType:"json", 
             data:{
-                api_key:"645bbdf320519f9a5473a288fc9f617a",
-                per_page:16,
+                api_key:"d61e30a1010fe3e1dab106d3a2df0f21", 
+                per_page:10, 
                 format:"json",
-                nojsoncallback:1,
-                privacy_filter: 1,
-                tags: flickr.tag 
+                nojsoncallback:1, 
+                privacy_filter : 1,
+                tags: flickr.tag
             }
         }
     }
@@ -74,7 +118,8 @@ function getList(flickr){
         console.log(data.photos.photo);
     
         let items = data.photos.photo;
-    
+        
+        $("#gallery").empty();
         $("#gallery").append("<ul>");
     
         $(items).each(function(index, data){
