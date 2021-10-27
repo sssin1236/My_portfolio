@@ -103,19 +103,19 @@ const $rollWrap = $(".rolling").parent();
 let timer;
 let num = 0;
 
-timer = setInterval(roll, 30);
+timer = setInterval(roll, 20);
 
 $(".rolling").parent().on("mouseenter", function(){
     clearInterval(timer);
 });
 $(".rolling").parent().on("mouseleave", function(){
-    timer = setInterval(roll, 30);
+    timer = setInterval(roll, 20);
 });
 
 function roll(){
     if(num <= -250){
         num = 0;
-        // $(".rolling").find("article").first().appendTo($(".rolling"));
+        $(".rolling").find("article").first().appendTo($(".rolling"));
     }else{
         num -= 2;
     }

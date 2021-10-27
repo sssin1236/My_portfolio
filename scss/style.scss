@@ -13,6 +13,12 @@
 @import "sub/location.scss";
 @import "sub/community";
 
+
+body{
+    width: 100%;
+    overflow-X: hidden;
+}
+
 #popup{
     position: fixed;
     top: 0; left: 0;
