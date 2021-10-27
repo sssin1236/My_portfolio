@@ -67,6 +67,17 @@ $("#navi li a").on("click", function(e){
 });
 
 
+//gnb menu -----------------------------------------------------------------------
+$("#gnb>li").on("mouseenter", function(){
+    $(this).find(".subMenu").fadeIn();
+});
+
+$("#gnb>li").on("mouseleave",function(){
+    $(this).find(".subMenu").fadeOut();
+});
+
+
+
 // 쿠키 팝업-------------------------------------------------------------------
 let isCookie = document.cookie.indexOf("popup=done");
 console.log(isCookie);
