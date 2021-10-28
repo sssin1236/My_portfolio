@@ -185,21 +185,22 @@ body{
 
 
 #header{
-    width: 100%;
-    padding: 60px 0;
+    width: 100%; 
     position: absolute;
     top: 0; left: 0;
     z-index: 2;
     
-    >.inner{
-        width: 1180px;
+    .inner{
+        width: 1180px; height:120px;
+        padding: 30px 0;
         margin: 0 auto;
         position: relative;
-        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
 
         >h1{
-            position: absolute;
-            left: 0px; bottom: 0%;
+            padding: 20px 0;
             display: flex;
             align-content: center;
             justify-content: center;
@@ -220,12 +221,22 @@ body{
         }
 
         #gnb{
-            width: 100%; 
-            position: absolute;
-            left: 0; bottom: 0;
 
             >li{
                 display: inline-block;
+                padding: 20px 40px;
+
+                &:hover a{
+                    transform: translateY(-5px);
+                }
+
+                >a{
+                    display: block;
+                    text-align: center;
+                    font: 15px/1 $mainFon;
+                    color: #333;
+                    transition: 0.5s;
+                }
 
                 .subMenu{
                     width: 1180px; height: 300px;
@@ -377,60 +388,16 @@ body{
                         border: inherit;
                     }
                 }
-
-                &::after{
-                    content: '';
-                    display: block;
-                    width: 0; height: 1px;
-                    background: $mainCol;
-                    position: absolute;
-                    top: -10px; left: 50%;
-                    transform: translateX(-50%);
-                    transition: 0.5s;
-                }
-
-                &:hover{
-                    transform: translateY(0px);
-
-                    &::after{
-                        width: 40px;
-                    }
-                }
-
-                &.on{
-                    transform: translateY(-5px);
-
-                    &::after{
-                        width: 40px;
-                    }
-
-                    a{
-                        font-size: 17px;
-                        font-weight: bold;
-                    }
-                }
-
-                >a{
-                    display: block;
-                    padding: 0 20px;
-                    margin: 0px 20px;
-                    text-align: center;
-                    font: 15px/1 $mainFon;
-                    color: #333;
-                    transition: 0.5s;
-                }
             }
         }
 
         .util{
-            position: absolute;
-            right: 0; bottom: 0;
 
             &::after{
                 content: ''; display: block; clear: both;
             }
 
-            li{
+            >li{
                 float: left;
                 display: block;
                 margin-right: 20px;
@@ -454,7 +421,6 @@ body{
         .btnMo{
             display: none;
             float: right;
-            transform: translateY(-50%);
             width: 40px; height: 40px;
             border: 2px solid #333;
             font: bold 15px/1  $mainFon;
@@ -502,7 +468,7 @@ body{
             #gnbMo{
                 margin-bottom: 20px;
 
-                li{
+                >li{
                     &:last-child{
                         padding-bottom: 20px;
                         border-bottom: 1px solid #444;
@@ -519,7 +485,7 @@ body{
             }
 
             .utilMo{
-                li{
+                >li{
                     a{
                         display: block;
                         width: 100%;
@@ -658,7 +624,7 @@ body{
     
                             h3{
                                 color: #fff;
-                                border-bottom: 2px solid #fff; 
+                                border-bottom: 1.5px solid #fff; 
                             }
     
                             span a, i{
@@ -702,7 +668,7 @@ body{
                             font: bold 28px/1.4 $mainFon;
                             color: #111;
                             z-index: 2;
-                            border-bottom: 2px solid $mainCol;
+                            border-bottom: 1.5px solid #333;
                             padding-bottom: 20px;
                             margin-bottom: 20px;
                         }
@@ -1685,11 +1651,8 @@ body{
         
         .inner{
             width: 100%;
-            padding: 0px 30px;
+            padding: 30px 30px;
             
-            >h1{
-                left: 30px; 
-            }
     
             #gnb{
                 display: none;

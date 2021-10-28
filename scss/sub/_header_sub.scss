@@ -208,32 +208,12 @@
             width: 100%;
             padding: 50px 30px;
     
-            h1{
-                display: flex;
-                align-content: center;
-                justify-content: center;
-    
-                a{
-                    display: inline-block;
-                    margin-right: 15px;
-                    font: bold 16px/15px $mainFon;
-                    color: #111;
-                    letter-spacing: 1px;
-                }
-                
-                i{
-                    font-size: 30px;
-                    color: #111;
-                    line-height: 10px;
-                }
-            }
-    
             #gnb{
                 display: none;
             }
     
             .util{
-                display: block;
+                display: none;
             }
     
             .btnMo{
@@ -246,24 +226,3 @@
 
 
 
-@media screen and (max-width:1179px){
-    #header_sub{
-        
-        .inner{
-            width: 100%;
-            padding: 50px 30px;
-    
-            #gnb{
-                display: none;
-            }
-    
-            .util{
-                display: none;
-            }
-    
-            .btnMo{
-                display: block;
-            }
-        }
-    }
-}
