@@ -3988,20 +3988,20 @@ body {
     margin: 0 auto;
     position: relative;
     text-align: center; }
-    #header .inner h1 {
+    #header .inner > h1 {
       position: absolute;
-      left: 0;
+      left: 0px;
       bottom: 0%;
       display: flex;
       align-content: center;
       justify-content: center; }
-      #header .inner h1 a {
+      #header .inner > h1 a {
         display: inline-block;
         margin-right: 15px;
         font: bold 16px/15px "Rajdhani";
         color: #111;
         letter-spacing: 1px; }
-      #header .inner h1 i {
+      #header .inner > h1 i {
         font-size: 30px;
         color: #111;
         line-height: 10px; }
@@ -4209,8 +4209,7 @@ body {
       #header .inner .Mob h1 {
         margin-bottom: 30px;
         padding-bottom: 20px;
-        border-bottom: 1px solid #444;
-        float: left; }
+        border-bottom: 1px solid #444; }
         #header .inner .Mob h1 a {
           font: 18px/1 "Rajdhani";
           color: #aaa; }
@@ -5097,7 +5096,7 @@ body {
   #header .inner {
     width: 100%;
     padding: 0px 30px; }
-    #header .inner h1 {
+    #header .inner > h1 {
       left: 30px; }
     #header .inner #gnb {
       display: none; }

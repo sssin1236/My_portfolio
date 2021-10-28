@@ -1,10 +1,10 @@
-var container = document.getElementById('map'); 
-var options = { 
+const container = document.getElementById('map'); 
+const options = { 
 	center: new kakao.maps.LatLng(37.50706831802294, 126.75637087155816), 
 	level: 3 
 };
 
-var map = new kakao.maps.Map(container, options); 
+const map = new kakao.maps.Map(container, options); 
 
 
 const t_on = document.querySelectorAll(".traffic li")[0];
@@ -28,12 +28,9 @@ t_off.addEventListener("click", function(e){
     t_off.classList.add("on");
 });
 
-var mapTypeControl = new kakao.maps.MapTypeControl();
+const mapTypeControl = new kakao.maps.MapTypeControl();
 
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-
-var zoomControl = new kakao.maps.ZoomControl();
-map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 
 const branch_btns = document.querySelectorAll(".branch li"); 
@@ -82,6 +79,12 @@ for(let i=0; i<markerOptions.length; i++){
         }
         markerOptions[i].button.classList.add("on");
     }
+}
+
+window.onresize = ()=>{
+    let on_btn = document.querySelector(".branch li.on");
+    let on_index = on_btn.getAttribute("data-index");
+    map.setCenter(markerOptions[on_index].latlng);
 }
 
 

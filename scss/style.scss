@@ -197,9 +197,9 @@ body{
         position: relative;
         text-align: center;
 
-        h1{
+        >h1{
             position: absolute;
-            left: 0; bottom: 0%;
+            left: 0px; bottom: 0%;
             display: flex;
             align-content: center;
             justify-content: center;
@@ -479,7 +479,6 @@ body{
                 margin-bottom: 30px;
                 padding-bottom: 20px;
                 border-bottom: 1px solid #444;
-                float: left;
 
                 a{
                     font: 18px/1 $mainFon;
@@ -1687,7 +1686,7 @@ body{
             width: 100%;
             padding: 0px 30px;
             
-            h1{
+            >h1{
                 left: 30px; 
             }
     
