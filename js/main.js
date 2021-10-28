@@ -76,6 +76,15 @@ $("#gnb>li").on("mouseleave",function(){
     $(this).find(".subMenu").fadeOut();
 });
 
+$("#gnb>li").each(function(index){
+    $("#gnb>li").eq(index).find("a").on("focusin",function(){
+        $("#gnb>li").eq(index).find(".subMenu").show();            
+    });
+
+     $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
+        $("#gnb>li").eq(index).find(".subMenu").hide();
+     })  ; 
+})
 
 
 // 쿠키 팝업-------------------------------------------------------------------

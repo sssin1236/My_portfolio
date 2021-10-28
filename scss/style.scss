@@ -233,17 +233,19 @@ body{
                 >a{
                     display: block;
                     text-align: center;
+                    outline: rgba(17, 17, 17, 0.95);
                     font: 15px/1 $mainFon;
                     color: #333;
                     transition: 0.5s;
                 }
 
                 .subMenu{
-                    width: 1180px; height: 400px;
+                    width: 1180px; height: 350px;
                     position: absolute;
                     top: 85px; left: 0;
                     background: #eee;
                     border-top: 1px solid $mainCol;
+                    // border-bottom: 1px solid $mainCol;
                     display: block;
 
                     &:hover{
@@ -260,9 +262,9 @@ body{
 
                     .left{
                         width: 25%; height: 100%;
-                        background: inherit;
+                        background: $mainCol;
                         float: left;
-                        padding: 50px 0px;
+                        padding: 50px 20px;
 
                         >h2{
                             font: 40px/1 $mainFon;
@@ -299,7 +301,7 @@ body{
                         p{
                             font: 15px/1.3 $mainFon;
                             color: #333;
-                            text-align: left;
+                            text-align: right;
                         }
                     }
 
@@ -308,7 +310,7 @@ body{
                         background: inherit;
                         position: relative;
                         float: right;
-                        padding: 20px 0;
+                        padding: 10px 0;
 
                         &::after{
                             content: '';
@@ -319,19 +321,19 @@ body{
                         >ul{
                             float: left;
                             width: 190px; height: 100%;
-                            padding: 20px 50px;
+                            padding: 20px 30px;
                             border-right: 1px solid #bbb;
 
                             >li{
                                 text-align: right;
-                                margin-bottom: 30px;
+                                margin-bottom: 20px;
 
                                 &:last-child{
                                     margin-bottom: 0px;
                                 }
 
                                 >a{
-                                    font: 20px/1 $mainFon;
+                                    font: 16px/1 $mainFon;
                                     color: #333;
                                 }
                             }
