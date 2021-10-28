@@ -3995,13 +3995,13 @@ body {
         transition: 0.5s; }
       #header .inner #gnb > li .subMenu {
         width: 1180px;
-        height: 300px;
+        height: 400px;
         position: absolute;
-        top: 61px;
+        top: 85px;
         left: 0;
         background: #eee;
         border-top: 1px solid #ff5b20;
-        display: none; }
+        display: block; }
         #header .inner #gnb > li .subMenu:hover .left h2::before {
           transform: rotate(30deg); }
         #header .inner #gnb > li .subMenu:hover .left h2::after {
@@ -4101,8 +4101,8 @@ body {
           position: absolute;
           top: -1px;
           left: -100%;
-          background: inherit;
-          border: inherit; }
+          background: #ff5b20;
+          border-top: 1px solid #ff5b20; }
         #header .inner #gnb > li .subMenu::after {
           content: '';
           display: block;
