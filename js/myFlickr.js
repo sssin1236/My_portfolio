@@ -1,3 +1,15 @@
+const btnCall = document.querySelector(".btnMo");
+const menuMo = document.querySelector(".Mob");
+
+btnCall.onclick = function(e){
+    e.preventDefault();
+
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle("on");
+}
+
+
+
 
 getList({
     type: "userid",
@@ -7,16 +19,16 @@ getList({
 $(".search a").on("click", function(e){
     e.preventDefault();
 
-    var search = $(".search input").val();
-    $(".search input").val("");
-
     $("#gallery ul").removeClass("on");
     $(".loadImg").removeClass("off");
 
-    getList({
-        type: "search",
-        tags: search
-    });
+    var search = $(".search input").val();
+        $(".search input").val("");
+
+        getList({
+            type: "search",
+            tag: search
+        }); 
 });
 
 $(window).on("keypress", function(e){
@@ -27,12 +39,9 @@ $(window).on("keypress", function(e){
         var search = $(".search input").val();
         $(".search input").val("");
 
-        $("#gallery ul").removeClass("on");
-        $(".loadImg").removeClass("off");
-
         getList({
             type: "search",
-            tags: search
+            tag: search
         }); 
     }
 });

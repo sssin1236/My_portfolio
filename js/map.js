@@ -1,3 +1,15 @@
+const btnCall = document.querySelector(".btnMo");
+const menuMo = document.querySelector(".Mob");
+
+btnCall.onclick = function(e){
+    e.preventDefault();
+
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle("on");
+}
+
+
+
 const container = document.getElementById('map'); 
 const options = { 
 	center: new kakao.maps.LatLng(37.50706831802294, 126.75637087155816), 
