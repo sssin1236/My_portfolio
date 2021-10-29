@@ -8,8 +8,16 @@ btnCall.onclick = function(e){
     menuMo.classList.toggle("on");
 }
 
-
-
+var swiper = new Swiper(".swiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    freeMode: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
+});
 
 getList({
     type: "userid",
