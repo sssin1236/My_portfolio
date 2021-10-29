@@ -246,7 +246,13 @@ body{
                     background: #eee;
                     border-top: 1px solid $mainCol;
                     // border-bottom: 1px solid $mainCol;
-                    display: block;
+                    display: none;
+
+                    &.commu{
+                        .left h2{
+                            margin-bottom: 20px;
+                        }
+                    }
 
                     &:hover{
                         .left{
@@ -262,7 +268,7 @@ body{
 
                     .left{
                         width: 25%; height: 100%;
-                        background: $mainCol;
+                        background: inherit;
                         float: left;
                         padding: 50px 20px;
 
@@ -303,6 +309,42 @@ body{
                             color: #333;
                             text-align: right;
                         }
+
+                        .addPic{
+                            width: 100%;
+                            padding: 0px 0 30px;
+                            border-bottom: 2px solid #111;
+
+                            a{
+                                font: 18px/1 'arial';
+                                color: #222;
+                            }
+
+                            p{
+                                font: 13px/1.2 'arial';
+                                color: #555;
+                                margin: 10px 0 15px;
+                                text-align: left;
+                            }
+
+                            span{
+                                font: bold 14px/1 $mainFon;
+                                color: #111;
+                                letter-spacing: 1px;
+                                float: right;
+                                position:relative;
+
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    width: 20px; height: 20px;
+                                    border-radius: 50%;
+                                    border: 1px solid $mainCol;
+                                    position: absolute;
+                                    top: -5px; right: -7px;
+                                }
+                            }
+                        }
                     }
 
                     .right{
@@ -321,11 +363,27 @@ body{
                         >ul{
                             float: left;
                             width: 190px; height: 100%;
-                            padding: 20px 30px;
+                            padding: 20px 10px 20px 40px;
                             border-right: 1px solid #bbb;
 
+                            h2{
+                                font: bold 18px/1 $mainFon;
+                                color: $mainCol; 
+                                margin-bottom: 30px;
+                                position: relative;
+
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    width: 30px; height: 1.5px;
+                                    background: #bbb;
+                                    position: absolute;
+                                    bottom: -10px; left: 0;
+                                }
+                            }
+
                             >li{
-                                text-align: right;
+                                text-align: left;
                                 margin-bottom: 20px;
 
                                 &:last-child{
