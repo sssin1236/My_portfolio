@@ -228,13 +228,14 @@ body{
 
                 &:hover a{
                     transform: translateY(-5px);
+                    font-weight: bold;
                 }
 
                 >a{
                     display: block;
                     text-align: center;
                     outline: rgba(17, 17, 17, 0.95);
-                    font: 15px/1 $mainFon;
+                    font: normal 15px/1 $mainFon;
                     color: #333;
                     transition: 0.5s;
                 }
