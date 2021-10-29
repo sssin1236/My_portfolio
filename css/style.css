@@ -3984,7 +3984,8 @@ body {
         line-height: 10px; }
     #header .inner #gnb > li {
       display: inline-block;
-      padding: 20px 40px; }
+      padding: 20px 40px;
+      font-size: 0; }
       #header .inner #gnb > li:hover a {
         transform: translateY(-5px);
         font-weight: bold; }
@@ -3997,12 +3998,13 @@ body {
         transition: 0.5s; }
       #header .inner #gnb > li .subMenu {
         width: 1180px;
-        height: 350px;
+        height: 360px;
         position: absolute;
         top: 85px;
         left: 0;
         background: #eee;
         border-top: 1px solid #ff5b20;
+        border-bottom: 1px solid #ff5b20;
         display: none; }
         #header .inner #gnb > li .subMenu.commu .left h2 {
           margin-bottom: 20px; }

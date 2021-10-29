@@ -69,11 +69,11 @@ $("#navi li a").on("click", function(e){
 
 //gnb menu -----------------------------------------------------------------------
 $("#gnb>li").on("mouseenter", function(){
-    $(this).find(".subMenu").fadeIn();
+    $(this).find(".subMenu").show();
 });
 
 $("#gnb>li").on("mouseleave",function(){
-    $(this).find(".subMenu").fadeOut();
+    $(this).find(".subMenu").hide();
 });
 
 $("#gnb>li").each(function(index){
