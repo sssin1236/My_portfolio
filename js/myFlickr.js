@@ -9,8 +9,8 @@ btnCall.onclick = function(e){
 }
 
 var swiper = new Swiper(".swiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 0,
     freeMode: true,
     loop: true,
     pagination: {
