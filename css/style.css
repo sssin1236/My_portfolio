@@ -2293,82 +2293,88 @@ input, select, option {
 #popPhoto {
   width: 100%;
   height: 100vh;
-  padding: 50px 80px;
+  padding: 50px 0px;
   position: fixed;
   top: 0;
   left: 0;
   background: rgba(17, 17, 17, 0.8);
   z-index: 5; }
-  #popPhoto .best {
-    width: 100%;
-    height: 100%;
+  #popPhoto::before {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    background: rgba(17, 17, 17, 0.8); }
+  #popPhoto .tit {
+    width: 90%;
+    margin-bottom: 20px;
     margin: 0 auto;
-    position: relative;
-    background: rgba(17, 17, 17, 0.8);
-    overflow: hidden;
-    text-align: center; }
-    #popPhoto .best h1 {
-      font: bold 80px/1 "Rajdhani";
+    position: relative; }
+    #popPhoto .tit h1 {
+      font: bold 50px/1 "Rajdhani";
       color: #eee;
       margin: 40px; }
-    #popPhoto .best > p {
-      font: 50px/1 "Rajdhani";
-      color: #eee; }
-    #popPhoto .best .close {
-      float: right;
-      font: 15px/1 "Rajdhani";
-      color: #ff5b20;
+    #popPhoto .tit > p {
+      font: 30px/1 "Rajdhani";
+      color: #eee;
+      margin-bottom: 20px; }
+  #popPhoto .close {
+    float: right;
+    font: 15px/1 "Rajdhani";
+    color: #ff5b20;
+    position: absolute;
+    top: -20px;
+    right: 15px; }
+    #popPhoto .close b {
+      display: block;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: 0.5s; }
+    #popPhoto .close:hover::before, #popPhoto .close:hover::after {
+      transform: rotate(0deg);
+      top: 120%; }
+    #popPhoto .close:hover b {
+      transform: translateY(0px);
+      opacity: 1; }
+    #popPhoto .close::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(45deg);
       position: absolute;
-      top: 15px;
-      right: 15px; }
-      #popPhoto .best .close b {
-        display: block;
-        transform: translateY(-20px);
-        opacity: 0;
-        transition: 0.5s; }
-      #popPhoto .best .close:hover::before, #popPhoto .best .close:hover::after {
-        transform: rotate(0deg);
-        top: 120%; }
-      #popPhoto .best .close:hover b {
-        transform: translateY(0px);
-        opacity: 1; }
-      #popPhoto .best .close::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #fff;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -10px;
-        transition: 0.5s; }
-      #popPhoto .best .close::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #fff;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -10px;
-        transition: 0.5s; }
-    #popPhoto .best .swiper {
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      transition: 0.5s; }
+    #popPhoto .close::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      transition: 0.5s; }
+  #popPhoto .swiper {
+    width: 100%;
+    height: 800px; }
+    #popPhoto .swiper .swiper-wrapper {
       width: 100%;
-      height: 800px;
-      overflow: hidden; }
-      #popPhoto .best .swiper .swiper-wrapper {
-        width: 100%;
-        height: 100%;
-        position: relative; }
-        #popPhoto .best .swiper .swiper-wrapper .swiper-slide {
-          width: 300px;
-          height: 60%;
-          overflow: hidden;
-          background: #eee; }
+      height: 100%;
+      position: relative; }
+      #popPhoto .swiper .swiper-wrapper .swiper-slide {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        background: #eee; }
 
 .gallery .inner {
   position: relative; }
