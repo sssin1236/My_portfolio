@@ -197,6 +197,11 @@ if(isCookie == -1){
     $("#popup").hide();
 }
 
+$("#popPhoto .tit .close").on("click", function(e){
+    e.preventDefault();
+
+});
+
 
 function setCookie(time){
     let today = new Date();
