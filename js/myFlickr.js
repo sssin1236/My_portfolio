@@ -196,3 +196,15 @@ if(isCookie == -1){
 }else{
     $("#popup").hide();
 }
+
+
+function setCookie(time){
+    let today = new Date();
+    let date = today.getDate();
+
+    today.setDate(date + time);
+
+    let duedate = today.toGMTString();
+
+    document.cookie = "popup=done; expires"+duedate;
+}
