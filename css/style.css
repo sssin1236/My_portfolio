@@ -2372,9 +2372,7 @@ input, select, option {
       position: relative; }
       #popPhoto .swiper .swiper-wrapper .swiper-slide {
         width: 80%;
-        height: 60%;
-        overflow: hidden;
-        background: #eee; }
+        height: 60%; }
 
 .gallery .inner {
   position: relative; }

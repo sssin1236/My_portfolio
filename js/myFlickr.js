@@ -186,3 +186,7 @@ function getList(flickr){
         console.err("데이터를 호출하는 데 실패했습니다.");
     })
 }
+
+//쿠키----------------------------------------------------------------------
+let isCookie = document.cookie.indexOf("popup=done");
+console.log(isCookie);
