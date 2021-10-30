@@ -190,3 +190,9 @@ function getList(flickr){
 //쿠키----------------------------------------------------------------------
 let isCookie = document.cookie.indexOf("popup=done");
 console.log(isCookie);
+
+if(isCookie == -1){
+    $("#popup").show();
+}else{
+    $("#popup").hide();
+}
