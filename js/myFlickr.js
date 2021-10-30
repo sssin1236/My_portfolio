@@ -199,7 +199,11 @@ if(isCookie == -1){
 
 $("#popPhoto .tit .close").on("click", function(e){
     e.preventDefault();
+    let isChecked = $("#popPhoto").find("input[type=checkbox]").is(":checked");
 
+    if(isChecked) setCookie(1);
+
+    $("#popPhoto").slideUp(500);
 });
 
 
