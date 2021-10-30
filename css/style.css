@@ -2373,7 +2373,8 @@ input, select, option {
       #popPhoto .swiper .swiper-wrapper .swiper-slide {
         width: 80%;
         height: 70%;
-        border: 2px solid #eee; }
+        border: 2px solid #eee;
+        position: relative; }
 
 .gallery .inner {
   position: relative; }
