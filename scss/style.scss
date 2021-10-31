@@ -438,6 +438,7 @@ body{
                         top: -1px; left: -100%; 
                         background: $mainCol;
                         border-top: 1px solid $mainCol;
+                        border-bottom: 1px solid $mainCol;
                     }
 
                     &::after{
