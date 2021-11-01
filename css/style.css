@@ -2295,12 +2295,6 @@ input, select, option {
   margin: 0 auto;
   padding: 50px 0px;
   position: relative; }
-  .gallery #popPhoto h1 {
-    font: bold 24px/1 "Rajdhani";
-    color: #111;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #111;
-    cursor: pointer; }
   .gallery #popPhoto .inner {
     width: 100%;
     position: relative; }
@@ -2311,9 +2305,33 @@ input, select, option {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      .gallery #popPhoto .inner .wrap article {
+        width: 100%;
+        height: 500px;
+        padding: 0px 20px;
+        position: relative; }
+        .gallery #popPhoto .inner .wrap article:nth-of-type(1) {
+          padding: 0;
+          border-top: 2px solid #111; }
+          .gallery #popPhoto .inner .wrap article:nth-of-type(1) p {
+            font: 18px/1.4 "Rajdhani";
+            color: #333;
+            padding-top: 20px; }
+        .gallery #popPhoto .inner .wrap article > h1 {
+          font: bold 40px/1 "Rajdhani";
+          color: #111; }
+        .gallery #popPhoto .inner .wrap article .pic {
+          width: 100%;
+          height: 400px;
+          margin-bottom: 20px; }
+          .gallery #popPhoto .inner .wrap article .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #333; }
 .gallery .inner {
   position: relative; }
-  .gallery .inner h1 {
+  .gallery .inner > h1 {
     font: bold 24px/1 "Rajdhani";
     color: #111;
     padding-bottom: 20px;
