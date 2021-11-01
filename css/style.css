@@ -2290,45 +2290,6 @@ input, select, option {
         margin-left: 50px; }
       .mem .inner .wrap article .name .career h2 {
         margin-bottom: 30px; } }
-.gallery #popPhoto {
-  width: 1180px;
-  margin: 0 auto;
-  padding: 50px 0px;
-  position: relative; }
-  .gallery #popPhoto .inner {
-    width: 100%;
-    position: relative; }
-    .gallery #popPhoto .inner .wrap {
-      width: 100%;
-      height: 100%;
-      padding: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .gallery #popPhoto .inner .wrap article {
-        width: 100%;
-        height: 500px;
-        padding: 0px 20px;
-        position: relative; }
-        .gallery #popPhoto .inner .wrap article:nth-of-type(1) {
-          padding: 0;
-          border-top: 2px solid #111; }
-          .gallery #popPhoto .inner .wrap article:nth-of-type(1) p {
-            font: 18px/1.4 "Rajdhani";
-            color: #333;
-            padding-top: 20px; }
-        .gallery #popPhoto .inner .wrap article > h1 {
-          font: bold 40px/1 "Rajdhani";
-          color: #111; }
-        .gallery #popPhoto .inner .wrap article .pic {
-          width: 100%;
-          height: 400px;
-          margin-bottom: 20px; }
-          .gallery #popPhoto .inner .wrap article .pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: #333; }
 .gallery .inner {
   position: relative; }
   .gallery .inner > h1 {
@@ -4692,17 +4653,19 @@ body {
   #brand.on .inner .wrap article {
     opacity: 1;
     transition-delay: 0.5s; }
-    #brand.on .inner .wrap article:nth-of-type(1) {
-      transform: translateY(-30px); }
     #brand.on .inner .wrap article:nth-of-type(2) {
-      transform: translateY(50px); }
+      transform: translateY(30px); }
     #brand.on .inner .wrap article:nth-of-type(3) {
+      transform: translateY(-30px); }
+    #brand.on .inner .wrap article:nth-of-type(4) {
+      transform: translateY(30px); }
+    #brand.on .inner .wrap article:nth-of-type(5) {
       transform: translateY(-30px); }
   #brand .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
-    #brand .inner h1 {
+    #brand .inner > h1 {
       font: bold 28px "Rajdhani";
       color: #111;
       text-align: center;
@@ -4710,7 +4673,7 @@ body {
       transform: translateY(50px);
       transition: 1s;
       opacity: 0; }
-      #brand .inner h1::after {
+      #brand .inner > h1::after {
         content: '';
         display: block;
         width: 40px;
@@ -4729,55 +4692,137 @@ body {
       transition: 1s;
       opacity: 0; }
     #brand .inner .wrap {
-      width: 100%; }
-      #brand .inner .wrap::after {
-        content: '';
-        display: block;
-        clear: both; }
+      width: 100%;
+      height: 100%;
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
       #brand .inner .wrap article {
-        width: 360px;
+        width: 100%;
         height: 500px;
-        float: left;
-        margin-right: 40px;
+        padding: 0px 20px;
         position: relative;
-        transition: 1.5s;
-        opacity: 0; }
-        #brand .inner .wrap article:hover .txt {
-          opacity: 1;
-          left: -5%; }
-        #brand .inner .wrap article:last-child {
-          margin-right: 0; }
+        transition: 0.5s; }
         #brand .inner .wrap article:nth-of-type(1) {
-          transform: translateY(-130px); }
-        #brand .inner .wrap article:nth-of-type(2) {
-          transform: translateY(150px); }
-        #brand .inner .wrap article:nth-of-type(3) {
-          transform: translateY(-130px); }
-        #brand .inner .wrap article img {
+          padding: 0;
+          border-top: 2px solid #111; }
+          #brand .inner .wrap article:nth-of-type(1):hover a::before {
+            background: #ff5b20;
+            width: 10px;
+            right: 9px; }
+          #brand .inner .wrap article:nth-of-type(1):hover a::after {
+            border-color: #ff5b20; }
+          #brand .inner .wrap article:nth-of-type(1):hover a span::before {
+            transform-origin: center center;
+            transform: rotate(-90deg);
+            background: #ff5b20;
+            right: 9px; }
+          #brand .inner .wrap article:nth-of-type(1) p {
+            font: 18px/1.4 "Rajdhani";
+            color: #333;
+            padding-top: 10px;
+            margin-bottom: 90px; }
+            #brand .inner .wrap article:nth-of-type(1) p b {
+              line-height: 2; }
+          #brand .inner .wrap article:nth-of-type(1) a {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 25px;
+            position: relative; }
+            #brand .inner .wrap article:nth-of-type(1) a::before {
+              content: '';
+              display: block;
+              width: 40%;
+              height: 1px;
+              background: #111;
+              position: absolute;
+              top: 13px;
+              right: 10px;
+              transition: 0.5s; }
+            #brand .inner .wrap article:nth-of-type(1) a::after {
+              content: '';
+              display: block;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              border: 1px solid #111;
+              position: absolute;
+              top: 0;
+              right: 0px;
+              transition: 0.5s; }
+            #brand .inner .wrap article:nth-of-type(1) a span {
+              font: 18px/25px "Rajdhani";
+              color: #ff5b20; }
+              #brand .inner .wrap article:nth-of-type(1) a span::before {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 1px;
+                background: #111;
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                transform: rotate(30deg);
+                transform-origin: right center;
+                transition: 0.5s; }
+              #brand .inner .wrap article:nth-of-type(1) a span::after {
+                content: '';
+                display: none;
+                width: 10px;
+                height: 1px;
+                background: #111;
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                transform: rotate(-30deg);
+                transform-origin: right center; }
+          #brand .inner .wrap article:nth-of-type(1) > h1 {
+            font: bold 50px/1 "Rajdhani";
+            color: #111;
+            border-top: 1px dotted #111;
+            border-bottom: 2px solid #111;
+            padding: 10px 0; }
+        #brand .inner .wrap article .pic {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          z-index: 3; }
+          margin-bottom: 20px; }
+          #brand .inner .wrap article .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #333; }
         #brand .inner .wrap article .txt {
-          width: 90%;
-          height: 110%;
           position: absolute;
-          top: 50%;
-          left: -10%;
-          transform: translateY(-50%);
-          background: rgba(255, 100, 44, 0.795);
-          padding: 80px 20px;
-          transition: all 0.5s;
-          opacity: 0;
-          z-index: 1; }
+          top: 0;
+          right: 20px;
+          width: 40%;
+          height: 110%;
+          background: rgba(255, 91, 32, 0.7); }
           #brand .inner .wrap article .txt h2 {
-            font: bold 24px/1 "Rajdhani";
+            font: 30px/1 "Rajdhani";
+            color: #111;
+            text-align: right;
+            width: 300px;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 200px;
+            right: -130px; }
+          #brand .inner .wrap article .txt span {
+            font: 45px/1 'roboto';
             color: #eee;
-            margin-bottom: 40px; }
-          #brand .inner .wrap article .txt p {
-            font: 18px/1.3 "Rajdhani";
-            color: #ddd;
-            letter-spacing: 1px; }
+            position: absolute;
+            bottom: 0;
+            left: 5px; }
+            #brand .inner .wrap article .txt span::before {
+              content: '';
+              display: block;
+              width: 20px;
+              height: 1px;
+              background: #eee;
+              margin-bottom: 10px;
+              margin-left: 5px; }
 
 #banner {
   width: 100%;
@@ -5221,57 +5266,150 @@ body {
 
   #brand {
     padding: 100px 30px; }
-    #brand.on .inner .wrap article:nth-of-type(1) {
-      transform: translateY(0px);
-      transform: translateX(0px);
-      transition-delay: 0.5s; }
     #brand.on .inner .wrap article:nth-of-type(2) {
       transform: translateY(0px);
       transform: translateX(0px);
-      transition-delay: 1s; }
+      transition-delay: 0.5s; }
     #brand.on .inner .wrap article:nth-of-type(3) {
+      transform: translateY(0px);
+      transform: translateX(0px);
+      transition-delay: 1s; }
+    #brand.on .inner .wrap article:nth-of-type(4) {
+      transform: translateY(0px);
+      transform: translateX(0px);
+      transition-delay: 1.5s; }
+    #brand.on .inner .wrap article:nth-of-type(5) {
       transform: translateY(0px);
       transform: translateX(0px);
       transition-delay: 1.5s; }
     #brand .inner {
       width: 100%; }
-      #brand .inner .wrap article {
-        width: 100%;
-        height: 400px;
-        float: right;
-        margin-bottom: 50px;
-        margin-right: 0;
-        text-align: right; }
-        #brand .inner .wrap article:hover .txt {
-          left: 0; }
-        #brand .inner .wrap article:last-child {
-          margin-bottom: 0; }
-        #brand .inner .wrap article:nth-of-type(1) {
-          transform: translateY(0px);
-          transform: translateX(-50px); }
-        #brand .inner .wrap article:nth-of-type(2) {
-          transform: translateY(0px);
-          transform: translateX(50px); }
-        #brand .inner .wrap article:nth-of-type(3) {
-          transform: translateY(0px);
-          transform: translateX(-50px); }
-        #brand .inner .wrap article img {
-          width: 75%;
-          height: 100%;
-          object-fit: cover; }
-        #brand .inner .wrap article .txt {
-          width: 40%;
-          height: 110%;
-          left: 0%;
-          background: rgba(255, 91, 32, 0.7);
-          padding: 40px 30px;
-          opacity: 1;
-          text-align: left; }
-          #brand .inner .wrap article .txt h2 {
-            font-size: 4vmin; }
-          #brand .inner .wrap article .txt p {
-            letter-spacing: 0px;
-            font-size: 3vmin; }
+      #brand .inner .wrap {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #brand .inner .wrap article {
+          width: 100%;
+          height: 400px;
+          padding: 0; }
+          #brand .inner .wrap article:nth-of-type(1) {
+            width: 100%;
+            padding: 0px 10px; }
+            #brand .inner .wrap article:nth-of-type(1):hover a::before {
+              background: #ff5b20;
+              width: 10px;
+              right: 9px; }
+            #brand .inner .wrap article:nth-of-type(1):hover a::after {
+              border-color: #ff5b20; }
+            #brand .inner .wrap article:nth-of-type(1):hover a span::before {
+              transform-origin: center center;
+              transform: rotate(-90deg);
+              background: #ff5b20;
+              right: 9px; }
+            #brand .inner .wrap article:nth-of-type(1) p {
+              height: 200px;
+              font: 18px/1.4 "Rajdhani";
+              color: #333;
+              overflow: hidden;
+              padding-top: 10px;
+              margin-bottom: 20px; }
+              #brand .inner .wrap article:nth-of-type(1) p b {
+                line-height: 2; }
+            #brand .inner .wrap article:nth-of-type(1) a {
+              display: block;
+              margin-bottom: 10px;
+              width: 100%;
+              height: 25px;
+              position: relative; }
+              #brand .inner .wrap article:nth-of-type(1) a::before {
+                content: '';
+                display: block;
+                width: 40%;
+                height: 1px;
+                background: #111;
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                transition: 0.5s; }
+              #brand .inner .wrap article:nth-of-type(1) a::after {
+                content: '';
+                display: block;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 1px solid #111;
+                position: absolute;
+                top: 0;
+                right: 0px;
+                transition: 0.5s; }
+              #brand .inner .wrap article:nth-of-type(1) a span {
+                font: 18px/25px "Rajdhani";
+                color: #ff5b20; }
+                #brand .inner .wrap article:nth-of-type(1) a span::before {
+                  content: '';
+                  display: block;
+                  width: 10px;
+                  height: 1px;
+                  background: #111;
+                  position: absolute;
+                  top: 13px;
+                  right: 10px;
+                  transform: rotate(30deg);
+                  transform-origin: right center;
+                  transition: 0.5s; }
+                #brand .inner .wrap article:nth-of-type(1) a span::after {
+                  content: '';
+                  display: none;
+                  width: 10px;
+                  height: 1px;
+                  background: #111;
+                  position: absolute;
+                  top: 13px;
+                  right: 10px;
+                  transform: rotate(-30deg);
+                  transform-origin: right center; }
+            #brand .inner .wrap article:nth-of-type(1) > h1 {
+              font: bold 40px/1 "Rajdhani"; }
+          #brand .inner .wrap article .pic {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px; }
+            #brand .inner .wrap article .pic img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              background: #333; }
+          #brand .inner .wrap article .txt {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width: 70%;
+            height: 110%;
+            background: rgba(255, 91, 32, 0.7); }
+            #brand .inner .wrap article .txt h2 {
+              font: 30px/1 "Rajdhani";
+              color: #111;
+              text-align: right;
+              width: 300px;
+              transform: rotate(-90deg);
+              position: absolute;
+              top: 200px;
+              right: -130px; }
+            #brand .inner .wrap article .txt span {
+              font: 45px/1 'roboto';
+              color: #eee;
+              position: absolute;
+              bottom: 0;
+              left: 5px; }
+              #brand .inner .wrap article .txt span::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 1px;
+                background: #eee;
+                margin-bottom: 10px;
+                margin-left: 5px; }
 
   #banner {
     padding: 100px 30px; }
@@ -5481,23 +5619,19 @@ body {
 
   #brand .inner {
     width: 100%; }
-    #brand .inner .wrap article {
-      width: 100%;
-      height: 300px; }
-      #brand .inner .wrap article img {
-        width: 85%;
-        height: 100%;
-        object-fit: cover; }
-      #brand .inner .wrap article .txt {
-        width: 50%;
-        height: 110%;
-        left: 0%;
-        padding: 30px 15px; }
-        #brand .inner .wrap article .txt h2 {
-          margin-bottom: 15px;
-          font-size: 6vmin; }
-        #brand .inner .wrap article .txt p {
-          font-size: 15px; }
+    #brand .inner .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+      #brand .inner .wrap article {
+        width: 100%;
+        height: 400px;
+        padding: 0;
+        margin-bottom: 20px; }
+        #brand .inner .wrap article .txt {
+          width: 30%;
+          height: 100%; }
 
   #banner .inner h1::after {
     top: 80px;
