@@ -30,7 +30,7 @@ $("input[type=submit]").on("click", function(e){
 
     if(!agree('agreement')) e.preventDefault();
     if(!isCheck('agree')) e.preventDefault();
-    if(!isEmail('email')) e.preventDefault();
+    if(!isEmail('e-mail')) e.preventDefault();
     if(!phon('call')) e.preventDefault();
     if(!isPwd2('pwd1', 'pwd2')) e.preventDefault();
     if(!isPwd('pwd1', 8, 15)) e.preventDefault();
@@ -75,6 +75,17 @@ $("input[name=pwd1]").on("keyup", function(){
     }
 
     
+});
+
+$("input[name=pwd2]").on("keyup", function(){
+    let pwd1 = $("input[name=pwd1]").val();
+    let pwd2 = $("input[name=pwd2]").val();
+
+    if(pwd1 === pwd2){
+        $(this).parent().find("p").css({ color: "#111"});
+    }else{
+        $(this).parent().find("p").css({ color: "rgb(255, 91, 32)"});
+    }
 });
 
 
@@ -190,16 +201,15 @@ function isCheck(name){
 
 function agree(name){
     let isCheck = $("input[name="+name+"]").first().is(":checked");
+    let targetPos = $("input[name="+name+"]").offset().top + -500;
 
     if(isCheck){
         $("input[name="+name+"]").parent().find("p").text("개인정보 수집 및 이용 방침에 동의하십니까?"); 
         $("input[name="+name+"]").parent().find("p").css("color", "#111");
         return true;
     }else{
-        $("input[name="+name+"]").parent().find("p").remove(); 
-        $("input[name="+name+"]").parent().append(
-            "<p>개인정보이용 방침에 동의하여 주세요."
-        )
+        $("input[name="+name+"]").parent().find("p").text("개인정보이용 방침에 동의하여 주세요."); 
         $("input[name="+name+"]").parent().find("p").css("color", "rgb(255, 91, 32)");
+        $("html, body").animate({ scrollTop : targetPos }, 500);
     }
 }
