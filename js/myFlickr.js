@@ -82,7 +82,7 @@ function getList(flickr){
             dataType:"json",
             data:{
                 api_key:"645bbdf320519f9a5473a288fc9f617a",
-                per_page:16,
+                per_page:12,
                 format:"json",
                 nojsoncallback:1,
                 privacy_filter: 1,
@@ -96,7 +96,7 @@ function getList(flickr){
             dataType:"json", 
             data:{
                 api_key:"d61e30a1010fe3e1dab106d3a2df0f21", 
-                per_page:10, 
+                per_page:12, 
                 format:"json",
                 nojsoncallback:1, 
                 privacy_filter : 1,
@@ -111,7 +111,7 @@ function getList(flickr){
             dataType:"json",
             data:{
                 api_key:"645bbdf320519f9a5473a288fc9f617a",
-                per_page:16,
+                per_page:12,
                 format:"json",
                 nojsoncallback:1,
                 privacy_filter: 1,
@@ -177,33 +177,3 @@ function getList(flickr){
     })
 }
 
-//쿠키----------------------------------------------------------------------
-let isCookie = document.cookie.indexOf("popup=done");
-console.log(isCookie);
-
-if(isCookie == -1){
-    $("#popup").show();
-}else{
-    $("#popup").hide();
-}
-
-$("#popPhoto .tit .close").on("click", function(e){
-    e.preventDefault();
-    let isChecked = $("#popPhoto").find("input[type=checkbox]").is(":checked");
-
-    if(isChecked) setCookie(1);
-
-    $("#popPhoto").slideUp(500);
-});
-
-
-function setCookie(time){
-    let today = new Date();
-    let date = today.getDate();
-
-    today.setDate(date + time);
-
-    let duedate = today.toGMTString();
-
-    document.cookie = "popup=done; expires"+duedate;
-}

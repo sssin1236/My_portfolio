@@ -2290,78 +2290,27 @@ input, select, option {
         margin-left: 50px; }
       .mem .inner .wrap article .name .career h2 {
         margin-bottom: 30px; } }
-#popPhoto {
-  width: 100%;
-  height: 100vh;
+.gallery #popPhoto {
+  width: 1180px;
+  margin: 0 auto;
   padding: 50px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(17, 17, 17, 0.8);
-  z-index: 5; }
-  #popPhoto .tit {
-    width: 90%;
-    margin-bottom: 20px;
-    margin: 0 auto;
+  position: relative; }
+  .gallery #popPhoto h1 {
+    font: bold 24px/1 "Rajdhani";
+    color: #111;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #111;
+    cursor: pointer; }
+  .gallery #popPhoto .inner {
+    width: 100%;
     position: relative; }
-    #popPhoto .tit h1 {
-      font: bold 50px/1 "Rajdhani";
-      color: #eee;
-      margin: 40px; }
-  #popPhoto .close {
-    float: right;
-    font: 15px/1 "Rajdhani";
-    color: #ff5b20;
-    position: absolute;
-    top: -20px;
-    right: 15px; }
-    #popPhoto .close b {
-      display: block;
-      transform: translateY(-20px);
-      opacity: 0;
-      transition: 0.5s; }
-    #popPhoto .close:hover::before, #popPhoto .close:hover::after {
-      transform: rotate(0deg);
-      top: 120%; }
-    #popPhoto .close:hover b {
-      transform: translateY(0px);
-      opacity: 1; }
-    #popPhoto .close::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: #fff;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -10px;
-      transition: 0.5s; }
-    #popPhoto .close::after {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: #fff;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -10px;
-      transition: 0.5s; }
-  #popPhoto .inner {
-    width: 1180px;
-    height: 800px;
-    margin: 0 auto;
-    position: relative; }
-    #popPhoto .inner .wrap {
+    .gallery #popPhoto .inner .wrap {
       width: 100%;
       height: 100%;
       padding: 30px;
       display: flex;
-      justify-content: space-between; }
-
+      justify-content: space-between;
+      align-items: center; }
 .gallery .inner {
   position: relative; }
   .gallery .inner h1 {
