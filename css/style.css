@@ -2299,15 +2299,6 @@ input, select, option {
   left: 0;
   background: rgba(17, 17, 17, 0.8);
   z-index: 5; }
-  #popPhoto::before {
-    content: '';
-    display: block;
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-    background: rgba(17, 17, 17, 0.8); }
   #popPhoto .tit {
     width: 90%;
     margin-bottom: 20px;
@@ -2317,10 +2308,6 @@ input, select, option {
       font: bold 50px/1 "Rajdhani";
       color: #eee;
       margin: 40px; }
-    #popPhoto .tit > p {
-      font: 30px/1 "Rajdhani";
-      color: #eee;
-      margin-bottom: 20px; }
   #popPhoto .close {
     float: right;
     font: 15px/1 "Rajdhani";
@@ -2363,28 +2350,17 @@ input, select, option {
       left: 50%;
       margin-left: -10px;
       transition: 0.5s; }
-  #popPhoto .swiper {
-    width: 100%;
-    height: 800px; }
-    #popPhoto .swiper .swiper-wrapper {
+  #popPhoto .inner {
+    width: 1180px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative; }
+    #popPhoto .inner .wrap {
       width: 100%;
       height: 100%;
-      position: relative; }
-      #popPhoto .swiper .swiper-wrapper .swiper-slide {
-        width: 80%;
-        height: 70%;
-        border: 2px solid #eee;
-        position: relative;
-        padding: 50px; }
-        #popPhoto .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) article {
-          width: 80%;
-          height: 50%;
-          padding: 20px; }
-          #popPhoto .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) article .pic {
-            width: 100%;
-            height: 90%;
-            background: #eee;
-            margin-bottom: 10px; }
+      padding: 30px;
+      display: flex;
+      justify-content: space-between; }
 
 .gallery .inner {
   position: relative; }
