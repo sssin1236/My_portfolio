@@ -502,9 +502,9 @@
                 <div class="chec">
                         <p>개인정보 수집 및 이용 방침에 동의하십니까?</p>
                         
-                        <input type="radio" name="agree" id="agree" value="agree">
+                        <input type="radio" name="agreement" id="agree" value="agree">
                         <label for="agree">동의함</label>
-                        <input type="radio" name="deagree" id="deagree" value="deagree">
+                        <input type="radio" name="agreement" id="deagree" value="deagree">
                         <label for="deagree">동의하지 않음</label>
                 </div>
 
@@ -603,9 +603,9 @@
                 <div class="chec">
                     <p>제 3자 정보제공 및 마케팅 활용에 동의하십니까?</p>
                     
-                    <input type="radio" name="agree" id="agree" value="agree">
+                    <input type="radio" name="marketing" id="agree" value="agree">
                     <label for="agree">동의함</label>
-                    <input type="radio" name="deagree" id="deagree" value="deagree">
+                    <input type="radio" name="marketing" id="deagree" value="deagree">
                     <label for="deagree">동의하지 않음</label>
                 </div>
             </dl>
@@ -701,17 +701,17 @@
                                 <i class="fas fa-check"></i>
                             </th>
 							<td>
-								<input type="text" name="email" id="email" placeholder="선택입력">
+								<input type="text" name="email" id="email">
 								<select name="company" id="company">
-									<option value="">-----</option>
+									<option value="직접입력">직접입력</option>
 									<option value="naver">
-                                        @ naver.com</option>
+                                        naver.com</option>
 									<option value="nate">
-                                        @ nate.com</option>
+                                        nate.com</option>
 									<option value="google">
-                                        @ gmail.com</option>
+                                        gmail.com</option>
 									<option value="daum">
-                                        @ daum.net</option>
+                                        daum.net</option>
 								</select>
 							</td>
 						</tr>
@@ -726,7 +726,7 @@
 								<input type="radio" name="agree" id="agree" value="agree">
 								수신 동의</label>
 								<label for="deagree">
-								<input type="radio" name="deagree" id="deagree" value="deagree">
+								<input type="radio" name="agree" id="deagree" value="deagree">
 								수신 미동의</label>
 							</td>
 						</tr>

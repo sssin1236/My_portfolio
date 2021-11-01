@@ -28,10 +28,13 @@ $("dt").on("click", function(){
 $("input[type=submit]").on("click", function(e){
     e.preventDefault();
 
-    if(!isID('userid', 4, 10)) e.preventDefault();
-    if(!isPwd('pwd1', 8, 15)) e.preventDefault();
-    if(!isPwd2('pwd1', 'pwd2')) e.preventDefault();
+    if(!agree('agreement')) e.preventDefault();
+    if(!isCheck('agree')) e.preventDefault();
+    if(!isEmail('email')) e.preventDefault();
     if(!phon('call')) e.preventDefault();
+    if(!isPwd2('pwd1', 'pwd2')) e.preventDefault();
+    if(!isPwd('pwd1', 8, 15)) e.preventDefault();
+    if(!isID('userid', 4, 10)) e.preventDefault();
 });
 
 
@@ -125,7 +128,7 @@ function isPwd2(name1, name2){
         $("input[name="+name2+"]").parent().find("p").remove();
         return true;
     }else{
-        $("input[name"+name2+"]").parent().find("p").remove(); 
+        $("input[name="+name2+"]").parent().find("p").remove(); 
         $("input[name="+name2+"]").parent().append(
             "<p>비밀번호를 동일하게 입력해주세요.</p>"
         )
@@ -137,18 +140,66 @@ function isPwd2(name1, name2){
 
 function phon(name){
     let call = $("input[name="+name+"]").val();
-    let sel = $("select[name"+name+"]").children("option:selected").val(); 
+    let sel = $("select[name= "+name+"]").children("option:selected").val(); 
     let targetPos = $("input[name="+name+"]").offset().top + -500;
-    let ph = $("input[name="+name+"]").attr("placeholder");
     let num = /[0-9]/;
 
     if(sel !=="" && num.test(call)){
         return true;
     }else{
-        $("input[name"+name+"]").empty();
+        $("input[name"+name+"]").val();
         $("input[name="+name+"]").attr({placeholder : "연락처를 정확하게 입력해주세요."});
         $("html, body").animate({ scrollTop : targetPos }, 500);
         $("input[name="+name+"]").focus();
         return false;
+    }
+}
+
+function isEmail(name){
+    let txt = $("input[name="+name+"]").val(); 
+    let targetPos = $("input[name="+name+"]").offset().top + -500;
+
+    if(/@/.test(txt)){
+        $("[inputname="+name+"]").parent().find("p").remove(); 
+        return true;
+    }else{
+        $("input[name="+name+"]").parent().find("p").remove(); 
+        $("input[name="+name+"]").parent().append(
+            "<p>정확한 아이디를 입력해주세요.</p>"
+        )
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+        $("input[name="+name+"]").focus();
+    }
+}
+
+function isCheck(name){
+    let isCheck = $("input[name="+name+"]").is(":checked");
+    let targetPos = $("input[name="+name+"]").offset().top + -500;
+
+    if(isCheck){
+        $("input[name="+name+"]").parent().parent().find("p").remove(); 
+        return true;
+    }else{
+    }$("input[name="+name+"]").parent().parent().find("p").remove(); 
+    $("input[name="+name+"]").parent().parent().append(
+        "<p>동의여부를 체크해 주세요.</p>"
+    )
+    $("html, body").animate({ scrollTop : targetPos }, 500);
+    return false; 
+}
+
+function agree(name){
+    let isCheck = $("input[name="+name+"]").first().is(":checked");
+
+    if(isCheck){
+        $("input[name="+name+"]").parent().find("p").text("개인정보 수집 및 이용 방침에 동의하십니까?"); 
+        $("input[name="+name+"]").parent().find("p").css("color", "#111");
+        return true;
+    }else{
+        $("input[name="+name+"]").parent().find("p").remove(); 
+        $("input[name="+name+"]").parent().append(
+            "<p>개인정보이용 방침에 동의하여 주세요."
+        )
+        $("input[name="+name+"]").parent().find("p").css("color", "rgb(255, 91, 32)");
     }
 }
