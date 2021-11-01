@@ -4802,13 +4802,13 @@ body {
           background: rgba(255, 91, 32, 0.7); }
           #brand .inner .wrap article .txt h2 {
             font: 30px/1 "Rajdhani";
-            color: #111;
+            color: #fff;
             text-align: right;
             width: 300px;
             transform: rotate(-90deg);
             position: absolute;
-            top: 200px;
-            right: -130px; }
+            top: 150px;
+            right: -100px; }
           #brand .inner .wrap article .txt span {
             font: 45px/1 'roboto';
             color: #eee;
