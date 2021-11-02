@@ -252,7 +252,6 @@ body{
                     display: none;
 
                     &.commu{
-                        display: block;
                         .left h2{
                             margin-bottom: 20px;
                         }
@@ -260,7 +259,8 @@ body{
                         .right{
                             .wrap{
                                 width: calc(100% - 200px);
-                                padding: 20px 0px 20px 20px;
+                                padding-left: 20px;
+                                margin-top: 20px;
                                 float: right;
 
                                 dl{
@@ -270,10 +270,11 @@ body{
 
                                     dt{
                                         width: 100%; 
-                                        padding: 20px 0;
+                                        padding: 15px 0;
                                         position: relative;
-                                        border-bottom: 2px solid #333;
+                                        border-top: 2px solid #333;
                                         text-align: right;
+                                        cursor: pointer;
 
                                         h3{
                                             font: bold 20px/1 $mainFon;
@@ -312,6 +313,41 @@ body{
                                                     transform: rotate(0deg);
                                                 }
                                             }
+                                        }
+                                    }
+
+                                    dd{
+                                        width: 100%; 
+                                        padding: 10px 0;
+                                        position: relative;
+                                        text-align: right;
+                                        display: none;
+
+                                        &:nth-of-type(1){
+                                            display: block;
+                                        }
+
+                                        p{
+                                            width: 80%;
+                                            font: 18px/1.2 $mainFon;
+                                            color: #333;
+                                            margin-bottom: 25px;
+                                            text-align: left;
+                                        }
+
+                                        span{
+                                            font: bold 15px/1 'roboto';
+                                            color: $mainCol;
+                                            letter-spacing: 1px;
+                                        }
+
+                                        a{
+                                            display: inline-block;
+                                            width: 50px; height: 30px;
+                                            border: 1px solid $mainCol;
+                                            font: 15px/30px $mainFon;
+                                            color: $mainCol;
+                                            text-align: center;
                                         }
                                     }
                                 }
@@ -628,6 +664,68 @@ body{
                                     }
                                 }
                                 
+                            }
+                        }
+                    }
+
+                    &.loca{
+                        display: block;
+                        .right{
+                            .pic{
+                                width: calc(100% - 200px); height: 100%;
+
+                                article{
+                                    width: 50%; height: 100%;
+                                    padding-left: 30px;
+
+                                    img{
+                                        width: 100%; height: 100%;
+                                        object-fit: cover;
+                                    }
+
+                                    &:nth-of-type(2){
+                                        width: 47%;
+                                        padding-left: 20px;
+                                        margin-left: 3%;
+                                        border-left: 1px solid #ddd;
+                                        text-align: center;
+
+                                        h3{
+                                            font: bold 30px/1 'Roboto';
+                                            color: #111;
+                                            margin-top: 20px;
+                                            margin-bottom: 30px;
+                                        }
+
+                                        p{
+                                            font: 20px/1 $mainFon;
+                                            color: $mainCol;
+                                            margin-top: 20px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        span{
+                                            font: 15px/1.5 $mainFon;
+                                            color: #333;
+                                        }
+
+                                        a{
+                                            display: block;
+                                            width: 180px; height: 35px;
+                                            border: 1px solid $mainCol;
+                                            background: $mainCol;
+                                            margin: 20px auto 0;
+                                            font: bold 16px/35px $mainFon;
+                                            color: #fff;
+                                            letter-spacing: 1px;
+
+                                            i{
+                                                font-size: 18px;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
