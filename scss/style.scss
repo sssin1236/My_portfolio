@@ -242,7 +242,7 @@ body{
                 }
 
                 .subMenu{
-                    width: 1180px; height: 360px;
+                    width: 1180px; height: 380px;
                     position: absolute;
                     top: 85px; left: 0;
                     background: #eee;
@@ -253,6 +253,82 @@ body{
                     &.commu{
                         .left h2{
                             margin-bottom: 20px;
+                        }
+                    }
+
+                    &.youtube{
+                        .right{
+                            .pic{
+                                display: block; 
+
+                                article:nth-of-type(1){
+                                    width: 100%; height: 150px;
+                                    padding-bottom: 15px;
+                                    border-bottom: 1px solid #bbb;
+
+                                    &::after{
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                    }
+
+                                    video{
+                                        width: 50%; height: 100%;
+                                        object-fit: cover;
+                                    }
+
+                                    .tit{
+                                        width: 48%; height: 100%;
+                                        float: right;
+
+                                        h3{
+                                            font: bold 24px/1 $mainFon;
+                                            color: #111;
+                                            text-align: right;
+                                            margin-bottom: 30px;
+                                        }
+
+                                        p{
+                                            font: 15px/1.3 $mainFon;
+                                            color: #333;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+
+                                article:nth-of-type(2){
+                                    margin-right: 2%;
+                                }
+
+                                article:nth-of-type(2), article:nth-of-type(3){
+                                    width: 49%; height: 150px;
+                                    padding-top: 15px;
+                                    float: left;
+
+                                    video{
+                                        width: 50%; height: 100%;
+                                        object-fit: cover;
+                                    }
+
+                                    .tit{
+                                        width: 48%; height: 100%;
+                                        padding: 10px 0;
+                                        float: right;
+                                        text-align: right;
+
+                                        h3{
+                                            font: bold 18px/1 $mainFon;
+                                            color: #333;
+                                            margin-bottom: 25px;
+                                        }
+
+                                        p{
+                                            font: 13px/1.3 $mainFon;
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -354,7 +430,7 @@ body{
                         background: inherit;
                         position: relative;
                         float: right;
-                        padding: 10px 0;
+                        padding: 20px 0;
 
                         &::after{
                             content: '';
