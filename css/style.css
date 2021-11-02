@@ -4009,8 +4009,55 @@ body {
           border-top: 1px solid #ff5b20;
           border-bottom: 1px solid #ff5b20;
           display: none; }
-          #header .inner #gnb > li .subMenu.commu .left h2 {
-            margin-bottom: 20px; }
+          #header .inner #gnb > li .subMenu.commu {
+            display: block; }
+            #header .inner #gnb > li .subMenu.commu .left h2 {
+              margin-bottom: 20px; }
+            #header .inner #gnb > li .subMenu.commu .right .wrap {
+              width: calc(100% - 200px);
+              padding: 20px 0px 20px 20px;
+              float: right; }
+              #header .inner #gnb > li .subMenu.commu .right .wrap dl {
+                width: 100%;
+                margin: 0 auto;
+                position: relative; }
+                #header .inner #gnb > li .subMenu.commu .right .wrap dl dt {
+                  width: 100%;
+                  padding: 20px 0;
+                  position: relative;
+                  border-bottom: 2px solid #333;
+                  text-align: right; }
+                  #header .inner #gnb > li .subMenu.commu .right .wrap dl dt h3 {
+                    font: bold 20px/1 "Rajdhani";
+                    color: #111;
+                    letter-spacing: 1px;
+                    text-align: left; }
+                    #header .inner #gnb > li .subMenu.commu .right .wrap dl dt h3::before {
+                      content: '';
+                      display: block;
+                      width: 15px;
+                      height: 2px;
+                      background: #111;
+                      position: absolute;
+                      top: 50%;
+                      right: 0;
+                      transform: rotate(-30deg);
+                      transform-origin: right center;
+                      transition: 0.5s; }
+                    #header .inner #gnb > li .subMenu.commu .right .wrap dl dt h3::after {
+                      content: '';
+                      display: block;
+                      width: 15px;
+                      height: 2px;
+                      background: #111;
+                      position: absolute;
+                      top: 50%;
+                      right: 0;
+                      transform: rotate(30deg);
+                      transform-origin: right center;
+                      transition: 0.5s; }
+                  #header .inner #gnb > li .subMenu.commu .right .wrap dl dt.on h3::before, #header .inner #gnb > li .subMenu.commu .right .wrap dl dt.on h3::after {
+                    transform: rotate(0deg); }
           #header .inner #gnb > li .subMenu.youtube .right .pic {
             display: block; }
             #header .inner #gnb > li .subMenu.youtube .right .pic article:nth-of-type(1) {
