@@ -4315,51 +4315,49 @@ body {
               #header .inner #gnb > li .subMenu.gallery .right .wrap article:hover .txt {
                 right: 5px;
                 opacity: 1; }
-          #header .inner #gnb > li .subMenu.loca {
-            display: block; }
-            #header .inner #gnb > li .subMenu.loca .right .pic {
-              width: calc(100% - 200px);
-              height: 100%; }
-              #header .inner #gnb > li .subMenu.loca .right .pic article {
-                width: 50%;
+          #header .inner #gnb > li .subMenu.loca .right .pic {
+            width: calc(100% - 200px);
+            height: 100%; }
+            #header .inner #gnb > li .subMenu.loca .right .pic article {
+              width: 50%;
+              height: 100%;
+              padding-left: 30px; }
+              #header .inner #gnb > li .subMenu.loca .right .pic article img {
+                width: 100%;
                 height: 100%;
-                padding-left: 30px; }
-                #header .inner #gnb > li .subMenu.loca .right .pic article img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover; }
-                #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) {
-                  width: 47%;
-                  padding-left: 20px;
-                  margin-left: 3%;
-                  border-left: 1px solid #ddd;
-                  text-align: center; }
-                  #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) h3 {
-                    font: bold 30px/1 'Roboto';
-                    color: #111;
-                    margin-top: 20px;
-                    margin-bottom: 30px; }
-                  #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) p {
-                    font: 20px/1 "Rajdhani";
-                    color: #ff5b20;
-                    margin-top: 20px;
-                    margin-bottom: 20px; }
-                  #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) span {
-                    font: 15px/1.5 "Rajdhani";
-                    color: #333; }
-                  #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) a {
-                    display: block;
-                    width: 180px;
-                    height: 35px;
-                    border: 1px solid #ff5b20;
-                    background: #ff5b20;
-                    margin: 20px auto 0;
-                    font: bold 16px/35px "Rajdhani";
-                    color: #fff;
-                    letter-spacing: 1px; }
-                    #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) a i {
-                      font-size: 18px;
-                      margin-right: 10px; }
+                object-fit: cover; }
+              #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) {
+                width: 47%;
+                padding-left: 20px;
+                margin-left: 3%;
+                border-left: 1px solid #ddd;
+                text-align: center; }
+                #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) h3 {
+                  font: bold 30px/1 'Roboto';
+                  color: #111;
+                  margin-top: 20px;
+                  margin-bottom: 30px; }
+                #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) p {
+                  font: 20px/1 "Rajdhani";
+                  color: #ff5b20;
+                  margin-top: 20px;
+                  margin-bottom: 20px; }
+                #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) span {
+                  font: 15px/1.5 "Rajdhani";
+                  color: #333; }
+                #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) a {
+                  display: block;
+                  width: 180px;
+                  height: 35px;
+                  border: 1px solid #ff5b20;
+                  background: #ff5b20;
+                  margin: 20px auto 0;
+                  font: bold 16px/35px "Rajdhani";
+                  color: #fff;
+                  letter-spacing: 1px; }
+                  #header .inner #gnb > li .subMenu.loca .right .pic article:nth-of-type(2) a i {
+                    font-size: 18px;
+                    margin-right: 10px; }
           #header .inner #gnb > li .subMenu:hover .left h2::before {
             transform: rotate(30deg); }
           #header .inner #gnb > li .subMenu:hover .left h2::after {
