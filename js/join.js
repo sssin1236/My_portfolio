@@ -1,5 +1,6 @@
 const btnCall = document.querySelector(".btnMo");
 const menuMo = document.querySelector(".Mob");
+let targetPos = $("fieldset h2").offset().top + -500;
 
 btnCall.onclick = function(e){
     e.preventDefault();
@@ -28,13 +29,34 @@ $("dt").on("click", function(){
 $("input[type=submit]").on("click", function(e){
     e.preventDefault();
 
-    if(!agree('agreement')) e.preventDefault();
-    if(!isCheck('agree')) e.preventDefault();
-    if(!isEmail('e-mail')) e.preventDefault();
-    if(!phon('call')) e.preventDefault();
-    if(!isPwd2('pwd1', 'pwd2')) e.preventDefault();
-    if(!isPwd('pwd1', 8, 15)) e.preventDefault();
-    if(!isID('userid', 4, 10)) e.preventDefault();
+    if(!agree('agreement')){
+        e.preventDefault();
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    }
+    if(!isCheck('agree')){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    }
+    if(!isEmail('e-mail')){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    } 
+    if(!phon('call')){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    }
+    if(!isPwd2('pwd1', 'pwd2')){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    } 
+    if(!isPwd('pwd1', 8, 15)){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    }
+    if(!isID('userid', 4, 10)){
+        e.preventDefault(); 
+        $("html, body").animate({ scrollTop : targetPos }, 500);
+    } 
 });
 
 
@@ -101,7 +123,6 @@ function isID(name, len, len2){
         $("input[name="+name+"]").parent().find("p").css({ color: "#111"});
         return true;
     }else{
-        $("html, body").animate({ scrollTop : targetPos }, 500);
         $("input[name="+name+"]").focus();
         return false;
     }
@@ -124,8 +145,6 @@ function isPwd(name, len, len2){
         $("input[name="+name+"]").parent().find("p").css({ color: "#111"});
         return true;
     }else{
-        $("html, body").animate({ scrollTop : targetPos }, 500);
-        $("input[name="+name+"]").focus();
         return false;
     }
 }
@@ -143,8 +162,6 @@ function isPwd2(name1, name2){
         $("input[name="+name2+"]").parent().append(
             "<p>비밀번호를 동일하게 입력해주세요.</p>"
         )
-        $("html, body").animate({ scrollTop : targetPos }, 500);
-        $("input[name="+name2+"]").focus();
         return false;
     }
 }
@@ -160,8 +177,6 @@ function phon(name){
     }else{
         $("input[name"+name+"]").val();
         $("input[name="+name+"]").attr({placeholder : "연락처를 정확하게 입력해주세요."});
-        $("html, body").animate({ scrollTop : targetPos }, 500);
-        $("input[name="+name+"]").focus();
         return false;
     }
 }
@@ -178,8 +193,6 @@ function isEmail(name){
         $("input[name="+name+"]").parent().append(
             "<p>정확한 아이디를 입력해주세요.</p>"
         )
-        $("html, body").animate({ scrollTop : targetPos }, 500);
-        $("input[name="+name+"]").focus();
     }
 }
 
@@ -195,7 +208,6 @@ function isCheck(name){
     $("input[name="+name+"]").parent().parent().append(
         "<p>동의여부를 체크해 주세요.</p>"
     )
-    $("html, body").animate({ scrollTop : targetPos }, 500);
     return false; 
 }
 
@@ -210,6 +222,5 @@ function agree(name){
     }else{
         $("input[name="+name+"]").parent().find("p").text("개인정보이용 방침에 동의하여 주세요."); 
         $("input[name="+name+"]").parent().find("p").css("color", "rgb(255, 91, 32)");
-        $("html, body").animate({ scrollTop : targetPos }, 500);
     }
 }

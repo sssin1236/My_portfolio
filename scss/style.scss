@@ -263,8 +263,7 @@ body{
                                 display: block; 
 
                                 article:nth-of-type(1){
-                                    width: 100%; height: 150px;
-                                    margin-top: 20px;
+                                    width: 100%; height: 155px;
                                     padding-bottom: 20px;
                                     border-bottom: 1px solid #bbb;
 
@@ -303,31 +302,41 @@ body{
                                 }
 
                                 article:nth-of-type(2), article:nth-of-type(3){
-                                    width: 49%; height: 150px;
-                                    padding-top: 30px;
+                                    width: 49%; height: 170px;
+                                    padding-top: 20px;
                                     float: left;
+                                    position: relative;
+                                    overflow: hidden;
 
-                                    video{
-                                        width: 50%; height: 100%;
+                                    >video{
+                                        width: 100%; height: 100%;
                                         object-fit: cover;
-                                        filter: grayscale(50%);
                                     }
 
                                     .tit{
-                                        width: 48%; height: 100%;
-                                        padding: 10px 0;
-                                        float: right;
+                                        width: 100%; height: 80%;
+                                        background: rgba(17, 17, 17, 0.9);
+                                        padding: 10px;
                                         text-align: right;
+                                        position: absolute;
+                                        bottom: -100px; right: 0;
+                                        transition: 0.5s;
 
                                         h3{
-                                            font: bold 18px/1 $mainFon;
-                                            color: #333;
+                                            font: 19px/1 $mainFon;
+                                            color: #fff;
                                             margin-bottom: 25px;
                                         }
 
                                         p{
-                                            font: 13px/1.3 $mainFon;
-                                            color: #333;
+                                            font: 15px/1.3 $mainFon;
+                                            color: #ddd;
+                                        }
+                                    }
+
+                                    &:hover{
+                                        .tit{
+                                            bottom: 0;
                                         }
                                     }
                                 }
@@ -401,7 +410,6 @@ body{
                     }
 
                     &.gallery{
-                        display: block;
                         .right{
                             .wrap{
                                 width: 78%; height: 100%;
@@ -534,20 +542,26 @@ body{
                     
                                     .txt{
                                         position: absolute;
-                                        top: 50%; right: 10px;
+                                        top: 50%; right: -10px;
                                         transform: translateY(-50%);
                                         width: 40px; height: 100%;
-                                        background: rgba(255, 91, 32, 0.8);
-                                        opacity: 1;
+                                        background: rgba(17, 17, 17, 0.952);
+                                        transition: 0.5s;
+                                        opacity: 0;
                     
                                         h2{
-                                            width: 200px;
-                                            font: 20px/1 'roboto';
+                                            font: 22px/1.1 'roboto';
                                             color: #fff;
-                                            text-align: right;
                                             transform: rotate(-90deg);
                                             position: absolute;
-                                            bottom: 150px; right: -80px;
+                                            bottom: 30px; right: 8px;
+                                        }
+                                    }
+
+                                    &:hover{
+                                        .txt{
+                                            right: 5px; 
+                                            opacity: 1;
                                         }
                                     }
                                 }
