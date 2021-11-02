@@ -401,252 +401,157 @@ body{
                     }
 
                     &.gallery{
+                        display: block;
                         .right{
-                            .pic{
-                                .wrap{
-                                    width: 100%; height: 100%;
-                                    padding: 30px 0;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
+                            .wrap{
+                                width: 78%; height: 100%;
+                                padding: 20px 0;
+                                float: right;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
                         
-                                    article{
-                                        width: 100%; height: 300px;
-                                        padding: 0px 20px;
-                                        position: relative;
-                                        transition: 0.5s;
-                        
-                                        &:nth-of-type(1){
-                                            width: 70%;
-                                            padding: 0;
-                                            border-top: 2px solid #111;
-                        
-                                            &:hover{
-                                                a{
+                                article{
+                                    width: 100%; height: 300px;
+                                    padding: 0px 10px;
+                                    position: relative;
+                                    transition: 0.5s;
+                    
+                                    &:nth-of-type(1){
+                                        width: 100%;
+                                        padding: 0 10px;
+                    
+                                        &:hover{
+                                            a{
+                                                &::before{
+                                                    background: $mainCol;
+                                                    width: 10px;
+                                                    right: 9px;
+                                                }
+                    
+                                                &::after{
+                                                    border-color: $mainCol;
+                                                }
+                    
+                                                span{
                                                     &::before{
+                                                        transform-origin: center center;
+                                                        transform: rotate(-90deg);
                                                         background: $mainCol;
-                                                        width: 10px;
                                                         right: 9px;
                                                     }
-                        
-                                                    &::after{
-                                                        border-color: $mainCol;
-                                                    }
-                        
-                                                    span{
-                                                        &::before{
-                                                            transform-origin: center center;
-                                                            transform: rotate(-90deg);
-                                                            background: $mainCol;
-                                                            right: 9px;
-                                                        }
-                                                    }
                                                 }
                                             }
-                        
-                                            p{
-                                                font: 18px/1.4 $mainFon;
-                                                color: #333;
-                                                padding-top: 10px;
-                                                margin-bottom: 30px;
-                        
-                                                b{
-                                                    line-height: 2;
-                                                }
+                                        }
+                    
+                                        p{
+                                            font: 15px/1.4 $mainFon;
+                                            color: #333;
+                                            padding-top: 10px;
+                                            margin-bottom: 20px;
+                                            border-top: 2px solid #111;
+                    
+                                            b{
+                                                line-height: 2;
                                             }
-                        
-                                            a{
+                                        }
+                    
+                                        a{
+                                            display: block;
+                                            margin-bottom: 10px;
+                                            width: 100%; height: 25px;
+                                            position: relative;
+                    
+                                            &::before{
+                                                content: '';
                                                 display: block;
-                                                margin-bottom: 10px;
-                                                width: 100%; height: 25px;
-                                                position: relative;
-                        
+                                                width: 40%; height: 1px;
+                                                background: #111;
+                                                position: absolute;
+                                                top: 13px; right: 10px;
+                                                transition: 0.5s;
+                                            }
+                    
+                                            &::after{
+                                                content: '';
+                                                display: block;
+                                                width: 25px; height: 25px;
+                                                border-radius: 50%;
+                                                border: 1px solid #111;
+                                                position: absolute;
+                                                top: 0; right: 0px;
+                                                transition: 0.5s;
+                                            }
+                    
+                                            span{
+                                                font: 18px/25px $mainFon;
+                                                color: $mainCol;
+                    
                                                 &::before{
                                                     content: '';
                                                     display: block;
-                                                    width: 40%; height: 1px;
+                                                    width: 10px; height: 1px;
                                                     background: #111;
                                                     position: absolute;
                                                     top: 13px; right: 10px;
+                                                    transform: rotate(30deg);
+                                                    transform-origin: right center;
                                                     transition: 0.5s;
                                                 }
-                        
+                    
                                                 &::after{
                                                     content: '';
-                                                    display: block;
-                                                    width: 25px; height: 25px;
-                                                    border-radius: 50%;
-                                                    border: 1px solid #111;
+                                                    display: none;
+                                                    width: 10px; height: 1px;
+                                                    background: #111;
                                                     position: absolute;
-                                                    top: 0; right: 0px;
-                                                    transition: 0.5s;
+                                                    top: 13px; right: 10px;
+                                                    transform: rotate(-30deg);
+                                                    transform-origin: right center;
                                                 }
-                        
-                                                span{
-                                                    font: 18px/25px $mainFon;
-                                                    color: $mainCol;
-                        
-                                                    &::before{
-                                                        content: '';
-                                                        display: block;
-                                                        width: 10px; height: 1px;
-                                                        background: #111;
-                                                        position: absolute;
-                                                        top: 13px; right: 10px;
-                                                        transform: rotate(30deg);
-                                                        transform-origin: right center;
-                                                        transition: 0.5s;
-                                                    }
-                        
-                                                    &::after{
-                                                        content: '';
-                                                        display: none;
-                                                        width: 10px; height: 1px;
-                                                        background: #111;
-                                                        position: absolute;
-                                                        top: 13px; right: 10px;
-                                                        transform: rotate(-30deg);
-                                                        transform-origin: right center;
-                                                    }
-                                                }
-                                            }
-                        
-                                            >h1{
-                                                font: bold 50px/1 $mainFon;
-                                                color: #111;
-                                                border-top: 1px dotted #111;
-                                                border-bottom: 2px solid #111;
-                                                padding: 10px 0;
                                             }
                                         }
+                    
+                                        >h1{
+                                            font: bold 38px/1 $mainFon;
+                                            color: #111;
+                                            border-top: 1px dotted #111;
+                                            border-bottom: 2px solid #111;
+                                            padding: 10px 0;
+                                        }
+                                    }
+                                    
+                                    .pic{
+                                        width: 100%; height: 100%;
+                                        margin-bottom: 20px;
                                         
-                                        .pic{
+                                        img{
                                             width: 100%; height: 100%;
-                                            margin-bottom: 20px;
-                                            
-                                            img{
-                                                width: 100%; height: 100%;
-                                                object-fit: cover;
-                                                background: #333;
-                                            }
+                                            object-fit: cover;
+                                            background: #333;
                                         }
-                        
-                                        .txt{
+                                    }
+                    
+                                    .txt{
+                                        position: absolute;
+                                        top: 50%; right: 10px;
+                                        transform: translateY(-50%);
+                                        width: 40px; height: 100%;
+                                        background: rgba(255, 91, 32, 0.8);
+                                        opacity: 1;
+                    
+                                        h2{
+                                            width: 200px;
+                                            font: 20px/1 'roboto';
+                                            color: #fff;
+                                            text-align: right;
+                                            transform: rotate(-90deg);
                                             position: absolute;
-                                            top: 50%; right: 0px;
-                                            transform: translateY(-50%);
-                                            width: 80%; height: 110%;
-                                            background: rgba(255, 91, 32, 0.8);
-                                            opacity: 1;
-                        
-                                            article{
-                                                width: 100%;
-                                                padding: 20px;
-                                                border: none;
-                            
-                                                &:hover{
-                                                    a{
-                                                        &::before{
-                                                            background: $mainCol;
-                                                            width: 10px;
-                                                            right: 9px;
-                                                        }
-                            
-                                                        &::after{
-                                                            border-color: $mainCol;
-                                                        }
-                            
-                                                        span{
-                                                            &::before{
-                                                                transform-origin: center center;
-                                                                transform: rotate(-90deg);
-                                                                background: $mainCol;
-                                                                right: 9px;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                            
-                                                p{
-                                                    font: 18px/1.4 $mainFon;
-                                                    color: #ddd;
-                                                    padding-top: 10px;
-                                                    margin-top: 10px;
-                                                    margin-bottom: 90px;
-                                                    border-top: 2px solid #eee;
-                            
-                                                    b{
-                                                        line-height: 2;
-                                                    }
-                                                }
-                            
-                                                a{
-                                                    display: block;
-                                                    margin-bottom: 10px;
-                                                    width: 100%; height: 25px;
-                                                    position: relative;
-                            
-                                                    &::before{
-                                                        content: '';
-                                                        display: block;
-                                                        width: 40%; height: 1px;
-                                                        background: #111;
-                                                        position: absolute;
-                                                        top: 13px; right: 10px;
-                                                        transition: 0.5s;
-                                                    }
-                            
-                                                    &::after{
-                                                        content: '';
-                                                        display: block;
-                                                        width: 25px; height: 25px;
-                                                        border-radius: 50%;
-                                                        border: 1px solid #111;
-                                                        position: absolute;
-                                                        top: 0; right: 0px;
-                                                        transition: 0.5s;
-                                                    }
-                            
-                                                    span{
-                                                        font: 18px/25px $mainFon;
-                                                        color: #111;
-                            
-                                                        &::before{
-                                                            content: '';
-                                                            display: block;
-                                                            width: 10px; height: 1px;
-                                                            background: #111;
-                                                            position: absolute;
-                                                            top: 13px; right: 10px;
-                                                            transform: rotate(30deg);
-                                                            transform-origin: right center;
-                                                            transition: 0.5s;
-                                                        }
-                            
-                                                        &::after{
-                                                            content: '';
-                                                            display: none;
-                                                            width: 10px; height: 1px;
-                                                            background: #111;
-                                                            position: absolute;
-                                                            top: 13px; right: 10px;
-                                                            transform: rotate(-30deg);
-                                                            transform-origin: right center;
-                                                        }
-                                                    }
-                                                }
-                            
-                                                >h1{
-                                                    font: bold 50px/1 $mainFon;
-                                                    color: #fff;
-                                                    border-top: 1px dotted #eee;
-                                                    border-bottom: 2px solid #eee;
-                                                    padding: 10px 0;
-                                                }
-                                            }
+                                            bottom: 150px; right: -80px;
                                         }
                                     }
                                 }
+                                
                             }
                         }
                     }

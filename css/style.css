@@ -4112,149 +4112,51 @@ body {
                 transition: 0.5s; }
               #header .inner #gnb > li .subMenu.about .right article .pic:hover img {
                 transform: scale(1.1); }
-          #header .inner #gnb > li .subMenu.gallery .right .pic .wrap {
-            width: 100%;
-            height: 100%;
-            padding: 30px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center; }
-            #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article {
-              width: 100%;
-              height: 300px;
-              padding: 0px 20px;
-              position: relative;
-              transition: 0.5s; }
-              #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) {
-                width: 70%;
-                padding: 0;
-                border-top: 2px solid #111; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1):hover a::before {
-                  background: #ff5b20;
-                  width: 10px;
-                  right: 9px; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1):hover a::after {
-                  border-color: #ff5b20; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1):hover a span::before {
-                  transform-origin: center center;
-                  transform: rotate(-90deg);
-                  background: #ff5b20;
-                  right: 9px; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) p {
-                  font: 18px/1.4 "Rajdhani";
-                  color: #333;
-                  padding-top: 10px;
-                  margin-bottom: 30px; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) p b {
-                    line-height: 2; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a {
-                  display: block;
-                  margin-bottom: 10px;
-                  width: 100%;
-                  height: 25px;
-                  position: relative; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a::before {
-                    content: '';
-                    display: block;
-                    width: 40%;
-                    height: 1px;
-                    background: #111;
-                    position: absolute;
-                    top: 13px;
-                    right: 10px;
-                    transition: 0.5s; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a::after {
-                    content: '';
-                    display: block;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    border: 1px solid #111;
-                    position: absolute;
-                    top: 0;
-                    right: 0px;
-                    transition: 0.5s; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a span {
-                    font: 18px/25px "Rajdhani";
-                    color: #ff5b20; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a span::before {
-                      content: '';
-                      display: block;
-                      width: 10px;
-                      height: 1px;
-                      background: #111;
-                      position: absolute;
-                      top: 13px;
-                      right: 10px;
-                      transform: rotate(30deg);
-                      transform-origin: right center;
-                      transition: 0.5s; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) a span::after {
-                      content: '';
-                      display: none;
-                      width: 10px;
-                      height: 1px;
-                      background: #111;
-                      position: absolute;
-                      top: 13px;
-                      right: 10px;
-                      transform: rotate(-30deg);
-                      transform-origin: right center; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article:nth-of-type(1) > h1 {
-                  font: bold 50px/1 "Rajdhani";
-                  color: #111;
-                  border-top: 1px dotted #111;
-                  border-bottom: 2px solid #111;
-                  padding: 10px 0; }
-              #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .pic {
+          #header .inner #gnb > li .subMenu.gallery {
+            display: block; }
+            #header .inner #gnb > li .subMenu.gallery .right .wrap {
+              width: 78%;
+              height: 100%;
+              padding: 20px 0;
+              float: right;
+              display: flex;
+              justify-content: space-between;
+              align-items: center; }
+              #header .inner #gnb > li .subMenu.gallery .right .wrap article {
                 width: 100%;
-                height: 100%;
-                margin-bottom: 20px; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .pic img {
+                height: 300px;
+                padding: 0px 10px;
+                position: relative;
+                transition: 0.5s; }
+                #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) {
                   width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  background: #333; }
-              #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt {
-                position: absolute;
-                top: 50%;
-                right: 0px;
-                transform: translateY(-50%);
-                width: 80%;
-                height: 110%;
-                background: rgba(255, 91, 32, 0.8);
-                opacity: 1; }
-                #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article {
-                  width: 100%;
-                  padding: 20px;
-                  border: none; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article:hover a::before {
+                  padding: 0 10px; }
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1):hover a::before {
                     background: #ff5b20;
                     width: 10px;
                     right: 9px; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article:hover a::after {
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1):hover a::after {
                     border-color: #ff5b20; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article:hover a span::before {
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1):hover a span::before {
                     transform-origin: center center;
                     transform: rotate(-90deg);
                     background: #ff5b20;
                     right: 9px; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article p {
-                    font: 18px/1.4 "Rajdhani";
-                    color: #ddd;
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) p {
+                    font: 15px/1.4 "Rajdhani";
+                    color: #333;
                     padding-top: 10px;
-                    margin-top: 10px;
-                    margin-bottom: 90px;
-                    border-top: 2px solid #eee; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article p b {
+                    margin-bottom: 20px;
+                    border-top: 2px solid #111; }
+                    #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) p b {
                       line-height: 2; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a {
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a {
                     display: block;
                     margin-bottom: 10px;
                     width: 100%;
                     height: 25px;
                     position: relative; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a::before {
+                    #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a::before {
                       content: '';
                       display: block;
                       width: 40%;
@@ -4264,7 +4166,7 @@ body {
                       top: 13px;
                       right: 10px;
                       transition: 0.5s; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a::after {
+                    #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a::after {
                       content: '';
                       display: block;
                       width: 25px;
@@ -4275,10 +4177,10 @@ body {
                       top: 0;
                       right: 0px;
                       transition: 0.5s; }
-                    #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a span {
+                    #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a span {
                       font: 18px/25px "Rajdhani";
-                      color: #111; }
-                      #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a span::before {
+                      color: #ff5b20; }
+                      #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a span::before {
                         content: '';
                         display: block;
                         width: 10px;
@@ -4290,7 +4192,7 @@ body {
                         transform: rotate(30deg);
                         transform-origin: right center;
                         transition: 0.5s; }
-                      #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article a span::after {
+                      #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) a span::after {
                         content: '';
                         display: none;
                         width: 10px;
@@ -4301,12 +4203,39 @@ body {
                         right: 10px;
                         transform: rotate(-30deg);
                         transform-origin: right center; }
-                  #header .inner #gnb > li .subMenu.gallery .right .pic .wrap article .txt article > h1 {
-                    font: bold 50px/1 "Rajdhani";
-                    color: #fff;
-                    border-top: 1px dotted #eee;
-                    border-bottom: 2px solid #eee;
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article:nth-of-type(1) > h1 {
+                    font: bold 38px/1 "Rajdhani";
+                    color: #111;
+                    border-top: 1px dotted #111;
+                    border-bottom: 2px solid #111;
                     padding: 10px 0; }
+                #header .inner #gnb > li .subMenu.gallery .right .wrap article .pic {
+                  width: 100%;
+                  height: 100%;
+                  margin-bottom: 20px; }
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article .pic img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    background: #333; }
+                #header .inner #gnb > li .subMenu.gallery .right .wrap article .txt {
+                  position: absolute;
+                  top: 50%;
+                  right: 10px;
+                  transform: translateY(-50%);
+                  width: 40px;
+                  height: 100%;
+                  background: rgba(255, 91, 32, 0.8);
+                  opacity: 1; }
+                  #header .inner #gnb > li .subMenu.gallery .right .wrap article .txt h2 {
+                    width: 200px;
+                    font: 20px/1 'roboto';
+                    color: #fff;
+                    text-align: right;
+                    transform: rotate(-90deg);
+                    position: absolute;
+                    bottom: 150px;
+                    right: -80px; }
           #header .inner #gnb > li .subMenu:hover .left h2::before {
             transform: rotate(30deg); }
           #header .inner #gnb > li .subMenu:hover .left h2::after {
