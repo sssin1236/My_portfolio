@@ -4682,8 +4682,10 @@ body {
       left: 0;
       overflow: hidden; }
       #visual .inner .wrap .rolling {
-        width: calc(250px * 8);
-        height: 100%; }
+        width: calc(250px * 5);
+        height: 100%;
+        position: relative;
+        right: -47%; }
         #visual .inner .wrap .rolling::after {
           content: '';
           display: block;

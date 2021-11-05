@@ -1136,7 +1136,9 @@ body{
             overflow: hidden;
 
             .rolling{
-                width: calc(250px * 8); height: 100%;
+                width: calc(250px * 5); height: 100%;
+                position: relative;
+                right: -47%;
 
                 &::after{
                     content: ''; display: block; clear: both;
