@@ -1046,7 +1046,7 @@ body{
     background: #efefef;
     position: relative;
 
-    >img{
+    >.pic{
         width: 100%; height: 100%;
         position: absolute;
         top: 0; left: 0;
@@ -1077,7 +1077,7 @@ body{
             padding: 30px;
             position: absolute;
             top: 190px; right: 0;
-            background: url(../img/쿠션지.jpg) no-repeat center/cover;
+            background: #111;
 
             &::after{
                 content: ''; display: block; clear: both;

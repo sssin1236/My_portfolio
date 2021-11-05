@@ -445,7 +445,8 @@
 
                     .career{
                         width: 340px; height: 60px;
-                        background: rgba(34, 34, 34, 0.99);
+                        background: rgba(34, 34, 34, 0.7);
+                        backdrop-filter: blur(5px);
                         padding: 20px 30px 30px;
                         position: absolute;
                         bottom: 0; left:0;
@@ -471,16 +472,18 @@
 
                         a{
                             display: block;
-                            width: 60px; height: 60px;
-                            background: rgba(34, 34, 34, 0.99);
+                            width: 40px; height: 40px;
+                            background: rgba(34, 34, 34, 0.7);
+                            backdrop-filter: blur(5px);
                             position: absolute;
-                            top: -30px; right: 20px;
-                            border-radius: 50%;
+                            top: -40px; right: 20px;
+                            border-top-left-radius: 50%;
+                            border-top-right-radius: 50%;
                             text-align: center;
                             
                             i{
                                 font-size: 20px;
-                                line-height: 50px;
+                                line-height: 40px;
                                 color: #eee;
                                 transition: 1s;
                             }
@@ -513,8 +516,7 @@
                             }
 
                             a i{
-                                transform: rotate(180deg);
-                                animation: none;
+                                animation: remotion 1s ease forwards;
                             }
                         }
                     }
@@ -539,9 +541,14 @@
 }
 
 @keyframes motion{
-    0% {transform: translateY(0px);}
-    50% {transform: translateY(-8px);}
-    100% {transform: translateY(0px);}
+    0% {transform: rotate(0deg) translateY(0px) ;}
+    50% {transform: translateY(-8px) }
+    100% {transform: translateY(0px) }
+}
+
+@keyframes remotion{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
 }
 
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Rajdhani:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gugi&family=Noto+Sans+KR:wght@300;400&display=swap");
@@ -949,7 +948,8 @@ input, select, option {
           .mem .inner .wrap article .name .career {
             width: 340px;
             height: 60px;
-            background: rgba(34, 34, 34, 0.99);
+            background: rgba(34, 34, 34, 0.7);
+            backdrop-filter: blur(5px);
             padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
@@ -972,17 +972,19 @@ input, select, option {
                 transition: 1s; }
             .mem .inner .wrap article .name .career a {
               display: block;
-              width: 60px;
-              height: 60px;
-              background: rgba(34, 34, 34, 0.99);
+              width: 40px;
+              height: 40px;
+              background: rgba(34, 34, 34, 0.7);
+              backdrop-filter: blur(5px);
               position: absolute;
-              top: -30px;
+              top: -40px;
               right: 20px;
-              border-radius: 50%;
+              border-top-left-radius: 50%;
+              border-top-right-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
-                line-height: 50px;
+                line-height: 40px;
                 color: #eee;
                 transition: 1s; }
             .mem .inner .wrap article .name .career > ul > li {
@@ -1001,8 +1003,7 @@ input, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotate(180deg);
-                animation: none; }
+                animation: remotion 1s ease forwards; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
@@ -1011,11 +1012,16 @@ input, select, option {
 
 @keyframes motion {
   0% {
-    transform: translateY(0px); }
+    transform: rotate(0deg) translateY(0px); }
   50% {
     transform: translateY(-8px); }
   100% {
     transform: translateY(0px); } }
+@keyframes remotion {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
 @media screen and (max-width: 1179px) {
   .intro {
     padding: 0px 30px 80px;
@@ -1958,7 +1964,8 @@ input, select, option {
           .mem .inner .wrap article .name .career {
             width: 340px;
             height: 60px;
-            background: rgba(34, 34, 34, 0.99);
+            background: rgba(34, 34, 34, 0.7);
+            backdrop-filter: blur(5px);
             padding: 20px 30px 30px;
             position: absolute;
             bottom: 0;
@@ -1981,17 +1988,19 @@ input, select, option {
                 transition: 1s; }
             .mem .inner .wrap article .name .career a {
               display: block;
-              width: 60px;
-              height: 60px;
-              background: rgba(34, 34, 34, 0.99);
+              width: 40px;
+              height: 40px;
+              background: rgba(34, 34, 34, 0.7);
+              backdrop-filter: blur(5px);
               position: absolute;
-              top: -30px;
+              top: -40px;
               right: 20px;
-              border-radius: 50%;
+              border-top-left-radius: 50%;
+              border-top-right-radius: 50%;
               text-align: center; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
-                line-height: 50px;
+                line-height: 40px;
                 color: #eee;
                 transition: 1s; }
             .mem .inner .wrap article .name .career > ul > li {
@@ -2010,8 +2019,7 @@ input, select, option {
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotate(180deg);
-                animation: none; }
+                animation: remotion 1s ease forwards; }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
@@ -2020,11 +2028,16 @@ input, select, option {
 
 @keyframes motion {
   0% {
-    transform: translateY(0px); }
+    transform: rotate(0deg) translateY(0px); }
   50% {
     transform: translateY(-8px); }
   100% {
     transform: translateY(0px); } }
+@keyframes remotion {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
 @media screen and (max-width: 1179px) {
   .intro {
     padding: 0px 30px 80px;
@@ -4593,7 +4606,7 @@ body {
   height: 100vh;
   background: #efefef;
   position: relative; }
-  #visual > img {
+  #visual > .pic {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -4622,7 +4635,7 @@ body {
       position: absolute;
       top: 190px;
       right: 0;
-      background: url(../img/쿠션지.jpg) no-repeat center/cover; }
+      background: #111; }
       #visual .inner .list::after {
         content: '';
         display: block;
