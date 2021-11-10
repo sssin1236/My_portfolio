@@ -1111,12 +1111,14 @@ input, select, option {
   .intro .inner {
     width: 1180px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .intro .inner::after {
       content: '';
       display: block;
       clear: both; }
     .intro .inner h1 {
+      width: 50%;
       float: left;
       margin-top: 20px;
       z-index: 2; }
@@ -1131,6 +1133,7 @@ input, select, option {
         right: 250px;
         z-index: 1; }
       .intro .inner h1 b {
+        width: 100%;
         font: normal 100px/1 'arial';
         color: #ff5b20; }
       .intro .inner h1 span {
@@ -2130,12 +2133,14 @@ input, select, option {
   .intro .inner {
     width: 1180px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .intro .inner::after {
       content: '';
       display: block;
       clear: both; }
     .intro .inner h1 {
+      width: 50%;
       float: left;
       margin-top: 20px;
       z-index: 2; }
@@ -2150,6 +2155,7 @@ input, select, option {
         right: 250px;
         z-index: 1; }
       .intro .inner h1 b {
+        width: 100%;
         font: normal 100px/1 'arial';
         color: #ff5b20; }
       .intro .inner h1 span {

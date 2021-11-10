@@ -65,7 +65,7 @@ $(".career a").on("click", function(e){
 
 letter("b",220, 0, 0);
 letter(".sliding2", 80, 220, 1000);
-letter(".sliding3", 80, 300, 1000);
+letter(".sliding3", 80, 300, 2000);
 
 function letter(el, ht, top, delay){
     const selector = $(".sliding1").children(el);
@@ -85,6 +85,9 @@ function letter(el, ht, top, delay){
     );
 
     selector.find(".mask").stop().delay(delay).animate({ left: 0}, 1000, function(){
-
+        $(this).prev(el).css({ opacity: 1});
+        $(this).stop().animate({ left: "100%"}, 1000, function(){
+            $(this).remove();
+        });
     });
 }
