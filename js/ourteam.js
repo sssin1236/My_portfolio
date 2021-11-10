@@ -63,9 +63,10 @@ $(".career a").on("click", function(e){
     e.preventDefault();
 });
 
-letter("b", 1000, 0);
+letter("b",220, 1000, 0);
+letter("span", 80, 1000, 1000);
 
-function letter(el, speed, delay){
+function letter(el, ht, speed, delay){
     const selector = $(".sliding").children(el);
     const bgColor = selector.css("color");
 
@@ -73,8 +74,8 @@ function letter(el, speed, delay){
         $("<em class='mask'>")
             .css({
                 display: "block",
-                width: "100%",
-                height: "100%",
+                width: "50%",
+                height: ht,
                 backgroundColor: bgColor,
                 position: "absolute",
                 top: 0,
