@@ -1117,9 +1117,6 @@ input, select, option {
       display: block;
       clear: both; }
     .intro .inner h1 {
-      width: 350px;
-      font: bold 80px/1 'arial';
-      color: #111;
       float: left;
       margin-top: 20px;
       z-index: 2; }
@@ -1136,6 +1133,10 @@ input, select, option {
       .intro .inner h1 b {
         font: normal 100px/1 'arial';
         color: #ff5b20; }
+      .intro .inner h1 span {
+        display: block;
+        font: bold 80px/1 'arial';
+        color: #111; }
     .intro .inner .pic {
       width: 580px;
       height: 700px;
@@ -1525,7 +1526,6 @@ input, select, option {
       width: 100%; }
       .intro .inner h1 {
         width: 49%;
-        font: bold 6vw/1 'arial';
         margin-bottom: 30px;
         z-index: 2; }
         .intro .inner h1::before {
@@ -1536,6 +1536,8 @@ input, select, option {
           left: 48%; }
         .intro .inner h1 b {
           font: normal 10vw/1 'arial'; }
+        .intro .inner h1 span {
+          font-size: 6vw; }
       .intro .inner .pic {
         width: 55%;
         height: 400px;
@@ -1703,12 +1705,13 @@ input, select, option {
     .intro .inner {
       width: 100%; }
       .intro .inner h1 {
-        width: 100%;
-        font: bold 13vw/1 'arial'; }
+        width: 100%; }
         .intro .inner h1::before {
           display: none; }
         .intro .inner h1 b {
           font: normal 15vw/1 'arial'; }
+        .intro .inner h1 span {
+          font-size: 13vw; }
       .intro .inner .pic {
         width: 100%;
         height: 300px;
@@ -2133,9 +2136,6 @@ input, select, option {
       display: block;
       clear: both; }
     .intro .inner h1 {
-      width: 350px;
-      font: bold 80px/1 'arial';
-      color: #111;
       float: left;
       margin-top: 20px;
       z-index: 2; }
@@ -2152,6 +2152,10 @@ input, select, option {
       .intro .inner h1 b {
         font: normal 100px/1 'arial';
         color: #ff5b20; }
+      .intro .inner h1 span {
+        display: block;
+        font: bold 80px/1 'arial';
+        color: #111; }
     .intro .inner .pic {
       width: 580px;
       height: 700px;
@@ -2541,7 +2545,6 @@ input, select, option {
       width: 100%; }
       .intro .inner h1 {
         width: 49%;
-        font: bold 6vw/1 'arial';
         margin-bottom: 30px;
         z-index: 2; }
         .intro .inner h1::before {
@@ -2552,6 +2555,8 @@ input, select, option {
           left: 48%; }
         .intro .inner h1 b {
           font: normal 10vw/1 'arial'; }
+        .intro .inner h1 span {
+          font-size: 6vw; }
       .intro .inner .pic {
         width: 55%;
         height: 400px;
@@ -2719,12 +2724,13 @@ input, select, option {
     .intro .inner {
       width: 100%; }
       .intro .inner h1 {
-        width: 100%;
-        font: bold 13vw/1 'arial'; }
+        width: 100%; }
         .intro .inner h1::before {
           display: none; }
         .intro .inner h1 b {
           font: normal 15vw/1 'arial'; }
+        .intro .inner h1 span {
+          font-size: 13vw; }
       .intro .inner .pic {
         width: 100%;
         height: 300px;

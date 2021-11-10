@@ -46,7 +46,6 @@ const $mem = $(".mem");
 const $article = $mem.find("article");
 
 
-
 $(".career").on("click", function(){
 
     let has = $(this).hasClass("on");
@@ -63,3 +62,27 @@ $(".career").on("click", function(){
 $(".career a").on("click", function(e){
     e.preventDefault();
 });
+
+letter("b", 1000, 0);
+
+function letter(el, speed, delay){
+    const selector = $(".sliding").children(el);
+    const bgColor = selector.css("color");
+
+    selector.append(
+        $("<em class='mask'>")
+            .css({
+                display: "block",
+                width: "100%",
+                height: "100%",
+                backgroundColor: bgColor,
+                position: "absolute",
+                top: 0,
+                left: "-100%"
+            })
+    );
+
+    $("h1").find(".mask").stop(delay).animate({ left: 0}, speed, function(){
+
+    });
+}
