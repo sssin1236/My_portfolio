@@ -63,11 +63,12 @@ $(".career a").on("click", function(e){
     e.preventDefault();
 });
 
-letter("b",220, 1000, 0);
-letter("span", 80, 1000, 1000);
+letter("b",220, 0, 0);
+letter(".sliding2", 80, 220, 1000);
+letter(".sliding3", 80, 300, 1000);
 
-function letter(el, ht, speed, delay){
-    const selector = $(".sliding").children(el);
+function letter(el, ht, top, delay){
+    const selector = $(".sliding1").children(el);
     const bgColor = selector.css("color");
 
     selector.append(
@@ -78,12 +79,12 @@ function letter(el, ht, speed, delay){
                 height: ht,
                 backgroundColor: bgColor,
                 position: "absolute",
-                top: 0,
+                top: top,
                 left: "-100%"
             })
     );
 
-    $("h1").find(".mask").stop(delay).animate({ left: 0}, speed, function(){
+    selector.find(".mask").stop().delay(delay).animate({ left: 0}, 1000, function(){
 
     });
 }
