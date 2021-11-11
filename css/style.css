@@ -1132,12 +1132,10 @@ input, select, option {
         top: 250px;
         right: 250px;
         z-index: 1; }
-      .intro .inner h1 b {
-        width: 100%;
+      .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
         font: normal 100px/1 'arial';
         color: #ff5b20; }
-      .intro .inner h1 span {
-        display: block;
+      .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
         font: bold 80px/1 'arial';
         color: #111; }
     .intro .inner .pic {
@@ -2154,12 +2152,10 @@ input, select, option {
         top: 250px;
         right: 250px;
         z-index: 1; }
-      .intro .inner h1 b {
-        width: 100%;
+      .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
         font: normal 100px/1 'arial';
         color: #ff5b20; }
-      .intro .inner h1 span {
-        display: block;
+      .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
         font: bold 80px/1 'arial';
         color: #111; }
     .intro .inner .pic {

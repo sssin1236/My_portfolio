@@ -53,16 +53,16 @@
                 z-index: 1;
             }
 
-            b{
-                width: 100%;
-                font: normal 100px/1 'arial';
-                color: $mainCol;
-            }
-
-            span{
-                display: block;
-                font: bold 80px/1 'arial';
-                color: #111;
+            .sliding1, .sliding2, .sliding3{
+                b{
+                    font: normal 100px/1 'arial';
+                    color: $mainCol;
+                }
+                
+                span{
+                    font: bold 80px/1 'arial';
+                    color: #111;
+                }
             }
         }
 

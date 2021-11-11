@@ -63,9 +63,9 @@ $(".career a").on("click", function(e){
     e.preventDefault();
 });
 
-letter("b",220, 0, 0);
-letter(".sliding2", 80, 220, 1000);
-letter(".sliding3", 80, 300, 2000);
+// letter("b",220, 0, 0);
+// letter(".sliding2", 80, 220, 1000);
+// letter(".sliding3", 80, 300, 2000);
 
 function letter(el, ht, top, delay){
     const selector = $(".sliding1").children(el);
