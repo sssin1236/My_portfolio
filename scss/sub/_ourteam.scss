@@ -54,6 +54,9 @@
             }
 
             .sliding1, .sliding2, .sliding3{
+                width: 100%;
+                position: relative;
+
                 b{
                     font: normal 100px/1 'arial';
                     color: $mainCol;

@@ -63,30 +63,28 @@ $(".career a").on("click", function(e){
     e.preventDefault();
 });
 
-// letter("b",220, 0, 0);
-// letter(".sliding2", 80, 220, 1000);
-// letter(".sliding3", 80, 300, 2000);
 
-function letter(el, ht, top, delay){
-    const selector = $(".sliding1").children(el);
-    const bgColor = selector.css("color");
+letter(".sliding1", 1000, 0);
 
-    selector.append(
+function letter(el, speed, delay){
+    const bgColor = $(el).children().css("color");
+
+    $(el).append(
         $("<em class='mask'>")
             .css({
                 display: "block",
-                width: "50%",
-                height: ht,
+                width: "100%",
+                height: "100%",
                 backgroundColor: bgColor,
                 position: "absolute",
-                top: top,
+                top: 0,
                 left: "-100%"
             })
     );
 
-    selector.find(".mask").stop().delay(delay).animate({ left: 0}, 1000, function(){
-        $(this).prev(el).css({ opacity: 1});
-        $(this).stop().animate({ left: "100%"}, 1000, function(){
+    $(el).find(".mask").stop().delay(delay).animate({ left: 0}, speed, function(){
+        $(this).prev().css({ opacity: 1});
+        $(this).stop().animate({ left: "100%"}, speed, function(){
             $(this).remove();
         });
     });
