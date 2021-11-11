@@ -1133,14 +1133,17 @@ input, select, option {
         right: 250px;
         z-index: 1; }
       .intro .inner h1 .sliding1, .intro .inner h1 .sliding2, .intro .inner h1 .sliding3 {
-        width: 100%;
+        display: inline-block;
+        overflow: hidden;
         position: relative; }
         .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 100px/1 'arial';
-          color: #ff5b20; }
+          color: #ff5b20;
+          opacity: 0; }
         .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font: bold 80px/1 'arial';
-          color: #111; }
+          color: #111;
+          opacity: 0; }
     .intro .inner .pic {
       width: 580px;
       height: 700px;
@@ -2158,14 +2161,17 @@ input, select, option {
         right: 250px;
         z-index: 1; }
       .intro .inner h1 .sliding1, .intro .inner h1 .sliding2, .intro .inner h1 .sliding3 {
-        width: 100%;
+        display: inline-block;
+        overflow: hidden;
         position: relative; }
         .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 100px/1 'arial';
-          color: #ff5b20; }
+          color: #ff5b20;
+          opacity: 0; }
         .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font: bold 80px/1 'arial';
-          color: #111; }
+          color: #111;
+          opacity: 0; }
     .intro .inner .pic {
       width: 580px;
       height: 700px;

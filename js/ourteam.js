@@ -65,6 +65,8 @@ $(".career a").on("click", function(e){
 
 
 letter(".sliding1", 1000, 0);
+letter(".sliding2", 700, 700);
+letter(".sliding3", 700, 1400);
 
 function letter(el, speed, delay){
     const bgColor = $(el).children().css("color");
@@ -78,13 +80,13 @@ function letter(el, speed, delay){
                 backgroundColor: bgColor,
                 position: "absolute",
                 top: 0,
-                left: "-100%"
+                left: "-100%",
             })
     );
 
-    $(el).find(".mask").stop().delay(delay).animate({ left: 0}, speed, function(){
+    $(el).find(".mask").stop().delay(delay).animate({ left: 0}, speed, "easeInExpo", function(){
         $(this).prev().css({ opacity: 1});
-        $(this).stop().animate({ left: "100%"}, speed, function(){
+        $(this).stop().animate({ left: "100%"}, speed, "easeInExpo", function(){
             $(this).remove();
         });
     });

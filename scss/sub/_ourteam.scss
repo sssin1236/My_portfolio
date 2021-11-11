@@ -54,17 +54,20 @@
             }
 
             .sliding1, .sliding2, .sliding3{
-                width: 100%;
+                display: inline-block;
+                overflow: hidden;
                 position: relative;
 
                 b{
                     font: normal 100px/1 'arial';
                     color: $mainCol;
+                    opacity: 0;
                 }
                 
                 span{
                     font: bold 80px/1 'arial';
                     color: #111;
+                    opacity: 0;
                 }
             }
         }
