@@ -64,9 +64,9 @@ $(".career a").on("click", function(e){
 });
 
 
-letter(".sliding1", 1000, 0);
-letter(".sliding2", 700, 700);
-letter(".sliding3", 700, 1400);
+letter(".sliding1", 700, 0);
+letter(".sliding2", 500, 700);
+letter(".sliding3", 500, 800);
 
 function letter(el, speed, delay){
     const bgColor = $(el).children().css("color");
