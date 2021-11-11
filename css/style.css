@@ -1149,7 +1149,7 @@ input, select, option {
         height: 100%;
         object-fit: cover;
         z-index: 2; }
-    .intro .inner p {
+    .intro .inner > p {
       width: 450px;
       font: 19px/1.6 'arial';
       color: #333;
@@ -1530,14 +1530,14 @@ input, select, option {
         margin-bottom: 30px;
         z-index: 2; }
         .intro .inner h1::before {
-          width: 50%;
+          width: 48%;
           height: 300px;
           position: absolute;
           top: 150px;
           left: 48%; }
-        .intro .inner h1 b {
+        .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 10vw/1 'arial'; }
-        .intro .inner h1 span {
+        .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font-size: 6vw; }
       .intro .inner .pic {
         width: 55%;
@@ -1546,7 +1546,7 @@ input, select, option {
         margin-top: 0px;
         position: relative;
         z-index: 2; }
-      .intro .inner p {
+      .intro .inner > p {
         width: 45%;
         height: 300px;
         font: 15px/1.6 'arial';
@@ -1671,7 +1671,7 @@ input, select, option {
             .mem .inner .wrap article .name .career a {
               width: 40px;
               height: 40px;
-              top: -20px;
+              top: -40px;
               right: 20px; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
@@ -1702,22 +1702,22 @@ input, select, option {
 @media screen and (max-width: 539px) {
   .intro {
     padding: 0px 20px 60px;
-    margin-bottom: 180px; }
+    margin-bottom: 130px; }
     .intro .inner {
       width: 100%; }
       .intro .inner h1 {
         width: 100%; }
         .intro .inner h1::before {
           display: none; }
-        .intro .inner h1 b {
+        .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 15vw/1 'arial'; }
-        .intro .inner h1 span {
+        .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font-size: 13vw; }
       .intro .inner .pic {
         width: 100%;
         height: 300px;
         border: 2px solid #ff5b20; }
-      .intro .inner p {
+      .intro .inner > p {
         width: 90%;
         height: 190px;
         left: 30px;
@@ -1731,6 +1731,8 @@ input, select, option {
       margin-bottom: 50px; }
     .award .inner article {
       margin-bottom: 30px; }
+      .award .inner article:nth-of-type(1) .txt p {
+        margin-top: 50px; }
       .award .inner article:nth-of-type(2) .txt {
         padding-right: 0px; }
       .award .inner article:nth-of-type(3) .txt p {
@@ -2169,7 +2171,7 @@ input, select, option {
         height: 100%;
         object-fit: cover;
         z-index: 2; }
-    .intro .inner p {
+    .intro .inner > p {
       width: 450px;
       font: 19px/1.6 'arial';
       color: #333;
@@ -2550,14 +2552,14 @@ input, select, option {
         margin-bottom: 30px;
         z-index: 2; }
         .intro .inner h1::before {
-          width: 50%;
+          width: 48%;
           height: 300px;
           position: absolute;
           top: 150px;
           left: 48%; }
-        .intro .inner h1 b {
+        .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 10vw/1 'arial'; }
-        .intro .inner h1 span {
+        .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font-size: 6vw; }
       .intro .inner .pic {
         width: 55%;
@@ -2566,7 +2568,7 @@ input, select, option {
         margin-top: 0px;
         position: relative;
         z-index: 2; }
-      .intro .inner p {
+      .intro .inner > p {
         width: 45%;
         height: 300px;
         font: 15px/1.6 'arial';
@@ -2691,7 +2693,7 @@ input, select, option {
             .mem .inner .wrap article .name .career a {
               width: 40px;
               height: 40px;
-              top: -20px;
+              top: -40px;
               right: 20px; }
               .mem .inner .wrap article .name .career a i {
                 font-size: 20px;
@@ -2722,22 +2724,22 @@ input, select, option {
 @media screen and (max-width: 539px) {
   .intro {
     padding: 0px 20px 60px;
-    margin-bottom: 180px; }
+    margin-bottom: 130px; }
     .intro .inner {
       width: 100%; }
       .intro .inner h1 {
         width: 100%; }
         .intro .inner h1::before {
           display: none; }
-        .intro .inner h1 b {
+        .intro .inner h1 .sliding1 b, .intro .inner h1 .sliding2 b, .intro .inner h1 .sliding3 b {
           font: normal 15vw/1 'arial'; }
-        .intro .inner h1 span {
+        .intro .inner h1 .sliding1 span, .intro .inner h1 .sliding2 span, .intro .inner h1 .sliding3 span {
           font-size: 13vw; }
       .intro .inner .pic {
         width: 100%;
         height: 300px;
         border: 2px solid #ff5b20; }
-      .intro .inner p {
+      .intro .inner > p {
         width: 90%;
         height: 190px;
         left: 30px;
@@ -2751,6 +2753,8 @@ input, select, option {
       margin-bottom: 50px; }
     .award .inner article {
       margin-bottom: 30px; }
+      .award .inner article:nth-of-type(1) .txt p {
+        margin-top: 50px; }
       .award .inner article:nth-of-type(2) .txt {
         padding-right: 0px; }
       .award .inner article:nth-of-type(3) .txt p {

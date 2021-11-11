@@ -79,7 +79,7 @@
             }
         }
 
-        p{
+        >p{
             width: 450px;
             font: 19px/1.6 'arial';
             color: #333;
@@ -577,17 +577,19 @@
                 z-index: 2;
 
                 &::before{
-                    width: 50%; height: 300px;
+                    width: 48%; height: 300px;
                     position: absolute;
                     top: 150px; left: 48%;
                 }
-
-                b{
-                    font: normal 10vw/1 'arial';
-                }
-
-                span{
-                    font-size: 6vw;
+    
+                .sliding1, .sliding2, .sliding3{
+                    b{
+                        font: normal 10vw/1 'arial';
+                    }
+    
+                    span{
+                        font-size: 6vw;
+                    }
                 }
             }
 
@@ -600,7 +602,7 @@
 
             }
 
-            p{
+            >p{
                 width: 45%; height: 300px;
                 font: 15px/1.6 'arial';
                 overflow: hidden;
@@ -798,7 +800,7 @@
 
                             a{
                                 width: 40px; height: 40px;
-                                top: -20px; right: 20px;
+                                top: -40px; right: 20px;
                                 
                                 i{
                                     font-size: 20px;
@@ -864,7 +866,7 @@
     
     .intro{
         padding: 0px 20px 60px;
-        margin-bottom: 180px;
+        margin-bottom: 130px;
 
         .inner{
             width: 100%;
@@ -875,13 +877,15 @@
                 &::before{
                     display: none;
                 }
-
-                b{
-                    font: normal 15vw/1 'arial';
-                }
-
-                span{
-                    font-size: 13vw;
+    
+                .sliding1, .sliding2, .sliding3{
+                    b{
+                        font: normal 15vw/1 'arial';
+                    }
+    
+                    span{
+                        font-size: 13vw;
+                    }
                 }
             }
 
@@ -890,7 +894,7 @@
                 border: 2px solid $mainCol;
             }
 
-            p{
+            >p{
                 width: 90%; height: 190px;
                 left: 30px; bottom: auto; right: auto; top: 105%;
             }
@@ -907,6 +911,12 @@
 
             article{
                 margin-bottom: 30px;
+
+                &:nth-of-type(1){
+                    .txt p{
+                        margin-top: 50px;
+                    }
+                }
 
                 &:nth-of-type(2){
                     .txt{ 
