@@ -96,7 +96,7 @@ const base = -500;
 let pos = [];
 
 
-$("#box").each(function(_, data){
+$(".member>#box").each(function(_, data){
     pos.push($(data).offset().top);
 });
 
@@ -104,7 +104,7 @@ $(window).on("scroll", function(){
     let scroll = $(this).scrollTop();
     init();
 
-    $("#box").each(function(index){
+    $(".member>#box").each(function(index){
         if(scroll >= pos[index] + base){
             custom[index](scroll);
         }
@@ -122,10 +122,11 @@ let custom = [
     },
 
     function(scroll){
-        
+        let current_scroll = scroll - pos[1];
+
+        $(".year").css({ right: 300-current_scroll + "px"});
     }
 ]
-
 let init = function(){
-    $(".intro>.inner").find(".pic").css({ transform: "scale(2)", opacity: 0});
+    $(".intro>.inner").find(".pic").css({ transform: "scale(1)", opacity: 1});
 }
