@@ -123,8 +123,16 @@ let custom = [
 
     function(scroll){
         let current_scroll = scroll - pos[1];
+        let right = 100 - current_scroll;
+        let left = 300 - current_scroll;
+        let right_scroll;
+        let left_scroll;
+        (right <= -20) ? right_scroll = -20 : right_scroll = right;
+        (left <= -20) ? left_scroll = -20 : left_scroll = left;
 
-        $(".year").css({ right: 300-current_scroll + "px"});
+        $(".year").css({ right: right_scroll + "px"});
+        $(".year2").css({ left: left_scroll + "px"});
+        $(".year3").css({ right: right_scroll + "px"});
     }
 ]
 let init = function(){

@@ -1214,7 +1214,7 @@ input, select, option {
         padding-right: 40px; }
         .award .inner article:nth-of-type(2) .txt span {
           left: -20px;
-          transition: 0.5s; }
+          transition: 1s; }
       .award .inner article:nth-of-type(2) .pic {
         float: right; }
       .award .inner article .txt {
@@ -1230,10 +1230,10 @@ input, select, option {
           color: #ff5b20;
           position: absolute;
           bottom: -10px;
-          right: 300px;
+          right: 100px;
           opacity: 0.1;
           z-index: 1;
-          transition: 0.5s; }
+          transition: 0.3s; }
         .award .inner article .txt h2 {
           font: bold 30px/1 "Rajdhani";
           color: #222;
@@ -2246,7 +2246,7 @@ input, select, option {
         padding-right: 40px; }
         .award .inner article:nth-of-type(2) .txt span {
           left: -20px;
-          transition: 0.5s; }
+          transition: 1s; }
       .award .inner article:nth-of-type(2) .pic {
         float: right; }
       .award .inner article .txt {
@@ -2262,10 +2262,10 @@ input, select, option {
           color: #ff5b20;
           position: absolute;
           bottom: -10px;
-          right: 300px;
+          right: 100px;
           opacity: 0.1;
           z-index: 1;
-          transition: 0.5s; }
+          transition: 0.3s; }
         .award .inner article .txt h2 {
           font: bold 30px/1 "Rajdhani";
           color: #222;
