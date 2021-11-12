@@ -91,3 +91,33 @@ function letter(el, speed, delay){
         });
     });
 }
+
+const base = -500;
+let pos = [];
+
+
+$("#box").each(function(_, data){
+    pos.push($(data).offset().top);
+});
+
+$(window).on("scroll", function(){
+    let scroll = $(this).scrollTop();
+
+    $("#box").each(function(index){
+        if(scroll >= pos[index] + base){
+            custom[index](scroll);
+        }
+
+    });
+});
+
+let custom = [
+    function(scroll){
+        let current_scroll = 4-scroll/100;
+        let scale_scroll;
+        (current_scroll <= 1) ? scale_scroll = 1 : scale_scroll = current_scroll;
+
+        $(".intro>.inner").find(".pic").css({ transform: "scale("+scale_scroll+")"});
+        console.log(scroll);
+    }
+]
