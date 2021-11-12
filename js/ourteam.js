@@ -102,22 +102,30 @@ $("#box").each(function(_, data){
 
 $(window).on("scroll", function(){
     let scroll = $(this).scrollTop();
+    init();
 
     $("#box").each(function(index){
         if(scroll >= pos[index] + base){
             custom[index](scroll);
         }
-
     });
 });
 
 let custom = [
     function(scroll){
-        let current_scroll = 4-scroll/100;
+        let current_scroll = 2-scroll/400;
+        var opacity_scroll = scroll/1000 * 2;
         let scale_scroll;
         (current_scroll <= 1) ? scale_scroll = 1 : scale_scroll = current_scroll;
 
-        $(".intro>.inner").find(".pic").css({ transform: "scale("+scale_scroll+")"});
-        console.log(scroll);
+        $(".intro>.inner").find(".pic").css({ transform: "scale("+scale_scroll+")", opacity: 0+opacity_scroll});
+    },
+
+    function(scroll){
+        
     }
 ]
+
+let init = function(){
+    $(".intro>.inner").find(".pic").css({ transform: "scale(2)", opacity: 0});
+}
