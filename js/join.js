@@ -27,7 +27,7 @@ $("#gnb>li").each(function(index){
      })  ; 
 })
 
-$("dt").on("click", function(){
+$(".wrap dt").on("click", function(){
 
     let isOn = $(this).hasClass("on");
     

@@ -21,12 +21,12 @@ $("#gnb>li").each(function(index){
         $("#gnb>li").eq(index).find(".subMenu").show();            
     });
 
-     $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
+    $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
         $("#gnb>li").eq(index).find(".subMenu").hide();
-     })  ; 
+    })  ; 
 })
 
-$("dt").on("click", function(){
+$(".wrap dt").on("click", function(){
 
     let isOn = $(this).hasClass("on");
     
