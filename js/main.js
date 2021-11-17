@@ -1,5 +1,12 @@
 const btnCall = document.querySelector(".btnMo");
 const menuMo = document.querySelector(".Mob");
+const $article = $("article");
+const $txt = $("#visual .txt");
+const $top = $(".line1");
+const $right = $(".line2");
+const $bottom = $(".line3");
+const $left = $(".line4");
+const $dots = $("span");
 
 btnCall.onclick = function(e){
     e.preventDefault();
@@ -10,14 +17,6 @@ btnCall.onclick = function(e){
 
 
 //--------------------------------jQuery----------------------------------------
-
-const $article = $("article");
-const $txt = $("#visual .txt");
-const $top = $(".line1");
-const $right = $(".line2");
-const $bottom = $(".line3");
-const $left = $(".line4");
-const $dots = $("span");
 
 
 const $btns = $("#navi li");
@@ -34,11 +33,28 @@ setPos();
 $(window).on("resize", function(){
     setPos();
     let activeindex = $btns.children("a").filter(".on").parent().index();
+    activeScroll(activeindex);
 });
 
 $(window).on("scroll", function(){
     let scroll = $(window).scrollTop();
     activation(scroll);
+});
+
+$boxs.on("mousewheel",function(e){
+    e.preventDefault();
+
+    if(enableAtv){
+        enableAtv = false;
+
+        let i = $(e.currentTarget).index();
+
+        if(e.originalEvent.deltaY > 0){
+            activeScroll(i+1);
+        }else{
+            activeScroll(i-1);
+        }
+    }
 });
 
 
@@ -47,8 +63,12 @@ $btns.on("click", function(e){
     let isOn = $(e.currentTarget).children("a").hasClass("on");
     if(isOn) return;
 
-    let target = $(this).index();
-    activeScroll(target);
+    if(enableAtv){
+        enableAtv = false;
+
+        let target = $(e.currentTarget).index();
+        activeScroll(target);
+    }
 });
 
 function setPos(){
@@ -72,7 +92,7 @@ function activation(scroll){
 
 function activeScroll(index){
     $("html, body").stop().animate({ scrollTop : posArr[index] }, 1000, function(){
-
+        enableAtv = true;
     });
 }
 
