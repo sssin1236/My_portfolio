@@ -24,8 +24,8 @@ class MyScroll{
     }
     
     init(option){
-        this.$boxs = option.panel;
-        this.$btns = option.btns;
+        this.boxs = $(option.panel);
+        this.btns = $(option.btns);
         this.posArr = [];
         this.enableAtv = true;
         this.baseLine = option.base;
@@ -37,7 +37,7 @@ class MyScroll{
     
         $(window).on("resize", ()=>{
             this.setPos();
-            let activeindex = this.$btns.children("a").filter(".on").parent().index();
+            let activeindex = this.btns.children("a").filter(".on").parent().index();
             this.activeScroll(activeindex);
         });
     
@@ -63,7 +63,7 @@ class MyScroll{
         // });
     
     
-        this.$btns.on("click", (e)=>{
+        this.btns.on("click", (e)=>{
             e.preventDefault();
             let isOn = $(e.currentTarget).children("a").hasClass("on");
             if(isOn) return;
@@ -81,19 +81,19 @@ class MyScroll{
     
     setPos(){
         this.posArr = [];
-        this.$boxs.each(index=>{
-            this.posArr.push(this.$boxs.eq(index).offset().top);
+        this.boxs.each(index=>{
+            this.posArr.push(this.boxs.eq(index).offset().top);
         });
     }
     
     activation(scroll){
-        this.$boxs.each(index=>{
+        this.boxs.each(index=>{
             if(scroll >+ this.posArr[index] + this.baseLine){
-                this.$btns.children("a").removeClass("on");
-                this.$btns.eq(index).children("a").addClass("on");
+                this.btns.children("a").removeClass("on");
+                this.btns.eq(index).children("a").addClass("on");
     
-                this.$boxs.removeClass("on");
-                this.$boxs.eq(index).addClass("on");
+                this.boxs.removeClass("on");
+                this.boxs.eq(index).addClass("on");
             }
         });
     }
