@@ -18,54 +18,63 @@ const $right = $(".line2");
 const $bottom = $(".line3");
 const $left = $(".line4");
 const $dots = $("span");
+
+
 const $btns = $("#navi li");
 const $boxs = $(".myScroll");
 
-let speed = 700;
-let isOn = $article.hasClass("on");
+
 let posArr = [];
-let len2 = $btns.length;
+let enableAtv = true;
 let baseLine = -250;
+let speed = 700;
 
-
-for(let i=0; i<len2; i++){
-    posArr.push($boxs.eq(i).offset().top);
-}
+setPos();
 
 $(window).on("resize", function(){
-    posArr = [];
-    for(let i=0; i<len2; i++){
-        posArr.push($boxs.eq(i).offset().top);
-    }
+    setPos();
+    let activeindex = $btns.children("a").filter(".on").parent().index();
 });
 
 $(window).on("scroll", function(){
-    let scroll = $(this).scrollTop();
+    let scroll = $(window).scrollTop();
+    activation(scroll);
+});
 
-    for(let i=0; i<len2; i++){
-        if(scroll >= posArr[i] + baseLine){
+
+$btns.on("click", function(e){
+    e.preventDefault();
+    let isOn = $(e.currentTarget).children("a").hasClass("on");
+    if(isOn) return;
+
+    let target = $(this).index();
+    activeScroll(target);
+});
+
+function setPos(){
+    posArr = [];
+    $boxs.each(function(index){
+        posArr.push($boxs.eq(index).offset().top);
+    });
+}
+
+function activation(scroll){
+    $boxs.each(function(index){
+        if(scroll >+ posArr[index] + baseLine){
             $btns.children("a").removeClass("on");
-            $btns.eq(i).children("a").addClass("on");
+            $btns.eq(index).children("a").addClass("on");
 
             $boxs.removeClass("on");
-            $boxs.eq(i).addClass("on");
+            $boxs.eq(index).addClass("on");
         }
-    }
-});
+    });
+}
 
+function activeScroll(index){
+    $("html, body").stop().animate({ scrollTop : posArr[index] }, 1000, function(){
 
-$("#navi li a").on("click", function(e){
-    e.preventDefault();
-
-    let target = $(this).attr("href");
-
-    let targetPos = $(target).offset().top;
-
-    $("html, body").animate({
-        scrollTop : targetPos
-    }, 1000);
-});
-
+    });
+}
 
 //gnb menu -----------------------------------------------------------------------
 $("#gnb>li").on("mouseenter", function(){
