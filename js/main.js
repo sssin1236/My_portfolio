@@ -17,84 +17,95 @@ btnCall.onclick = function(e){
 
 
 //--------------------------------jQuery----------------------------------------
-
-
-const $btns = $("#navi li");
-const $boxs = $(".myScroll");
-
-
-let posArr = [];
-let enableAtv = true;
-let baseLine = -250;
-let speed = 700;
-
-setPos();
-
-$(window).on("resize", function(){
-    setPos();
-    let activeindex = $btns.children("a").filter(".on").parent().index();
-    activeScroll(activeindex);
-});
-
-$(window).on("scroll", function(){
-    let scroll = $(window).scrollTop();
-    activation(scroll);
-});
-
-$boxs.on("mousewheel",function(e){
-    e.preventDefault();
-
-    if(enableAtv){
-        enableAtv = false;
-
-        let i = $(e.currentTarget).index();
-
-        if(e.originalEvent.deltaY > 0){
-            activeScroll(i+1);
-        }else{
-            activeScroll(i-1);
-        }
+class MyScroll{
+    constructor(option){
+        this.init(option);
+        this.bindingEvent();
     }
-});
-
-
-$btns.on("click", function(e){
-    e.preventDefault();
-    let isOn = $(e.currentTarget).children("a").hasClass("on");
-    if(isOn) return;
-
-    if(enableAtv){
-        enableAtv = false;
-
-        let target = $(e.currentTarget).index();
-        activeScroll(target);
+    
+    init(option){
+        this.$boxs = option.panel;
+        this.$btns = option.btns;
+        this.posArr = [];
+        this.enableAtv = true;
+        this.baseLine = option.base;
+        this.speed = option.speed;
     }
-});
-
-function setPos(){
-    posArr = [];
-    $boxs.each(function(index){
-        posArr.push($boxs.eq(index).offset().top);
-    });
+    
+    bindingEvent(){
+        this.setPos();
+    
+        $(window).on("resize", ()=>{
+            this.setPos();
+            let activeindex = this.$btns.children("a").filter(".on").parent().index();
+            this.activeScroll(activeindex);
+        });
+    
+        $(window).on("scroll", ()=>{
+            let scroll = $(window).scrollTop();
+            this.activation(scroll);
+        });
+    
+        // this.$boxs.on("mousewheel", (e)=>{
+        //     e.preventDefault();
+    
+        //     if(this.enableAtv){
+        //         this.enableAtv = false;
+    
+        //         let i = $(e.currentTarget).index();
+    
+        //         if(e.originalEvent.deltaY > 0){
+        //             this.activeScroll(i+1);
+        //         }else{
+        //             this.activeScroll(i-1);
+        //         }
+        //     }
+        // });
+    
+    
+        this.$btns.on("click", (e)=>{
+            e.preventDefault();
+            let isOn = $(e.currentTarget).children("a").hasClass("on");
+            if(isOn) return;
+    
+            if(this.enableAtv){
+                this.enableAtv = false;
+    
+                let target = $(e.currentTarget).index();
+                this.activeScroll(target);
+            }
+        });
+    }
+    
+    
+    
+    setPos(){
+        this.posArr = [];
+        this.$boxs.each(index=>{
+            this.posArr.push(this.$boxs.eq(index).offset().top);
+        });
+    }
+    
+    activation(scroll){
+        this.$boxs.each(index=>{
+            if(scroll >+ this.posArr[index] + this.baseLine){
+                this.$btns.children("a").removeClass("on");
+                this.$btns.eq(index).children("a").addClass("on");
+    
+                this.$boxs.removeClass("on");
+                this.$boxs.eq(index).addClass("on");
+            }
+        });
+    }
+    
+    activeScroll(index){
+        $("html, body").stop().animate({ scrollTop :this. posArr[index] }, this.speed, ()=>{
+            this.enableAtv = true;
+        });
+    }
 }
 
-function activation(scroll){
-    $boxs.each(function(index){
-        if(scroll >+ posArr[index] + baseLine){
-            $btns.children("a").removeClass("on");
-            $btns.eq(index).children("a").addClass("on");
 
-            $boxs.removeClass("on");
-            $boxs.eq(index).addClass("on");
-        }
-    });
-}
-
-function activeScroll(index){
-    $("html, body").stop().animate({ scrollTop : posArr[index] }, 1000, function(){
-        enableAtv = true;
-    });
-}
 
 //gnb menu -----------------------------------------------------------------------
 $("#gnb>li").on("mouseenter", function(){
