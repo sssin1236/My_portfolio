@@ -46,21 +46,21 @@ class MyScroll{
             this.activation(scroll);
         });
     
-        // this.$boxs.on("mousewheel", (e)=>{
-        //     e.preventDefault();
+        this.boxs.on("mousewheel", (e)=>{
+            e.preventDefault();
     
-        //     if(this.enableAtv){
-        //         this.enableAtv = false;
+            if(this.enableAtv){
+                this.enableAtv = false;
     
-        //         let i = $(e.currentTarget).index();
-    
-        //         if(e.originalEvent.deltaY > 0){
-        //             this.activeScroll(i+1);
-        //         }else{
-        //             this.activeScroll(i-1);
-        //         }
-        //     }
-        // });
+                let i = $(e.currentTarget).index();
+        
+                if(e.originalEvent.deltaY > 0){
+                    this.activeScroll(i+1);
+                }else{
+                    this.activeScroll(i-1);
+                }
+            }
+        });
     
     
         this.btns.on("click", (e)=>{
@@ -98,8 +98,8 @@ class MyScroll{
         });
     }
     
-    activeScroll(index){
-        $("html, body").stop().animate({ scrollTop :this. posArr[index] }, this.speed, ()=>{
+    activeScroll = index=>{
+        $("html, body").stop().animate({ scrollTop :this.posArr[index]}, this.speed, ()=>{
             this.enableAtv = true;
         });
     }
