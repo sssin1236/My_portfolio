@@ -171,15 +171,59 @@
 
     img{
         width: 100%; height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     >span{
-        font: bold 14px/1 'airal';
-        color: #fff;
         position: absolute;
-        top: 20px; right: 20px;
+        top: 50px; right: 50px;
         cursor: pointer;
+
+        b{
+            display: block;
+            font: 18px/1 $mainFon;
+            color: $mainCol;
+            letter-spacing: 1px;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        &:hover{
+            &::before, &::after{
+                transform: rotate(0deg);
+                top: 120%;
+            }
+
+            b{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            width: 20px; height: 2px;
+            background: #fff;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%; left: 50%;
+            margin-left: -10px;
+            transition: 0.5s;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            width: 20px; height: 2px;
+            background: #fff;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 50%; left: 50%;
+            margin-left: -10px;
+            transition: 0.5s;
+        }
     }
 }
 

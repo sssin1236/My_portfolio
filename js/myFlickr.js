@@ -81,20 +81,20 @@ btnSearch.on("click", function(e){
 
 $(window).on("keypress", function(e){
     if(e.keyCode == 13){
-        var search = $(".search input").val();
+        var search = input.val();
     
         if(!search){
-            $(".search input").attr("placeholder", "검색어를 입력하세요.");
-            $(".search input").focus();
-            $(".search input").on("focusout", function(){
-                $(".search input").attr("placeholder", "SEARCH")
+            input.attr("placeholder", "검색어를 입력하세요.");
+            input.focus();
+            input.on("focusout", function(){
+                input.attr("placeholder", "SEARCH")
             });
             return;
         }
         
-        $("#gallery ul").removeClass("on");
+        gallery.children("ul").removeClass("on");
         $(".loadImg").removeClass("off");
-        $(".search input").val("");
+        input.val("");
 
         getList({
             type: "search",
@@ -104,8 +104,8 @@ $(window).on("keypress", function(e){
 });
 
 
-$(".inner h1").on("click", function(){
-    $("#gallery ul").removeClass("on");
+logo.on("click", function(){
+    gallery.children("ul").removeClass("on");
     $(".loadImg").removeClass("off");
 
     getList({
@@ -114,7 +114,7 @@ $(".inner h1").on("click", function(){
     });
 });
 
-$("body").on("click", "#gallery ul li", function(e){
+$("body").on("click", gallery.selector+" ul li", function(e){
     e.preventDefault();
 
     let imgSrc = $(this).children("a").attr("href");
@@ -123,7 +123,7 @@ $("body").on("click", "#gallery ul li", function(e){
         $("<div class='pop'>")
             .append(
                 $("<img>").attr({ src : imgSrc }),
-                $("<span>").text("Close")
+                $("<span>").append("<b>CLOSE</b>")
             )
     )
 });
