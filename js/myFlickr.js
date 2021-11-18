@@ -43,96 +43,106 @@ $("dt").on("click", function(){
 });
 
 //flickr 함수 --------------------------------------------------------------------------
+function MyFlickr(){
+    this.init();
+    this.bindingEvent();
+}
 
-const search = $(".search");
-const btnSearch = search.find("a");
-const input = search.find("input");
-const logo = $(".inner h1");
-const gallery = $("#gallery");
+MyFlickr.prototype.init = function(){
+    this.search = $(".search");
+    this.btnSearch = search.find("a");
+    this.input = search.find("input");
+    this.logo = $(".inner h1");
+    this.gallery = $("#gallery");
+}
 
-getList({
-    type: "userid",
-    user_id: "194134849@N06"
-});
-
-btnSearch.on("click", function(e){
-    e.preventDefault();
-
-    var search = input.val();
+MyFlickr.prototype.bindingEvent = function(){
+    this.getList({
+        type: "userid",
+        user_id: "194134849@N06"
+    });
     
-    if(!search){
-        input.attr("placeholder", "검색어를 입력하세요.");
-        input.focus();
-        input.on("focusout", function(){
-            input.attr("placeholder", "SEARCH")
-        });
-        return;
-    }
+    this.btnSearch.on("click", function(e){
+        e.preventDefault();
     
-    gallery.children("ul").removeClass("on");
-    $(".loadImg").removeClass("off");
-    input.val("");
-
-    getList({
-        type: "search",
-        tag: search
-    }); 
-});
-
-$(window).on("keypress", function(e){
-    if(e.keyCode == 13){
-        var search = input.val();
-    
+        var search = this.input.val();
+        
         if(!search){
-            input.attr("placeholder", "검색어를 입력하세요.");
-            input.focus();
-            input.on("focusout", function(){
-                input.attr("placeholder", "SEARCH")
+            this.input.attr("placeholder", "검색어를 입력하세요.");
+            this.input.focus();
+            this.input.on("focusout", function(){
+                this.input.attr("placeholder", "SEARCH")
             });
             return;
         }
         
-        gallery.children("ul").removeClass("on");
+        this.gallery.children("ul").removeClass("on");
         $(".loadImg").removeClass("off");
-        input.val("");
-
-        getList({
+        this.input.val("");
+    
+        this.getList({
             type: "search",
             tag: search
         }); 
-    }
-});
-
-
-logo.on("click", function(){
-    gallery.children("ul").removeClass("on");
-    $(".loadImg").removeClass("off");
-
-    getList({
-        type: "userid",
-        user_id: "194134849@N06"
+    }.bind(this));
+    
+    $(window).on("keypress", function(e){
+        if(e.keyCode == 13){
+            var search = this.input.val();
+        
+            if(!search){
+                this.input.attr("placeholder", "검색어를 입력하세요.");
+                this.input.focus();
+                this.input.on("focusout", function(){
+                    this.input.attr("placeholder", "SEARCH")
+                });
+                return;
+            }
+            
+            this.gallery.children("ul").removeClass("on");
+            $(".loadImg").removeClass("off");
+            this.input.val("");
+    
+            this.getList({
+                type: "search",
+                tag: search
+            }); 
+        }
+    }.bind(this));
+    
+    
+    this.logo.on("click", function(){
+        this.gallery.children("ul").removeClass("on");
+        $(".loadImg").removeClass("off");
+    
+        this.getList({
+            type: "userid",
+            user_id: "194134849@N06"
+        });
+    }.bind(this));
+    
+    $("body").on("click", this.gallery.selector+" ul li", function(e){
+        e.preventDefault();
+    
+        let imgSrc = $(e.currentTarget).children("a").attr("href");
+    
+        $("body").append(
+            $("<div class='pop'>")
+                .append(
+                    $("<img>").attr({ src : imgSrc }),
+                    $("<span>").append("<b>CLOSE</b>")
+                )
+        )
     });
-});
+    
+    $("body").on("click", ".pop span", function(){
+        $(".pop").fadeOut();
+    });
+}
 
-$("body").on("click", gallery.selector+" ul li", function(e){
-    e.preventDefault();
 
-    let imgSrc = $(this).children("a").attr("href");
 
-    $("body").append(
-        $("<div class='pop'>")
-            .append(
-                $("<img>").attr({ src : imgSrc }),
-                $("<span>").append("<b>CLOSE</b>")
-            )
-    )
-});
-
-$("body").on("click", ".pop span", function(){
-    $(".pop").fadeOut();
-});
-
-function getList(flickr){
+MyFlick.prototype.getList = function(flickr){
     let result_flickr = {};
 
     if(flickr.type =="interest"){
@@ -184,22 +194,22 @@ function getList(flickr){
         console.log(data.photos.photo);
     
         let items = data.photos.photo;
-        creatList(items);
-        loadImg();
-    })
+        this.creatList(items);
+        this.loadImg();
+    }.bind(this))
     .error(function(err){
         console.err("데이터를 호출하는 데 실패했습니다.");
     })
 }
 
-function creatList(items){
-    gallery.empty();
-    gallery.append("<ul>");
+MyFlick.prototype.creatList = function(items){
+    this.gallery.empty();
+    this.gallery.append("<ul>");
 
     $(items).each(function(index, data){
         let num = index+1;
 
-        gallery.children("ul").append(
+        this.gallery.children("ul").append(
             $("<li>")
                 .append(
                     $("<a>").attr({
@@ -218,14 +228,14 @@ function creatList(items){
                     )
                 )
         )
-    });
+    }.bind(this));
 }
 
-function loadImg(){
-    const total = gallery.find("li").length;
+MyFlick.prototype.loadImg = function(){
+    const total = this.gallery.find("li").length;
     let imgLen = 0;
 
-    gallery.find("img").each(function(index, data){
+    this.gallery.find("img").each(function(index, data){
 
         data.onerror = function(){
             $(data).attr("src", "img/default.jpg");
@@ -236,8 +246,8 @@ function loadImg(){
 
             if(imgLen === total){ 
                 $(".loadImg").addClass("off");
-                gallery.children("ul").addClass("on");
+                this.gallery.children("ul").addClass("on");
             }
         }        
-    }); 
+    }.bind(this)); 
 }
