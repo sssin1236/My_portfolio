@@ -184,55 +184,60 @@ function getList(flickr){
         console.log(data.photos.photo);
     
         let items = data.photos.photo;
-        
-        $("#gallery").empty();
-        $("#gallery").append("<ul>");
-    
-        $(items).each(function(index, data){
-            let num = index+1;
-    
-            $("#gallery ul").append(
-                $("<li>")
-                    .append(
-                        $("<a>").attr({
-                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                        })
-                        .append(
-                            $("<img>").attr({
-                                src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                            })
-                        ),
-                    )
-                    .append(
-                        $("<h2>").text("2021 PROJECT"),
-                        $("<p>").text(data.owner).append(
-                            $("<span>").text("0" + num + "/")
-                        )
-                    )
-            )
-        });
-    
-        const total = $("#gallery ul li").length;
-        let imgLen = 0;
-    
-        $("#gallery img").each(function(index, data){
-    
-            data.onerror = function(){
-                $(data).attr("src", "img/default.jpg");
-            }
-            
-            data.onload = function(){            
-                imgLen++;
-    
-                if(imgLen === total){ 
-                    $(".loadImg").addClass("off");
-                    $("#gallery ul").addClass("on");
-                }
-            }        
-        }); 
+        creatList(items);
+        loadImg();
     })
     .error(function(err){
         console.err("데이터를 호출하는 데 실패했습니다.");
     })
 }
 
+function creatList(items){
+    gallery.empty();
+    gallery.append("<ul>");
+
+    $(items).each(function(index, data){
+        let num = index+1;
+
+        gallery.children("ul").append(
+            $("<li>")
+                .append(
+                    $("<a>").attr({
+                        href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                    })
+                    .append(
+                        $("<img>").attr({
+                            src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                        })
+                    ),
+                )
+                .append(
+                    $("<h2>").text("2021 PROJECT"),
+                    $("<p>").text(data.owner).append(
+                        $("<span>").text("0" + num + "/")
+                    )
+                )
+        )
+    });
+}
+
+function loadImg(){
+    const total = gallery.find("li").length;
+    let imgLen = 0;
+
+    gallery.find("img").each(function(index, data){
+
+        data.onerror = function(){
+            $(data).attr("src", "img/default.jpg");
+        }
+        
+        data.onload = function(){            
+            imgLen++;
+
+            if(imgLen === total){ 
+                $(".loadImg").addClass("off");
+                gallery.children("ul").addClass("on");
+            }
+        }        
+    }); 
+}
