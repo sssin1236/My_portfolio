@@ -55,12 +55,16 @@ class MyFlickr{
         this.btnSearch = this.search.find("a");
         this.input = this.search.find("input");
         this.logo = $(options.logo);
+        this.user_id = options.userId;
+        this.apiKey = options.apiKey;
+        this.perPage = options.perPage;
+        this.loadingImg = options.loadingImg;
     }
     
     bindingEvent(){
         this.getList({
             type: "userid",
-            user_id: "194134849@N06"
+            user_id: this.user_id
         });
         
         this.btnSearch.on("click", e=>{
@@ -118,7 +122,7 @@ class MyFlickr{
         
             this.getList({
                 type: "userid",
-                user_id: "194134849@N06"
+                user_id: this.user_id
             });
         });
         
@@ -151,8 +155,8 @@ class MyFlickr{
                 url:"https://www.flickr.com/services/rest/?method=flickr.interestingness.getList",
                 dataType:"json",
                 data:{
-                    api_key:"645bbdf320519f9a5473a288fc9f617a",
-                    per_page:12,
+                    api_key:this.apiKey,
+                    per_page:this.perPage,
                     format:"json",
                     nojsoncallback:1,
                     privacy_filter: 1,
@@ -165,8 +169,8 @@ class MyFlickr{
                 url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
                 dataType:"json", 
                 data:{
-                    api_key:"d61e30a1010fe3e1dab106d3a2df0f21", 
-                    per_page:12, 
+                    api_key:this.apiKey, 
+                    per_page:this.perPage, 
                     format:"json",
                     nojsoncallback:1, 
                     privacy_filter : 1,
@@ -180,8 +184,8 @@ class MyFlickr{
                 url:"https://www.flickr.com/services/rest/?method=flickr.people.getPhotos",
                 dataType:"json",
                 data:{
-                    api_key:"645bbdf320519f9a5473a288fc9f617a",
-                    per_page:12,
+                    api_key:this.apiKey,
+                    per_page:this.perPage,
                     format:"json",
                     nojsoncallback:1,
                     privacy_filter: 1,
@@ -192,7 +196,6 @@ class MyFlickr{
     
         $.ajax(result_flickr)
         .success(data=>{
-            console.log(data.photos.photo);
         
             let items = data.photos.photo;
             this.creatList(items);
@@ -239,7 +242,7 @@ class MyFlickr{
         this.gallery.find("img").each((index, data)=>{
     
             data.onerror = ()=>{
-                $(data).attr("src", "img/default.jpg");
+                $(data).attr("src", this.loadingImg);
             }
             
             data.onload = ()=>{            
