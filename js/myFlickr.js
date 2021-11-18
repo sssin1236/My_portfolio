@@ -44,17 +44,17 @@ $("dt").on("click", function(){
 
 //flickr 함수 --------------------------------------------------------------------------
 class MyFlickr{
-    constructor(){
-        this.init();
+    constructor(options){
+        this.init(options);
         this.bindingEvent();
     }
     
-    init(){
-        this.search = $(".search");
+    init(options){
+        this.gallery = $(options.selector);
+        this.search = $(options.searchBox);
         this.btnSearch = this.search.find("a");
         this.input = this.search.find("input");
-        this.logo = $(".inner h1");
-        this.gallery = $("#gallery");
+        this.logo = $(options.logo);
     }
     
     bindingEvent(){

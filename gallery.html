@@ -13,7 +13,11 @@
     <script defer src="js/myFlickr.js"></script>
     <script>
         $(document).ready(function(){
-            new MyFlickr();
+            new MyFlickr({
+                selector: "#gallery",
+                searchBox: ".search",
+                logo: ".inner h1"
+            });
         })
     </script>
 </head>
