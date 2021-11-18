@@ -88,7 +88,7 @@ class MyScroll{
     
     activation(scroll){
         this.boxs.each(index=>{
-            if(scroll >+ this.posArr[index] + this.baseLine){
+            if(scroll >= this.posArr[index] + this.baseLine){
                 this.btns.children("a").removeClass("on");
                 this.btns.eq(index).children("a").addClass("on");
     
@@ -98,7 +98,7 @@ class MyScroll{
         });
     }
     
-    activeScroll = index=>{
+    activeScroll(index){
         $("html, body").stop().animate({ scrollTop :this.posArr[index]}, this.speed, ()=>{
             this.enableAtv = true;
         });
