@@ -42,32 +42,58 @@ $("dt").on("click", function(){
     }
 });
 
+//flickr 함수 --------------------------------------------------------------------------
+
+const search = $(".search");
+const btnSearch = search.find("a");
+const input = search.find("input");
+const logo = $(".inner h1");
+const gallery = $("#gallery");
+
 getList({
     type: "userid",
     user_id: "194134849@N06"
 });
 
-$(".search a").on("click", function(e){
+btnSearch.on("click", function(e){
     e.preventDefault();
 
-    $("#gallery ul").removeClass("on");
+    var search = input.val();
+    
+    if(!search){
+        input.attr("placeholder", "검색어를 입력하세요.");
+        input.focus();
+        input.on("focusout", function(){
+            input.attr("placeholder", "SEARCH")
+        });
+        return;
+    }
+    
+    gallery.children("ul").removeClass("on");
     $(".loadImg").removeClass("off");
+    input.val("");
 
-    var search = $(".search input").val();
-        $(".search input").val("");
-
-        getList({
-            type: "search",
-            tag: search
-        }); 
+    getList({
+        type: "search",
+        tag: search
+    }); 
 });
 
 $(window).on("keypress", function(e){
     if(e.keyCode == 13){
+        var search = $(".search input").val();
+    
+        if(!search){
+            $(".search input").attr("placeholder", "검색어를 입력하세요.");
+            $(".search input").focus();
+            $(".search input").on("focusout", function(){
+                $(".search input").attr("placeholder", "SEARCH")
+            });
+            return;
+        }
+        
         $("#gallery ul").removeClass("on");
         $(".loadImg").removeClass("off");
-
-        var search = $(".search input").val();
         $(".search input").val("");
 
         getList({
