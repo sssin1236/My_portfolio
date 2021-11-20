@@ -40,20 +40,7 @@ getYoutube({
 
 $("body").on("click", "#video article a", function(e){
     e.preventDefault();
-
-    let vidId = $(this).attr("href");
-
-    $("body").append(
-        $("<div class='vidPop'>").append(
-            $("<iframe>").attr({
-                src : "https://www.youtube.com/embed/"+vidId,
-                frameborder : 0,
-                width: "100%",
-                height: 600
-            }),
-            $("<span>").text("Close")
-        )
-    )
+    creatPop(this);
 });
 
 $("body").on("click", ".vidPop span", function(){
@@ -120,4 +107,20 @@ function getYoutube(opt){
     .error(function(err){
         console.error(err);
     })
+}
+
+function creatPop(item){
+    let vidId = $(item).attr("href");
+
+    $("body").append(
+        $("<div class='vidPop'>").append(
+            $("<iframe>").attr({
+                src : "https://www.youtube.com/embed/"+vidId,
+                frameborder : 0,
+                width: "100%",
+                height: 600
+            }),
+            $("<span>").append("<b>CLOSE</b>")
+        )
+    )
 }

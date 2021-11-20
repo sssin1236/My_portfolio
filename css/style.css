@@ -3097,13 +3097,49 @@ input, select, option {
     object-fit: cover;
     z-index: 5; }
   .vidPop > span {
-    font: 18px/1 "Rajdhani";
-    color: #fff;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 50px;
     cursor: pointer;
     z-index: 5; }
+    .vidPop > span b {
+      display: block;
+      font: 18px/1 "Rajdhani";
+      color: #ff5b20;
+      letter-spacing: 1px;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: 0.5s; }
+    .vidPop > span:hover::before, .vidPop > span:hover::after {
+      transform: rotate(0deg);
+      top: 120%; }
+    .vidPop > span:hover b {
+      transform: translateY(0px);
+      opacity: 1; }
+    .vidPop > span::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      transition: 0.5s; }
+    .vidPop > span::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      transition: 0.5s; }
 
 @media screen and (max-width: 1179px) {
   .youtube .inner {
