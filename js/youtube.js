@@ -34,39 +34,35 @@ $("dt").on("click", function(){
 
 
 function MyYoutube(){
-
+    this.init();
+    this.bindingEvent();
 }
 
 MyYoutube.prototype.init = function(){
-
+    this.selector = "#video";
+    this.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
+    this.num = 6;
 }
 
 MyYoutube.prototype.bindingEvent = function(){
+    this.getYoutube({
+        frame: this.selector,
+        playList: this.playList,
+        num: this.num
+    });
     
+    $("body").on("click", this.selector+" article a", function(e){
+        e.preventDefault();
+        this.creatPop(e.currentTarget);
+    }.bind(this));
+    
+    $("body").on("click", ".vidPop span", function(){
+        $(".vidPop").fadeOut(500);
+    });
 }
 
 
-const selector = "#video";
-const playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
-let num = 6;
-
-
-getYoutube({
-    frame: selector,
-    playList: playList,
-    num: num
-});
-
-$("body").on("click", "#video article a", function(e){
-    e.preventDefault();
-    creatPop(this);
-});
-
-$("body").on("click", ".vidPop span", function(){
-    $(".vidPop").fadeOut(500);
-});
-
-function getYoutube(opt){
+MyYoutube.prototype.getYoutube = function(opt){
 
     if(opt.frame === undefined){
         console.log("frame 속성값은 필수입력 사항입니다.");
@@ -128,7 +124,7 @@ function getYoutube(opt){
     })
 }
 
-function creatPop(item){
+MyYoutube.prototype.creatPop = function(item){
     let vidId = $(item).attr("href");
 
     $("body").append(
