@@ -32,110 +32,113 @@ $("dt").on("click", function(){
     }
 });
 
-
-function MyYoutube(){
-    this.init();
-    this.bindingEvent();
-}
-
-MyYoutube.prototype.init = function(){
-    this.selector = "#video";
-    this.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
-    this.num = 6;
-}
-
-MyYoutube.prototype.bindingEvent = function(){
-    this.getYoutube({
-        frame: this.selector,
-        playList: this.playList,
-        num: this.num
-    });
-    
-    $("body").on("click", this.selector+" article a", function(e){
-        e.preventDefault();
-        this.creatPop(e.currentTarget);
-    }.bind(this));
-    
-    $("body").on("click", ".vidPop span", function(){
-        $(".vidPop").fadeOut(500);
-    });
-}
-
-
-MyYoutube.prototype.getYoutube = function(opt){
-
-    if(opt.frame === undefined){
-        console.log("frame 속성값은 필수입력 사항입니다.");
-        return;
+class MyYoutube{
+    constructor(){
+        this.init();
+        this.bindingEvent();
     }
-    if(opt.playList === undefined){
-        ("playList 속성값은 필수입력 사항입니다.");
-        return;
+    
+    init(){
+        this.selector = "#video";
+        this.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
+        this.num = 6;
     }
-    if(opt.num === undefined) opt.num = 6;
-    $.ajax({
-        url: "https://www.googleapis.com/youtube/v3/playlistItems",
-        dataType : 'jsonp',
-        data :{
-            part : "snippet",
-            key : "AIzaSyCCiZuUxyRnAnWNnLdQxnZ5COuFx0Cv33A",
-            maxResults : opt.num,
-            playlistId : opt.playList
-        }
-    })
-    .success(function(data){
+    
+    bindingEvent(){
+        this.getYoutube({
+            frame: this.selector,
+            playList: this.playList,
+            num: this.num
+        });
         
-        let items = data.items;
-        console.log(items);
+        $("body").on("click", this.selector+" article a", e=>{
+            e.preventDefault();
+            this.creatPop(e.currentTarget);
+        });
+        
+        $("body").on("click", ".vidPop span", ()=>{
+            $(".vidPop").fadeOut(500);
+        });
+    }
     
-        $(items).each(function(index, data){
-            
-            let txt = data.snippet.description;
-            let len = txt.length;
-            let tit = data.snippet.title;
-            let titLen = tit.length;
-            
     
-            if(len > 75){
-                txt = txt.substr(0, 75) + "...";
+    getYoutube(opt){
+    
+        if(opt.frame === undefined){
+            console.log("frame 속성값은 필수입력 사항입니다.");
+            return;
+        }
+        if(opt.playList === undefined){
+            ("playList 속성값은 필수입력 사항입니다.");
+            return;
+        }
+        if(opt.num === undefined) opt.num = 6;
+        $.ajax({
+            url: "https://www.googleapis.com/youtube/v3/playlistItems",
+            dataType : 'jsonp',
+            data :{
+                part : "snippet",
+                key : "AIzaSyCCiZuUxyRnAnWNnLdQxnZ5COuFx0Cv33A",
+                maxResults : opt.num,
+                playlistId : opt.playList
             }
-    
-            if(titLen > 40){
-                tit = tit.substr(0, 40) + "...";
-            }
-    
-            $(opt.frame).append(
-                $("<article>").append(
-                    $("<a>").attr({ href : data.snippet.resourceId.videoId }).append(
-                        $("<img>").attr({ src : data.snippet.thumbnails.high.url})
-                    ),
-                    $("<div class='con'>").append(
-                        $("<span>").text(data.snippet.videoOwnerChannelTitle),
-                        $("<h2>").text(tit),
-                        $("<p>").text(txt)
+        })
+        .success(data=>{
+            
+            let items = data.items;
+            console.log(items);
+        
+            $(items).each((index, data)=>{
+                
+                let txt = data.snippet.description;
+                let len = txt.length;
+                let tit = data.snippet.title;
+                let titLen = tit.length;
+                
+        
+                if(len > 75){
+                    txt = txt.substr(0, 75) + "...";
+                }
+        
+                if(titLen > 40){
+                    tit = tit.substr(0, 40) + "...";
+                }
+        
+                $(opt.frame).append(
+                    $("<article>").append(
+                        $("<a>").attr({ href : data.snippet.resourceId.videoId }).append(
+                            $("<img>").attr({ src : data.snippet.thumbnails.high.url})
+                        ),
+                        $("<div class='con'>").append(
+                            $("<span>").text(data.snippet.videoOwnerChannelTitle),
+                            $("<h2>").text(tit),
+                            $("<p>").text(txt)
+                        )
                     )
                 )
-            )
+            })
+        
         })
+        .error(err=>{
+            console.error(err);
+        })
+    }
     
-    })
-    .error(function(err){
-        console.error(err);
-    })
-}
-
-MyYoutube.prototype.creatPop = function(item){
-    let vidId = $(item).attr("href");
-
-    $("body").append(
-        $("<div class='vidPop'>").append(
-            $("<iframe>").attr({
-                src : "https://www.youtube.com/embed/"+vidId,
-                frameborder : 0,
-                width: "100%",
-                height: 600
-            }),
-            $("<span>").append("<b>CLOSE</b>")
+    creatPop(item){
+        let vidId = $(item).attr("href");
+    
+        $("body").append(
+            $("<div class='vidPop'>").append(
+                $("<iframe>").attr({
+                    src : "https://www.youtube.com/embed/"+vidId,
+                    frameborder : 0,
+                    width: "100%",
+                    height: 600
+                }),
+                $("<span>").append("<b>CLOSE</b>")
+            )
         )
-    )
+    }
 }
+
+
