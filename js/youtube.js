@@ -32,17 +32,53 @@ $("dt").on("click", function(){
     }
 });
 
+getYoutube({
+    frame: "#video",
+    playList: "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6",
+    num: 6
+});
 
+$("body").on("click", "#video article a", function(e){
+    e.preventDefault();
+
+    let vidId = $(this).attr("href");
+
+    $("body").append(
+        $("<div class='vidPop'>").append(
+            $("<iframe>").attr({
+                src : "https://www.youtube.com/embed/"+vidId,
+                frameborder : 0,
+                width: "100%",
+                height: 600
+            }),
+            $("<span>").text("Close")
+        )
+    )
+});
+
+$("body").on("click", ".vidPop span", function(){
+    $(".vidPop").fadeOut(500);
+});
 
 function getYoutube(opt){
+
+    if(opt.frame === undefined){
+        console.log("frame 속성값은 필수입력 사항입니다.");
+        return;
+    }
+    if(opt.playList === undefined){
+        ("playList 속성값은 필수입력 사항입니다.");
+        return;
+    }
+    if(opt.num === undefined) opt.num = 6;
     $.ajax({
         url: "https://www.googleapis.com/youtube/v3/playlistItems",
         dataType : 'jsonp',
         data :{
             part : "snippet",
             key : "AIzaSyCCiZuUxyRnAnWNnLdQxnZ5COuFx0Cv33A",
-            maxResults : 6,
-            playlistId : "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6"
+            maxResults : opt.num,
+            playlistId : opt.playList
         }
     })
     .success(function(data){
@@ -66,7 +102,7 @@ function getYoutube(opt){
                 tit = tit.substr(0, 40) + "...";
             }
     
-            $("#video").append(
+            $(opt.frame).append(
                 $("<article>").append(
                     $("<a>").attr({ href : data.snippet.resourceId.videoId }).append(
                         $("<img>").attr({ src : data.snippet.thumbnails.high.url})
@@ -85,25 +121,3 @@ function getYoutube(opt){
         console.error(err);
     })
 }
-
-$("body").on("click", "#video article a", function(e){
-    e.preventDefault();
-
-    let vidId = $(this).attr("href");
-
-    $("body").append(
-        $("<div class='vidPop'>").append(
-            $("<iframe>").attr({
-                src : "https://www.youtube.com/embed/"+vidId,
-                frameborder : 0,
-                width: "100%",
-                height: 600
-            }),
-            $("<span>").text("Close")
-        )
-    )
-});
-
-$("body").on("click", ".vidPop span", function(){
-    $(".vidPop").fadeOut(500);
-});
