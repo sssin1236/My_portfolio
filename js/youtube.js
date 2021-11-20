@@ -43,12 +43,17 @@ class MyYoutube{
             console.log("frame 속성값은 필수입력 사항입니다.");
             return;
         }
+        if(option.key === undefined){
+            console.log("key 속성값은 필수입력 사항입니다.");
+            return;
+        }
         if(option.playList === undefined){
             option.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
         }
         if(option.num === undefined) option.num = 6;
         this.selector = option.frame;
         this.playList = option.playList;
+        this.key = option.key;
         this.num = option.num;
     }
     
@@ -73,7 +78,7 @@ class MyYoutube{
             dataType : 'jsonp',
             data :{
                 part : "snippet",
-                key : "AIzaSyCCiZuUxyRnAnWNnLdQxnZ5COuFx0Cv33A",
+                key : this.key,
                 maxResults : this.num,
                 playlistId : this.playList
             }
