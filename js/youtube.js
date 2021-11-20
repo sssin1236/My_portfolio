@@ -33,23 +33,27 @@ $("dt").on("click", function(){
 });
 
 class MyYoutube{
-    constructor(){
-        this.init();
+    constructor(option){
+        this.init(option);
         this.bindingEvent();
     }
     
-    init(){
-        this.selector = "#video";
-        this.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
-        this.num = 6;
+    init(option){
+        if(option.frame === undefined){
+            console.log("frame 속성값은 필수입력 사항입니다.");
+            return;
+        }
+        if(option.playList === undefined){
+            option.playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
+        }
+        if(option.num === undefined) option.num = 6;
+        this.selector = option.frame;
+        this.playList = option.playList;
+        this.num = option.num;
     }
     
     bindingEvent(){
-        this.getYoutube({
-            frame: this.selector,
-            playList: this.playList,
-            num: this.num
-        });
+        this.getYoutube();
         
         $("body").on("click", this.selector+" article a", e=>{
             e.preventDefault();
@@ -62,25 +66,16 @@ class MyYoutube{
     }
     
     
-    getYoutube(opt){
+    getYoutube(){
     
-        if(opt.frame === undefined){
-            console.log("frame 속성값은 필수입력 사항입니다.");
-            return;
-        }
-        if(opt.playList === undefined){
-            ("playList 속성값은 필수입력 사항입니다.");
-            return;
-        }
-        if(opt.num === undefined) opt.num = 6;
         $.ajax({
             url: "https://www.googleapis.com/youtube/v3/playlistItems",
             dataType : 'jsonp',
             data :{
                 part : "snippet",
                 key : "AIzaSyCCiZuUxyRnAnWNnLdQxnZ5COuFx0Cv33A",
-                maxResults : opt.num,
-                playlistId : opt.playList
+                maxResults : this.num,
+                playlistId : this.playList
             }
         })
         .success(data=>{
@@ -104,7 +99,7 @@ class MyYoutube{
                     tit = tit.substr(0, 40) + "...";
                 }
         
-                $(opt.frame).append(
+                $(this.selector).append(
                     $("<article>").append(
                         $("<a>").attr({ href : data.snippet.resourceId.videoId }).append(
                             $("<img>").attr({ src : data.snippet.thumbnails.high.url})

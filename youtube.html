@@ -12,7 +12,11 @@
     <script defer src="js/youtube.js"></script>
     <script>
         $(document).ready(function(){
-            new MyYoutube();
+            new MyYoutube({
+                frame: "#video",
+                playList: "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6",
+                num: 6
+            });
         })
     </script>
 </head>
