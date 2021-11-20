@@ -4561,14 +4561,14 @@ body {
       #header .inner #gnb > li {
         display: inline-block;
         padding: 20px 40px;
-        font-size: 0; }
+        font-size: 0;
+        outline: 1; }
         #header .inner #gnb > li:hover a {
           transform: translateY(-5px);
           font-weight: bold; }
         #header .inner #gnb > li > a {
           display: block;
           text-align: center;
-          outline: rgba(17, 17, 17, 0.95);
           font: normal 15px/1 "Rajdhani";
           color: #333;
           transition: 0.5s; }
