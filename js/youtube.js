@@ -32,10 +32,29 @@ $("dt").on("click", function(){
     }
 });
 
+
+function MyYoutube(){
+
+}
+
+MyYoutube.prototype.init = function(){
+
+}
+
+MyYoutube.prototype.bindingEvent = function(){
+    
+}
+
+
+const selector = "#video";
+const playList = "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6";
+let num = 6;
+
+
 getYoutube({
-    frame: "#video",
-    playList: "PLlgbG45RVNao7w0WwmJlvh1umeP_ol2r6",
-    num: 6
+    frame: selector,
+    playList: playList,
+    num: num
 });
 
 $("body").on("click", "#video article a", function(e){
