@@ -3688,9 +3688,9 @@ input, select, option {
       font: bold 17px/1 "Rajdhani";
       color: #111; }
       .location .inner .wrap article > ul li p {
-        font: 17px/1 "Rajdhani";
-        color: #333;
-        margin-top: 5px; }
+        font: 14px/1 'Noto Sans KR';
+        color: #666;
+        margin-top: 10px; }
 .location .form {
   width: 1180px;
   margin: 100px auto;
@@ -3737,7 +3737,7 @@ input, select, option {
             padding: 10px;
             background: transparent;
             border: none;
-            border-bottom: 2px solid #222;
+            border-bottom: 1px solid #999;
             margin-bottom: 30px; }
             .location .form .wrap form fieldset article input[type=text] option, .location .form .wrap form fieldset article input[type=number] option, .location .form .wrap form fieldset article input[type=email] option, .location .form .wrap form fieldset article select option {
               font: 16px/1 "Rajdhani";
@@ -3751,7 +3751,7 @@ input, select, option {
           .location .form .wrap form fieldset .comments textarea {
             width: 100%;
             border: none;
-            border-bottom: 2px solid #222;
+            border-bottom: 1px solid #999;
             background: transparent;
             resize: none;
             padding: 10px; }

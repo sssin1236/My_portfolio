@@ -147,9 +147,9 @@
                     color: #111;
     
                     p{
-                        font: 17px/1 $mainFon;
-                        color: #333;
-                        margin-top: 5px;
+                        font: 14px/1 'Noto Sans KR';
+                        color: #666;
+                        margin-top: 10px;
                     }
                 }
             }
@@ -214,7 +214,7 @@
                             padding: 10px;
                             background: transparent;
                             border: none;
-                            border-bottom: 2px solid #222;
+                            border-bottom: 1px solid #999;
                             margin-bottom: 30px;
 
                             option{
@@ -237,7 +237,7 @@
                         textarea{
                             width: 100%;
                             border: none;
-                            border-bottom: 2px solid #222;
+                            border-bottom: 1px solid #999;
                             background: transparent;
                             resize: none;
                             padding: 10px;
