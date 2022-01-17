@@ -58,23 +58,6 @@ class MyScroll{
             this.activation(scroll);
         });
     
-        // this.boxs.on("mousewheel", (e)=>{
-        //     e.preventDefault();
-    
-        //     if(this.enableAtv){
-        //         this.enableAtv = false;
-    
-        //         let i = $(e.currentTarget).index();
-        
-        //         if(e.originalEvent.deltaY > 0){
-        //             this.activeScroll(i+1);
-        //         }else{
-        //             this.activeScroll(i-1);
-        //         }
-        //     }
-        // });
-    
-    
         this.btns.on("click", (e)=>{
             e.preventDefault();
             let isOn = $(e.currentTarget).children("a").hasClass("on");
@@ -88,8 +71,6 @@ class MyScroll{
             }
         });
     }
-    
-    
     
     setPos(){
         this.posArr = [];

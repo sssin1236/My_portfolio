@@ -4542,7 +4542,8 @@ body {
         display: inline-block;
         padding: 20px 40px;
         font-size: 0;
-        outline: 1; }
+        outline: 1;
+        cursor: pointer; }
         #header .inner #gnb > li:hover a {
           transform: translateY(-5px);
           font-weight: bold; }
