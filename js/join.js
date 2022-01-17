@@ -60,7 +60,6 @@ $("dt").on("click", function(){
 });
 
 $("input[type=submit]").on("click", function(e){
-    e.preventDefault();
 
     if(!agree('agreement')){
         e.preventDefault();

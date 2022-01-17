@@ -217,7 +217,22 @@ body{
     }
 }
 
+#skip a{
+    position: fixed;
+    width: 30px; height: 230px;
+    padding: 20px 5px;
+    background: $mainCol;
+    font: bold 15px/1.3 'Noto Sans KR';
+    color: #fff;
+    text-align: center;
+    top: 0; left: -30px;
+    z-index: 10;
+    transition: 0.5s;
 
+    &.on{
+        left: 0px;
+    }
+}
 
 #header{
     width: 100%; 
@@ -1041,6 +1056,16 @@ body{
                 margin-bottom: 20px;
 
                 >li{
+                    &:hover{
+                        a{
+                            color: $mainCol;
+
+                            &::after{
+                                width: 60px;
+                            }
+                        }
+                    }
+
                     &:last-child{
                         padding-bottom: 20px;
                         border-bottom: 1px solid #444;
@@ -1052,6 +1077,18 @@ body{
                         padding: 15px 0;
                         font: bold 16px/1 $mainFon;
                         color: #ddd;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 0px; height: 1px;
+                            background: #ddd;
+                            position: absolute;
+                            top: 50%; right: 20px;
+                            margin-top: -1px;
+                            transition: 0.8s;
+                        }
                     }
                 }
             }
@@ -1254,7 +1291,7 @@ body{
 
                         p{
                             font: 13px/1.4 'arial';
-                            color:#333;
+                            color:#777;
                             margin-left: 20px;
                         }
 
@@ -1340,7 +1377,7 @@ body{
                 text-align: center;
                 z-index: 1;
                 opacity: 0;
-                transition: 0.8s;
+                transition: top 0.8s, opacity 0.3s;
 
                 &.on{
                     top: 140px;
@@ -2516,7 +2553,7 @@ body{
             position: relative;
     
             .left{
-                width: 100%; height: 37%;
+                width: 100%; height: 35%;
                 position: absolute;
                 bottom: 0px; left: 0;
     
@@ -2664,8 +2701,9 @@ body{
             }
         
             .right{
-                width: 100%; height: 63%;
-                padding: 80px 30px 0; 
+                width: 100%; height: calc(65% - 80px);
+                padding: 0px 30px; 
+                top: 80px;
     
                 &.on{
                     article{
@@ -2679,13 +2717,12 @@ body{
                 }
     
                 .popVid{
-                    width: 100%; height: calc(100% - 80px);
+                    width: 100%; height: 100%;
                     padding: 0px 30px;
                     background: transparent;
     
                     &.on{
-                        top: 80px;
-                        opacity: 1;
+                        top: 0px;
                         z-index: 6;
                     }
     
@@ -2778,7 +2815,7 @@ body{
                     &:hover{
     
                         .text{
-                            top: 90px;
+                            top: 100px;
 
                             p{
                                 opacity: 1;
@@ -2806,7 +2843,7 @@ body{
                         &:nth-of-type(2n){
     
                             .text{
-                                bottom: 90px;
+                                bottom: 100px;
                                 top: auto;
                             }
                         }
@@ -3252,27 +3289,83 @@ body{
     #visual{
     
         .inner{
-            padding: 100px 30px 0px;
     
-            h1{
-                font: bold 13vw/1 'arial';
-            }
+            .left{
+        
+                .btnBox{
+                    padding: 20px 30px;
     
-            >p{
-                display: none;
-            }
+                    ul{
     
-            .list{
-                width: 80%; height: 250px;
-                top: 230px; left: 30px;
-                
+                        li{
+    
+                            nav{
+                                text-align: center;
+                                font: bold 11px/1 'Roboto';
+                            }
+                        }
+                    }
+                }
             }
+        
+            .right{
+    
+                &.on{
+                    article{
+    
+                        &:nth-of-type(2n){
+                            margin-top: 0%;
+                        }
+                    }
+                }
+    
+                >article{
+                    width: 50%; height: 50%;
+                    transition: margin-top 1s, opacity 0.8s 0.2s, transform 0.8s;
 
-            .wrap{
-                height: 380px;
-                position: absolute;
-                bottom: 0; left: 0;
-                overflow: hidden;
+                    &.on{
+                        transform: translateY(100%);
+                    }
+    
+                    >.pic{
+                        height: 85%;
+                    }
+    
+                    .text{
+    
+                        >p{
+                            font: 12px/1 'arial';
+                            color: $mainCol;
+                            opacity: 1;
+                        }
+        
+                        h3{
+                            font: bold 20px/1.4 $mainFon;
+                            color: #eee;
+                            border-top: 1.5px solid #333;
+                            opacity: 1;
+                        }
+                    }
+                    
+                    &:hover{
+    
+                        .text{
+                            top: 0px;
+                        }
+    
+                        .pic{
+                            height: 100%;
+                        }
+    
+                        &:nth-of-type(2n){
+    
+                            .text{
+                                bottom: 0px;
+                                top: auto;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

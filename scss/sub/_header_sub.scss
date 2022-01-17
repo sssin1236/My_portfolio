@@ -788,7 +788,7 @@
             border-right: 2px solid #fff;
             padding: 30px 30px;
             text-align: left;
-            z-index: 10;
+            z-index: 5;
             opacity: 1;
             transition: all 0.5s;
 
@@ -819,6 +819,16 @@
                 margin-bottom: 20px;
 
                 >li{
+                    &:hover{
+                        a{
+                            color: $mainCol;
+                            
+                            &::after{
+                                width: 60px;
+                            }
+                        }
+                    }
+
                     &:last-child{
                         padding-bottom: 20px;
                         border-bottom: 1px solid #444;
@@ -830,6 +840,18 @@
                         padding: 15px 0;
                         font: bold 16px/1 $mainFon;
                         color: #ddd;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 0px; height: 1px;
+                            background: #ddd;
+                            position: absolute;
+                            top: 50%; right: 20px;
+                            margin-top: -1px;
+                            transition: 0.8s;
+                        }
                     }
                 }
             }

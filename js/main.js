@@ -1,5 +1,6 @@
 const btnCall = document.querySelector(".btnMo");
 const menuMo = document.querySelector(".Mob");
+const skip = document.querySelectorAll("#skip a");
 const $article = $("article");
 const $txt = $("#visual .txt");
 const $top = $(".line1");
@@ -17,6 +18,15 @@ btnCall.onclick = function(e){
     menuMo.classList.toggle("on");
 }
 
+skip.forEach((btn, index)=>{
+    btn.addEventListener("focusin", e=>{
+        e.currentTarget.classList.add("on");
+    });
+
+    btn.addEventListener("focusout", e=>{
+        e.currentTarget.classList.remove("on");
+    })
+})
 
 //--------------------------------jQuery----------------------------------------
 class MyScroll{
