@@ -514,7 +514,7 @@
                                 margin-top: 5px;
                                 li{
                                     font: 17px/1.6 $mainFon;
-                                    color: #888;
+                                    color: #999;
                                 }
                                 
                             }
@@ -834,7 +834,7 @@
                             }
 
                             &.on{
-                                height: 380px;
+                                height: 310px;
 
                                 h2{
                                     text-align: left;
@@ -846,7 +846,6 @@
 
                                 a i{
                                     transform: rotate(180deg);
-                                    animation: none;
                                 }
                             }
                         }
@@ -998,7 +997,7 @@
             .wrap{
 
                 article{
-                    width: 100%; height: 400px;
+                    width: 100%; height: 430px;
                     margin-right: 0%;
                     margin-bottom: 30px;
 
@@ -1020,6 +1019,10 @@
 
                     .name{
                         .career{
+
+                            &.on{
+                                height: 335px;
+                            }
 
                             h2{
                                 margin-bottom: 30px;

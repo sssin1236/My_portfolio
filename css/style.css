@@ -1499,7 +1499,7 @@ input, select, option {
                 margin-top: 5px; }
                 .mem .inner .wrap article .name .career > ul > li ul li {
                   font: 17px/1.6 "Rajdhani";
-                  color: #888; }
+                  color: #999; }
             .mem .inner .wrap article .name .career.on {
               height: 380px; }
               .mem .inner .wrap article .name .career.on h2 {
@@ -1696,14 +1696,13 @@ input, select, option {
                   font: 15px/1.6 "Rajdhani";
                   color: #888; }
             .mem .inner .wrap article .name .career.on {
-              height: 380px; }
+              height: 310px; }
               .mem .inner .wrap article .name .career.on h2 {
                 text-align: left; }
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotate(180deg);
-                animation: none; }
+                transform: rotate(180deg); }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
@@ -1781,7 +1780,7 @@ input, select, option {
       margin-bottom: 50px; }
     .mem .inner .wrap article {
       width: 100%;
-      height: 400px;
+      height: 430px;
       margin-right: 0%;
       margin-bottom: 30px; }
       .mem .inner .wrap article:nth-of-type(3) {
@@ -1793,6 +1792,8 @@ input, select, option {
         height: 400px;
         margin-top: 55px;
         margin-left: 50px; }
+      .mem .inner .wrap article .name .career.on {
+        height: 335px; }
       .mem .inner .wrap article .name .career h2 {
         margin-bottom: 30px; } }
 .member .sub_visual .txt h1::after {
@@ -2531,7 +2532,7 @@ input, select, option {
                 margin-top: 5px; }
                 .mem .inner .wrap article .name .career > ul > li ul li {
                   font: 17px/1.6 "Rajdhani";
-                  color: #888; }
+                  color: #999; }
             .mem .inner .wrap article .name .career.on {
               height: 380px; }
               .mem .inner .wrap article .name .career.on h2 {
@@ -2728,14 +2729,13 @@ input, select, option {
                   font: 15px/1.6 "Rajdhani";
                   color: #888; }
             .mem .inner .wrap article .name .career.on {
-              height: 380px; }
+              height: 310px; }
               .mem .inner .wrap article .name .career.on h2 {
                 text-align: left; }
                 .mem .inner .wrap article .name .career.on h2::after {
                   width: 30px; }
               .mem .inner .wrap article .name .career.on a i {
-                transform: rotate(180deg);
-                animation: none; }
+                transform: rotate(180deg); }
         .mem .inner .wrap article:hover .pic img {
           transform: scale(1.08); }
         .mem .inner .wrap article:hover .name .career i {
@@ -2813,7 +2813,7 @@ input, select, option {
       margin-bottom: 50px; }
     .mem .inner .wrap article {
       width: 100%;
-      height: 400px;
+      height: 430px;
       margin-right: 0%;
       margin-bottom: 30px; }
       .mem .inner .wrap article:nth-of-type(3) {
@@ -2825,6 +2825,8 @@ input, select, option {
         height: 400px;
         margin-top: 55px;
         margin-left: 50px; }
+      .mem .inner .wrap article .name .career.on {
+        height: 335px; }
       .mem .inner .wrap article .name .career h2 {
         margin-bottom: 30px; } }
 .gallery .inner {
