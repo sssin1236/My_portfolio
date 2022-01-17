@@ -5412,12 +5412,12 @@ body {
     #visual .inner .right {
       width: 790px;
       height: 100%;
+      overflow: hidden;
       padding-top: 140px;
       padding-bottom: 10px;
       position: absolute;
       top: 0px;
       right: 0;
-      overflow: hidden;
       transition: 1.5s;
       transition-delay: 0.5s; }
       #visual .inner .right.on article {
@@ -6275,7 +6275,8 @@ body {
 
   #header .inner {
     width: 100%;
-    padding: 30px 30px; }
+    height: 80px;
+    padding: 20px 30px; }
     #header .inner #gnb {
       display: none; }
     #header .inner .util {
@@ -6288,13 +6289,13 @@ body {
     height: auto; }
     #visual .inner {
       width: 100%;
-      padding: 100px 30px 0px;
+      padding: 0px;
       position: relative; }
       #visual .inner .left {
         width: 100%;
-        height: 40%;
+        height: 37%;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: 0; }
         #visual .inner .left.on h1 span {
           opacity: 1;
@@ -6358,14 +6359,16 @@ body {
           color: #555; }
         #visual .inner .left .btnBox {
           width: 100%;
+          height: 100%;
           padding: 10px 30px;
           position: absolute;
           bottom: 0;
           left: -50%;
           opacity: 0;
-          transition: 1s; }
+          transition: 1s 0.8s; }
           #visual .inner .left .btnBox .list article {
             height: 80px;
+            margin-right: 6%;
             margin-bottom: 10px;
             position: relative; }
             #visual .inner .left .btnBox .list article span {
@@ -6376,196 +6379,107 @@ body {
               font: 12px/1.4 'arial';
               color: #555; }
           #visual .inner .left .btnBox ul {
-            float: right;
-            width: 100%;
-            border-top: 1px solid #111;
-            padding: 10px 0; }
-            #visual .inner .left .btnBox ul li {
-              width: 33.3333%;
-              padding: 10px 5px;
-              float: left;
-              border-right: 1px solid #999; }
-              #visual .inner .left .btnBox ul li:last-child {
-                border-right: none; }
-              #visual .inner .left .btnBox ul li nav {
-                font: bold 13px/1 'Roboto';
-                color: #555; }
-              #visual .inner .left .btnBox ul li p {
-                display: inline-block;
-                font: bold 25px/1 'Roboto';
-                color: #111;
-                margin-top: 20px; }
-              #visual .inner .left .btnBox ul li i {
-                float: right;
-                vertical-align: middle;
-                width: 25px;
-                height: 25px;
-                margin-top: 20px;
-                font-size: 10px;
-                line-height: 25px;
-                text-align: center;
-                border-radius: 50%;
-                color: #eee;
-                background: #222; }
+            padding-bottom: 0; }
+            #visual .inner .left .btnBox ul li nav {
+              font: bold 12px/1 'Roboto'; }
+            #visual .inner .left .btnBox ul li p {
+              font: bold 20px/1 'Roboto';
+              margin-top: 15px; }
+            #visual .inner .left .btnBox ul li i {
+              width: 20px;
+              height: 20px;
+              margin-top: 15px;
+              line-height: 20px; }
       #visual .inner .right {
         width: 100%;
-        height: 60%;
-        padding-top: 100px;
-        padding-bottom: 0px;
-        position: absolute;
-        top: 0px;
-        right: 0; }
+        height: 63%;
+        padding: 80px 30px 0; }
         #visual .inner .right.on article {
           margin-top: 0;
           opacity: 1; }
           #visual .inner .right.on article:nth-of-type(2n) {
-            margin-top: 30%; }
+            margin-top: 5%; }
         #visual .inner .right .popVid {
           width: 100%;
-          height: 95%;
-          position: absolute;
-          top: -100%;
-          right: 0;
-          background: #eee;
-          text-align: center;
-          z-index: 1;
-          opacity: 0;
-          transition: 0.8s; }
+          height: calc(100% - 80px);
+          padding: 0px 30px;
+          background: transparent; }
           #visual .inner .right .popVid.on {
-            top: 140px;
+            top: 80px;
             opacity: 1;
             z-index: 6; }
           #visual .inner .right .popVid > .popclose {
-            cursor: pointer;
-            font: 18px/1 "Rajdhani";
-            color: #ff5b20;
-            display: inline-block;
-            position: absolute;
             top: 20px;
-            right: 20px; }
-            #visual .inner .right .popVid > .popclose:hover::after {
-              width: 100%; }
+            right: 50px; }
+            #visual .inner .right .popVid > .popclose:hover {
+              color: #fff; }
+              #visual .inner .right .popVid > .popclose:hover::after {
+                width: 100%; }
             #visual .inner .right .popVid > .popclose::after {
               content: '';
               display: block;
               width: 0%;
               height: 2px;
-              background: #ff5b20;
+              background: #fff;
               margin-top: 5px;
               transition: 0.5s; }
           #visual .inner .right .popVid video {
             width: 100%;
-            height: calc(100% - 140px);
+            height: 100%;
             object-fit: cover;
-            margin-bottom: 30px; }
+            margin-bottom: 0px; }
         #visual .inner .right > article {
-          float: left;
-          width: 197px;
-          height: 70%;
-          position: relative;
-          transition: 1s;
-          z-index: 4;
-          opacity: 0;
-          margin-top: -50%;
-          cursor: pointer;
-          transition: margin-top 1s 0.8s, opacity 0.8s 1s, transform 0.8s; }
+          width: 25%;
+          height: 90%;
+          transition: margin-top 1s, opacity 0.8s 0.2s, transform 0.8s; }
           #visual .inner .right > article.on {
             transform: translateY(100%); }
-          #visual .inner .right > article:nth-of-type(2n) {
-            margin-top: 80%; }
-            #visual .inner .right > article:nth-of-type(2n) .pic {
-              top: auto;
-              top: 0px; }
-            #visual .inner .right > article:nth-of-type(2n) .text {
-              top: auto;
-              bottom: 0;
+          #visual .inner .right > article:nth-of-type(2n) .pic {
+            top: auto;
+            top: 0px; }
+          #visual .inner .right > article:nth-of-type(2n) .text {
+            bottom: 0px; }
+            #visual .inner .right > article:nth-of-type(2n) .text p {
+              margin-top: 10px;
+              margin-bottom: 10px; }
+            #visual .inner .right > article:nth-of-type(2n) .text h3 {
               border-top: none;
-              border-bottom: 1px solid #111; }
-              #visual .inner .right > article:nth-of-type(2n) .text p {
-                margin-top: 30px;
-                margin-bottom: 20px; }
-              #visual .inner .right > article:nth-of-type(2n) .text h3 {
-                border-top: none;
-                border-bottom: 1.5px solid #333;
-                padding: 10px 0;
-                margin-top: 0;
-                margin-bottom: 20px; }
+              border-bottom: 1.5px solid #333;
+              padding: 10px 0;
+              margin-bottom: 10px; }
           #visual .inner .right > article > .pic {
             width: 100%;
-            height: 70%;
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            z-index: 2;
-            backdrop-filter: blur(2px);
-            transition: 1s; }
-            #visual .inner .right > article > .pic video {
-              display: none;
-              width: 0%;
-              height: 0%;
-              object-fit: cover;
-              transition: 1s;
-              opacity: 0;
-              filter: brightness(0.5); }
-            #visual .inner .right > article > .pic img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover; }
+            height: 78%; }
           #visual .inner .right > article .text {
-            width: 100%;
-            border: 1px solid #111;
-            border-bottom: none;
-            position: absolute;
-            top: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 20px;
-            z-index: 2;
-            transition: 1s; }
+            padding: 10px; }
             #visual .inner .right > article .text > p {
-              font: 14px/1 'arial';
+              font: 12px/1 'arial';
               color: #ff5b20;
-              margin-bottom: 30px;
-              margin-top: 20px;
-              z-index: 2; }
+              margin-bottom: 10px;
+              margin-top: 10px;
+              opacity: 0;
+              transition: 0.5s; }
             #visual .inner .right > article .text h3 {
-              font: bold 28px/1.4 "Rajdhani";
-              color: #111;
-              z-index: 2;
+              font: bold 20px/1.4 "Rajdhani";
+              color: #eee;
               border-top: 1.5px solid #333;
               padding: 10px 0;
-              margin-top: 20px;
-              transition: 0.5s; }
-            #visual .inner .right > article .text span {
-              display: block;
-              width: 100%;
-              position: relative;
-              z-index: 2;
-              transition: 0.5s; }
-              #visual .inner .right > article .text span a {
-                font: 13px/1 'arial';
-                color: #222;
-                transition: 0.5s; }
-                #visual .inner .right > article .text span a i {
-                  font-size: 14px;
-                  color: #222;
-                  position: absolute;
-                  top: 50%;
-                  right: 0px;
-                  margin-top: -6px;
-                  transition: 0.5s; }
+              margin-top: 10px;
+              opacity: 0; }
           #visual .inner .right > article:hover .text {
-            top: 100px; }
+            top: 90px; }
+            #visual .inner .right > article:hover .text p {
+              opacity: 1; }
             #visual .inner .right > article:hover .text h3 {
-              color: #eee; }
+              opacity: 1; }
             #visual .inner .right > article:hover .text span a {
               color: #ddd; }
               #visual .inner .right > article:hover .text span a i {
                 color: #ddd; }
           #visual .inner .right > article:hover .pic {
-            height: 80%; }
+            height: 78%; }
           #visual .inner .right > article:hover:nth-of-type(2n) .text {
-            bottom: 100px;
+            bottom: 90px;
             top: auto; }
 
   #news {
@@ -7019,51 +6933,6 @@ body {
   #navi {
     right: 10px;
     top: 50%; } }
-@media screen and (max-height: 900px) {
-  #visual .inner {
-    padding-top: 170px; }
-    #visual .inner .list {
-      top: 170px;
-      right: 0; }
-      #visual .inner .list::after {
-        content: '';
-        display: block;
-        clear: both; }
-    #visual .inner .wrap .rolling article {
-      width: 250px;
-      height: 100%;
-      padding: 20px 0; }
-      #visual .inner .wrap .rolling article .pic {
-        width: 90%;
-        height: 90%;
-        padding: 25px 0 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); } }
-@media screen and (max-height: 800px) {
-  #visual .inner {
-    padding-top: 150px; }
-    #visual .inner .list {
-      top: 150px;
-      right: 0; }
-      #visual .inner .list span {
-        bottom: -30px; }
-    #visual .inner .wrap {
-      width: calc(250px * 5);
-      height: 340px; }
-      #visual .inner .wrap .rolling article {
-        width: 250px;
-        height: 100%;
-        padding: 20px 0; }
-        #visual .inner .wrap .rolling article .pic {
-          width: 90%;
-          height: 90%;
-          padding: 25px 0 10px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%); } }
 @keyframes ani {
   0% {
     opacity: 0;

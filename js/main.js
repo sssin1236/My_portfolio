@@ -111,11 +111,28 @@ class MyScroll{
 
 console.log(isCookie);
 
-// if(isCookie === -1){
-//     $("#popup").show();
-// }else{
-//     $("#popup").hide();
-// }
+if(isCookie === -1){
+    $("#popup").show();
+    $("#popup .content .close").on("click", function(e){
+        e.preventDefault();
+        $(".textBox").addClass("on");
+        $(".left").addClass("on");
+        $(".right").addClass("on");
+        timer1 = setInterval(numCount1, 10);
+        timer2 = setInterval(numCount2, 50);
+        timer3 = setInterval(numCount3, 30);
+    })
+}else{
+    $("#popup").hide();
+    $(window).on("load", function(){
+        $(".textBox").addClass("on");
+        $(".left").addClass("on");
+        $(".right").addClass("on");
+        timer1 = setInterval(numCount1, 10);
+        timer2 = setInterval(numCount2, 50);
+        timer3 = setInterval(numCount3, 30);
+    });
+}
 
 $("#popup .content .close").on("click", function(e){
     e.preventDefault();
@@ -151,15 +168,6 @@ function setCookie(time){
 
 //visual motion ----------------------------------------------------------------
 letter(".left>h1", 0.1);
-
-$(window).on("load", function(){
-    $(".textBox").addClass("on");
-    $(".left").addClass("on");
-    $(".right").addClass("on");
-    timer1 = setInterval(numCount1, 10);
-    timer2 = setInterval(numCount2, 50);
-    timer3 = setInterval(numCount3, 30);
-});
 
 $(".right>article").on("click", function(){
     let vid = $(this).find("video").attr("src");
