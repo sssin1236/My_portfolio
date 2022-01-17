@@ -163,6 +163,15 @@ $("#popup .content .close").on("click", function(e){
     $("#popup").slideUp(500);
 });
 
+$("#ck").on("click", function(){
+    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
+    if(isChecked){
+        $(".icon").addClass("on");
+    }else{
+        $(".icon").removeClass("on");
+    }
+})
+
 function setCookie(time){
     let today = new Date();
     let date = today.getDate();
