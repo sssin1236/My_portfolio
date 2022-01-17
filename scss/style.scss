@@ -24,7 +24,7 @@ body{
     top: 0; left: 0;
     width: 100%; height: 100vh;
     background: rgba(36, 36, 36, 0.98);
-    z-index: 5;
+    z-index: 8;
 
     .content{
         width: 800px; min-height: 400px;
@@ -123,7 +123,7 @@ body{
 
                 p{
                     font: 24px/1 $mainFon;
-                    color: #fff;
+                    color: #ddd;
                     text-align: center;
                     margin-bottom: 40px;
                 }
@@ -169,7 +169,7 @@ body{
 
             label{
                 font: 15px/1 $fontKo;
-                color: #eee;
+                color: #ccc;
                 margin-left: 5px;
             }
 
@@ -1338,13 +1338,14 @@ body{
                 top: -100%; right: 0;
                 background: #eee;
                 text-align: center;
-                z-index: 5;
+                z-index: 1;
                 opacity: 0;
                 transition: 0.8s;
 
                 &.on{
                     top: 140px;
                     opacity: 1;
+                    z-index: 6;
                 }
 
                 >.popclose{
@@ -2448,23 +2449,36 @@ body{
             
             .inner{
                 width: 100%; height: 90%;
-                margin: 15px 0px 50px;
+                margin: 15px 0px 20px;
     
                 article{
                     width: 100%; height: 50%;
                     float: none;
+                    overflow: hidden;
                 }
     
                 .popTxt{
                     padding: 30px 0px;
     
                     h1{
-                        margin-top: 10px;
-                        margin-bottom: 25px;
+                        margin-top: 0px;
+                        margin-bottom: 15px;
+                        font-size: 35px;
                     }
     
                     p{
-                        margin-bottom: 30px;
+                        margin-bottom: 15px;
+                        font-size: 15px;
+                    }
+
+                    input[type=text]{
+                        height: 30px;
+                        margin-bottom: 10px;
+                    }
+
+                    input[type=submit]{
+                        height: 30px;
+                        padding: 0;
                     }
                 }
             }
@@ -2493,70 +2507,399 @@ body{
     }
     
     #visual{
-    
-        >img{
-            opacity: 0.15;
-        }
+        width: 100%;
+        height: auto;
     
         .inner{
             width: 100%;
-            padding: 120px 30px 0px;
+            padding: 100px 30px 0px;
+            position: relative;
     
-            h1{
-                font: bold 60px/1 'arial';
-            }
+            .left{
+                width: 100%; height: 40%;
+                position: absolute;
+                bottom: 0; left: 0;
     
-            >p{
-                width: 45%;
-            }
+                &.on{
+                    h1 span{
+                        opacity: 1;
+                        transform: scale(1);
     
-            .list{
-                width: 45%; height: 250px;
-                padding: 20px;
-                top: 190px; right: 30px;
+                        &:nth-of-type(2){
+                            transform: scale(1) translateY(32px);
+                        } 
+                        
+                        &:nth-of-type(8){
+                            transform: scale(1) translateY(-43px);
+                        }
+                    }
     
-                h2{
-                    width: 80px;
-                    font: 20px/1 'arial';
-                    margin-bottom: 15px;
-    
-                    &::before{
-                        margin-bottom: 10px;
-                        background: $mainCol;
+                    .btnBox{
+                        left: 0px;
+                        opacity: 1;
                     }
                 }
     
-                ul{
-                    width: 100%;
-                    position: absolute;
-                    top: 100px; left: 20px;
+                h1{
+                    display:none;
     
-                    li{
-                        width: calc(100% / 2 - 20px);
-
-                        &:nth-of-type(1), &:nth-of-type(2){
-                            margin-bottom: 30px;
+                    span{
+                        width: 30px;
+                        text-align: center;
+                        position: relative;
+                        transform: scale(1.2);
+                        opacity: 0;
+                        transition: 0.8s;
+    
+                        &:nth-of-type(1){
+                            border-bottom: 5px solid #111;
+    
+                            &::after{
+                                content: 'DESIGN';
+                                display: block;
+                                font: 13px/1 $mainFon;
+                                color: $mainCol;
+                                position: absolute;
+                                bottom: -25px; left: 5px;
+                            }
                         }
     
-                        a{
-                            font: bold 14px/1 'arial';
-                            color: #ccc;
+                        &:nth-of-type(2){
+                            width: 55px; height: 43px;
+                            border-bottom: 5px solid #111;
+                            transform: scale(1.2) translateY(0px);
                         }
     
-                        >span{
-                            display: block;
-                            margin-top: 5px;
-                            font: 13px/1 'arial';
-                            color: #999;
+                        &:nth-of-type(3){
+                            border-bottom: 5px solid #111;
+    
+                            &::after{
+                                content: 'HOUSE';
+                                display: block;
+                                font: 13px/1 $mainFon;
+                                color: $mainCol;
+                                position: absolute;
+                                bottom: -25px; left: 5px;
+                            }
+                        }
+    
+                        &:nth-of-type(4){
+                            width: 260px;
+                            padding-top: 10px;
+                            text-align: right;
+                        }
+    
+                        &:nth-of-type(7), &:nth-of-type(9),&:nth-of-type(10), &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13){
+                            width: 50px;
+                            margin-top: 10px;
+                            border-top: 5px solid #111;
+                        }
+    
+                        &:nth-of-type(8){
+                            width: 55px; height: 43px;
+                            border-bottom: 5px solid #111;
+                            transform: scale(1.2) translateY(0px);
                         }
                     }
                 }
-                
-                >span{
-                    position: absolute;
-                    bottom: -40px; left: 0;
-                    font: bold 13px/1 'arial';
+        
+                >p{
+                    font: 16px/1.7 'arial';
                     color: #555;
+                }
+        
+                .btnBox{
+                    width: 100%;
+                    padding: 10px 30px;
+                    position: absolute;
+                    bottom: 0; left: -50%;
+                    opacity: 0;
+                    transition: 1s;
+    
+                    .list{
+    
+                        article{
+                            height: 80px;
+                            margin-bottom: 10px;
+                            position: relative;
+    
+                            span{
+                                position: static;
+                            }
+    
+                            h2{
+                                font: 20px/1 $mainFon;
+                            }
+    
+                            p{
+                                font: 12px/1.4 'arial';
+                                color:#555;
+                            }
+                        }
+                    }
+    
+                    ul{
+                        float: right;
+                        width: 100%;
+                        border-top: 1px solid #111;
+                        padding: 10px 0;
+    
+                        li{
+                            width: 33.3333%;
+                            padding: 10px 5px;
+                            float: left;
+                            border-right: 1px solid #999;
+    
+                            &:last-child{
+                                border-right: none;
+                            }
+    
+                            nav{
+                                font: bold 13px/1 'Roboto';
+                                color: #555;
+                            }
+    
+                            p{
+                                display: inline-block;
+                                font: bold 25px/1 'Roboto';
+                                color: #111;
+                                margin-top: 20px;
+                            }
+    
+                            i{
+                                float: right;
+                                vertical-align: middle;
+                                width: 25px; height: 25px;
+                                margin-top: 20px;
+                                font-size: 10px;
+                                line-height: 25px;
+                                text-align: center;
+                                border-radius: 50%;
+                                color: #eee;
+                                background: #222;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .right{
+                width: 100%; height: 60%;
+                padding-top: 100px;
+                padding-bottom: 0px;
+                position: absolute;
+                top: 0px; right: 0;
+    
+                &.on{
+                    article{
+                        margin-top: 0;
+                        opacity: 1;
+    
+                        &:nth-of-type(2n){
+                            margin-top: 30%;
+                        }
+                    }
+                }
+    
+                .popVid{
+                    width: 100%; height: 95%;
+                    position: absolute;
+                    top: -100%; right: 0;
+                    background: #eee;
+                    text-align: center;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: 0.8s;
+    
+                    &.on{
+                        top: 140px;
+                        opacity: 1;
+                        z-index: 6;
+                    }
+    
+                    >.popclose{
+                        cursor: pointer;
+                        font: 18px/1 $mainFon;
+                        color: $mainCol;
+                        display: inline-block;
+                        position: absolute;
+                        top: 20px; right: 20px;
+    
+                        &:hover{
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+    
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 0%; height: 2px;
+                            background: $mainCol;
+                            margin-top: 5px;
+                            transition: 0.5s;
+                        }
+                    }
+    
+                    video{
+                        width: 100%; height: calc(100% - 140px);
+                        object-fit: cover;
+                        margin-bottom: 30px;
+                    }
+                }
+    
+                >article{
+                    float: left;
+                    width: 197px; height: 70%;
+                    position: relative;
+                    transition: 1s;
+                    z-index: 4;
+                    opacity: 0;
+                    margin-top: -50%;
+                    cursor: pointer;
+                    transition: margin-top 1s 0.8s, opacity 0.8s 1s, transform 0.8s;
+    
+                    &.on{
+                        transform: translateY(100%);
+                    }
+    
+                    &:nth-of-type(2n){
+                        margin-top: 80%;
+    
+                        .pic{
+                            top: auto;
+                            top: 0px;
+                        }
+    
+                        .text{
+                            top: auto;
+                            bottom: 0;
+                            border-top: none;
+                            border-bottom: 1px solid #111;
+    
+                            p{
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                            }
+    
+                            h3{
+                                border-top: none;
+                                border-bottom: 1.5px solid #333;
+                                padding: 10px 0;
+                                margin-top: 0;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+    
+                    >.pic{
+                        width: 100%; height: 70%;
+                        position: absolute;
+                        bottom: 0px; left: 0;
+                        z-index: 2;
+                        backdrop-filter: blur(2px);
+                        transition: 1s;
+                        
+                        video{
+                            display: none;
+                            width: 0%; height: 0%;
+                            object-fit: cover;
+                            transition: 1s;
+                            opacity: 0;
+                            filter: brightness(0.5);
+                        }
+    
+                        img{
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .text{
+                        width: 100%;
+                        border: 1px solid #111;
+                        border-bottom: none;
+                        position: absolute;
+                        top: 0px; left: 50%;
+                        transform: translateX(-50%);
+                        padding: 20px;
+                        z-index: 2;
+                        transition: 1s;
+    
+                        >p{
+                            font: 14px/1 'arial';
+                            color: $mainCol;
+                            margin-bottom: 30px;
+                            margin-top: 20px;
+                            z-index: 2;
+                        }
+        
+                        h3{
+                            font: bold 28px/1.4 $mainFon;
+                            color: #111;
+                            z-index: 2;
+                            border-top: 1.5px solid #333;
+                            padding: 10px 0;
+                            margin-top: 20px;
+                            transition: 0.5s;
+                        }
+                        
+                        span{
+                            display: block;
+                            width: 100%;
+                            position: relative;
+                            z-index: 2;
+                            transition: 0.5s;
+        
+                            a{
+                                font: 13px/1 'arial';
+                                color: #222;
+                                transition: 0.5s;
+        
+                                i{
+                                    font-size: 14px;
+                                    color: #222;
+                                    position: absolute;
+                                    top: 50%; right:0px;
+                                    margin-top: -6px;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+                    
+                    &:hover{
+    
+                        .text{
+                            top: 100px;
+    
+                            h3{
+                                color: #eee;
+                            }
+    
+                            span{
+                                a{
+                                    color: #ddd;
+    
+                                    i{
+                                        color: #ddd;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .pic{
+                            height: 80%;
+                        }
+    
+                        &:nth-of-type(2n){
+    
+                            .text{
+                                bottom: 100px;
+                                top: auto;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -2934,11 +3277,12 @@ body{
 @media screen and (max-width:539px){
     #popup{
         .content{
-            width: 80%; height: 60%;
+            width: 80%; height: 70%;
     
             
             .inner{
-                margin: 15px 0px 30px;
+                margin: 10px 0px 20px;
+                padding: 0;
     
                 article{
                     width: 100%; height: 50%;
@@ -2946,22 +3290,20 @@ body{
                 }
     
                 .popTxt{
-                    padding: 10px 0px;
+                    padding: 0px;
     
                     h1{
-                        font-size: 50px;
+                        font-size: 30px;
                         margin-top: 20px;
-                        margin-bottom: 15px;
+                        margin-bottom: 20px;
                     }
     
                     p{
-                        font-size: 18px;
-                        margin-bottom: 20px;
+                        font-size: 15px;
+                        margin-bottom: 10px;
                     }
 
                     input[type=text]{
-                        height: 30px;
-                        margin-bottom: 10px;
                         border-bottom: 1px solid #ddd;
 
                         &::placeholder{
@@ -2974,8 +3316,21 @@ body{
                     }
 
                     input[type=submit]{
-                        height: 30px;
-                        padding: 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+            .wrap{
+                label{
+                    font-size: 13px;
+
+                    .icon{
+                        width: 15px; height: 15px;
+
+                        &::after{
+                            top: -2px; left: 3px;
+                        }
                     }
                 }
             }

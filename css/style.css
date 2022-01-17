@@ -4441,7 +4441,7 @@ body {
   width: 100%;
   height: 100vh;
   background: rgba(36, 36, 36, 0.98);
-  z-index: 5; }
+  z-index: 8; }
   #popup .content {
     width: 800px;
     min-height: 400px;
@@ -4524,7 +4524,7 @@ body {
           margin-bottom: 40px; }
         #popup .content .inner .popTxt p {
           font: 24px/1 "Rajdhani";
-          color: #fff;
+          color: #ddd;
           text-align: center;
           margin-bottom: 40px; }
         #popup .content .inner .popTxt input[type=text] {
@@ -4558,7 +4558,7 @@ body {
       float: left; }
       #popup .content .wrap label {
         font: 15px/1 "Noto Sans KR";
-        color: #eee;
+        color: #ccc;
         margin-left: 5px; }
       #popup .content .wrap input[type=checkbox] {
         display: none;
@@ -5433,12 +5433,13 @@ body {
         right: 0;
         background: #eee;
         text-align: center;
-        z-index: 5;
+        z-index: 1;
         opacity: 0;
         transition: 0.8s; }
         #visual .inner .right .popVid.on {
           top: 140px;
-          opacity: 1; }
+          opacity: 1;
+          z-index: 6; }
         #visual .inner .right .popVid > .popclose {
           cursor: pointer;
           font: 18px/1 "Rajdhani";
@@ -6250,18 +6251,27 @@ body {
     #popup .content .inner {
       width: 100%;
       height: 90%;
-      margin: 15px 0px 50px; }
+      margin: 15px 0px 20px; }
       #popup .content .inner article {
         width: 100%;
         height: 50%;
-        float: none; }
+        float: none;
+        overflow: hidden; }
       #popup .content .inner .popTxt {
         padding: 30px 0px; }
         #popup .content .inner .popTxt h1 {
-          margin-top: 10px;
-          margin-bottom: 25px; }
+          margin-top: 0px;
+          margin-bottom: 15px;
+          font-size: 35px; }
         #popup .content .inner .popTxt p {
-          margin-bottom: 30px; }
+          margin-bottom: 15px;
+          font-size: 15px; }
+        #popup .content .inner .popTxt input[type=text] {
+          height: 30px;
+          margin-bottom: 10px; }
+        #popup .content .inner .popTxt input[type=submit] {
+          height: 30px;
+          padding: 0; }
 
   #header .inner {
     width: 100%;
@@ -6273,51 +6283,290 @@ body {
     #header .inner .btnMo {
       display: block; }
 
-  #visual > img {
-    opacity: 0.15; }
-  #visual .inner {
+  #visual {
     width: 100%;
-    padding: 120px 30px 0px; }
-    #visual .inner h1 {
-      font: bold 60px/1 'arial'; }
-    #visual .inner > p {
-      width: 45%; }
-    #visual .inner .list {
-      width: 45%;
-      height: 250px;
-      padding: 20px;
-      top: 190px;
-      right: 30px; }
-      #visual .inner .list h2 {
-        width: 80px;
-        font: 20px/1 'arial';
-        margin-bottom: 15px; }
-        #visual .inner .list h2::before {
-          margin-bottom: 10px;
-          background: #ff5b20; }
-      #visual .inner .list ul {
+    height: auto; }
+    #visual .inner {
+      width: 100%;
+      padding: 100px 30px 0px;
+      position: relative; }
+      #visual .inner .left {
         width: 100%;
+        height: 40%;
         position: absolute;
-        top: 100px;
-        left: 20px; }
-        #visual .inner .list ul li {
-          width: calc(100% / 2 - 20px); }
-          #visual .inner .list ul li:nth-of-type(1), #visual .inner .list ul li:nth-of-type(2) {
+        bottom: 0;
+        left: 0; }
+        #visual .inner .left.on h1 span {
+          opacity: 1;
+          transform: scale(1); }
+          #visual .inner .left.on h1 span:nth-of-type(2) {
+            transform: scale(1) translateY(32px); }
+          #visual .inner .left.on h1 span:nth-of-type(8) {
+            transform: scale(1) translateY(-43px); }
+        #visual .inner .left.on .btnBox {
+          left: 0px;
+          opacity: 1; }
+        #visual .inner .left h1 {
+          display: none; }
+          #visual .inner .left h1 span {
+            width: 30px;
+            text-align: center;
+            position: relative;
+            transform: scale(1.2);
+            opacity: 0;
+            transition: 0.8s; }
+            #visual .inner .left h1 span:nth-of-type(1) {
+              border-bottom: 5px solid #111; }
+              #visual .inner .left h1 span:nth-of-type(1)::after {
+                content: 'DESIGN';
+                display: block;
+                font: 13px/1 "Rajdhani";
+                color: #ff5b20;
+                position: absolute;
+                bottom: -25px;
+                left: 5px; }
+            #visual .inner .left h1 span:nth-of-type(2) {
+              width: 55px;
+              height: 43px;
+              border-bottom: 5px solid #111;
+              transform: scale(1.2) translateY(0px); }
+            #visual .inner .left h1 span:nth-of-type(3) {
+              border-bottom: 5px solid #111; }
+              #visual .inner .left h1 span:nth-of-type(3)::after {
+                content: 'HOUSE';
+                display: block;
+                font: 13px/1 "Rajdhani";
+                color: #ff5b20;
+                position: absolute;
+                bottom: -25px;
+                left: 5px; }
+            #visual .inner .left h1 span:nth-of-type(4) {
+              width: 260px;
+              padding-top: 10px;
+              text-align: right; }
+            #visual .inner .left h1 span:nth-of-type(7), #visual .inner .left h1 span:nth-of-type(9), #visual .inner .left h1 span:nth-of-type(10), #visual .inner .left h1 span:nth-of-type(11), #visual .inner .left h1 span:nth-of-type(12), #visual .inner .left h1 span:nth-of-type(13) {
+              width: 50px;
+              margin-top: 10px;
+              border-top: 5px solid #111; }
+            #visual .inner .left h1 span:nth-of-type(8) {
+              width: 55px;
+              height: 43px;
+              border-bottom: 5px solid #111;
+              transform: scale(1.2) translateY(0px); }
+        #visual .inner .left > p {
+          font: 16px/1.7 'arial';
+          color: #555; }
+        #visual .inner .left .btnBox {
+          width: 100%;
+          padding: 10px 30px;
+          position: absolute;
+          bottom: 0;
+          left: -50%;
+          opacity: 0;
+          transition: 1s; }
+          #visual .inner .left .btnBox .list article {
+            height: 80px;
+            margin-bottom: 10px;
+            position: relative; }
+            #visual .inner .left .btnBox .list article span {
+              position: static; }
+            #visual .inner .left .btnBox .list article h2 {
+              font: 20px/1 "Rajdhani"; }
+            #visual .inner .left .btnBox .list article p {
+              font: 12px/1.4 'arial';
+              color: #555; }
+          #visual .inner .left .btnBox ul {
+            float: right;
+            width: 100%;
+            border-top: 1px solid #111;
+            padding: 10px 0; }
+            #visual .inner .left .btnBox ul li {
+              width: 33.3333%;
+              padding: 10px 5px;
+              float: left;
+              border-right: 1px solid #999; }
+              #visual .inner .left .btnBox ul li:last-child {
+                border-right: none; }
+              #visual .inner .left .btnBox ul li nav {
+                font: bold 13px/1 'Roboto';
+                color: #555; }
+              #visual .inner .left .btnBox ul li p {
+                display: inline-block;
+                font: bold 25px/1 'Roboto';
+                color: #111;
+                margin-top: 20px; }
+              #visual .inner .left .btnBox ul li i {
+                float: right;
+                vertical-align: middle;
+                width: 25px;
+                height: 25px;
+                margin-top: 20px;
+                font-size: 10px;
+                line-height: 25px;
+                text-align: center;
+                border-radius: 50%;
+                color: #eee;
+                background: #222; }
+      #visual .inner .right {
+        width: 100%;
+        height: 60%;
+        padding-top: 100px;
+        padding-bottom: 0px;
+        position: absolute;
+        top: 0px;
+        right: 0; }
+        #visual .inner .right.on article {
+          margin-top: 0;
+          opacity: 1; }
+          #visual .inner .right.on article:nth-of-type(2n) {
+            margin-top: 30%; }
+        #visual .inner .right .popVid {
+          width: 100%;
+          height: 95%;
+          position: absolute;
+          top: -100%;
+          right: 0;
+          background: #eee;
+          text-align: center;
+          z-index: 1;
+          opacity: 0;
+          transition: 0.8s; }
+          #visual .inner .right .popVid.on {
+            top: 140px;
+            opacity: 1;
+            z-index: 6; }
+          #visual .inner .right .popVid > .popclose {
+            cursor: pointer;
+            font: 18px/1 "Rajdhani";
+            color: #ff5b20;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            right: 20px; }
+            #visual .inner .right .popVid > .popclose:hover::after {
+              width: 100%; }
+            #visual .inner .right .popVid > .popclose::after {
+              content: '';
+              display: block;
+              width: 0%;
+              height: 2px;
+              background: #ff5b20;
+              margin-top: 5px;
+              transition: 0.5s; }
+          #visual .inner .right .popVid video {
+            width: 100%;
+            height: calc(100% - 140px);
+            object-fit: cover;
             margin-bottom: 30px; }
-          #visual .inner .list ul li a {
-            font: bold 14px/1 'arial';
-            color: #ccc; }
-          #visual .inner .list ul li > span {
-            display: block;
-            margin-top: 5px;
-            font: 13px/1 'arial';
-            color: #999; }
-      #visual .inner .list > span {
-        position: absolute;
-        bottom: -40px;
-        left: 0;
-        font: bold 13px/1 'arial';
-        color: #555; }
+        #visual .inner .right > article {
+          float: left;
+          width: 197px;
+          height: 70%;
+          position: relative;
+          transition: 1s;
+          z-index: 4;
+          opacity: 0;
+          margin-top: -50%;
+          cursor: pointer;
+          transition: margin-top 1s 0.8s, opacity 0.8s 1s, transform 0.8s; }
+          #visual .inner .right > article.on {
+            transform: translateY(100%); }
+          #visual .inner .right > article:nth-of-type(2n) {
+            margin-top: 80%; }
+            #visual .inner .right > article:nth-of-type(2n) .pic {
+              top: auto;
+              top: 0px; }
+            #visual .inner .right > article:nth-of-type(2n) .text {
+              top: auto;
+              bottom: 0;
+              border-top: none;
+              border-bottom: 1px solid #111; }
+              #visual .inner .right > article:nth-of-type(2n) .text p {
+                margin-top: 30px;
+                margin-bottom: 20px; }
+              #visual .inner .right > article:nth-of-type(2n) .text h3 {
+                border-top: none;
+                border-bottom: 1.5px solid #333;
+                padding: 10px 0;
+                margin-top: 0;
+                margin-bottom: 20px; }
+          #visual .inner .right > article > .pic {
+            width: 100%;
+            height: 70%;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            z-index: 2;
+            backdrop-filter: blur(2px);
+            transition: 1s; }
+            #visual .inner .right > article > .pic video {
+              display: none;
+              width: 0%;
+              height: 0%;
+              object-fit: cover;
+              transition: 1s;
+              opacity: 0;
+              filter: brightness(0.5); }
+            #visual .inner .right > article > .pic img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          #visual .inner .right > article .text {
+            width: 100%;
+            border: 1px solid #111;
+            border-bottom: none;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            z-index: 2;
+            transition: 1s; }
+            #visual .inner .right > article .text > p {
+              font: 14px/1 'arial';
+              color: #ff5b20;
+              margin-bottom: 30px;
+              margin-top: 20px;
+              z-index: 2; }
+            #visual .inner .right > article .text h3 {
+              font: bold 28px/1.4 "Rajdhani";
+              color: #111;
+              z-index: 2;
+              border-top: 1.5px solid #333;
+              padding: 10px 0;
+              margin-top: 20px;
+              transition: 0.5s; }
+            #visual .inner .right > article .text span {
+              display: block;
+              width: 100%;
+              position: relative;
+              z-index: 2;
+              transition: 0.5s; }
+              #visual .inner .right > article .text span a {
+                font: 13px/1 'arial';
+                color: #222;
+                transition: 0.5s; }
+                #visual .inner .right > article .text span a i {
+                  font-size: 14px;
+                  color: #222;
+                  position: absolute;
+                  top: 50%;
+                  right: 0px;
+                  margin-top: -6px;
+                  transition: 0.5s; }
+          #visual .inner .right > article:hover .text {
+            top: 100px; }
+            #visual .inner .right > article:hover .text h3 {
+              color: #eee; }
+            #visual .inner .right > article:hover .text span a {
+              color: #ddd; }
+              #visual .inner .right > article:hover .text span a i {
+                color: #ddd; }
+          #visual .inner .right > article:hover .pic {
+            height: 80%; }
+          #visual .inner .right > article:hover:nth-of-type(2n) .text {
+            bottom: 100px;
+            top: auto; }
 
   #news {
     width: 100%;
@@ -6540,33 +6789,39 @@ body {
 @media screen and (max-width: 539px) {
   #popup .content {
     width: 80%;
-    height: 60%; }
+    height: 70%; }
     #popup .content .inner {
-      margin: 15px 0px 30px; }
+      margin: 10px 0px 20px;
+      padding: 0; }
       #popup .content .inner article {
         width: 100%;
         height: 50%;
         float: none; }
       #popup .content .inner .popTxt {
-        padding: 10px 0px; }
+        padding: 0px; }
         #popup .content .inner .popTxt h1 {
-          font-size: 50px;
+          font-size: 30px;
           margin-top: 20px;
-          margin-bottom: 15px; }
-        #popup .content .inner .popTxt p {
-          font-size: 18px;
           margin-bottom: 20px; }
+        #popup .content .inner .popTxt p {
+          font-size: 15px;
+          margin-bottom: 10px; }
         #popup .content .inner .popTxt input[type=text] {
-          height: 30px;
-          margin-bottom: 10px;
           border-bottom: 1px solid #ddd; }
           #popup .content .inner .popTxt input[type=text]::placeholder {
             font: 15px/30px "Rajdhani"; }
           #popup .content .inner .popTxt input[type=text]:focus {
             border: 1px solid #ff5b20; }
         #popup .content .inner .popTxt input[type=submit] {
-          height: 30px;
-          padding: 0; }
+          font-size: 16px; }
+    #popup .content .wrap label {
+      font-size: 13px; }
+      #popup .content .wrap label .icon {
+        width: 15px;
+        height: 15px; }
+        #popup .content .wrap label .icon::after {
+          top: -2px;
+          left: 3px; }
 
   #visual .inner {
     padding: 100px 30px 0px; }

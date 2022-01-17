@@ -7,6 +7,7 @@ const $right = $(".line2");
 const $bottom = $(".line3");
 const $left = $(".line4");
 const $dots = $("span");
+let isCookie = document.cookie.indexOf("popup=done");
 let num1 = num2 = num3 = 450;
 
 btnCall.onclick = function(e){
@@ -106,6 +107,48 @@ class MyScroll{
     }
 }
 
+// 쿠키 팝업-------------------------------------------------------------------
+
+console.log(isCookie);
+
+// if(isCookie === -1){
+//     $("#popup").show();
+// }else{
+//     $("#popup").hide();
+// }
+
+$("#popup .content .close").on("click", function(e){
+    e.preventDefault();
+
+    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
+
+    if(isChecked) setCookie(1);
+
+    $("#popup").slideUp(500);
+});
+
+$("#ck").on("click", function(){
+    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
+    if(isChecked){
+        $(".icon").addClass("on");
+    }else{
+        $(".icon").removeClass("on");
+    }
+});
+
+
+function setCookie(time){
+    let today = new Date();
+    let date = today.getDate();
+
+    today.setDate(date + time);
+
+    let duedate = today.toGMTString();
+
+    document.cookie = "popup=done; expires"+duedate;
+}
+
+
 //visual motion ----------------------------------------------------------------
 letter(".left>h1", 0.1);
 
@@ -167,35 +210,6 @@ $("dt").on("click", function(){
 });
 
 
-// 쿠키 팝업-------------------------------------------------------------------
-let isCookie = document.cookie.indexOf("popup=done");
-console.log(isCookie);
-
-if(isCookie == -1){
-    $("#popup").show();
-}else{
-    $("#popup").hide();
-}
-
-$("#popup .content .close").on("click", function(e){
-    e.preventDefault();
-
-    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
-
-    if(isChecked) setCookie(1);
-
-    $("#popup").slideUp(500);
-});
-
-$("#ck").on("click", function(){
-    let isChecked = $("#popup").find("input[type=checkbox]").is(":checked");
-    if(isChecked){
-        $(".icon").addClass("on");
-    }else{
-        $(".icon").removeClass("on");
-    }
-})
-
 
 // 스와이퍼 -----------------------------------------------------------------------
 
@@ -242,16 +256,6 @@ btnStop.onclick = function(){
 
 
 
-function setCookie(time){
-    let today = new Date();
-    let date = today.getDate();
-
-    today.setDate(date + time);
-
-    let duedate = today.toGMTString();
-
-    document.cookie = "popup=done; expires"+duedate;
-}
 
 function numCount1() {
     num1++;
