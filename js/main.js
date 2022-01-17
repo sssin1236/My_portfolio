@@ -7,6 +7,7 @@ const $right = $(".line2");
 const $bottom = $(".line3");
 const $left = $(".line4");
 const $dots = $("span");
+let num1 = num2 = num3 = 450;
 
 btnCall.onclick = function(e){
     e.preventDefault();
@@ -105,6 +106,29 @@ class MyScroll{
     }
 }
 
+//visual motion ----------------------------------------------------------------
+letter(".left>h1", 0.1);
+
+$(window).on("load", function(){
+    $(".textBox").addClass("on");
+    $(".left").addClass("on");
+    $(".right").addClass("on");
+    timer1 = setInterval(numCount1, 10);
+    timer2 = setInterval(numCount2, 50);
+    timer3 = setInterval(numCount3, 30);
+});
+
+$(".right>article").on("click", function(){
+    let vid = $(this).find("video").attr("src");
+    $(this).addClass("on");
+    $(".popVid").find("video").attr("src", vid);
+    $(".popVid").addClass("on");
+});
+
+$(".popclose").on("click", function(){
+    $(this).parent().removeClass("on");
+    $(".right>article").removeClass("on");
+})
 
 
 //gnb menu -----------------------------------------------------------------------
@@ -172,42 +196,6 @@ $("#ck").on("click", function(){
     }
 })
 
-function setCookie(time){
-    let today = new Date();
-    let date = today.getDate();
-
-    today.setDate(date + time);
-
-    let duedate = today.toGMTString();
-
-    document.cookie = "popup=done; expires"+duedate;
-}
-
-// 롤링 배너 -------------------------------------------------------------------
-/*
-const $rollWrap = $(".rolling").parent();
-let timer;
-let num = 0;
-
-timer = setInterval(roll, 20);
-
-$(".rolling").parent().on("mouseenter", function(){
-    clearInterval(timer);
-});
-$(".rolling").parent().on("mouseleave", function(){
-    timer = setInterval(roll, 20);
-});
-
-function roll(){
-    if(num <= -250){
-        num = 0;
-        $(".rolling").find("article").first().appendTo($(".rolling"));
-    }else{
-        num -= 2;
-    }
-    $(".rolling").css({marginLeft: num});
-}
-*/
 
 // 스와이퍼 -----------------------------------------------------------------------
 
@@ -252,3 +240,62 @@ btnStop.onclick = function(){
 }
 
 
+
+
+function setCookie(time){
+    let today = new Date();
+    let date = today.getDate();
+
+    today.setDate(date + time);
+
+    let duedate = today.toGMTString();
+
+    document.cookie = "popup=done; expires"+duedate;
+}
+
+function numCount1() {
+    num1++;
+    if (num1 > 1135) {
+        clearInterval(timer1);
+    } else {
+        $(".count1").text(num1);
+    }
+}
+
+function numCount2() {
+    num2++;
+    if (num2 > 507) {
+        clearInterval(timer2);
+    } else {
+        $(".count2").text(num2);
+    }
+}
+
+function numCount3() {
+    num3++;
+    if (num3 > 798) {
+        clearInterval(timer3);
+    } else {
+        $(".count3").text(num3);
+    }
+}
+
+function letter(item, interval){
+    const target = $(item);
+    const txt = target.text();
+    let num = 0;
+
+    $(item).empty();
+
+    for(let el of txt){
+        target.append(
+            $("<span>")
+            .text(el)
+            .css({
+                transitionDelay: interval * num+"s",
+                display: "inline-block"
+            })
+        )
+        num++;
+    }
+}
