@@ -9,3 +9,4 @@
 5. Location (kakao map API를 이용한 페이지)
 6. Join (회원가입 페이지)
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/90322599/154440765-2ba45fc1-3504-4d5f-ab72-f6dd92eb095f.gif)
