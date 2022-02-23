@@ -135,6 +135,7 @@ let custom = [
         $(".year3").css({ right: right_scroll + "px"});
     }
 ]
+
 let init = function(){
     $(".intro>.inner").find(".pic").css({ transform: "scale(1)", opacity: 1});
 }

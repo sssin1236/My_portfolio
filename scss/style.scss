@@ -3288,15 +3288,18 @@ body{
     
     
     #visual{
+        overflow: hidden;
     
         .inner{
     
             .left{
+                    height: 20%;
         
                 .btnBox{
                     padding: 20px 30px;
                     
                     .list{
+                        display: none;
                         article video{
                             display: none;
                         }
@@ -3316,6 +3319,7 @@ body{
             }
         
             .right{
+                height: calc(80% - 80px);
     
                 &.on{
                     article{
@@ -3379,7 +3383,8 @@ body{
     
     // news -------------------------------------------------------------------------------
     #news{
-    
+        overflow: hidden;
+
         .inner{
             width: 100%;
     
@@ -3426,7 +3431,7 @@ body{
     
     // brand -------------------------------------------------------------------------------
     #brand{
-    
+        overflow: hidden;
     
         .inner{
             width: 100%;
@@ -3476,7 +3481,8 @@ body{
 
     // comment -----------------------------------------------------------------------------
     #comment{
-    
+        overflow: hidden;
+        
         .inner{
     
             .wrap{
