@@ -2482,7 +2482,7 @@ body{
 @media screen and (max-width:1179px){
     #popup{
         .content{
-            width: 80%; height: 80%;
+            width: 60%; height: 60%;
     
             
             .inner{
@@ -2490,7 +2490,8 @@ body{
                 margin: 15px 0px 20px;
     
                 article{
-                    width: 100%; height: 50%;
+                    width: 100%; height: 60%;
+                    margin-bottom: 20px;
                     float: none;
                     overflow: hidden;
                 }
@@ -2858,6 +2859,7 @@ body{
     #news{
         width: 100%; 
         padding: 100px 30px;
+        overflow: hidden;
     
         .inner{
             width: 100%;
@@ -2916,6 +2918,7 @@ body{
     // brand -------------------------------------------------------------------------------
     #brand{
         padding: 100px 30px;
+        overflow: hidden;
     
         
         &.on .inner{
@@ -3008,6 +3011,7 @@ body{
     // banner ------------------------------------------------------------------------------
     #banner{
         padding: 100px 30px;
+        overflow: hidden;
     
         .inner{
             width: 100%;
@@ -3017,6 +3021,7 @@ body{
     // comment -----------------------------------------------------------------------------
     #comment{
         padding: 100px 30px;
+        overflow: hidden;
     
         &.on .inner{
             .wrap article{
