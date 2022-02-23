@@ -513,9 +513,9 @@
                         td{
                             font: bold 14px/1 $mainFon;
 
-                            &:nth-of-type(1){ width: 20%; }
-                            &:nth-of-type(2){ width: auto; }
-                            &:nth-of-type(3){ width: 23%; }
+                            &:nth-of-type(1){ width: 10%; }
+                            &:nth-of-type(2){ width: auto; padding-left: 20px;}
+                            &:nth-of-type(3){ width: 20%; }
     
     
                             a{
