@@ -6669,6 +6669,8 @@ body {
 
   #visual .inner .left .btnBox {
     padding: 20px 30px; }
+    #visual .inner .left .btnBox .list article video {
+      display: none; }
     #visual .inner .left .btnBox ul li nav {
       text-align: center;
       font: bold 11px/1 'Roboto'; }

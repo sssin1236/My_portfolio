@@ -3295,6 +3295,12 @@ body{
         
                 .btnBox{
                     padding: 20px 30px;
+                    
+                    .list{
+                        article video{
+                            display: none;
+                        }
+                    }
     
                     ul{
     
