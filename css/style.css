@@ -5860,6 +5860,12 @@ body {
   width: 100%;
   padding: 100px;
   background: url(../img/banner1.jpg) no-repeat fixed; }
+  #banner.on .inner h1, #banner.on .inner p {
+    transform: translateY(0);
+    opacity: 1; }
+  #banner.on .inner .member .toJoin, #banner.on .inner .member .pic {
+    transform: translateX(0px);
+    opacity: 1; }
   #banner .inner {
     width: 1180px;
     margin: 0 auto;
@@ -5869,7 +5875,10 @@ body {
       font: bold 28px "Rajdhani";
       color: #eee;
       text-align: center;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      transform: translateY(50px);
+      transition: 1s;
+      opacity: 0; }
       #banner .inner h1::after {
         content: '';
         display: block;
@@ -5880,9 +5889,71 @@ body {
         top: 50px;
         left: 50%;
         transform: translateX(-50%); }
-    #banner .inner p {
+    #banner .inner > p {
       font: normal 16px/1.4 "Rajdhani";
-      color: #ddd; }
+      color: #ddd;
+      transform: translateY(-20px);
+      transition: 1s;
+      opacity: 0; }
+    #banner .inner .member {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      margin-top: 80px; }
+      #banner .inner .member::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: #eee;
+        position: absolute;
+        top: 0;
+        left: 50%; }
+      #banner .inner .member .toJoin {
+        float: left;
+        width: 50%;
+        padding: 30px 30px;
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: 0.5s 0.8s; }
+        #banner .inner .member .toJoin h2 {
+          font: 27px/1 "Rajdhani";
+          color: #eee;
+          margin-bottom: 30px; }
+        #banner .inner .member .toJoin p {
+          width: 55%;
+          margin: 0 auto;
+          font: normal 16px/1.4 "Rajdhani";
+          color: #888;
+          margin-bottom: 30px; }
+        #banner .inner .member .toJoin a {
+          display: block;
+          width: 120px;
+          height: 40px;
+          border: 1px solid #bbb;
+          margin: 0 auto;
+          font: 17px/40px "Rajdhani";
+          color: #bbb;
+          transition: 0.3s; }
+          #banner .inner .member .toJoin a:hover {
+            background: #bbb;
+            color: #111; }
+      #banner .inner .member .pic {
+        float: right;
+        width: 50%;
+        height: 100%;
+        padding: 30px 30px;
+        transform: translateX(200px);
+        opacity: 0;
+        transition: 0.5s 0.8s; }
+        #banner .inner .member .pic img {
+          width: 65%;
+          height: 100%;
+          border: 1px solid #bbb;
+          object-fit: cover;
+          background: #eee;
+          vertical-align: middle;
+          filter: brightness(0.7); }
 
 #comment {
   width: 100%;
