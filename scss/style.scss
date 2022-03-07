@@ -2039,6 +2039,12 @@ body{
         }
         
         .member{
+
+            &::after{
+                height: 100%;
+                opacity: 1;
+            }
+
             .toJoin, .pic{
                 transform: translateX(0px);
                 opacity: 1;
@@ -2085,10 +2091,12 @@ body{
             &::after{
                 content: '';
                 display: block;
-                width: 1px; height: 100%;
+                width: 1px; height: 0%;
                 background: #eee;
                 position: absolute;
                 top: 0; left: 50%;
+                opacity: 0;
+                transition: 0.3s 0.5s;
             }
 
             .toJoin{
@@ -3122,6 +3130,41 @@ body{
     
         .inner{
             width: 100%;
+
+            .member{
+                margin-top: 50px;
+    
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 1px; height: 0%;
+                    background: #eee;
+                    position: absolute;
+                    top: 0; left: 50%;
+                    opacity: 0;
+                    transition: 0.3s 0.5s;
+                }
+    
+                .toJoin{
+                    padding: 10px 10px;
+    
+                    h2{
+                        margin-bottom: 20px;
+                    }
+    
+                    p{
+                        width: 90%;
+                    }
+                }
+    
+                .pic{
+                    padding: 10px 10px;
+    
+                    img{
+                        width: 90%; 
+                    }
+                }
+            }
         }
     }
 
@@ -3590,6 +3633,42 @@ body{
     
                 &::after{
                     top: 80px; left: 50%;
+                }
+            }
+            
+            >p{
+                display: none;
+            }
+
+            .member{
+                margin-top: 0px;
+    
+                &::after{
+                    display: none;
+                }
+    
+                .toJoin{
+                    float: none;
+                    width: 100%;
+
+                    h2{
+                        font: 24px/1 $mainFon;
+                    }
+    
+                    p{
+                        width: 90%;
+                        font: normal 14px/1.4 $mainFon;
+                        margin-bottom: 20px;
+                    }
+                }
+    
+                .pic{
+                    float: none;
+                    width: 100%; height: 100%;
+    
+                    img{
+                        width: 100%; height: 100px;
+                    }
                 }
             }
         }

@@ -5863,6 +5863,9 @@ body {
   #banner.on .inner h1, #banner.on .inner p {
     transform: translateY(0);
     opacity: 1; }
+  #banner.on .inner .member::after {
+    height: 100%;
+    opacity: 1; }
   #banner.on .inner .member .toJoin, #banner.on .inner .member .pic {
     transform: translateX(0px);
     opacity: 1; }
@@ -5904,11 +5907,13 @@ body {
         content: '';
         display: block;
         width: 1px;
-        height: 100%;
+        height: 0%;
         background: #eee;
         position: absolute;
         top: 0;
-        left: 50%; }
+        left: 50%;
+        opacity: 0;
+        transition: 0.3s 0.5s; }
       #banner .inner .member .toJoin {
         float: left;
         width: 50%;
@@ -6593,6 +6598,29 @@ body {
     overflow: hidden; }
     #banner .inner {
       width: 100%; }
+      #banner .inner .member {
+        margin-top: 50px; }
+        #banner .inner .member::after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 0%;
+          background: #eee;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          opacity: 0;
+          transition: 0.3s 0.5s; }
+        #banner .inner .member .toJoin {
+          padding: 10px 10px; }
+          #banner .inner .member .toJoin h2 {
+            margin-bottom: 20px; }
+          #banner .inner .member .toJoin p {
+            width: 90%; }
+        #banner .inner .member .pic {
+          padding: 10px 10px; }
+          #banner .inner .member .pic img {
+            width: 90%; }
 
   #comment {
     padding: 100px 30px;
@@ -6855,6 +6883,28 @@ body {
   #banner .inner h1::after {
     top: 80px;
     left: 50%; }
+  #banner .inner > p {
+    display: none; }
+  #banner .inner .member {
+    margin-top: 0px; }
+    #banner .inner .member::after {
+      display: none; }
+    #banner .inner .member .toJoin {
+      float: none;
+      width: 100%; }
+      #banner .inner .member .toJoin h2 {
+        font: 24px/1 "Rajdhani"; }
+      #banner .inner .member .toJoin p {
+        width: 90%;
+        font: normal 14px/1.4 "Rajdhani";
+        margin-bottom: 20px; }
+    #banner .inner .member .pic {
+      float: none;
+      width: 100%;
+      height: 100%; }
+      #banner .inner .member .pic img {
+        width: 100%;
+        height: 100px; }
 
   #comment {
     overflow: hidden; }
