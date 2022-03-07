@@ -6511,6 +6511,8 @@ body {
           text-align: left; }
           #brand .inner .wrap article .txt h2 {
             font-size: 4vmin; }
+            #brand .inner .wrap article .txt h2::after {
+              display: none; }
           #brand .inner .wrap article .txt p {
             letter-spacing: 0px;
             font-size: 3vmin; }
@@ -6774,6 +6776,8 @@ body {
           #brand .inner .wrap article .txt h2 {
             margin-bottom: 15px;
             font-size: 6vmin; }
+            #brand .inner .wrap article .txt h2::after {
+              display: none; }
           #brand .inner .wrap article .txt p {
             font-size: 15px; }
 

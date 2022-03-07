@@ -2056,6 +2056,10 @@ body{
             font: normal 16px/1.4 $mainFon;
             color: #ddd;
         }
+
+        .member{
+            
+        }
     }
 }
 
@@ -3007,6 +3011,10 @@ body{
 
                         h2{
                             font-size: 4vmin;
+
+                            &::after{
+                                display: none;
+                            }
                         }
 
                         p{
@@ -3470,6 +3478,10 @@ body{
                         h2{
                             margin-bottom: 15px;
                             font-size: 6vmin;
+
+                            &::after{
+                                display: none;
+                            }
                         }
 
                         p{
