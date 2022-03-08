@@ -6899,7 +6899,7 @@ body {
             font-size: 15px; }
 
   #banner {
-    background: url(../img/banner1.jpg) no-repeat; }
+    background: #000; }
     #banner .inner h1::after {
       top: 80px;
       left: 50%; }
