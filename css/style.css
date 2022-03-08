@@ -6898,31 +6898,33 @@ body {
           #brand .inner .wrap article .txt p {
             font-size: 15px; }
 
-  #banner .inner h1::after {
-    top: 80px;
-    left: 50%; }
-  #banner .inner > p {
-    display: none; }
-  #banner .inner .member {
-    margin-top: 0px; }
-    #banner .inner .member::after {
+  #banner {
+    background: url(../img/banner1.jpg) no-repeat; }
+    #banner .inner h1::after {
+      top: 80px;
+      left: 50%; }
+    #banner .inner > p {
       display: none; }
-    #banner .inner .member .toJoin {
-      float: none;
-      width: 100%; }
-      #banner .inner .member .toJoin h2 {
-        font: 24px/1 "Rajdhani"; }
-      #banner .inner .member .toJoin p {
-        width: 90%;
-        font: normal 14px/1.4 "Rajdhani";
-        margin-bottom: 20px; }
-    #banner .inner .member .pic {
-      float: none;
-      width: 100%;
-      height: 100%; }
-      #banner .inner .member .pic img {
+    #banner .inner .member {
+      margin-top: 0px; }
+      #banner .inner .member::after {
+        display: none; }
+      #banner .inner .member .toJoin {
+        float: none;
+        width: 100%; }
+        #banner .inner .member .toJoin h2 {
+          font: 24px/1 "Rajdhani"; }
+        #banner .inner .member .toJoin p {
+          width: 90%;
+          font: normal 14px/1.4 "Rajdhani";
+          margin-bottom: 20px; }
+      #banner .inner .member .pic {
+        float: none;
         width: 100%;
-        height: 100px; }
+        height: 100%; }
+        #banner .inner .member .pic img {
+          width: 100%;
+          height: 100px; }
 
   #comment {
     overflow: hidden; }
