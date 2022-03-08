@@ -170,8 +170,7 @@ $(".right>article").on("click", function(){
 $(".popclose").on("click", function(){
     $(this).parent().removeClass("on");
     $(".right>article").removeClass("on");
-})
-
+});
 
 //gnb menu -----------------------------------------------------------------------
 $("#gnb>li").on("mouseenter", function(){
