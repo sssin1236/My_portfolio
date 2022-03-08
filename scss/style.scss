@@ -2251,15 +2251,31 @@ body{
                 >span{
                     float: right;
 
-                    a{
-                        i{
-                            font-size: 16px;
-                            color: #ddd;
-                            transition: 0.3s;
+                    .plus{
+                        display: inline-block;
+                        width: 15px; height: 15px;
+                        position: relative;
+                        transition: 1s;
+
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 15px; height: 1px;
+                            background: #eee;
+                            position: absolute;
+                            top: 7px; right: 0;
                         }
 
-                        &:hover svg{
-                            font-size: 20px;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px; height: 15px;
+                            background: #eee;
+                            position: absolute;
+                            bottom: 0%; right: 7px;
+                        }
+
+                        &:hover{
                             transform: rotate(180deg);
                         }
                     }
@@ -3894,86 +3910,184 @@ body{
     }
 }
 
-
-
-
-
-// @media screen and(max-height: 900px){
-//     #visual{
+@media screen and (max-height:900px){
+    #visual{
+        
+        .inner{
+            padding: 121px 0px 0px;
+        
+            .right{
+                padding-top: 121px;
     
-//         .inner{
+                .popVid{
+                    height: calc(100% - 131px);
     
-//             .list{
-//                 top: 170px; right: 0;
+                    &.on{
+                        top: 121px;
+                    }
+                    video{
+                        width: 100%; height: 100%;
+                        object-fit: cover;
+                    }
+                }
     
-//                 &::after{
-//                     content: ''; display: block; clear: both;
-//                 }
-//             }
+                >article{
+                    float: left;
+                    width: 197px; height: 70%;
+                    position: relative;
+                    transition: 1s;
+                    z-index: 4;
+                    opacity: 0;
+                    margin-top: -50%;
+                    cursor: pointer;
+                    transition: margin-top 1s 0.8s, opacity 0.8s 1s, transform 0.8s;
     
-//             .wrap{
-
-//                 .rolling{
-
-//                     article{
-//                     width: 250px; height: 100%;
-//                     padding: 20px 0;
+                    &.on{
+                        transform: translateY(100%);
+                    }
     
-//                         .pic{
-//                             width: 90%; height: 90%;
-//                             padding: 25px 0 10px;
-//                             position: absolute;
-//                             top: 50%; left: 50%;
-//                             transform: translate(-50%, -50%);
-//                         }
-//                     }
-//                 }
+                    &:nth-of-type(2n){
+                        margin-top: 80%;
     
-                
-//             }
-//         }
-//     }
-// }
-
-// @media screen and(max-height: 800px){
-//     #visual{
+                        .pic{
+                            top: auto;
+                            top: 0px;
+                        }
     
-//         .inner{
+                        .text{
+                            top: auto;
+                            bottom: 0;
+                            border-top: none;
+                            border-bottom: 1px solid #111;
     
-//             .list{
-//                 top: 150px; right: 0;
-
-//                 span{
-//                     bottom: -30px
-//                 }
-//             }
+                            p{
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                            }
     
-//             .wrap{
-//                 width: calc(250px * 5); height: 340px;
-
-//                 .rolling{
-
-//                     article{
-//                     width: 250px; height: 100%;
-//                     padding: 20px 0;
+                            h3{
+                                border-top: none;
+                                border-bottom: 1.5px solid #333;
+                                padding: 10px 0;
+                                margin-top: 0;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
     
+                    >.pic{
+                        width: 100%; height: 70%;
+                        position: absolute;
+                        bottom: 0px; left: 0;
+                        z-index: 2;
+                        backdrop-filter: blur(2px);
+                        transition: 1s;
+                        
+                        video{
+                            display: none;
+                            width: 0%; height: 0%;
+                            object-fit: cover;
+                            transition: 1s;
+                            opacity: 0;
+                            filter: brightness(0.5);
+                        }
     
-//                         .pic{
-//                             width: 90%; height: 90%;
-//                             padding: 25px 0 10px;
-//                             position: absolute;
-//                             top: 50%; left: 50%;
-//                             transform: translate(-50%, -50%);
-//                         }
-//                     }
-//                 }
+                        img{
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                        }
+                    }
     
-                
-//             }
-//         }
-//     }
-// }
-
+                    .text{
+                        width: 100%;
+                        border: 1px solid #111;
+                        border-bottom: none;
+                        position: absolute;
+                        top: 0px; left: 50%;
+                        transform: translateX(-50%);
+                        padding: 20px;
+                        z-index: 2;
+                        transition: 1s;
+    
+                        >p{
+                            font: 14px/1 'arial';
+                            color: $mainCol;
+                            margin-bottom: 30px;
+                            margin-top: 20px;
+                            z-index: 2;
+                        }
+        
+                        h3{
+                            font: bold 28px/1.4 $mainFon;
+                            color: #111;
+                            z-index: 2;
+                            border-top: 1.5px solid #333;
+                            padding: 10px 0;
+                            margin-top: 20px;
+                            transition: 0.5s;
+                        }
+                        
+                        span{
+                            display: block;
+                            width: 100%;
+                            position: relative;
+                            z-index: 2;
+                            transition: 0.5s;
+        
+                            a{
+                                font: 13px/1 'arial';
+                                color: #222;
+                                transition: 0.5s;
+        
+                                i{
+                                    font-size: 14px;
+                                    color: #222;
+                                    position: absolute;
+                                    top: 50%; right:0px;
+                                    margin-top: -6px;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+                    
+                    &:hover{
+    
+                        .text{
+                            top: 100px;
+    
+                            h3{
+                                color: #eee;
+                            }
+    
+                            span{
+                                a{
+                                    color: #ddd;
+    
+                                    i{
+                                        color: #ddd;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .pic{
+                            height: 80%;
+                        }
+    
+                        &:nth-of-type(2n){
+    
+                            .text{
+                                bottom: 100px;
+                                top: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @keyframes ani{
     0%{ opacity: 0; transform: scale(1); }
