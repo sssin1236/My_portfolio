@@ -3236,26 +3236,17 @@ body{
                     .box{
                         padding: 20px 0;
     
-                        img{
-                            width: 48%; 
+                        .pic{
+                            width: 40%; 
                         }
     
-                        h3{
-                            width: 45%;
-                            position: absolute;
-                            top: 25px; left: 50%;
+                        .picTxt{
+                            width: 60%;
+
+                            p{
+                                margin-top: 10px;
+                            }
                         }
-    
-                        span{
-                            position: absolute;
-                            top: 60px; left: 50%;
-                        }
-    
-                        p{
-                            position: absolute;
-                            top: 90px; left: 50%;
-                        }
-                        
                     }
     
                     ul{
