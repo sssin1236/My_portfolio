@@ -51,7 +51,6 @@ class MyScroll{
             this.setPos();
             let activeindex = this.btns.children("a").filter(".on").parent().index();
             this.activeScroll(activeindex);
-            console.log(activeindex);
         });
     
         $(window).on("scroll", ()=>{
