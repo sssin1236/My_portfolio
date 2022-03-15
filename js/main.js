@@ -51,6 +51,7 @@ class MyScroll{
             this.setPos();
             let activeindex = this.btns.children("a").filter(".on").parent().index();
             this.activeScroll(activeindex);
+            console.log(activeindex);
         });
     
         $(window).on("scroll", ()=>{
@@ -101,6 +102,7 @@ class MyScroll{
 // 쿠키 팝업-------------------------------------------------------------------
 
 console.log(isCookie);
+
 
 if(isCookie === -1){
     $("#popup").show();

@@ -6057,20 +6057,20 @@ body {
               right: 7px; }
             #comment .inner .wrap article > span .plus:hover {
               transform: rotate(180deg); }
-        #comment .inner .wrap article .pic {
+        #comment .inner .wrap article .box {
           width: 100%;
           position: relative;
           padding: 35px 0; }
-          #comment .inner .wrap article .pic:nth-of-type(1) {
+          #comment .inner .wrap article .box:nth-of-type(1) {
             border-top: 1px solid #ff5b20;
             border-bottom: 1px solid #ff5b20; }
-          #comment .inner .wrap article .pic:nth-of-type(2) {
+          #comment .inner .wrap article .box:nth-of-type(2) {
             border-bottom: 1px solid #ff5b20; }
-          #comment .inner .wrap article .pic img {
+          #comment .inner .wrap article .box img {
             width: 230px;
             height: 150px;
             object-fit: cover; }
-          #comment .inner .wrap article .pic h3 {
+          #comment .inner .wrap article .box h3 {
             width: 250px;
             padding-bottom: 5px;
             position: absolute;
@@ -6079,13 +6079,13 @@ body {
             border-bottom: 2px solid #333;
             font: normal 20px/1 "Rajdhani";
             color: #ccc; }
-          #comment .inner .wrap article .pic span {
+          #comment .inner .wrap article .box span {
             position: absolute;
             top: 80px;
             left: 250px;
             font: 15px/1 "Rajdhani";
             color: #777; }
-          #comment .inner .wrap article .pic p {
+          #comment .inner .wrap article .box p {
             position: absolute;
             top: 110px;
             left: 250px;
@@ -6663,20 +6663,20 @@ body {
           margin-right: 0;
           transform: translateX(200px);
           padding-top: 30px; }
-        #comment .inner .wrap article .pic {
+        #comment .inner .wrap article .box {
           padding: 20px 0; }
-          #comment .inner .wrap article .pic img {
+          #comment .inner .wrap article .box img {
             width: 48%; }
-          #comment .inner .wrap article .pic h3 {
+          #comment .inner .wrap article .box h3 {
             width: 45%;
             position: absolute;
             top: 25px;
             left: 50%; }
-          #comment .inner .wrap article .pic span {
+          #comment .inner .wrap article .box span {
             position: absolute;
             top: 60px;
             left: 50%; }
-          #comment .inner .wrap article .pic p {
+          #comment .inner .wrap article .box p {
             position: absolute;
             top: 90px;
             left: 50%; }
@@ -6930,11 +6930,11 @@ body {
     overflow: hidden; }
     #comment .inner .wrap article {
       padding: 40px 20px; }
-      #comment .inner .wrap article .pic:nth-of-type(1) {
+      #comment .inner .wrap article .box:nth-of-type(1) {
         border-bottom: 1px solid rgba(255, 145, 105, 0.185); }
-      #comment .inner .wrap article .pic img {
+      #comment .inner .wrap article .box img {
         opacity: 0; }
-      #comment .inner .wrap article .pic h3 {
+      #comment .inner .wrap article .box h3 {
         width: 95%;
         position: absolute;
         top: 25px;
@@ -6942,13 +6942,13 @@ body {
         font-size: 20px;
         color: #eee;
         border-bottom: 1px solid #555; }
-      #comment .inner .wrap article .pic span {
+      #comment .inner .wrap article .box span {
         position: absolute;
         top: 60px;
         left: 3%;
         font: 14px/1 "Rajdhani";
         color: #aaa; }
-      #comment .inner .wrap article .pic p {
+      #comment .inner .wrap article .box p {
         position: absolute;
         top: 90px;
         left: 3%;

@@ -2280,7 +2280,7 @@ body{
                     }
                 }
 
-                .pic{
+                .box{
                     width: 100%;
                     position: relative;
                     padding: 35px 0;
@@ -3224,7 +3224,7 @@ body{
                         padding-top: 30px;
                     }
     
-                    .pic{
+                    .box{
                         padding: 20px 0;
     
                         img{
@@ -3700,7 +3700,7 @@ body{
     
                 article{
                     padding: 40px 20px;
-                    .pic{
+                    .box{
 
                         &:nth-of-type(1){
                             border-bottom: 1px solid rgba(255, 145, 105, 0.185);
