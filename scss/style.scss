@@ -2308,30 +2308,30 @@ body{
                         }
                     }
 
-                    h3{
-                        width: 250px;
-                        padding-bottom: 5px;
-                        position: absolute;
-                        top: 45px; left: 250px;
-                        border-bottom: 2px solid #333;
-                        font: normal 20px/1 $mainFon;
-                        color: #ccc;
-                    }
+                    .picTxt{
+                        float: right;
+                        width: 55%; height: 150px;
+                        padding-left: 20px;
 
-                    span{
-                        position: absolute;
-                        top: 80px; left: 250px;
-                        font: 15px/1 $mainFon;
-                        color: #777;
+                        h3{
+                            padding-bottom: 10px;
+                            margin-bottom: 5px;
+                            border-bottom: 1px solid #333;
+                            font: normal 20px/1 $mainFon;
+                            color: #ccc;
+                        }
+    
+                        span{
+                            font: 15px/1 $mainFon;
+                            color: #777;
+                        }
+    
+                        p{
+                            font: 16px/1.4 $mainFon;
+                            color: #999;
+                            margin-top: 15px;
+                        }
                     }
-
-                    p{
-                        position: absolute;
-                        top: 110px; left: 250px;
-                        font: 16px/1.4 $mainFon;
-                        color: #999;
-                    }
-                    
                 }
 
                 ul{
